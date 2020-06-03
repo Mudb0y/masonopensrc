@@ -1,0 +1,58 @@
+dictionary locations;
+string mapname;
+void draw_map(string name)
+{
+mapname=name;
+if (name=="m1")
+{
+maxx=100;
+maxy=100;
+set_location(30,50,30,50,"safe zone");
+if (me.x<=0 or me.y<=0)
+{
+me.x=35;
+me.y=40;
+}
+draw_platform(0,200,0,200,"concrete3");
+draw_platform(30,50,30,50,"carpet");
+draw_platform(29,29,30,50,"wall");
+draw_platform(30,50,29,29,"wall");
+draw_platform(30,50,51,51,"wall");
+draw_platform(51,51,30,50,"wall");
+draw_platform(35,37,49,51,"carpet");
+szb.spawn(36,49);
+if (level<50)
+spawn_turret(35,49);
+draw_platform(72,92,72,92,"plywood");
+draw_platform(72,92,93,93,"wall");
+draw_platform(72,92,71,71,"wall");
+draw_platform(71,71,72,92,"wall");
+draw_platform(93,93,72,92,"wall");
+draw_platform(92,93,90,91,"plywood");
+hrb.spawn(92,90);
+if (level<50)
+spawn_turret(92,90);
+set_location(35,37,49,51,"entrance to Safe Zone");
+set_location(72,92,72,92,"hideout room");
+}
+}
+void draw_platform(int leftx,int rightx,int miny, int maxy,string plattype)
+{
+for (uint i=leftx; i<=rightx; i++)
+{
+for (uint i2=miny; i2<=maxy; i2++)
+{
+map.set(i+":"+i2,plattype);
+}
+}
+}
+void set_location(int leftx,int rightx,int miny, int maxy,string loc)
+{
+for (uint i=leftx; i<=rightx; i++)
+{
+for (uint i2=miny; i2<=maxy; i2++)
+{
+locations.set(i+":"+i2,loc);
+}
+}
+}

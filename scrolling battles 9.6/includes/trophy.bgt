@@ -1,0 +1,81 @@
+int totaltrophies=0;
+void gettrophycount()
+{
+totaltrophies=0;
+if (trophy1unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy2unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy3unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy4unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy5unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy6unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy7unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy8unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy9unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy10unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy11unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy12unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy13unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy14unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy15unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy16unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy17unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy18unlocked==1)
+{
+totaltrophies+=1;
+}
+if (trophy19unlocked==1)
+{
+totaltrophies+=1;
+}
+}

@@ -1,0 +1,24 @@
+class fire
+{
+int firesound;
+int fx;
+int fy;
+fire(int firex, int firey)
+{
+fx=firex;
+fy=firey;
+firesound=pool.play_2d("fire.ogg", fx, fy, x, y, true);
+}
+}
+void fcheckloop()
+{
+for (uint i=0; i<fires.length(); i++)
+{
+pool.update_sound_2d(fires[i].firesound, fires[i].fx, fires[i].fy);
+if (x==fires[i].fx and y==fires[i].fy)
+{
+dlgplay("death.ogg");
+exit();
+}
+}
+}

@@ -1,0 +1,195 @@
+sound_pool zp;
+zomby@[] zombies(0);
+class zomby
+{
+int person=random(1,2);
+int attack=random(0,1);
+sound growlsound;
+int dead;
+int dietime=800;
+int growl;
+int growltime=random(8000,16000);
+int attacktime=random(1200,1400);
+int walktime=random(600,800)-(level*2);
+int x,y;
+int hp;
+timer attacktimer, dietimer, growltimer, walktimer;
+string tile;
+zomby(int zx,int zy,int zhp)
+{
+x=zx;
+y=zy;
+hp=zhp;
+if (gamemode==1)
+growltime=random(800,1600);
+}
+void checktile()
+{
+if (map.exists(x+":"+y))
+{
+map.get(x+":"+y,tile);
+}
+}
+}
+void zloop()
+{
+for (uint i=0; i<zombies.length(); i++)
+{
+for (uint i2=0; i2<zombies.length(); i2++)
+{
+if (zombies[i].x<=zombies[i2].x+4 and zombies[i].x>=zombies[i2].x-4 and zombies[i].y>=zombies[i2].y-1 and zombies[i].y<=zombies[i2].y+2 and zombies[i].dead==0 and zombies[i].attacktimer.elapsed>=zombies[i].attacktime and i!=i2 and gamemode==0)
+{
+zombies[i].attacktimer.restart();
+p.play_2d("attack"+random(1,3)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+p.play_2d("zhit"+random(1,3)+".ogg",me.x,me.y,zombies[i2].x,zombies[i2].y,false);
+zombies[i2].hp-=5*level;
+}
+}
+position_sound_2d(zombies[i].growlsound,me.x,me.y,zombies[i].x,zombies[i].y,3,3,1);
+if (zombies[i].walktime<=140 and gamemode==0)
+{
+zombies[i].walktime=random(140,150);
+}
+else if (zombies[i].walktime<=240 and gamemode==1)
+{
+zombies[i].walktime=random(240,250);
+}
+if (zombies[i].growltimer.elapsed>=zombies[i].growltime and zombies[i].dead==0)
+{
+zombies[i].growltimer.restart();
+if (gamemode==0)
+zombies[i].growlsound.load("zgrowl"+random(1,5)+".ogg");
+else
+zombies[i].growlsound.load("h"+zombies[i].person+"spawn.ogg");
+zombies[i].growlsound.play();
+}
+if (zombies[i].x<=me.x+2 and zombies[i].x>=me.x-2 and zombies[i].y>=me.y-2 and zombies[i].y<=me.y+2 and zombies[i].attacktimer.elapsed>=zombies[i].attacktime and zombies[i].dead==0)
+{
+zombies[i].attacktimer.restart();
+if (gamemode==0)
+p.play_stationary("attack"+random(1,3)+".ogg",false);
+else
+{
+p.play_stationary("fire_knife.ogg",false);
+p.play_stationary("hit_knife.ogg",false);
+p.play_stationary("zhit"+random(1,3)+".ogg",false);
+}
+if (level-(defense*5)<=0)
+{
+hp-=1;
+}
+else
+{
+hp-=level-(defense*5);
+}
+}
+if (zombies[i].hp<=0 and zombies[i].dead==0)
+{
+zp.play_2d("kill"+random(1,4)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+zombies[i].dead=1;
+zombies[i].dietimer.restart();
+}
+if (zombies[i].dietimer.elapsed>=zombies[i].dietime and zombies[i].dead==1)
+{
+zp.play_2d(zombies[i].tile+"hardland.ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+zombies.remove_at(i);
+if (xpmaster>0)
+xp+=random(2,15)*(level*(2*xpmaster));
+else
+xp+=random(2,15)*(level*2);
+kills+=1;
+break;
+}
+if (zombies[i].walktimer.elapsed>=zombies[i].walktime and zombies[i].dead==0)
+{
+zombies[i].walktimer.restart();
+if (zombies[i].y<me.y)
+{
+zombies[i].y+=1;
+zombies[i].checktile();
+if (zombies[i].tile=="wall")
+{
+zombies[i].y-=1;
+zombies[i].checktile();
+}
+zp.play_2d(zombies[i].tile+"step"+random(1,5)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+}
+else if (zombies[i].y>me.y)
+{
+zombies[i].y-=1;
+zombies[i].checktile();
+if (zombies[i].tile=="wall")
+{
+zombies[i].y+=1;
+zombies[i].checktile();
+}
+zp.play_2d(zombies[i].tile+"step"+random(1,5)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+}
+if (zombies[i].x<me.x)
+{
+zombies[i].x+=1;
+zombies[i].checktile();
+if (zombies[i].tile=="wall")
+{
+zombies[i].x-=1;
+zombies[i].checktile();
+}
+zp.play_2d(zombies[i].tile+"step"+random(1,5)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+}
+else if (zombies[i].x>me.x)
+{
+zombies[i].x-=1;
+zombies[i].checktile();
+if (zombies[i].tile=="wall")
+{
+zombies[i].x+=1;
+zombies[i].checktile();
+}
+zp.play_2d(zombies[i].tile+"step"+random(1,5)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+}
+}
+}
+}
+void spawn_zomby(int zx,int zy,int zhp)
+{
+zomby z1(zx,zy,zhp);
+zombies.insert_last(z1);
+}
+void ehit(int damage,string ammotype,int range,int turret=0)
+{
+for (uint i=0; i<zombies.length(); i++)
+{
+if (zombies[i].x<me.x+3 and zombies[i].x>me.x-3 and zombies[i].y>=me.y-1 and zombies[i].y<=me.y+range and turret==0 and zombies[i].dead==0)
+{
+p.play_2d("hit_"+ammotype+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+if (gamemode==0)
+{
+p.play_2d("zhit"+random(1,3)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+zombies[i].hp-=damage+(extradamage*2);
+}
+else if (gamemode==1)
+{
+p.play_2d("h"+zombies[i].person+"hit.ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+zombies[i].hp-=damage+(clawdamage*2);
+}
+}
+else if (turret==1)
+{
+p.play_2d("hit_"+ammotype+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+if (gamemode==0)
+{
+p.play_2d("zhit"+random(1,3)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+zombies[i].hp-=damage+(extradamage*2);
+}
+else if (gamemode==1)
+{
+p.play_2d("h"+zombies[i].person+"hit.ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+zombies[i].hp-=damage+(clawdamage*2);
+}
+}
+}
+}
+void destroy_all_zombies()
+{
+zombies.resize(0);
+}

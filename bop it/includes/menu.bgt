@@ -1,0 +1,190 @@
+dynamic_menu_pro menu;
+int mres;
+void mainmenu()
+{
+reset();
+menu.reset(false);
+menu.wrap=false;
+menu.allow_escape=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.edge_sound="sounds/menu/mboundary.ogg";
+menu.enter_sound="sounds/menu/menter.ogg";
+menu.open_sound="sounds/menu/mopen.ogg";
+menu.click_sound="sounds/menu/mclick.ogg";
+menu.add_music("sounds/music/mmusic.ogg");
+menu.add_item_tts("start game");
+menu.add_item_tts("start an autopilot game");
+menu.add_item_tts("help");
+menu.add_item_tts("exit");
+mres=menu.run("bop it main menu.", true);
+if (mres==0)
+{
+menu.fade_music(20);
+exit();
+}
+else if (mres==1)
+{
+menu.fade_music(20);
+game();
+}
+else if (mres==2)
+{
+menu.fade_music(20);
+autopilot=1;
+game();
+}
+else if(mres==3)
+{
+menu.fade_music(20);
+helpmenu();
+}
+else if (mres==4)
+{
+menu.fade_music(20);
+exit();
+}
+}
+void modemenu()
+{
+menu.reset(false);
+menu.wrap=false;
+menu.allow_escape=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.edge_sound="sounds/menu/mboundary.ogg";
+menu.enter_sound="sounds/menu/menter.ogg";
+menu.open_sound="sounds/menu/mopen.ogg";
+menu.click_sound="sounds/menu/mclick.ogg";
+menu.add_music("");
+menu.add_item_tts("vox bop");
+menu.add_item_tts("beat bop");
+menu.add_item_tts("random");
+menu.add_item_tts("go back");
+mres=menu.run("Select game mode.", true);
+if (mres==0 or mres==4)
+{
+mainmenu();
+}
+else if (mres==1)
+{
+mode="vox";
+return;
+}
+else if (mres==2)
+{
+mode="beat";
+return;
+}
+else if (mres==3)
+{
+mode="random";
+return;
+}
+}
+void vomenu()
+{
+string[] vodirs=find_directories("sounds/vo/*");
+menu.reset(false);
+menu.wrap=false;
+menu.allow_escape=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.edge_sound="sounds/menu/mboundary.ogg";
+menu.enter_sound="sounds/menu/menter.ogg";
+menu.open_sound="sounds/menu/mopen.ogg";
+menu.click_sound="sounds/menu/mclick.ogg";
+menu.add_music("");
+for(uint i=0; i<vodirs.length(); i++)
+{
+menu.add_item_tts(vodirs[i],vodirs[i]);
+}
+menu.add_item_tts("Screen Reader","sr");
+menu.add_item_tts("go back");
+mres=menu.run("Select a voice.", true);
+if (mres==0 and mres>=vodirs.length()+2)
+{
+mainmenu();
+return;
+}
+else if (menu.get_item_name(mres)=="sr")
+{
+vo="sr";
+return;
+}
+else
+{
+vo=menu.get_item_name(mres);
+return;
+}
+}
+void helpmenu()
+{
+commands[0]="bop it";
+commands[1]="pull it";
+commands[2]="twist it";
+commands[3]="spin it";
+commands[4]="flick it";
+commands[5]="nail it";
+menu.reset(false);
+menu.wrap=false;
+menu.allow_escape=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.edge_sound="sounds/menu/mboundary.ogg";
+menu.enter_sound="sounds/menu/menter.ogg";
+menu.open_sound="sounds/menu/mopen.ogg";
+menu.click_sound="sounds/menu/mclick.ogg";
+menu.add_music("");
+for (uint i=0; i<commands.length(); i++)
+{
+menu.add_item_tts(commands[i]);
+}
+menu.add_item_tts("go back");
+mres=menu.run("help menu.", true);
+if (mres==0 or mres==commands.length()+1)
+{
+mainmenu();
+return;
+}
+if (mres>=1 and mres<commands.length()+1)
+{
+help(mres);
+helpmenu();
+return;
+}
+}
+void gamemenu()
+{
+menu.reset(false);
+menu.wrap=false;
+menu.allow_escape=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.edge_sound="sounds/menu/mboundary.ogg";
+menu.enter_sound="sounds/menu/menter.ogg";
+menu.open_sound="sounds/menu/mopen.ogg";
+menu.click_sound="sounds/menu/mclick.ogg";
+menu.add_music("");
+menu.add_item_tts("bop it clasic");
+menu.add_item_tts("bop it extreme");
+menu.add_item_tts("bop it advanced");
+menu.add_item_tts("go back");
+mres=menu.run("Select the game you wish to play.", true);
+if (mres==0 or mres==4)
+{
+mainmenu();
+}
+if (mres==1)
+{
+maxcommands=clasiccommands;
+}
+if (mres==2)
+{
+maxcommands=extremecommands;
+}
+if (mres==3)
+{
+maxcommands=advancedcommands;
+}
+}

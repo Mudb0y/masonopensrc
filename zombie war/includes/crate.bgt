@@ -1,0 +1,43 @@
+int gottencrates=0;
+crate@[] crates(0);
+class crate
+{
+int pickrange=2;
+int x,y;
+sound cratesound;
+crate()
+{
+x=random(0,maxx);
+y=random(0,maxy);
+cratesound.load("crate.ogg");
+position_sound_2d(cratesound,me.x,me.y,x,y,1,1,1);
+cratesound.play_looped();
+}
+}
+void crateloop()
+{
+for (uint i=0; i<crates.length(); i++)
+{
+position_sound_2d(crates[i].cratesound,me.x,me.y,crates[i].x,crates[i].y,1,1,1);
+if (me.x>=crates[i].x-crates[i].pickrange and me.x<=crates[i].x+crates[i].pickrange and me.y>=crates[i].y-crates[i].pickrange and me.y<=crates[i].y+crates[i].pickrange)
+{
+crates[i].cratesound.stop();
+p.play_stationary("crateget.ogg",false);
+gottencrates+=1;
+crates.remove_at(i);
+spawn_crate();
+speak("1 crate with "+(50*level+(gottencrates*10))+" XP found.");
+xp+=(50*level+(gottencrates*(quantifier*5)));
+break;
+}
+}
+}
+void spawn_crate()
+{
+crate crate1();
+crates.insert_last(crate1);
+}
+void destroy_all_crates()
+{
+crates.resize(0);
+}

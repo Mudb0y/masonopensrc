@@ -1,0 +1,195 @@
+#include "speaker.bgt"
+#include "keyhook.bgt"
+#include "form.bgt"
+file filetypeslist;
+string filetypes;
+file savefile;
+kh key;
+string filetype="txt";
+string filename="untitled";
+string filename2;
+string text;
+speaker speak;
+audio_form form;
+void main()
+{
+key.install();
+form.reset();
+setform();
+form.create_window(filename+"."+filetype+" - Easy Pad", true, false);
+int textbox=form.create_input_box("Text", text, "", 0, false, true);
+int newbutton=form.create_button("New");
+int openbutton=form.create_button("Open...");
+int save=form.create_button("Save...");
+int cancel=form.create_button("Close", false, true);
+form.focus(textbox);
+while(true)
+{
+form.monitor();
+text=form.get_text(textbox);
+wait(5);
+if (key_pressed(KEY_F2))
+{
+speak.say("new line");
+form.add_text(textbox, "
+");
+}
+if(form.is_pressed(openbutton))
+{
+openform();
+}
+if(form.is_pressed(save))
+{
+saveform();
+}
+if(form.is_pressed(cancel))
+{
+exit();
+}
+if((key_down(KEY_LMENU))&&(key_pressed(KEY_F4)))
+{
+exit();
+}
+}
+}
+void setform()
+{
+if (screen_reader_is_running(1))
+{
+form.set_output_mode(JAWS);
+}
+if (screen_reader_is_running(2))
+{
+form.set_output_mode(WINDOW_EYES);
+}
+if (screen_reader_is_running(3))
+{
+form.set_output_mode(SYSTEM_ACCESS);
+}
+if (screen_reader_is_running(4))
+{
+form.set_output_mode(NVDA);
+}
+}
+void saveform()
+{
+form.reset();
+setform();
+filetypeslist.open("filetypes.dat", "r");
+filetypes=filetypeslist.read();
+string[] ft=string_split(filetypes, "+", true);
+form.create_window("Save file", true, true);
+int filenamebox=form.create_input_box("Base Filename", filename);
+int savetype=form.create_list("Save as Type");
+for(uint i=0;i < ft.length();i++)
+{
+form.add_list_item(savetype, ft[i], -1, false);
+}
+int save=form.create_button("Save", true);
+int cancel=form.create_button("Cancel", false, true);
+form.focus(filenamebox);
+while(true)
+{
+form.monitor();
+filename=form.get_text(filenamebox);
+filetype=form.get_list_item(savetype, form.get_list_position(savetype));
+wait(5);
+if(form.is_pressed(save))
+{
+savebox();
+}
+if(form.is_pressed(cancel))
+{
+filetype="txt";
+main();
+}
+if((key_down(KEY_LMENU))&&(key_pressed(KEY_F4)))
+{
+exit();
+}
+}
+}
+void savebox()
+{
+if (file_exists(filename))
+{
+form.reset();
+setform();
+form.create_window("Action Required", true, true);
+int state=form.create_status_bar("an action is required", "this file already exists. what do you want to do?");
+int append=form.create_button("append text");
+int over=form.create_button("Overwrite text");
+int cancel=form.create_button("Cancel");
+form.focus(state);
+while(true)
+{
+form.monitor();
+wait(5);
+if(form.is_pressed(append))
+{
+savefile.open(filename+"."+filetype, "a");
+savefile.write("
+"+text);
+savefile.close();
+main();
+}
+if(form.is_pressed(over))
+{
+savefile.open(filename+"."+filetype, "w");
+savefile.write(text);
+savefile.close();
+main();
+}
+if(form.is_pressed(cancel))
+{
+saveform();
+}
+if((key_down(KEY_LMENU))&&(key_pressed(KEY_F4)))
+{
+exit();
+}
+}
+}
+else
+{
+savefile.open(filename+"."+filetype, "w");
+savefile.write(text);
+savefile.close();
+main();
+}
+}
+void openform()
+{
+form.reset();
+setform();
+form.create_window("Open File", true, true);
+int filenamebox2=form.create_input_box("Filename", filename2);
+int open=form.create_button("Open");
+int cancel=form.create_button("Cancel");
+while(true)
+{
+form.monitor();
+filename2=form.get_text(filenamebox2);
+wait(5);
+if(form.is_pressed(open))
+{
+openfile();
+}
+if(form.is_pressed(cancel))
+{
+main();
+}
+if((key_down(KEY_LMENU))&&(key_pressed(KEY_F4)))
+{
+exit();
+}
+}
+}
+void openfile()
+{
+file openfwer;
+openfwer.open(filename2, "r");
+text=openfwer.read();
+openfwer.close();
+main();
+}

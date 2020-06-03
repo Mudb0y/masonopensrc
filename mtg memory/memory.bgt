@@ -1,0 +1,169 @@
+file gsettings;
+sound open2, close, enter, open;
+sound error_sound;
+sound[] tone(4);
+
+sound movement,menuwrap;
+void main()
+{
+gsettings.open("game.dat","rb");
+string yesno=gsettings.read();
+int yepnope=string_to_number(yesno);
+show_game_window("Memory");
+open2.load("sounds/msg/open.wav");
+tone[0].load("sounds/tones/1.wav");
+tone[0].volume = -10;
+tone[1].load("sounds/tones/2.wav");
+tone[1].volume = -10;
+tone[2].load("sounds/tones/3.wav");
+tone[2].volume = -10;
+tone[3].load("sounds/tones/4.wav");
+tone[3].volume = -10;
+error_sound.load("sounds/error.wav");
+error_sound.volume = -10;
+open.play();
+if (yepnope==1)
+{
+keyboard_practice();
+}
+if (yepnope==2)
+{
+game();
+}
+}
+void keyboard_practice()
+{
+alert("memory", "press f1 to see what to do here");
+while(true)
+{
+if(key_pressed(KEY_LEFT))
+{
+play_tone(0);
+}
+else if(key_pressed(KEY_DOWN))
+{
+play_tone(1);
+}
+else if(key_pressed(KEY_RIGHT))
+{
+play_tone(2);
+}
+else if(key_pressed(KEY_UP))
+{
+play_tone(3);
+}
+else if(key_pressed(KEY_F1))
+{
+alert("help", "hit one of the arrow keys to see what it's sound is. when done learning the sounds, hit escape to go back to the main area.");
+}
+else if(key_pressed(KEY_ESCAPE))
+{
+exit();
+}
+wait(5);
+}
+}
+void play_tone(int i)
+{
+tone[i].stop();
+tone[i].play();
+}
+void game()
+{
+bool game_over = false;
+int[] sequence;
+int sequence_length = 0;
+float time_between_tones = 460;
+float time_between_inputs = 2000;
+do
+{
+sequence_length++;
+sequence.resize(sequence_length);
+sequence[sequence_length-1] = random(0,3);
+// Play back the sequence from start to finish.
+output_sequence(@sequence, time_between_tones);
+game_over = input_sequence(@sequence, time_between_inputs);
+if((sequence_length%4)==0)
+{
+time_between_inputs = time_between_inputs-50;
+time_between_tones = time_between_tones*0.9;
+if(time_between_tones < 350)
+{
+time_between_tones = 350;
+}
+}
+}
+while(!game_over);
+int score = sequence_length-1; // minus 1 because they failed on the last.
+alert("memory", "Your final score was " + score + " sequences. Remember, if you need to practice, open game.dat in notepad and change the 2 to 1.");
+exit();
+}
+bool input_sequence(int[] @sequence, float time_between_inputs)
+{
+timer clock;
+for(uint i=0; i<sequence.length(); i++)
+{
+// Do the following for every tone in the sequence:
+clock.restart();
+int input = -1; // Set it to something invalid.
+while(clock.elapsed < time_between_inputs)
+{
+if(key_pressed(KEY_LEFT))
+{
+input = 0;
+}
+else if(key_pressed(KEY_DOWN))
+{
+input = 1;
+}
+else if(key_pressed(KEY_RIGHT))
+{
+input = 2;
+}
+else if(key_pressed(KEY_UP))
+{
+input = 3;
+}
+if(input>=0)
+{
+break; // Stop waiting because something was typed.
+}
+wait(5);
+}
+if(input!=sequence[i])
+{
+error_sound.play_wait();
+return true;
+}
+play_tone(input);
+}
+
+clock.restart();
+while(clock.elapsed < 1000)
+{
+wait(5);
+}
+return false;
+}
+void output_sequence(int[]@ sequence, float time_between_tones)
+{
+timer clock;
+int current;
+for(uint i=0; i<sequence.length(); i++)
+{
+if(i>0)
+{
+clock.restart();
+while(clock.elapsed < time_between_tones)
+{
+wait(5);
+}
+}
+current = sequence[i];
+play_tone(current);
+}
+while(tone[current].playing)
+{
+wait(5);
+}
+}

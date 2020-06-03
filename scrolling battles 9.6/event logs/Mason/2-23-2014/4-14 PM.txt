@@ -1,0 +1,14 @@
+0: 
+1: event. Version=9.1.0.127. (4-13-46 PM)
+2: event: mason has 17 trophies (4-13-46 PM)
+3: Event: mason is using the default Soundpack. (4-13-46 PM)
+4: Event: mason is using the Town environment. (4-13-46 PM)
+5: Event. User wants a normal game. (4-13-54 PM)
+6: event: mason has decided to start a new game. (4-13-54 PM)
+7: A casm pit spawned at 292 (4-13-55 PM)
+8: A casm pit spawned at 219 (4-13-55 PM)
+9: A lava pit spawned at 293 (4-13-55 PM)
+10: Event: an enemy (name microsoft sam) has been spawned at 55 with 900 HP. (4-13-55 PM)
+11: Event: Game loaded! (4-13-55 PM)
+12: Event: an enemy (name samantha) has been spawned at 143 with 300 HP. (4-13-55 PM)
+13: event: mason has decided to exit.

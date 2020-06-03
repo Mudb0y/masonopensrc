@@ -1,0 +1,2171 @@
+﻿string temp;
+string[] tmp;
+string yesorno;
+uint i;
+void mainmenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("sounds/menu themes/"+menutheme+"/menumusic.ogg");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("Play");
+menu.add_item_tts("Test Speakers");
+menu.add_item_tts("settings");
+menu.add_item_tts("Minigame Machine");
+menu.add_item_tts("about");
+menu.add_item_tts("info center");
+menu.add_item_tts("trophies cabinet");
+menu.add_item_tts("Check latest online version.");
+menu.add_item_tts("Scrolling battles has been ran worldwide a total of "+runs+" times, including this one!");
+menu.add_item_tts("exit");
+mres=menu.run("Scrolling Battles Menu", true);
+if (mres==0 or mres==10)
+{
+menu.fade_music(20);
+registrywrite();
+exit();
+}
+if (mres==1)
+{
+menu.fade_music(20);
+reset();
+registrywrite();
+game();
+return;
+}
+if (mres==2)
+{
+menu.stop_music();
+event("Event: "+name+" is testing speakers.");
+testspeaks();
+mainmenu();
+}
+if (mres==3)
+{
+menu.stop_music();
+event("Event: "+name+" is changing settings.");
+settingsmenu();
+return;
+}
+if (mres==4)
+{
+menu.stop_music();
+if (kills<50)
+{
+dlg("you have not unlocked any minigames yet! Press enter to continue.");
+mainmenu();
+return;
+}
+else
+{
+mgmenu();
+return;
+}
+}
+if (mres==5)
+{
+alert("scrolling battles", "scrolling battles. version: "+version+". Registered to "+name+". copyright 2013 by mtg studios.");
+mainmenu();
+return;
+}
+if (mres==6)
+{
+menu.fade_music(20);
+infocenter();
+return;
+}
+if (mres==7)
+{
+menu.fade_music(20);
+trophiescabinet();
+return;
+}
+if (mres==8)
+{
+menu.fade_music(20);
+checkversion();
+mainmenu();
+return;
+}
+if (mres==9)
+{
+mainmenu();
+return;
+}
+}
+void mgmenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+if (kills>=50)
+{
+menu.add_item_tts("shooting range");
+}
+if (kills>=100)
+{
+menu.add_item_tts("minibeep");
+}
+if (kills>=250)
+{
+menu.add_item_tts("audio fishing");
+}
+if (kills>=300)
+{
+menu.add_item_tts("fire escape");
+}
+if (kills>=350)
+{
+menu.add_item_tts("Dice");
+}
+if (kills>=400)
+{
+menu.add_item_tts("Swimming");
+}
+if (kills>=450)
+{
+menu.add_item_tts("Destroy the Door");
+}
+menu.add_item_tts("Go back");
+mres=menu.run("Minigame Machine. Use left and right arrows to select a game.", true);
+if (mres==0)
+{
+mainmenu();
+}
+if (mres==1)
+{
+if (kills>=50)
+{
+event("Event: "+name+" wants to play Shooting Range");
+mg1();
+}
+else
+{
+mainmenu();
+}
+}
+if (mres==2)
+{
+if (kills>=100)
+{
+event("Event: "+name+" wants to play Minibeep");
+mg2();
+}
+else
+{
+mainmenu();
+}
+}
+if (mres==3)
+{
+if (kills>=250)
+{
+event("Event: "+name+" wants to play Audio Fishing");
+mg3();
+}
+else
+{
+mainmenu();
+}
+}
+if (mres==4)
+{
+if (kills>=300)
+{
+event("Event: "+name+" wants to play Fire Escape");
+mg4();
+}
+else
+{
+mainmenu();
+}
+}
+if (mres==5)
+{
+if (kills>=350)
+{
+event("Event: "+name+" wants to play Dice");
+mg5();
+}
+else
+{
+mainmenu();
+}
+}
+if (mres==6)
+{
+if (kills>=400)
+{
+event("Event: "+name+" wants to play Swimming");
+mg6();
+}
+else
+{
+mainmenu();
+}
+}
+if (mres==7)
+{
+if (kills>=450)
+{
+event("Event: "+name+" wants to play Destroy The Door");
+mg7();
+}
+else
+{
+mainmenu();
+}
+}
+if (mres==8)
+{
+mainmenu();
+}
+}
+void settingsmenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("Enable confirmation to exit?");
+menu.add_item_tts("Enable Logo playing on startup?");
+menu.add_item_tts("Enable saving of event logs?");
+menu.add_item_tts("Change Sound pack");
+menu.add_item_tts("change name.");
+menu.add_item_tts("Change environment");
+menu.add_item_tts("Change Menu Theme");
+menu.add_item_tts("Data Management");
+menu.add_item_tts("Go back");
+mres=menu.run("Settings Menu", true);
+if (mres==0 or mres==9)
+{
+mainmenu();
+return;
+}
+if (mres==1)
+{
+yesorno=input_box("sb", "please enter yes or no");
+yesorno=string_to_lower_case(yesorno);
+if (yesorno=="yes")
+{
+enableyn=1;
+}
+if (yesorno=="no")
+{
+enableyn=0;
+}
+setting.write_number("enableconfirmation", enableyn);
+settingsmenu();
+return;
+}
+if (mres==2)
+{
+yesorno=input_box("sb", "please enter yes or no");
+yesorno=string_to_lower_case(yesorno);
+if (yesorno=="yes")
+{
+enablelogo=1;
+}
+if (yesorno=="no")
+{
+enablelogo=0;
+}
+setting.write_number("enablelogo", enablelogo);
+settingsmenu();
+return;
+}
+if (mres==3)
+{
+yesorno=input_box("sb", "please enter yes or no");
+yesorno=string_to_lower_case(yesorno);
+if (yesorno=="yes")
+{
+enableevents=1;
+}
+if (yesorno=="no")
+{
+enableevents=0;
+}
+setting2.write_number("enableevents", enableevents);
+settingsmenu();
+return;
+}
+if (mres==4)
+{
+spmenu();
+return;
+}
+if (mres==5)
+{
+name=input_box("sb", "please enter your new name.");
+setting.write_string("name", name);
+show_game_window(name+" - Scrolling Battles v "+version);
+settingsmenu();
+return;
+}
+if (mres==6)
+{
+event("Event: "+name+" wants to change the environment.");
+environmentmenu();
+return;
+}
+if (mres==7)
+{
+event("Event: "+name+" wants to change the menu theme.");
+thememenu();
+return;
+}
+if (mres==8)
+{
+datamenu(0);
+}
+}
+void exitmenu()
+{
+int answer=question("sb", "are you sure you wish to exit?");
+if (answer==1)
+{
+close();
+mainmenu();
+}
+else
+{
+return;
+}
+}
+void testspeaks()
+{
+sound testspeakers;
+testspeakers.load("sounds/soundpacks/"+soundpack+"/speakertest.ogg");
+testspeakers.play();
+while (testspeakers.playing)
+{
+if(key_pressed(KEY_RETURN))
+{
+testspeakers.stop();
+return;
+}
+}
+return;
+}
+void weaponmenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("Fists");
+menu.add_item_tts("Knife");
+menu.add_item_tts("Gun");
+menu.add_item_tts("Machine Gun");
+menu.add_item_tts("Pusher");
+menu.add_item_tts("Water Blaster");
+menu.add_item_tts("player helper");
+menu.add_item_tts("Item Grabber");
+menu.add_item_tts("laser");
+menu.add_item_tts("teleporter");
+menu.add_item_tts("grenade launcher");
+menu.add_item_tts("go back");
+mres=menu.run("Weapon Menu", true);
+if (mres==1)
+{
+speak("fists");
+weapon=1;
+return;
+}
+if (mres==2)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/drawknife.ogg", false, false);
+speak("knife");
+weapon=2;
+return;
+}
+if (mres==3)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/drawgun.ogg", false, false);
+speak("gun");
+weapon=3;
+return;
+}
+if (mres==4)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/drawmacgun.ogg", false, false);
+speak("machine gun");
+weapon=4;
+return;
+}
+if (mres==5)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/draw_pusher.ogg", false, false);
+speak("Pusher");
+weapon=5;
+return;
+}
+if (mres==6)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/draw_blaster.ogg", false, false);
+speak("Water Blaster");
+weapon=6;
+return;
+}
+if (mres==7)
+{
+speak("Player Helper");
+weapon=8;
+return;
+}
+if (mres==8)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/draw_grabber.ogg", false, false);
+speak("Item Grabber");
+weapon=7;
+return;
+}
+if (mres==9)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/draw_laser.ogg", false, false);
+speak("Laser Gun");
+weapon=9;
+return;
+}
+if (mres==10)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/drawtele.ogg", false, false);
+speak("Teleporter");
+weapon=10;
+return;
+}
+if (mres==11)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/draw_grenade.ogg", false, false);
+speak("Grenade Launcher");
+weapon=11;
+return;
+}
+if (mres==12)
+{
+return;
+}
+}
+void infomenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.wrap_sound="sounds/soundpacks/"+soundpack+"/menu5.ogg";
+menu.allow_escape=true;
+menu.wrap=true;
+menu.add_item_tts("knife damage. "+knifedamage+" hp. knife range. "+kniferange+" squares.");
+menu.add_item_tts("gun damage. "+gundamage+" hp. gun range. "+gunrange+" squares.");
+menu.add_item_tts("machine gun damage. "+macgundamage+" hp. machine gun range. "+gunrange+" squares.");
+menu.add_item_tts("pusher push amount, "+pusherpos+" squares.");
+menu.add_item_tts("blaster speed, "+blasterspeed+" ms. blaster time, "+blasttime+" ms.");
+menu.add_item_tts("helper speed, "+helperspeed+" ms. helper range, "+helperrange+" squares. helper damage, "+helperdamage+" hp.");
+menu.add_item_tts("laser damage. "+laserdamage+" hp. Laser range. "+laserrange+" squares.");
+menu.add_item_tts("teleporter range. "+telerange+" squares. Teleporter speed. "+telespeed+" MS per square.");
+menu.add_item_tts("grenade hit range. "+grenaderange+" squares. Grenade throw range. "+grenademove+" squares from your position. Grenade Launch explode speed. "+grenadespeed+". Grenade damage. "+grenadedamage+" HP.");
+menu.add_item_tts("You have "+maxchance+" pit chance items.");
+menu.add_item_tts("go back");
+mres=menu.run("Weapon Info Menu", true);
+if (mres==0 or mres==12)
+return;
+}
+void datamenu(int ingame)
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.wrap_sound="sounds/soundpacks/"+soundpack+"/menu5.ogg";
+menu.allow_escape=true;
+menu.wrap=true;
+menu.add_item_tts("clear saved jump time.");
+menu.add_item_tts("clear saved health.");
+menu.add_item_tts("clear saved money.");
+menu.add_item_tts("clear saved weapon ranges");
+menu.add_item_tts("clear saved weapon damages.");
+menu.add_item_tts("clear saved max position");
+menu.add_item_tts("clear saved weapon speeds and times.");
+menu.add_item_tts("clear saved moving speed");
+menu.add_item_tts("clear saved ammo.");
+menu.add_item_tts("clear elper health.");
+menu.add_item_tts("clear saved helper speed.");
+menu.add_item_tts("clear saved helper damage.");
+menu.add_item_tts("clear saved helper range");
+menu.add_item_tts("clear saved laser settings");
+menu.add_item_tts("clear saved teleporter settings");
+menu.add_item_tts("clear saved grenade launcher settings");
+menu.add_item_tts("clear enemy level");
+menu.add_item_tts("Clear safe zone info");
+menu.add_item_tts("clear saved kills");
+menu.add_item_tts("clear saved pit chance items");
+menu.add_item_tts("clear all.");
+menu.add_item_tts("go back");
+mres=menu.run("Data settings Menu.", true);
+if (mres==0)
+{
+if (ingame==0)
+{
+settingsmenu();
+return;
+}
+else
+{
+return;
+}
+}
+if (mres==1)
+{
+speak("OK");
+setting.write_number("jumptime", 600);
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==2)
+{
+speak("OK");
+setting.write_number("playerhealth", 150);
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==3)
+{
+speak("OK");
+setting.remove_value("dollars");
+dollars=0;
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==4)
+{
+setting.write_number("kniferange", 2);
+setting.write_number("gunrange", 6);
+setting.write_number("macgunrange", 8);
+setting.write_number("pusherrange", 4);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==5)
+{
+setting.write_number("knifedamage", 4);
+setting.write_number("gundamage", 8);
+setting.write_number("macgundamage", 8);
+setting.write_number("pusherdamage", 2);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==6)
+{
+setting.write_number("maxpos", 100);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==7)
+{
+setting.write_number("macguntime", 100);
+setting.write_number("blasterspeed", 90);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==8)
+{
+setting.write_number("speedtime", 450);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==9)
+{
+setting.write_number("gunammo", 150);
+setting.write_number("macgunammo", 250);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==10)
+{
+setting.write_number("helperhealth", 500);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==11)
+{
+setting.write_number("helperspeed", 350);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==12)
+{
+setting.write_number("helperdamage", 8);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==13)
+{
+setting.write_number("helperrange", 2);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==14)
+{
+setting2.write_number("batteries", 100);
+setting.write_number("laserdamage", 5);
+setting.write_number("laserrange", 5);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==15)
+{
+setting.write_number("telespeed", 100);
+setting.write_number("telerange", 5);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==16)
+{
+setting.write_number("grenademove", 2);
+setting.write_number("grenaderange", 5);
+setting.write_number("grenadespeed", 100);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==17)
+{
+setting2.remove_value("enemyminhealth");
+setting2.remove_value("enemymaxhealth");
+setting2.remove_value("enemyminspeed");
+setting2.remove_value("enemymaxspeed");
+setting2.remove_value("level");
+enemyminhealth=50;
+enemymaxhealth=100;
+enemyminspeed=600;
+enemymaxspeed=1200;
+level=1;
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==18)
+{
+setting2.write_number("sz1damage", 10);
+setting2.write_number("sz2damage", 10);
+setting2.write_number("sz1maxhealth", 5);
+setting2.write_number("sz2maxhealth", 5);
+setting2.write_number("sz1length", 2);
+setting2.write_number("sz2length", 2);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==19)
+{
+setting.write_number("kills", 0);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==20)
+{
+setting2.write_number("maxchance", 1);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==21)
+{
+setting2.write_number("sz1damage", 10);
+setting2.write_number("sz2damage", 10);
+setting2.write_number("sz1maxhealth", 5);
+setting2.write_number("sz2maxhealth", 5);
+setting2.write_number("sz1length", 2);
+setting2.write_number("sz2length", 2);
+setting2.remove_value("enemyminhealth");
+setting2.remove_value("enemymaxhealth");
+setting2.remove_value("enemyminspeed");
+setting2.remove_value("enemymaxspeed");
+setting2.remove_value("level");
+enemyminhealth=50;
+enemymaxhealth=100;
+enemyminspeed=600;
+enemymaxspeed=1200;
+level=1;
+setting.write_number("telespeed", 5);
+setting.write_number("telerange", 5);
+setting.write_number("laserdamage", 5);
+setting.write_number("laserrange", 5);
+setting.write_number("helperrange", 2);
+setting.write_number("helperspeed", 350);
+setting.write_number("helperdamage", 8);
+setting.write_number("copterdamage", 2);
+setting.write_number("copterspeed", 200);
+setting.write_number("helperhealth", 500);
+setting.write_number("gunammo", 150);
+setting.write_number("macgunammo", 250);
+setting.write_number("speedtime", 450);
+setting.write_number("macguntime", 100);
+setting.write_number("blasterspeed", 90);
+setting.write_number("maxpos", 40);
+setting.remove_value("dollars");
+setting.write_number("playerhealth", 150);
+setting.write_number("jumptime", 600);
+setting.write_number("kniferange", 2);
+setting.write_number("knifedamage", 4);
+setting.write_number("gundamage", 8);
+setting.write_number("macgundamage", 8);
+setting.write_number("pusherdamage", 2);
+setting.write_number("gunrange", 6);
+setting.write_number("macgunrange", 8);
+setting.write_number("pusherrange", 4);
+speak("OK");
+registry();
+datamenu(datavalue);
+return;
+}
+if (mres==22)
+{
+if (ingame==0)
+{
+settingsmenu();
+return;
+}
+else
+{
+return;
+}
+}
+}
+void scatmenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.wrap_sound="sounds/soundpacks/"+soundpack+"/menu5.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=true;
+menu.add_item_tts("player upgrades");
+menu.add_item_tts("weapon store");
+menu.add_item_tts("Safe Zone Store");
+menu.add_item_tts("extras");
+menu.add_item_tts("go back");
+mres=menu.run("Store menu. Select a category.", true);
+if (mres==1)
+{
+playerupgrades();
+return;
+}
+if (mres==2)
+{
+weaponstore();
+return;
+}
+if (mres==3)
+{
+szmenu();
+return;
+}
+if (mres==4)
+{
+extras();
+return;
+}
+if (mres==5 or mres==0)
+{
+return;
+}
+}
+void playerupgrades()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.wrap_sound="sounds/soundpacks/"+soundpack+"/menu5.ogg";
+menu.allow_escape=true;
+menu.wrap=true;
+menu.add_item_tts("upgrade health.");
+menu.add_item_tts("Speed boost.");
+menu.add_item_tts("buy jump time");
+menu.add_item_tts("Buy an item that decreases your chances of falling in a pit.");
+menu.add_item_tts("go back");
+mres=menu.run("Player Upgrades Menu.", true);
+if (mres==0)
+{
+scatmenu();
+return;
+}
+if (mres==1)
+{
+buyhealth();
+playerupgrades();
+return;
+}
+if (mres==2)
+{
+buyspeed();
+playerupgrades();
+return;
+}
+if (mres==3)
+{
+buyjumptime();
+playerupgrades();
+return;
+}
+if (mres==4)
+{
+buychance();
+playerupgrades();
+return;
+}
+if (mres==5)
+{
+scatmenu();
+return;
+}
+}
+void extras()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.wrap_sound="sounds/soundpacks/"+soundpack+"/menu5.ogg";
+menu.allow_escape=true;
+menu.wrap=true;
+menu.add_item_tts("purchase the max position upgrade.");
+menu.add_item_tts("purchase the item grabber weapon number 9. costs 100 dollars. when the item is on the screen, use this to warp that item to your position!");
+menu.add_item_tts("perchase the laser for 500 dollars");
+menu.add_item_tts("perchase the teleporter for 1000 dollars");
+menu.add_item_tts("Buy the advanced hotkeys set for 15000 dollars.");
+menu.add_item_tts("go back");
+mres=menu.run("Extras Menu.", true);
+if (mres==0)
+{
+scatmenu();
+return;
+}
+if (mres==1)
+{
+buymaxpos();
+extras();
+return;
+}
+if (mres==2)
+{
+buygrabber();
+extras();
+return;
+}
+if (mres==3)
+{
+buylaser();
+extras();
+return;
+}
+if (mres==4)
+{
+buyteleport();
+extras();
+return;
+}
+if (mres==5)
+{
+buyhotkey();
+extras();
+return;
+}
+if (mres==6)
+{
+scatmenu();
+return;
+}
+}
+void weaponstore()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.add_music("");
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("Knife");
+menu.add_item_tts("Gun");
+menu.add_item_tts("Machine Gun");
+menu.add_item_tts("Pusher");
+menu.add_item_tts("Water Blaster");
+menu.add_item_tts("player helper");
+menu.add_item_tts("laser");
+menu.add_item_tts("teleporter");
+menu.add_item_tts("Grenade Launcher");
+menu.add_item_tts("go back");
+mres=menu.run("Weapon Store. Select a weapon to upgrade.", true);
+if (mres==0)
+{
+scatmenu();
+return;
+}
+if (mres==1)
+{
+knifestore();
+return;
+}
+if (mres==2)
+{
+gunstore();
+return;
+}
+if (mres==3)
+{
+macgunstore();
+return;
+}
+if (mres==4)
+{
+pusherstore();
+return;
+}
+if (mres==5)
+{
+blasterstore();
+return;
+}
+if (mres==6)
+{
+helperstore();
+return;
+}
+if (mres==7)
+{
+laserstore();
+return;
+}
+if (mres==8)
+{
+telestore();
+return;
+}
+if (mres==9)
+{
+grenadestore();
+return;
+}
+if (mres==10)
+{
+scatmenu();
+return;
+}
+}
+void knifestore()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("knife damage upgrade.");
+menu.add_item_tts("knife range upgrade.");
+menu.add_item_tts("go back");
+mres=menu.run("Knife upgrades menu.", true);
+if (mres==0)
+{
+weaponstore();
+return;
+}
+if (mres==1)
+{
+buyknifedamage();
+knifestore();
+return;
+}
+if (mres==2)
+{
+buykniferange();
+knifestore();
+return;
+}
+if (mres==3)
+{
+weaponstore();
+return;
+}
+}
+void gunstore()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("buy ammo.");
+menu.add_item_tts("gun damage upgrade.");
+menu.add_item_tts("gun range upgrade.");
+menu.add_item_tts("go back");
+mres=menu.run("Gun upgrades menu.", true);
+if (mres==0)
+{
+weaponstore();
+return;
+}
+if (mres==1)
+{
+buygunammo();
+gunstore();
+return;
+}
+if (mres==2)
+{
+buygundamage();
+gunstore();
+return;
+}
+if (mres==3)
+{
+buygunrange();
+gunstore();
+return;
+}
+if (mres==4)
+{
+weaponstore();
+return;
+}
+}
+void macgunstore()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("buy ammo");
+menu.add_item_tts("machine gun damage upgrade.");
+menu.add_item_tts("machine gun range upgrade.");
+menu.add_item_tts("machine gun speed upgrade.");
+menu.add_item_tts("go back");
+mres=menu.run("Machine Gun upgrades menu.", true);
+if (mres==0)
+{
+weaponstore();
+return;
+}
+if (mres==1)
+{
+buymacgunammo();
+macgunstore();
+return;
+}
+if (mres==2)
+{
+buymacgundamage();
+macgunstore();
+return;
+}
+if (mres==3)
+{
+buymacgunrange();
+macgunstore();
+return;
+}
+if (mres==4)
+{
+buymacguntime();
+macgunstore();
+return;
+}
+if (mres==5)
+{
+weaponstore();
+return;
+}
+}
+void pusherstore()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("pusher damage upgrade.");
+menu.add_item_tts("pusher range upgrade.");
+menu.add_item_tts("more push for your pusher.");
+menu.add_item_tts("go back");
+mres=menu.run("Pusher upgrades menu.", true);
+if (mres==0)
+{
+weaponstore();
+return;
+}
+if (mres==1)
+{
+buypusherdamage();
+pusherstore();
+return;
+}
+if (mres==2)
+{
+buypusherrange();
+pusherstore();
+return;
+}
+if (mres==3)
+{
+buypusherpos();
+pusherstore();
+return;
+}
+if (mres==4)
+{
+weaponstore();
+return;
+}
+}
+void blasterstore()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("water blaster speed upgrade.");
+menu.add_item_tts("water blaster damage upgrade.");
+menu.add_item_tts("go back");
+mres=menu.run("Blaster upgrades menu.", true);
+if (mres==0)
+{
+weaponstore();
+return;
+}
+if (mres==1)
+{
+buyblasterspeed();
+blasterstore();
+return;
+}
+if (mres==2)
+{
+buyblasterdamage();
+blasterstore();
+return;
+}
+if (mres==3)
+{
+weaponstore();
+return;
+}
+}
+void helperstore()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("player helper health upgrade.");
+menu.add_item_tts("player helper speed upgrade.");
+menu.add_item_tts("player helper damage upgrade.");
+menu.add_item_tts("player helper range upgrade.");
+menu.add_item_tts("go back");
+mres=menu.run("Helper upgrades menu.", true);
+if (mres==0)
+{
+weaponstore();
+return;
+}
+if (mres==1)
+{
+buyhelperhealth();
+helperstore();
+return;
+}
+if (mres==2)
+{
+buyhelperspeed();
+helperstore();
+return;
+}
+if (mres==3)
+{
+buyhelperdamage();
+helperstore();
+return;
+}
+if (mres==4)
+{
+buyhelperrange();
+helperstore();
+return;
+}
+if (mres==5)
+{
+weaponstore();
+return;
+}
+}
+void laserstore()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("buy batteries.");
+menu.add_item_tts("laser damage upgrade.");
+menu.add_item_tts("laser range upgrade.");
+menu.add_item_tts("go back");
+mres=menu.run("Laser upgrades menu.", true);
+if (mres==0)
+{
+weaponstore();
+return;
+}
+if (mres==1)
+{
+buybatteries();
+laserstore();
+return;
+}
+if (mres==2)
+{
+buylaserdamage();
+laserstore();
+return;
+}
+if (mres==3)
+{
+buylaserrange();
+laserstore();
+return;
+}
+if (mres==4)
+{
+weaponstore();
+return;
+}
+}
+void telestore()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("teleporter range upgrade.");
+menu.add_item_tts("Teleporter speed upgrade.");
+menu.add_item_tts("go back");
+mres=menu.run("Teleport upgrades menu.", true);
+if (mres==0)
+{
+weaponstore();
+return;
+}
+if (mres==1)
+{
+buytelerange();
+telestore();
+return;
+}
+if (mres==2)
+{
+buytelespeed();
+telestore();
+return;
+}
+if (mres==3)
+{
+weaponstore();
+return;
+}
+}
+void grenadestore()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("Buy grenades");
+menu.add_item_tts("grenade range (not how far grenade is launched but the range it hits at when it explodes) upgrade.");
+menu.add_item_tts("grenade range (How far it is launched from your position) upgrade.");
+menu.add_item_tts("Grenade move speed upgrade.");
+menu.add_item_tts("go back");
+mres=menu.run("Grenade Launcher upgrades menu.", true);
+if (mres==0)
+{
+weaponstore();
+return;
+}
+if (mres==1)
+{
+buygrenades();
+grenadestore();
+return;
+}
+if (mres==2)
+{
+buygrenaderange();
+grenadestore();
+return;
+}
+if (mres==3)
+{
+buygrenaderange2();
+grenadestore();
+return;
+}
+if (mres==4)
+{
+buygrenadespeed();
+grenadestore();
+return;
+}
+if (mres==5)
+{
+weaponstore();
+return;
+}
+}
+void povmenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.add_music("");
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.wrap_sound="sounds/soundpacks/"+soundpack+"/menu5.ogg";
+menu.allow_escape=true;
+menu.wrap=true;
+menu.add_item_tts("your point of view");
+menu.add_item_tts("Helper's point of view");
+menu.add_item_tts("Camera");
+menu.add_item_tts("Go back");
+mres=menu.run("Point of View menu.", true);
+if (mres==1)
+{
+playersonar.stop();
+playersonaron=0;
+pov=0;
+return;
+}
+if (mres==2)
+{
+if (helperon==0)
+{
+alert("error", "helper is not active");
+}
+else
+{
+pov=1;
+}
+return;
+}
+if (mres==3)
+{
+povsquare=x;
+pov=3;
+return;
+}
+}
+void spmenu()
+{
+string[] temporary=find_directories("sounds/soundpacks/*");
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+for (uint i=0; i<temporary.length(); i++)
+{
+menu.add_item_tts(temporary[i]);
+}
+menu.add_item_tts("Go back");
+mres=menu.run("Select sound pack menu", true);
+if (mres==0 or mres>temporary.length())
+{
+settingsmenu();
+return;
+}
+if (mres>0 and mres<=temporary.length())
+{
+soundpack=temporary[mres-1];
+setting2.write_string("soundpack", soundpack);
+event("Event: Sound Pack set to "+soundpack+".");
+settingsmenu();
+return;
+}
+}
+void sellmenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.add_music("");
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.wrap_sound="sounds/soundpacks/"+soundpack+"/menu5.ogg";
+menu.allow_escape=true;
+menu.wrap=true;
+menu.add_item_tts("Sell 10 of your max position. Earns you 25 dollars.");
+menu.add_item_tts("Sell 20 of your max position. Earns you 50 dollars.");
+menu.add_item_tts("sell 10 of your gun ammo. Gives you 25 dollars.");
+menu.add_item_tts("sell 20 of your gun ammo. Gives you 50 dollars.");
+menu.add_item_tts("sell 10 of your machine gun ammo. Gives you 25 dollars.");
+menu.add_item_tts("sell 20 of your machine gun ammo. Gives you 50 dollars.");
+menu.add_item_tts("sell 5 grenades for 50 dollars.");
+menu.add_item_tts("sell 10 grenades for 100 dollars.");
+menu.add_item_tts("sell your laser for 500 dollars.");
+menu.add_item_tts("Sell 2 of safe zone 1 size.");
+menu.add_item_tts("Sell 2 of safe zone 2 size.");
+menu.add_item_tts("go back.");
+mres=menu.run("Sell Menu.", true);
+if (mres==0)
+{
+return;
+}
+if (mres==1)
+{
+sellmaxpos();
+sellmenu();
+return;
+}
+if (mres==2)
+{
+sellmaxpos2();
+sellmenu();
+return;
+}
+if (mres==3)
+{
+sellgunammo();
+sellmenu();
+return;
+}
+if (mres==4)
+{
+sellgunammo2();
+sellmenu();
+return;
+}
+if (mres==5)
+{
+sellmacgunammo();
+sellmenu();
+return;
+}
+if (mres==6)
+{
+sellmacgunammo2();
+sellmenu();
+return;
+}
+if (mres==7)
+{
+sellgrenades();
+sellmenu();
+return;
+}
+if (mres==8)
+{
+sellgrenades2();
+sellmenu();
+return;
+}
+if (mres==9)
+{
+selllaser();
+sellmenu();
+return;
+}
+if (mres==10)
+{
+sellsz1size();
+sellmenu();
+return;
+}
+if (mres==11)
+{
+sellsz2size();
+sellmenu();
+return;
+}
+if (mres==12)
+{
+return;
+}
+}
+void szmenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.wrap_sound="sounds/soundpacks/"+soundpack+"/menu5.ogg";
+menu.allow_escape=true;
+menu.wrap=true;
+menu.add_item_tts("Safe zone 1 size upgrade.");
+menu.add_item_tts("Safe zone 2 size upgrade.");
+menu.add_item_tts("upgrade safe zone 1's maximum available health to heal you to.");
+menu.add_item_tts("upgrade safe zone 2's maximum available health to heal you to.");
+menu.add_item_tts("Upgrade safe zone 1's damage it does to an enemy when the enemy hits it.");
+menu.add_item_tts("Upgrade safe zone 2's damage it does to an enemy when the enemy hits it.");
+menu.add_item_tts("Go back");
+mres=menu.run("Safe zone store.", true);
+if (mres==0 or mres==7)
+{
+scatmenu();
+return;
+}
+if (mres==1)
+{
+buysz1size();
+szmenu();
+return;
+}
+if (mres==2)
+{
+buysz2size();
+szmenu();
+return;
+}
+if (mres==3)
+{
+buysz1maxhealth();
+szmenu();
+return;
+}
+if (mres==4)
+{
+buysz2maxhealth();
+szmenu();
+return;
+}
+if (mres==5)
+{
+buysz1damage();
+szmenu();
+return;
+}
+if (mres==6)
+{
+buysz2damage();
+szmenu();
+return;
+}
+}
+void szinfomenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.wrap_sound="sounds/soundpacks/"+soundpack+"/menu5.ogg";
+menu.allow_escape=true;
+menu.wrap=true;
+menu.add_item_tts("Sizes: 1: "+sz1.length+". 2: "+sz2.length);
+menu.add_item_tts("Maximum healths: 1: "+sz1.maxhealth+". 2: "+sz2.maxhealth);
+menu.add_item_tts("Damages: 1: "+sz1.damage+". 2: "+sz2.damage+".");
+mres=menu.run("Safe Zone Info Menu.", true);
+if (mres>=0)
+{
+return;
+}
+}
+void difmenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("normal");
+menu.add_item_tts("advanced");
+menu.add_item_tts("go back");
+mres=menu.run("Select a difficulty level", true);
+if (mres==0 or mres==3)
+{
+mainmenu();
+return;
+}
+if (mres==1)
+{
+advancedmode=0;
+}
+if (mres==2)
+{
+advancedmode=1;
+}
+}
+void infocenter()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("kills: "+kills);
+menu.add_item_tts("Jump time: "+jumptime+" MS");
+menu.add_item_tts("health: "+playerhealth+" HP");
+menu.add_item_tts("Money: "+dollars+" Dollars");
+menu.add_item_tts("Gun ammo: "+gunammo);
+menu.add_item_tts("Machine Gun ammo: "+macgunammo);
+if (lasergot==1)
+{
+menu.add_item_tts("You have the laser.");
+menu.add_item_tts("Laser batteries: "+batteries);
+}
+if (telegot==1)
+{
+menu.add_item_tts("you have the teleporter.");
+}
+menu.add_item_tts("You have "+maxchance+" pit chance items.");
+menu.add_item_tts("You are fighting level "+level+" enemies.");
+menu.add_item_tts("Enemies have a range of "+enemyminhealth+" to "+enemymaxhealth+" hp.");
+menu.add_item_tts("Enemies have a range of "+enemyminspeed+" to "+enemymaxspeed+" ms when moving.");
+mres=menu.run("Information Center. Press enter or escape to exit.", true);
+if (mres>=0)
+{
+mainmenu();
+return;
+}
+}
+void enemymenu()
+{
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("Enemies have a range of "+enemyminhealth+" to "+enemymaxhealth+" hp.");
+menu.add_item_tts("Enemies have a range of "+enemyminspeed+" to "+enemymaxspeed+" ms when moving.");
+menu.add_item_tts("Enemies have a 1 in "+enemymaxchance+" chance of falling in a pit.");
+for (uint i=0; i<enemies.length; i++)
+{
+menu.add_item_tts(enemies[i].name+" is at "+enemies[i].pos+" and has "+enemies[i].health+" HP. His speed is "+enemies[i].speed+" ms per square.");
+}
+mres=menu.run("Enemy Info Menu. Press enter or escape to exit.", true);
+if (mres>=0)
+{
+return;
+}
+}
+void spawnmenu()
+{
+string[] temporary=find_directories("sounds/enemies/*");
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+for (uint i=0; i<temporary.length(); i++)
+{
+menu.add_item_tts(temporary[i]);
+}
+menu.add_item_tts("Go back");
+mres=menu.run("Spawn menu", true);
+if (mres==0 and mres==temporary.length())
+{
+return;
+}
+if (mres>0 and mres<=temporary.length())
+{
+string enemyspawnnumber=input_box("spawn enemy", "Enter how many "+temporary[mres-1]+"'s you want to spawn.");
+int number=string_to_number(enemyspawnnumber);
+for (uint i=0; i<number; i++)
+{
+enemy enemy6(x+random(1,15), random(enemyminhealth,enemymaxhealth), temporary[mres-1]);
+enemies.insert_last(enemy6);
+}
+}
+}
+void environmentmenu()
+{
+string[] temporary=find_directories("sounds/environments/*");
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+for (uint i=0; i<temporary.length(); i++)
+{
+menu.add_item_tts(temporary[i]);
+}
+menu.add_item_tts("Go back");
+mres=menu.run("Select environment menu", true);
+if (mres==0 or mres>temporary.length())
+{
+settingsmenu();
+return;
+}
+if (mres>0 and mres<=temporary.length())
+{
+environment=temporary[mres-1];
+setting2.write_string("environment", environment);
+event("Event: Environment set to "+environment+".");
+settingsmenu();
+return;
+}
+}
+void pitmenu()
+{
+string[] temporary=find_directories("sounds/pits/*");
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+for (uint i=0; i<temporary.length(); i++)
+{
+menu.add_item_tts(temporary[i]);
+}
+menu.add_item_tts("Go back");
+mres=menu.run("Spawn menu", true);
+if (mres==0 or mres==temporary.length())
+{
+return;
+}
+if (mres>0 and mres<=temporary.length())
+{
+pit pit15(x+random(1,15), temporary[mres-1]);
+pits.insert_last(pit15);
+}
+}
+void thememenu()
+{
+string[] temporary=find_directories("sounds/menu themes/*");
+menu.reset(true);
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=true;
+menu.enable_side_scrolling=true;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("");
+menu.allow_escape=true;
+menu.wrap=false;
+for (uint i=0; i<temporary.length(); i++)
+{
+menu.add_item_tts(temporary[i]);
+}
+menu.add_item_tts("Go back");
+mres=menu.run("Select menu theme menu", true);
+if (mres==0 or mres>temporary.length())
+{
+settingsmenu();
+return;
+}
+if (mres>0 and mres<=temporary.length())
+{
+menutheme=temporary[mres-1];
+setting2.write_string("menutheme", menutheme);
+event("Event: Menu Theme set to "+menutheme+".");
+settingsmenu();
+return;
+}
+}
+void trophiescabinet()
+{
+gettrophycount();
+if (totaltrophies==0)
+{
+dlg("You have no trophies.");
+mainmenu();
+}
+menu.reset(true);
+menu.enable_enter=false;
+menu.speak_position_information=true;
+menu.click_at_edge=false;
+menu.enable_home_and_end=true;
+menu.enable_numbers=true;
+menu.enable_left_and_right=false;
+menu.enable_up_and_down=true;
+menu.enable_side_scrolling=false;
+menu.repeat_items_at_edges=false;
+menu.click_sound="sounds/menu themes/"+menutheme+"/menumove"+random(1,10)+".ogg";
+menu.edge_sound="sounds/menu themes/"+menutheme+"/menuedge.ogg";
+menu.enter_sound="sounds/menu themes/"+menutheme+"/menuclose.ogg";
+menu.open_sound="sounds/menu themes/"+menutheme+"/menuopen.ogg";
+menu.add_music("sounds/menu themes/"+menutheme+"/trophymusic.ogg");
+menu.allow_escape=true;
+menu.wrap=false;
+if (trophy1unlocked==1)
+{
+menu.add_item_tts("Earn 500 kills");
+}
+if (trophy2unlocked==1)
+{
+menu.add_item_tts("Earn 1000 kills");
+}
+if (trophy3unlocked==1)
+{
+menu.add_item_tts("Earn 2000 kills");
+}
+if (trophy4unlocked==1)
+{
+menu.add_item_tts("Earn 5000 kills");
+}
+if (trophy5unlocked==1)
+{
+menu.add_item_tts("Fight level 250 enemies");
+}
+if (trophy6unlocked==1)
+{
+menu.add_item_tts("Fight level 500 enemies");
+}
+if (trophy7unlocked==1)
+{
+menu.add_item_tts("Have a total of 10000 dollars");
+}
+if (trophy8unlocked==1)
+{
+menu.add_item_tts("Have a total of 100000 dollars");
+}
+if (trophy9unlocked==1)
+{
+menu.add_item_tts("Have a total of 1000000 dollars");
+}
+if (trophy10unlocked==1)
+{
+menu.add_item_tts("Have a total of 5000000 dollars");
+}
+if (trophy11unlocked==1)
+{
+menu.add_item_tts("Have a total of 10000000 dollars");
+}
+if (trophy12unlocked==1)
+{
+menu.add_item_tts("Obtain 1 minute of jumptime");
+}
+if (trophy13unlocked==1)
+{
+menu.add_item_tts("Obtain 2 minutes of jumptime");
+}
+if (trophy14unlocked==1)
+{
+menu.add_item_tts("Let 25 enemies spawn on the map at once");
+}
+if (trophy15unlocked==1)
+{
+menu.add_item_tts("Let 50 enemies spawn on the map at once");
+}
+if (trophy16unlocked==1)
+{
+menu.add_item_tts("Force 100 enemies to spawn on the map at once");
+}
+if (trophy17unlocked==1)
+{
+menu.add_item_tts("Play scrolling battles late at night");
+}
+if (trophy18unlocked==1)
+{
+menu.add_item_tts("Play scrolling battles in the middle of the day");
+}
+if (trophy19unlocked==1)
+{
+menu.add_item_tts("Play scrolling battles in the morning");
+}
+mres=menu.run("Trophies Cabinet. You have "+totaltrophies+" trophies. Use up and down arrows to navigate. Press escape to close.", true);
+if (mres>=0)
+{
+menu.fade_music(30);
+mainmenu();
+return;
+}
+}

@@ -1,0 +1,8 @@
+0: 
+1: Event:  has started Scrolling Battles! (6-55-26 PM)
+2: event. Version=7.0.0.099. (6-55-26 PM)
+3: Event: Message of the day is Scrolling Battles version 6.9 is the latest at this time! (6-55-26 PM)
+4: Event: mason is using the default Soundpack. (6-55-27 PM)
+5: Event: mason is using the forest (default) environment. (6-55-27 PM)
+6: Event: mason wants to play Minibeep (6-55-32 PM)
+7: Event: mason wants to play Fire Escape (6-55-39 PM)

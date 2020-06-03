@@ -1,0 +1,49 @@
+void positions()
+{
+sz1.place(0, sz1.length-1);
+sz2.place(maxpos-sz2.length, maxpos);
+position_sound_pov(szradarsound1, sz1.finish, 1, 1);
+position_sound_pov(szradarsound2, sz2.start, 1, 1);
+position_sound_pov(playersonar, x, 1, 1);
+position_sound_pov(grenaderoll, grenadepos2, 1, 1);
+position_sound_pov(explode, grenadepos2, 1, 1);
+pool_update_listener_pov();
+position_sound_pov(blaster, blasterpos, 1, 1);
+position_sound_pov(wallblast, blasterpos, 1, 1);
+position_sound_pov(helper, helperpos, 1, 1);
+position_sound_pov(helpergun, helperpos, 1, 1);
+position_sound_pov(helperpain, helperpos, 1, 1);
+position_sound_pov(helperdeath, helperpos, 1, 1);
+position_sound_pov(knifehit, enemypos, 1, 1);
+position_sound_pov(spawn, enemypos, 1, 1);
+}
+void position_sound_pov(sound@ handle, int soundpos, int panstep, int pitchstep)
+{
+if (pov==0)
+{
+position_sound_1d(handle, x, soundpos, panstep, pitchstep);
+}
+else if (pov==1)
+{
+position_sound_1d(handle, helperpos, soundpos, panstep, pitchstep);
+}
+else if (pov==3)
+{
+position_sound_1d(handle, povsquare, soundpos, panstep, pitchstep);
+}
+}
+void pool_update_listener_pov()
+{
+if (pov==0)
+{
+pool.update_listener_1d(x);
+}
+else if (pov==1)
+{
+pool.update_listener_1d(helperpos);
+}
+else if (pov==3)
+{
+pool.update_listener_1d(povsquare);
+}
+}

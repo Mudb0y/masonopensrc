@@ -1,0 +1,17 @@
+0: 
+1: event. Version=9.1.0.127. (4-26-33 PM)
+2: event: mason has 17 trophies (4-26-33 PM)
+3: Event: mason is using the default Soundpack. (4-26-33 PM)
+4: Event: mason is using the Town environment. (4-26-33 PM)
+5: Event. User wants a normal game. (4-26-35 PM)
+6: event: mason has decided to start a new game. (4-26-35 PM)
+7: A hollow pit spawned at 173 (4-26-35 PM)
+8: A hollow pit spawned at 8 (4-26-35 PM)
+9: A hollow pit spawned at 38 (4-26-35 PM)
+10: Event: an enemy (name eloquence) has been spawned at 167 with 300 HP. (4-26-35 PM)
+11: Event: Game loaded! (4-26-35 PM)
+12: Event: an enemy (name Death elf) has been spawned at 168 with 500 HP. (4-26-40 PM)
+13: Event: An item has spawned! (4-26-45 PM)
+14: Event: an enemy (name Death elf) has been spawned at 201 with 500 HP. (4-26-47 PM)
+15: Event: An item has spawned! (4-26-48 PM)
+16: event: mason has decided to exit.

@@ -1,0 +1,116 @@
+int movetime=250;
+int x=0;
+int game1=60000;
+int level=1;
+int game2=1000;
+int gametime2=gametime/1000;
+int gametime=60000;
+int winningpos=200;
+tts_voice tts;
+timer movetimer, gametimer2, gametimer;
+sound win, amb, water, step;
+void main()
+{
+show_game_window("escape the titanic");
+win.load("sounds/amb/win.wav");
+amb.load("sounds/amb/amb.ogg");
+water.load("sounds/amb/water.ogg");
+amb.volume=-5;
+amb.play_looped();
+water.volume=-50;
+water.pan=-50;
+water.play_looped();
+while (true)
+{
+if (key_pressed(KEY_C))
+{
+tts.speak("position "+x);
+}
+if (gametimer2.elapsed>=game2)
+{
+gametime2-=1;
+amb.volume=amb.volume-random(0,2);
+water.volume=water.volume+1;
+water.pan=water.pan+1;
+gametimer2.restart();
+}
+if (gametimer.elapsed>=game1)
+{
+exit();
+}
+if (key_pressed(KEY_RIGHT))
+{
+if (x>=199)
+{
+win.play_wait();
+level+=1;
+alert("Titanic", "Moving on to level"+level+".");
+x=0;
+gametime-=10000;
+gametimer.restart();
+amb.volume=-5;
+water.volume=-50;
+water.pan=-50;
+movetime-=10;
+}
+if (x<=199)
+{
+step.load("sounds/steps/"+random(1,5)+".wav");
+step.stop();
+step.play();
+movetimer.restart();
+x+=1;
+}
+}
+if (key_down(KEY_RIGHT) and movetimer.elapsed>=movetime)
+{
+if (x>=199)
+{
+win.play_wait();
+level+=1;
+alert("Titanic", "Moving on to level"+level+".");
+x=0;
+gametime-=10000;
+gametimer.restart();
+amb.volume=-5;
+water.volume=-50;
+water.pan=-50;
+movetime-=10;
+}
+if (x<=199)
+{
+step.load("sounds/steps/"+random(1,5)+".wav");
+step.stop();
+step.play();
+movetimer.restart();
+x+=1;
+}
+}
+if (key_down(KEY_LEFT) and movetimer.elapsed>=movetime)
+{
+if (x>=1)
+{
+step.load("sounds/steps/"+random(1,5)+".wav");
+step.stop();
+step.play();
+movetimer.restart();
+x-=1;
+}
+}
+if (key_pressed(KEY_T))
+{
+tts.speak("you have "+gametime2+" time left!");
+}
+if (key_pressed(KEY_LEFT))
+{
+if (x>=1)
+{
+step.load("sounds/steps/"+random(1,5)+".wav");
+step.stop();
+step.play();
+movetimer.restart();
+x-=1;
+}
+}
+}
+}

@@ -1,0 +1,25 @@
+string deckey="mtgsb";
+string read_string(string filename)
+{
+file d;
+d.open(filename, "rb");
+string contents=string_decrypt(d.read(), deckey);
+d.close();
+return contents;
+}
+double read_number(string filename)
+{
+file d;
+d.open(filename, "rb");
+string contents=string_decrypt(d.read(), deckey);
+d.close();
+double cont=string_to_number(contents);
+return cont;
+}
+void write(string filename, string data)
+{
+file d;
+d.open(filename, "wb");
+string contents=data;
+d.write(string_encrypt(contents, deckey));
+}

@@ -1,0 +1,15 @@
+0: 
+1: event. Version=8.0.0.111. (1-19-36 AM)
+2: Event: mason is using the default Soundpack. (1-19-36 AM)
+3: Event: mason is using the spaceship 2 environment. (1-19-36 AM)
+4: Event. User wants a normal game. (1-19-38 AM)
+5: event: mason has decided to start a new game. (1-19-38 AM)
+6: A casm pit spawned at 1138 (1-19-39 AM)
+7: A water pit spawned at 302 (1-19-39 AM)
+8: A lava pit spawned at 112 (1-19-39 AM)
+9: Event: a level 4732 enemy (name Giovani) has been spawned at 559 with 7666 HP. (1-19-39 AM)
+10: Event: a level 4732 enemy (name eloquence) has been spawned at 325 with 4884 HP. (1-19-39 AM)
+11: Event: a level 4732 enemy (name Death elf) has been spawned at 488 with 6904 HP. (1-19-39 AM)
+12: Event: a level 4732 enemy (name mason 1) has been spawned at 36 with 8675 HP. (1-19-39 AM)
+13: Event: Game loaded! (1-19-39 AM)
+14: event: mason has decided to exit.

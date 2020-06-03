@@ -1,0 +1,222 @@
+﻿int speedthingy;
+int riflethingy;
+void buygunammo()
+{
+int costs=5;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" points.");
+int amount=string_to_number(howmuch);
+int amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>points)
+{
+alert("error", "you can't afford "+amount+" of this item.");
+}
+else
+{
+points-=amount2;
+gunammo+=amount;
+}
+}
+void buymacgunammo()
+{
+int costs=5;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" points.");
+int amount=string_to_number(howmuch);
+int amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>points)
+{
+alert("error", "you can't afford "+amount+" of this item.");
+}
+else
+{
+points-=amount2;
+macgunammo+=amount;
+}
+}
+void buyrifleammo()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" points.");
+int amount=string_to_number(howmuch);
+int amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>points)
+{
+alert("error", "you can't afford "+amount+" of this item.");
+}
+else
+{
+points-=amount2;
+rifleammo+=amount;
+}
+}
+void buyhealth()
+{
+int costs=1;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" points.");
+int amount=string_to_number(howmuch);
+int amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>points)
+{
+alert("error", "you can't afford "+amount+" of this item.");
+}
+else
+{
+points-=amount2;
+health+=amount;
+}
+}
+void buyspeed()
+{
+int costs=1;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" points.");
+int amount=string_to_number(howmuch);
+int amount2=amount*costs;
+speedthingy=movetime-amount;
+if (amount<=0 or speedthingy<=50)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>points)
+{
+alert("error", "you can't afford "+amount+" of this item.");
+}
+else
+{
+points-=amount2;
+movetime-=amount;
+}
+}
+void buyriflespeed()
+{
+int costs=2;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" points.");
+int amount=string_to_number(howmuch);
+int amount2=amount*costs;
+riflethingy=rifletime-amount;
+if (amount<=0 or riflethingy<=20)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>points)
+{
+alert("error", "you can't afford "+amount+" of this item.");
+}
+else
+{
+points-=amount2;
+rifletime-=amount;
+}
+}
+void buybatdamage()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" points.");
+int amount=string_to_number(howmuch);
+int amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>points)
+{
+alert("error", "you can't afford "+amount+" of this item.");
+}
+else
+{
+points-=amount2;
+batdamage+=amount;
+}
+}
+void buygundamage()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" points.");
+int amount=string_to_number(howmuch);
+int amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>points)
+{
+alert("error", "you can't afford "+amount+" of this item.");
+}
+else
+{
+points-=amount2;
+gundamage+=amount;
+}
+}
+void buymacgundamage()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" points.");
+int amount=string_to_number(howmuch);
+int amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>points)
+{
+alert("error", "you can't afford "+amount+" of this item.");
+}
+else
+{
+points-=amount2;
+macgundamage+=amount;
+}
+}
+void buyrifledamage()
+{
+int costs=20;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" points.");
+int amount=string_to_number(howmuch);
+int amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>points)
+{
+alert("error", "you can't afford "+amount+" of this item.");
+}
+else
+{
+points-=amount2;
+rifledamage+=amount;
+}
+}
+void buyrepairbat()
+{
+if (points<100)
+{
+alert("error", "you cannot afford this item!");
+}
+else if (batbroken==0)
+{
+alert("error", "your bat is in perfectly good shape.");
+}
+else
+{
+points-=100;
+bathits=0;
+batbroken=0;
+alert("success!", "Bat repaired!");
+}
+}

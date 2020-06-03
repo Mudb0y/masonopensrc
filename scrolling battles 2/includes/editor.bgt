@@ -1,0 +1,44 @@
+void editor()
+{
+if (!directory_exists(DIRECTORY_COMMON_APPDATA+"/sb2"))
+{
+alert("error", "no save files found.");
+mainmenu();
+}
+else
+{
+savefile.open(DIRECTORY_COMMON_APPDATA+"/sb2/data.dat", "r");
+string temp=savefile.read();
+if (temp=="" or temp=="0")
+{
+alert("error", "you haven't won the game yet!");
+mainmenu();
+}
+string slotnum=input_box("save file editor", "please enter the slot number you wish to edit.");
+int slot=string_to_number(slotnum);
+if (!file_exists(DIRECTORY_COMMON_APPDATA+"/sb2/savegame"+slot+".sav"))
+{
+alert("error", "nothing saved in this slot.");
+mainmenu();
+}
+else
+{
+savefile.open(DIRECTORY_COMMON_APPDATA+"/sb2/savegame"+slot+".sav", "r");
+string tmp=string_decrypt(savefile.read(), "13849347w1238342b3A93C4mN1GfXyzXcvg423mnIoO19_3Gc");
+string tmp2=input_box("editor", "contents", tmp);
+savefile.close();
+if (tmp2=="")
+{
+mainmenu();
+}
+else
+{
+savefile.open(DIRECTORY_COMMON_APPDATA+"/sb2/savegame"+slot+".sav", "w");
+savefile.write(string_encrypt(tmp2, "13849347w1238342b3A93C4mN1GfXyzXcvg423mnIoO19_3Gc"));
+}
+savefile.close();
+alert("success!", "save file updated!");
+mainmenu();
+}
+}
+}

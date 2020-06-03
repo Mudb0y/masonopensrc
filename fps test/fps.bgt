@@ -1,0 +1,130 @@
+#include "sound_pool_pro.bgt"
+string surface="rock";
+int maxpos=15;
+int maxy=15;
+int runtime;
+int run=12;
+int speedtime;
+int speed=30;
+int movetime=60;
+double x,y;
+sound_pool p;
+timer movetimer;
+tts_voice v;
+void main()
+{
+show_game_window("fps test");
+p.volume_step=0.02;
+p.pan_step=0.04;
+p.play_2d("sounds/ambience/compressor.wav", getpos(x),getpos(y),getpos(6),getpos(5),true);
+p.play_2d("sounds/ambience/conveyor1.wav", getpos(x),getpos(y),getpos(10),getpos(2),true);
+p.play_2d("sounds/ambience/fire.wav", getpos(x),getpos(y),getpos(3),getpos(12),true);
+while (true)
+{
+x=round(x,1);
+y=round(y,1);
+speedtime=movetime-speed-runtime;
+positions();
+if (key_down(KEY_LCONTROL) or key_down(KEY_RCONTROL))
+{
+runtime=run;
+}
+else
+{
+runtime=0;
+}
+if (key_pressed(KEY_C))
+{
+v.speak_interrupt(x+", "+y);
+}
+if (key_pressed(KEY_ESCAPE))
+{
+exit();
+}
+if (key_down(KEY_LEFT) and movetimer.elapsed>=speedtime and x>0)
+{
+movetimer.restart();
+x-=0.1;
+string stx=x;
+if (string_contains(stx, ".", 1)==-1)
+{
+p.play_stationary("sounds/steps/"+surface+"/run"+random(1,9)+".wav", false);
+}
+if (string_contains(stx, ".5", 1)!=-1)
+{
+p.play_stationary("sounds/movement/BMove"+random(1,6)+".wav", false);
+}
+}
+if (key_down(KEY_RIGHT) and movetimer.elapsed>=speedtime and x<maxpos)
+{
+movetimer.restart();
+x+=0.1;
+string stx=x;
+if (string_contains(stx, ".", 1)==-1)
+{
+p.play_stationary("sounds/steps/"+surface+"/run"+random(1,9)+".wav", false);
+}
+if (string_contains(stx, ".5", 1)!=-1)
+{
+p.play_stationary("sounds/movement/BMove"+random(1,6)+".wav", false);
+}
+}
+if (key_down(KEY_UP) and movetimer.elapsed>=speedtime and y<maxy)
+{
+movetimer.restart();
+y+=0.1;
+string sty=y;
+if (string_contains(sty, ".", 1)==-1)
+{
+p.play_stationary("sounds/steps/"+surface+"/run"+random(1,9)+".wav", false);
+}
+if (string_contains(sty, ".5", 1)!=-1)
+{
+p.play_stationary("sounds/movement/BMove"+random(1,6)+".wav", false);
+}
+}
+if (key_down(KEY_DOWN) and movetimer.elapsed>=speedtime and y>0)
+{
+movetimer.restart();
+y-=0.1;
+string sty=y;
+if (string_contains(sty, ".", 1)==-1)
+{
+p.play_stationary("sounds/steps/"+surface+"/run"+random(1,9)+".wav", false);
+}
+if (string_contains(sty, ".5", 1)!=-1)
+{
+p.play_stationary("sounds/movement/BMove"+random(1,6)+".wav", false);
+}
+}
+if (key_down(KEY_LEFT) and movetimer.elapsed>=speedtime+150 and x<=0)
+{
+movetimer.restart();
+p.play_stationary("sounds/movement/wall.wav", false);
+}
+if (key_down(KEY_RIGHT) and movetimer.elapsed>=speedtime+150 and x>=maxpos)
+{
+movetimer.restart();
+p.play_stationary("sounds/movement/wall.wav", false);
+}
+if (key_down(KEY_UP) and movetimer.elapsed>=speedtime+150 and y>=maxy)
+{
+movetimer.restart();
+p.play_stationary("sounds/movement/wall.wav", false);
+}
+if (key_down(KEY_DOWN) and movetimer.elapsed>=speedtime+150 and y<=0)
+{
+movetimer.restart();
+p.play_stationary("sounds/movement/wall.wav", false);
+}
+wait(5);
+}
+}
+void positions()
+{
+p.update_listener_2d(getpos(x),getpos(y));
+}
+double getpos(double pos)
+{
+return pos*100;
+}

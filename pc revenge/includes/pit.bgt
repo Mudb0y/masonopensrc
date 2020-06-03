@@ -1,0 +1,59 @@
+class pit
+{
+int pos;
+bool placed;
+bool occupied;
+sound pitsound;
+pit(int position, string playsound="")
+{
+pos=position;
+pitsound.load(playsound);
+position_sound_1d(pitsound, x, pos, 1, 1);
+pitsound.play_looped();
+placed=true;
+}
+void destroy()
+{
+pitsound.stop();
+pos=-150;
+}
+}
+void checkloop()
+{
+for (uint i=0; i<pits.length(); i++)
+{
+if (pits[i].placed==true)
+{
+position_sound_1d(pits[i].pitsound, x, pits[i].pos, 1, 1);
+if (x==pits[i].pos-2 or x==pits[i].pos-1 or x==pits[i].pos or x==pits[i].pos+1 or x==pits[i].pos+2)
+{
+pits[i].occupied=true;
+}
+else
+{
+pits[i].occupied=false;
+}
+if (x==pits[i].pos and jumping==0)
+{
+dlgplay("sounds/pitfall.ogg");
+reset();
+}
+}
+}
+}
+void playwalksound()
+{
+for (uint i=0; i<pits.length(); i++)
+{
+if (x==pits[i].pos-2 or x==pits[i].pos-1 or x==pits[i].pos or x==pits[i].pos+1 or x==pits[i].pos+2 and stepped==false)
+{
+pool.play_stationary("sounds/p"+random(1,5)+".ogg", false);
+stepped=true;
+}
+else if (pits[i].occupied==false and stepped==false and i>=pits.length()-1)
+{
+pool.play_stationary("sounds/"+random(1,5)+".ogg", false);
+stepped=true;
+}
+}
+}

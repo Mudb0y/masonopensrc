@@ -1,0 +1,7 @@
+0: 
+1: Event:  has started Scrolling Battles! (6-55-48 PM)
+2: event. Version=6.7.0.095. (6-55-48 PM)
+3: Event: mason is using the default Soundpack. (6-55-48 PM)
+4: Event: mason is using the forest (default) environment. (6-55-48 PM)
+5: Event: mason wants to change the environment. (6-55-50 PM)
+6: Event: Environment set to swamp. (6-55-53 PM)

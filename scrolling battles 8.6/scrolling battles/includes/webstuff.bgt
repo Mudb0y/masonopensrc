@@ -1,0 +1,4 @@
+void getruns()
+{
+runs=url_get("http://mtgstudiosus.tk/sb/run.php");
+}

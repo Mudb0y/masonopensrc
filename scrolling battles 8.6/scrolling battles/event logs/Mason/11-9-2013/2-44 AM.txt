@@ -1,0 +1,16 @@
+0: 
+1: event. Version=8.0.0.111. (2-44-19 AM)
+2: Event: mason is using the default Soundpack. (2-44-19 AM)
+3: Event: mason is using the spaceship 2 environment. (2-44-19 AM)
+4: Event. User wants a normal game. (2-44-30 AM)
+5: event: mason has decided to start a new game. (2-44-30 AM)
+6: A hollow pit spawned at 1048 (2-44-31 AM)
+7: A hollow pit spawned at 1237 (2-44-31 AM)
+8: A fire pit spawned at 109 (2-44-31 AM)
+9: Event: a level 5605 enemy (name southerner) has been spawned at 1417 with 6039 HP. (2-44-31 AM)
+10: Event: a level 5605 enemy (name mason 1) has been spawned at 1167 with 6519 HP. (2-44-31 AM)
+11: Event: a level 5605 enemy (name eloquence) has been spawned at 1440 with 10621 HP. (2-44-31 AM)
+12: Event: a level 5605 enemy (name mason 1) has been spawned at 351 with 9210 HP. (2-44-31 AM)
+13: Event: Game loaded! (2-44-31 AM)
+14: Event: a level 5605 enemy (name mason 1) has been spawned at 691 with 9011 HP. (2-44-31 AM)
+15: event: mason has decided to exit.

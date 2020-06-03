@@ -1,0 +1,3 @@
+speed me up! speeds your running up
+where is the crackerjack? tells you at which position the crackerjack is hidden.
+turbolift lets you hit space to get crackerjacks. you will receive 0 points for the turbolifted crackerjacks

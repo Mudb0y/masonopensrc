@@ -1,0 +1,5709 @@
+Engine error from function: bool file_exists(const string&in)
+
+Error: One or more invalid parameters in last call.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 112 (1)
+Function: void dynamic_menu_pro::add_music(string)
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 1826 (1)
+Function: void difmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 234 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::play_looped() const
+
+Error: No valid resource associated.
+
+Call stack size: 6
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 328 (1)
+Function: int dynamic_menu_pro::run_extended(string, bool, int, bool)
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 232 (1)
+Function: int dynamic_menu_pro::run(string, bool)
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 1832 (1)
+Function: void difmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 234 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 291 (1)
+Function: void ehit(int)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 106 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 291 (1)
+Function: void ehit(int)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 106 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 291 (1)
+Function: void ehit(int)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 106 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 291 (1)
+Function: void ehit(int)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 106 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 291 (1)
+Function: void ehit(int)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 106 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 224 (1)
+Function: void ehit(int)
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1155 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 224 (1)
+Function: void ehit(int)
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1155 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 91 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 224 (1)
+Function: void ehit(int)
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1155 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 224 (1)
+Function: void ehit(int)
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1155 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 171 (1)
+Function: void edie(uint, bool = false)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 137 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file_exists(const string&in)
+
+Error: One or more invalid parameters in last call.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 112 (1)
+Function: void dynamic_menu_pro::add_music(string)
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 1902 (1)
+Function: void enemymenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 461 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::play_looped() const
+
+Error: No valid resource associated.
+
+Call stack size: 6
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 328 (1)
+Function: int dynamic_menu_pro::run_extended(string, bool, int, bool)
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 232 (1)
+Function: int dynamic_menu_pro::run(string, bool)
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 1912 (1)
+Function: void enemymenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 461 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::load(const string&in) const
+
+Error: File not found.
+
+Call stack size: 6
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 33 (1)
+Function: enemy::enemy(int, int, string = "")
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 0 (0)
+Function: enemy@ enemy(int, int, string = "")
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 53 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::play() const
+
+Error: No valid resource associated.
+
+Call stack size: 6
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 35 (1)
+Function: enemy::enemy(int, int, string = "")
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 0 (0)
+Function: enemy@ enemy(int, int, string = "")
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 53 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file_exists(const string&in)
+
+Error: One or more invalid parameters in last call.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 112 (1)
+Function: void dynamic_menu_pro::add_music(string)
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 840 (1)
+Function: void scatmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 679 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::play_looped() const
+
+Error: No valid resource associated.
+
+Call stack size: 6
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 328 (1)
+Function: int dynamic_menu_pro::run_extended(string, bool, int, bool)
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 232 (1)
+Function: int dynamic_menu_pro::run(string, bool)
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 848 (1)
+Function: void scatmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 679 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file_exists(const string&in)
+
+Error: One or more invalid parameters in last call.
+
+Call stack size: 6
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 112 (1)
+Function: void dynamic_menu_pro::add_music(string)
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 945 (1)
+Function: void extras()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 866 (1)
+Function: void scatmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 679 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::play_looped() const
+
+Error: No valid resource associated.
+
+Call stack size: 7
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 328 (1)
+Function: int dynamic_menu_pro::run_extended(string, bool, int, bool)
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 232 (1)
+Function: int dynamic_menu_pro::run(string, bool)
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 955 (1)
+Function: void extras()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 866 (1)
+Function: void scatmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 679 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file_exists(const string&in)
+
+Error: One or more invalid parameters in last call.
+
+Call stack size: 7
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 112 (1)
+Function: void dynamic_menu_pro::add_music(string)
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 840 (1)
+Function: void scatmenu()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 958 (1)
+Function: void extras()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 866 (1)
+Function: void scatmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 679 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::play_looped() const
+
+Error: No valid resource associated.
+
+Call stack size: 8
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 328 (1)
+Function: int dynamic_menu_pro::run_extended(string, bool, int, bool)
+
+File: E:\a\projects\games\scrolling battles\includes\m_pro.bgt
+Line: 232 (1)
+Function: int dynamic_menu_pro::run(string, bool)
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 848 (1)
+Function: void scatmenu()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 958 (1)
+Function: void extras()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 866 (1)
+Function: void scatmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 679 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::load(const string&in) const
+
+Error: File not found.
+
+Call stack size: 6
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 33 (1)
+Function: enemy::enemy(int, int, string = "")
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 0 (0)
+Function: enemy@ enemy(int, int, string = "")
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 53 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::play() const
+
+Error: No valid resource associated.
+
+Call stack size: 6
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 35 (1)
+Function: enemy::enemy(int, int, string = "")
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 0 (0)
+Function: enemy@ enemy(int, int, string = "")
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 53 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: No valid resource associated.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 224 (1)
+Function: void ehit(int)
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1155 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 171 (1)
+Function: void edie(uint, bool = false)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 137 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 161 (1)
+Function: void playenemystep(uint)
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 143 (1)
+Function: void echeckloop()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1486 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1602 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1603 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1604 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1605 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1607 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 4
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1610 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool sound::stop() const
+
+Error: Illogical operation.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\includes\enemy.bgt
+Line: 314 (1)
+Function: void destroyallenemies()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1612 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: string file::read(double = 0) const
+
+Error: Invalid operation for this file mode.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1580 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: double file::write(string&in) const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1588 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+
+Engine error from function: bool file::close() const
+
+Error: No valid resource associated.
+
+Call stack size: 5
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1590 (1)
+Function: void saveevent()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 1613 (1)
+Function: void close()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 881 (1)
+Function: void game()
+
+File: E:\a\projects\games\scrolling battles\includes\menu.bgt
+Line: 43 (1)
+Function: void mainmenu()
+
+File: E:\a\projects\games\scrolling battles\sb.bgt
+Line: 212 (1)
+Function: void main()
+
+

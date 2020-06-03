@@ -1,0 +1,190 @@
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy fell into a pit! Ha ha ha!
+3: event: Enemy spawned!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Enemy spawned!
+6: event: Pits have changed.
+7: Event: Enemy fell into a pit! Ha ha ha!
+8: event: Enemy spawned!
+9: event: Pits will change in 3 seconds!
+10: Event: Enemy fell into a pit! Ha ha ha!
+11: event: Enemy spawned!
+12: Event: Enemy fell into a pit! Ha ha ha!
+13: event: Enemy spawned!
+14: Event: Enemy death.
+15: Event: Game loaded successfully!
+16: event: Loading game.
+17: event: Mason has decided to start a new game.
+18: event. User wants an advanced game.
+19: event: going to main screen.
+20: Retrieving message of the day...
+21: Event: Installing keyhook...
+22: event: Checking name...
+23: event: Setting up registry...
+24: event. Version=5.5.0.070.
+25: event. loading started.
+26: 
+0: event: Pits have changed.
+1: event: Pits will change in 3 seconds!
+2: Event: Enemy fell into a pit! Ha ha ha!
+3: event: Enemy spawned!
+4: Event: Enemy death.
+5: event: Pits have changed.
+6: event: Enemy spawned!
+7: event: Pits will change in 3 seconds!
+8: Event: Enemy death.
+9: event: Enemy spawned!
+10: Event: Enemy death.
+11: event: Enemy spawned!
+12: Event: Enemy death.
+13: event: Pits have changed.
+14: event: Pits will change in 3 seconds!
+15: event: Enemy spawned!
+16: Event: Enemy fell into a pit! Ha ha ha!
+17: event: Enemy spawned!
+18: Event: Enemy fell into a pit! Ha ha ha!
+19: event: Enemy spawned!
+20: Event: Enemy death.
+21: Event: Game loaded successfully!
+22: event: Loading game.
+23: event: Mason has decided to start a new game.
+24: event. User wants an advanced game.
+25: event: going to main screen.
+26: Retrieving message of the day...
+27: Event: Installing keyhook...
+28: event: Checking name...
+29: event: Setting up registry...
+30: event. Version=5.5.0.070.
+31: event. loading started.
+32: 
+0: Event: Player helper no longer spawned!
+1: event: Pits have changed.
+2: event: Helper detected an enemy!
+3: Event: Player helper spawned!
+4: event: Pits will change in 3 seconds!
+5: event: Enemy spawned!
+6: Event: Enemy fell into a pit! Ha ha ha!
+7: event: Enemy spawned!
+8: Event: Enemy fell into a pit! Ha ha ha!
+9: event: Enemy spawned!
+10: Event: Enemy fell into a pit! Ha ha ha!
+11: event: Enemy spawned!
+12: Event: Enemy fell into a pit! Ha ha ha!
+13: event: Enemy spawned!
+14: Event: Enemy death.
+15: Event: Game loaded successfully!
+16: event: Loading game.
+17: event: Mason has decided to start a new game.
+18: event. User wants an advanced game.
+19: event: Pits have changed.
+20: event: Pits will change in 3 seconds!
+21: Event: Enemy fell into a pit! Ha ha ha!
+22: event: Enemy spawned!
+23: Event: Enemy death.
+24: event: Pits have changed.
+25: event: Enemy spawned!
+26: event: Pits will change in 3 seconds!
+27: Event: Enemy death.
+28: event: Enemy spawned!
+29: Event: Enemy death.
+30: event: Enemy spawned!
+31: Event: Enemy death.
+32: event: Pits have changed.
+33: event: Pits will change in 3 seconds!
+34: event: Enemy spawned!
+35: Event: Enemy fell into a pit! Ha ha ha!
+36: event: Enemy spawned!
+37: Event: Enemy fell into a pit! Ha ha ha!
+38: event: Enemy spawned!
+39: Event: Enemy death.
+40: Event: Game loaded successfully!
+41: event: Loading game.
+42: event: Mason has decided to start a new game.
+43: event. User wants an advanced game.
+44: event: going to main screen.
+45: Retrieving message of the day...
+46: Event: Installing keyhook...
+47: event: Checking name...
+48: event: Setting up registry...
+49: event. Version=5.5.0.070.
+50: event. loading started.
+51: 
+0: event: Pits have changed.
+1: event: Pits will change in 3 seconds!
+2: event: Enemy spawned!
+3: Event: Enemy death.
+4: event: Pits have changed.
+5: event: Pits will change in 3 seconds!
+6: Event: Player helper killed!
+7: event: Helper detected an enemy!
+8: event: Enemy spawned!
+9: event: Pits have changed.
+10: event: Pits will change in 3 seconds!
+11: event: Helper stop seeing an enemy!
+12: Event: Enemy death.
+13: event: Helper detected an enemy!
+14: event: Enemy spawned!
+15: event: Helper stop seeing an enemy!
+16: Event: Enemy fell into a pit! Ha ha ha!
+17: event: Enemy spawned!
+18: Event: Player helper spawned!
+19: Event: Enemy fell into a pit! Ha ha ha!
+20: event: Enemy spawned!
+21: Event: Enemy death.
+22: Event: Game loaded successfully!
+23: event: Loading game.
+24: event: Mason has decided to start a new game.
+25: event. User wants an advanced game.
+26: Event: Player helper no longer spawned!
+27: event: Pits have changed.
+28: event: Helper detected an enemy!
+29: Event: Player helper spawned!
+30: event: Pits will change in 3 seconds!
+31: event: Enemy spawned!
+32: Event: Enemy fell into a pit! Ha ha ha!
+33: event: Enemy spawned!
+34: Event: Enemy fell into a pit! Ha ha ha!
+35: event: Enemy spawned!
+36: Event: Enemy fell into a pit! Ha ha ha!
+37: event: Enemy spawned!
+38: Event: Enemy fell into a pit! Ha ha ha!
+39: event: Enemy spawned!
+40: Event: Enemy death.
+41: Event: Game loaded successfully!
+42: event: Loading game.
+43: event: Mason has decided to start a new game.
+44: event. User wants an advanced game.
+45: event: Pits have changed.
+46: event: Pits will change in 3 seconds!
+47: Event: Enemy fell into a pit! Ha ha ha!
+48: event: Enemy spawned!
+49: Event: Enemy death.
+50: event: Pits have changed.
+51: event: Enemy spawned!
+52: event: Pits will change in 3 seconds!
+53: Event: Enemy death.
+54: event: Enemy spawned!
+55: Event: Enemy death.
+56: event: Enemy spawned!
+57: Event: Enemy death.
+58: event: Pits have changed.
+59: event: Pits will change in 3 seconds!
+60: event: Enemy spawned!
+61: Event: Enemy fell into a pit! Ha ha ha!
+62: event: Enemy spawned!
+63: Event: Enemy fell into a pit! Ha ha ha!
+64: event: Enemy spawned!
+65: Event: Enemy death.
+66: Event: Game loaded successfully!
+67: event: Loading game.
+68: event: Mason has decided to start a new game.
+69: event. User wants an advanced game.
+70: event: going to main screen.
+71: Retrieving message of the day...
+72: Event: Installing keyhook...
+73: event: Checking name...
+74: event: Setting up registry...
+75: event. Version=5.5.0.070.
+76: event. loading started.
+77: 

@@ -1,0 +1,17 @@
+0: 
+1: event. Version=8.0.0.111. (2-30-05 AM)
+2: Event: mason is using the default Soundpack. (2-30-05 AM)
+3: Event: mason is using the spaceship 2 environment. (2-30-05 AM)
+4: Event. User wants a normal game. (2-30-22 AM)
+5: event: mason has decided to start a new game. (2-30-22 AM)
+6: A lava pit spawned at 107 (2-30-22 AM)
+7: A fire pit spawned at 975 (2-30-22 AM)
+8: A casm pit spawned at 850 (2-30-22 AM)
+9: Event: a level 4733 enemy (name Giovani) has been spawned at 1507 with 7906 HP. (2-30-22 AM)
+10: Event: a level 4733 enemy (name mason 1) has been spawned at 477 with 8136 HP. (2-30-22 AM)
+11: Event: a level 4733 enemy (name samantha) has been spawned at 137 with 5242 HP. (2-30-22 AM)
+12: Event: a level 4733 enemy (name microsoft sam) has been spawned at 471 with 7985 HP. (2-30-22 AM)
+13: Event: Game loaded! (2-30-22 AM)
+14: event: mason just earned the trophy Have a total of 1000000 dollars! (2-30-27 AM)
+15: Event: a level 4733 enemy (name mason 2) has been spawned at 1113 with 4987 HP. (2-30-27 AM)
+16: event: mason has decided to exit.

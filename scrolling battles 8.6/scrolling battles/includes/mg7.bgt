@@ -1,0 +1,88 @@
+int door, door2;
+int wspeed=240;
+int weapondamage=25;
+int doordefhp=50;
+int doorhp=50;
+int doorpos;
+int pos=0;
+int doorlevel=1;
+timer wtim;
+void mg7()
+{
+pos=0;
+totaldollars=0;
+doordefhp=50;
+doorhp=doordefhp;
+doorspawn();
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/dooramb.ogg", true);
+while (true)
+{
+if (key_pressed(KEY_ESCAPE))
+{
+pool.destroy_all();
+dlg("You earned "+totaldollars+" dollars.");
+dollars+=totaldollars;
+registrywrite();
+mgmenu();
+return;
+}
+if (key_pressed(KEY_SPACE))
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/doorknife.ogg", false);
+if (pos>doorpos-1 and pos<=doorpos+1)
+{
+if (doorhp>0)
+{
+door2=pool.play_1d("sounds/soundpacks/"+soundpack+"/doorhit.ogg", pos, doorpos, false);
+doorhp-=weapondamage;
+}
+else if (doorhp<=0)
+{
+pool.play_1d("sounds/soundpacks/"+soundpack+"/doordest.ogg", pos, doorpos, false);
+pool.destroy_sound(door);
+doordefhp+=random(5,15);
+doorhp=doordefhp;
+doorlevel+=1;
+totaldollars+=random(5,15);
+doorspawn();
+}
+}
+}
+if (key_pressed(KEY_D))
+{
+speak("You are on door "+doorlevel+" of 20.");
+}
+if (doorlevel>=20)
+{
+pool.destroy_all();
+dlg("You earned "+totaldollars+" dollars.");
+dollars+=totaldollars;
+registrywrite();
+mgmenu();
+return;
+}
+if (key_down(KEY_LEFT) and wtim.elapsed>=wspeed and pos>0)
+{
+wtim.restart();
+pos-=1;
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/doorstep"+random(1,3)+".ogg", false);
+}
+if (key_down(KEY_RIGHT) and wtim.elapsed>=wspeed and pos<50)
+{
+wtim.restart();
+pos+=1;
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/doorstep"+random(1,3)+".ogg", false);
+}
+mg7positions();
+wait(5);
+}
+}
+void mg7positions()
+{
+pool.update_listener_1d(pos);
+}
+void doorspawn()
+{
+doorpos=random(0,50);
+door=pool.play_1d("sounds/soundpacks/"+soundpack+"/door.ogg", pos, doorpos, true);
+}

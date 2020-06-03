@@ -1,0 +1,38 @@
+int sz1healthspeed=350;
+int sz2healthspeed=350;
+class sz
+{
+int damage=2;
+int healthincrument=2;
+int healthspeed=350;
+int maxhealth;
+int length;
+int bought;
+int start;
+int finish;
+timer healthtimer;
+void place(string szstart, string szfinish)
+{
+start=string_to_number(szstart);
+finish=string_to_number(szfinish);
+}
+}
+void healloop()
+{
+if (x<=sz1.finish and x>=sz1.start)
+{
+if (sz1.healthtimer.elapsed>=sz1healthspeed and playerhealth<sz1.maxhealth)
+{
+sz1.healthtimer.restart();
+playerhealth+=sz1.healthincrument;
+}
+}
+if (x<=sz2.finish and x>=sz2.start)
+{
+if (sz2.healthtimer.elapsed>=sz2healthspeed and playerhealth<sz2.maxhealth)
+{
+sz2.healthtimer.restart();
+playerhealth+=sz2.healthincrument;
+}
+}
+}

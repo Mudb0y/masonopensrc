@@ -1,0 +1,54 @@
+dynamic_menu_pro m;
+void mainmenu()
+{
+reset();
+m.reset(true);
+m.enable_left_and_right=false;
+m.enable_up_and_down=true;
+m.click_sound="sounds/menuclick.ogg";
+m.enter_sound="sounds/menuenter.ogg";
+m.add_music("sounds/menumus.ogg");
+m.add_item("sounds/menu1.ogg", "start");
+m.add_item("sounds/menu2.ogg", "select");
+m.add_item("sounds/menu3.ogg", "exit");
+int mres=m.run("sounds/menu0.ogg", false);
+if (m.get_item_name(mres)=="start")
+{
+m.fade_music(30);
+game();
+}
+if (m.get_item_name(mres)=="select")
+{
+m.fade_music(30);
+roomsmenu();
+}
+if (m.get_item_name(mres)=="exit" or mres==0)
+{
+m.fade_music(30);
+exit();
+}
+}
+void roomsmenu()
+{
+m.reset(true);
+m.enable_left_and_right=false;
+m.enable_up_and_down=true;
+m.click_sound="sounds/menuclick.ogg";
+m.enter_sound="sounds/menuenter.ogg";
+m.add_music("sounds/");
+for (uint i=0; i<maxrooms; i++)
+{
+m.add_item(number_to_words((i+1), false)+".ogg");
+}
+m.add_item("sounds/menu4.ogg");
+int mres=m.run("select a room menu. "+maxrooms+" rooms.", true);
+if (mres<=maxrooms and mres>0)
+{
+room=mres;
+game();
+}
+else if (mres==0 or mres>maxrooms)
+{
+mainmenu();
+}
+}

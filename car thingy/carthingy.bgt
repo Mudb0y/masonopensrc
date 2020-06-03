@@ -1,0 +1,151 @@
+int slowable=0;
+int slowtime=40;
+int pitchtimed=10;
+int pitchtime=30;
+int minpitch=82;
+int maxpitch=180;
+int pantime=40;
+int minpan=-22;
+int maxpan=22;
+int running=0;
+sound music, crash, engine, start, off, horn;
+timer slowtimer, pitchtimer, pantimer;
+void main()
+{
+show_game_window("car thingy");
+music.load("sounds/music.wav");
+crash.load("sounds/crash.wav");
+start.load("sounds/start.wav");
+off.load("sounds/off.wav");
+engine.load("sounds/engine.wav");
+horn.load("sounds/horn.wav");
+music.play_looped();
+while(true)
+{
+wait(5);
+if (key_pressed(KEY_PRIOR))
+{
+music.volume=music.volume+2;
+}
+if (key_pressed(KEY_NEXT))
+{
+music.volume=music.volume-2;
+}
+if (key_pressed(KEY_HOME))
+{
+music.volume=0;
+}
+if (key_pressed(KEY_END))
+{
+music.volume=-50;
+}
+if (slowtimer.elapsed>=slowtime and slowable==1)
+{
+slowtimer.restart();
+if (engine.pitch>minpitch)
+{
+engine.pitch=engine.pitch-1;
+}
+}
+if (key_pressed(KEY_ESCAPE))
+{
+exit();
+}
+if (key_pressed(KEY_SPACE))
+{
+horn.play_looped();
+}
+if (key_released(KEY_SPACE))
+{
+horn.stop();
+}
+if (key_pressed(KEY_RETURN))
+{
+if (running==0)
+{
+start.play_wait();
+engine.play_looped();
+running=1;
+slowable=1;
+}
+else
+{
+engine.stop();
+engine.pitch=100;
+off.play();
+running=0;
+slowable=0;
+}
+}
+if (key_down(KEY_LEFT) and pantimer.elapsed>=pantime and running==1)
+{
+pantimer.restart();
+if (engine.pan>minpan)
+{
+engine.pan=engine.pan-1;
+horn.pan=engine.pan;
+start.pan=engine.pan;
+off.pan=engine.pan;
+}
+else
+{
+engine.pitch=100;
+horn.stop();
+crash.pan=engine.pan;
+engine.stop();
+crash.play_wait();
+engine.pan=0;
+horn.pan=engine.pan;
+start.pan=engine.pan;
+off.pan=engine.pan;
+running=0;
+}
+}
+if (key_down(KEY_RIGHT) and pantimer.elapsed>=pantime and running==1)
+{
+pantimer.restart();
+if (engine.pan<maxpan)
+{
+engine.pan=engine.pan+1;
+horn.pan=engine.pan;
+start.pan=engine.pan;
+off.pan=engine.pan;
+}
+else
+{
+engine.pitch=100;
+horn.stop();
+crash.pan=engine.pan;
+engine.stop();
+crash.play_wait();
+engine.pan=0;
+horn.pan=engine.pan;
+start.pan=engine.pan;
+off.pan=engine.pan;
+running=0;
+}
+}
+if (key_down(KEY_DOWN) and pitchtimer.elapsed>=pitchtimed and running==1)
+{
+slowable=1;
+pitchtimer.restart();
+if (engine.pitch>minpitch)
+{
+engine.pitch=engine.pitch-1;
+}
+}
+if (key_down(KEY_UP) and pitchtimer.elapsed>=pitchtime and running==1)
+{
+slowable=0;
+pitchtimer.restart();
+if (engine.pitch<maxpitch)
+{
+engine.pitch=engine.pitch+1;
+}
+}
+if (key_released(KEY_UP) or key_released(KEY_DOWN))
+{
+slowable=1;
+}
+}
+}

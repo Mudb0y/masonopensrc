@@ -1,0 +1,17 @@
+0: 
+1: event. Version=9.0.0.125. (11-19-18 PM)
+2: event: mason has 1 trophies (11-19-18 PM)
+3: Event: mason is using the default Soundpack. (11-19-18 PM)
+4: Event: mason is using the Town environment. (11-19-18 PM)
+5: Event. User wants a normal game. (11-19-22 PM)
+6: event: mason has decided to start a new game. (11-19-22 PM)
+7: A casm pit spawned at 8 (11-19-22 PM)
+8: A casm pit spawned at 70 (11-19-22 PM)
+9: A hollow pit spawned at 18 (11-19-22 PM)
+10: Event: a level 5 enemy (name mason 1) has been spawned at 41 with 106 HP. (11-19-22 PM)
+11: Event: a level 5 enemy (name alex mackintosh) has been spawned at 23 with 75 HP. (11-19-22 PM)
+12: Event: a level 5 enemy (name mason 2) has been spawned at 42 with 80 HP. (11-19-22 PM)
+13: Event: a level 5 enemy (name microsoft sam) has been spawned at 67 with 103 HP. (11-19-22 PM)
+14: Event: Game loaded! (11-19-22 PM)
+15: Event: a level 5 enemy (name southerner) has been spawned at 28 with 60 HP. (11-19-25 PM)
+16: event: mason has decided to exit.

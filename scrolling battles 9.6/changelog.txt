@@ -1,0 +1,500 @@
+New in 9.6
+Fixed window-eyes launching on sb startup.
+Fixed event log date multiplying.
+New in 9.5
+Tried again to fix event logs randomly appending the date twice.
+Fixed where you couldn't spawn a water pit
+Fixed where money would go into negatives.
+Added enemy and character customizations!
+Added 2d jumping!
+Removed buying of some stuff so people can make customizeable characters.
+Ripped out the old leveling system, in order to implement the new create your own enemy system.
+Attempted to fix the event log date add bug where it kept adding right onto the end of the date.
+Made the data folder go into appdata now. Just copy your existing data folder into there.
+New in 9.0
+Removed data menu. If you want to clear your data, delete the data folder. Until we get a better sollution.
+Changed save data completely to file. As a result, you'll have to restart your stats all over again, but this way it's a lot easier to add stuff.
+Fixed enemies never falling in pits bug (thanks to sam.)
+Removed the errors.log file from compiled scripts, sorry about that folks.
+Added you can make your own characters!
+Fixed event logs! Thanks to my stupidity they didn't work before.
+Changed jumping now you can hold left and right arrows while jumping to move in the air.
+Changed the sounds of the menu to newer and better ones.
+Removed menu themes, as they didn't seem to be very popular or good.
+Changed to the new and improved keyhold menu style. Press a key to move, or hold a key, like the same as in 2dp.
+New in 8.7
+Fixed a bug where the game would not stop the swimming ambience after winning.
+New in 8.6
+Fixed many bugs reported by errors.log file I added.
+Fixed a bug where if you played advanced, then played it again without restarting, a pit would randomly spawn right outside the safe zone with no sound.
+New in 8.5
+Removed all audio forms, resulting in a smaller executable.
+Fixed a few gramatical errors
+Fixed a bug where if you changed your name, the window title wouldn't update to reflect it.
+Removed look menu as it was not even that useful because I haden't updated it since I added it.
+Fixed a bug where pits could spawn in safe zones.
+Fixed another bug where data would not save
+New in 8.4
+Fixed a bug where if you die, you lose your current settings
+New in 8.3
+Updated the menu class, allowing me to add:
+You can no longer hit enter in the trophies cabinet.
+The trophies cabinet is now an up-down menu, with position info.
+you can now press home or end to go to the beginning or end of the menu.
+You can press v to check the music volume.
+and various stability improvements.
+changed the concept of pressing C.
+Added a percent of your position
+New in 8.2
+Fixed a bug where you got the playing late at night trophy infinitely.
+Fixed a bug where you could not disable stopping of event logs.
+New in 8.1
+Removed some not very good stuff from sounds, and shortened some clips and stuff to make sb smaller.
+Fixed some menus going from settings menu to main menu.
+Fixed some menus having the wrong title.
+Fixed a bug where if you had no trophies and clicked the trophy cabinet, it closed the game.
+New in 8.0
+Fixed an event log bug where the minutes which were between 0 and 9 were not precluded with a 0.
+Added the event log tells you how many trophies you have.
+Added so f3 tells you now enemies and pits count.
+Added even more trophies!
+
+Added more trophies.
+Added trophies count in trophies menu.
+
+Started on a trophy system!
+New in 7.8
+Added a few items to the data menu.
+Added a buy jump time item in the store.
+New in 7.7
+Fixed a bug where the menu theme wouldn't load.
+Made southerner enemy louder.
+Fixed a bug that you got all 5 items on the start of the game.
+New in 7.6
+Made the sound pacck selector as a menu now.
+Moved the change environment menu into the settings menu. Also added the change menu theme menu as well.
+Added something called a Menu Theme. This is basically you can set up your menu as a soundscape, or whatever. It's kind of cool.
+Destroy the door: Changed some sounds.
+Destroy the door: Added a key to check how many doors are left.
+New in 7.5
+Added another Enemy.
+Bumped version up from 7.3 to 7.5
+Fixed a bug where the safe zone wouldn't heal you if you were on it's edges.
+Completely redid how the store works. This one's a surprise, but I'm sure you'll love it. Let me know if something with this doesn't work right.
+Fixed some more bugs with enemies.
+Made it so enemies can once again fall in pits. It's still kind of buggy.
+New in 7.2
+Got rid of enter sound in store so you could hear the success or fail sound better.
+Fixed the event:  has started scrolling battles! Thing.
+Added a world runs thing which logs to the server when you run sb. Now we can see how many times sb is ran!
+New in 7.1
+Added a hotkey for checking the time. It's F12. Kind of useful for jfw users who can't check it due to the keyhook. Personally, I'm a time freak.
+Fixed some bugs with times displaying extra 0's and stuff when they weren't supposed to in event logs.
+With sb downloader, Made the game exit if you chose to run the installer.
+Fixed a bug with the sb downloader exiting the game if you chose no.
+New in 7.0
+Implemented the SB downloader into sb. Note, still kind of not how I want it, but it works. You should still get the original downloader.
+Increased max dollars to 10000000.
+Fixed you could buy infinite speed items but yet they would not take effect.
+Increased maximum walking speed slightly.
+Removed some older code, this has no effect on us.
+
+Fixed a bug where games that used steps didn't have them.
+
+Fixed a bug where if you bought or tried to buy the hotkey, you'd be put back in the game after it was bought.
+Added sounds for when items were successfully perchased, or failed.
+Fixed message of the day not working.
+Redesigned the about dialog.
+Added enemy level info to the info center.
+Added messages of the day are now in event logs.
+Got rid of retrieving message of the day message.
+Got rid of the loading message, for now the game loads a lot faster than it used to
+Added more pits
+Fixed a bug where safe zone land sound didn't play.
+New in 6.9
+Changed some stuff with web links, and the sb downloader.
+New in 6.8
+Fixed some bugs
+Added a new minigame!
+Fixed a data loss bug if you went into the data menu and went back out, your data would be reset to what it was last in.
+New in 6.7
+Fixed a bug with exiting.
+Changed the way event logs are saved.
+Changed the event log no longer saves when you hit escape or leave the actual game, but now saves when you exit.
+Added more info to the event logs.
+new in 6.6
+Fixed some bugs with soundpacks. Kind of did this in a hurry, so if some stuff doesn't work right, let me know.
+Added an sb v1 based environment
+Added an SB v3 based environment.
+Lowered volume of ambience on town environment.
+Removed rainforest environment as it was just a copy of forest kind of.
+Finally fixed the environment menu not going back bug.
+new in 6.5
+Added clearing of safe zone to the data menu.
+Fixed some bugs related to the data menu.
+Included some more sound packs.
+new in 6.4
+Added you can spawn any type of pit with the advanced hotkeys set that costs 15000. You may have already bought this, it was available as the enemy hotkey.
+Fixed a few bugs
+
+Added environments, which are basically you can create your own playing field now!
+Added you can now create your own pits!
+Added a special key to spawn as many enemies as you want.
+new in 6.3
+Fixed a bug where enemies played wrong death sounds.
+Fixed a bug where enemies didn't propperly play there sounds.
+Removed the key F10.
+
+Added a hotkey to spawn a specified amount of enemies.
+
+Added a hotkey, you can buy it for 15000, you can spawn any enemy that is in the list of spawnable enemies! Like you could spawn Alex or Mason whenever you wanted to fight them.
+
+Changed now you get as much money as the level enemy you are on when you kill it.
+Added lots more enemies
+
+Finally, added so you can create your own enemies!
+
+Added a lot of new items to event logs.
+Decreased the load time a lot.
+Changed the way event logs were displayed and written. This decreased game size by at least 3 or 4 kb.
+Reversed the order when event logs are saved to a text file. So now the events show as oldest to newest.
+Added an option to disable saving of event logs.
+new in 6.2
+Implimented an enemy leveling system. Note: this has been tested vigorously and seems to work really nicely.
+Fixed a lot of sound issues.
+Fixed some sounds clicking when the cpu was getting heavy.
+New in 6.1
+Due to popular demand, brought back pit chance items!
+Fixed some sound errors with running and hitting walls.
+Stopped machine gun from firing in the safe zones.
+Fixed now speech says Cannot fire in the safe zone for the weapons, rather than just not working.
+
+Changed a few sounds.
+Limited the number of enemies at a time on the map to 50, due to harm of CPU and game lag on slower and even decent machines.
+Increased the maximum money amount to 5000000.
+New in 6.0
+Made game slightly smaller by changing the way povs worked slightly. You won't notice a difference in sound, but you will slightly in size of exe.
+Fixed enemy hitsound would not play propperly in camera and other povs.
+Converted most of alert boxes to virtual alerts.
+Reimplimented randomization of pits.
+
+Fixed now hit sound is played. It's kind of quiet related to guns, but it'll be changed.
+Fixed a few sound-related bugs.
+Fixed items weren't positioning right with points of view
+Fixed a few slight sound bugs with pits.
+Fixed step sounds didn't update propperly when in a different pov.
+
+Fixed the grenade rolling didn't stop when you closed the game.
+Fixed grenade rolling didn't stop when an enemy was hit.
+Added a whole bunch of items to the info center
+
+Fixed you didn't get kills or money for enemies
+Fixed spawn sound always was on center.
+Added an info center menu to the main menu.
+Made it so you can only draw a weapon once like if you draw and try to draw again, it would do nothing
+Made enemies not attack you when you are jumping
+
+Enemies can now attack you!
+
+Fixed grenade launcher!
+Fixed enemies getting in the safe zone
+Fixed issue with sounds not pausing when they should.
+
+Fixed issue When you shoot with the water blaster or other weapons, and switch to another weapon while the launcher is still going, the enemy is automatically hit with the other weapon.
+
+Fixed a lot of bugs.
+Completely redid the enemies!
+
+new in 5.5
+Reimplimented pits with the new class!
+Removed dropping of items. That was buggy and not usefull at all.
+Removed pits. About to make a new pit class thing. Get ready.
+
+made item sounds stop when exiting.
+stopped items from spawning when game pauses.
+Added a few new items
+Fixed item get sound not playing.
+
+Fixed a few weapons in weapons menu where weapons were screwed and mixed around.
+Fixed the bug where the weapon menu didn't have the sounds of drawing weapons.
+Fixed a bug where the go back item in the weapons menu didn't go back, but grabbed the grenade launcher.
+Recoded the item grabber as weapon again!
+Added new logo, again!
+
+Added a key to change your camera's position manually. Hit shift+x.
+Changed menu music
+
+Changed some sounds
+Made music much longer
+Increased the amount of health each perchase of safe zone max health increase gives you. Now you don't have to feel ripped off.
+
+Fixed a bug in settings where go back didn't go back propperly.
+Fixed so if you were using window-eyes not as a primary screen reader, it'll still launch, but once you close it, you'll still have speech from another screen reader. As a drawback, window-eyes is no longer supported by sb.
+Set the default maxpos from 40 to 100
+
+I am no longer shipping the Old Sounds soundpack with SB. Nore am I supporting it.
+Changed message of the day algorithm slightly. They should retrieve much faster.
+
+Fixed bug where if you haden't unlocked any minigames, it closes the game.
+Changed some musics and stuff.
+Hopefully fixed some bugs with ambience.
+Changed version system. Now, I can release patches without doing 5.5.1 or whatever.
+Sped up slightly your running speed.
+Sped up the player helper's maximum enemy chase speed. A lot.
+Fixed camera.
+Added more items!
+Created the new item system, in beta, which allows me to add extra items to the screen and make, like, custom ones!
+Removed old item system, in favor of a new one coming soon!
+Added a safe zone radar beacon. Hit b to turn it on or off. It shows you where the entrances and exits are to all safe zones.
+Added healing to safe zones
+Added a menu that shows info about safe zones. Press Z.
+Reordered weapons back to old 3.x standards.
+Removed copter as it was extremely out of date and thus buggy.
+Added safe zones Still in beta
+new in 5.2
+Added a swimming minigame.
+Added a dice minigame.
+For sure fixed minigame machine.
+new in 5.1.4
+Fixed the bug with the minigame machine.
+new in 5.1.3
+tried to fix runtime errors...
+new in 5.1.2
+fixed for sure menu sounds bug
+new in 5.1.1
+Fixed a bug where enter sound wouldn't play.
+Fixed test speakers.
+new in 5.1
+Brought settings menu as well. Leaving minigames in a dialog because, well, it's easier.
+Brought back main menu instead of dialog because people were yelling about that.
+Fixed a bug where sounds would not work.
+Brought back side scrolling menus instead of up and down ones.
+new in 5.0
+There is another status bar if you are using a beta.
+Version is now shown in event logs and buffers.
+Added more events!
+Added more kill comments.
+Added more health ratings
+Added: Event logs now have items numbered, similar to how they are read in the actual buffer.
+Fixed a bug with the saving of event files.
+Fixed a few more bugs with the new interface.
+Added an event buffer! See readme for details!
+Fixed a bug with the new interface. If you hit go back in settings, it didn't work, but if you hit data management, it went back.
+Added the game recognizes directories put in the sounds folder. This means you can make mods and actually share and use them!
+Converted sounds to unprotected, so you guys can make mods!
+Changed the still existing menus from side scrolling to up and down.
+Decreased the size of the sounds pack, by lowering the quality. You shouldn't notice a difference though.
+Added a new logo
+Bumped the version number up from 4.2 to 5.0.
+Added a message of the day system in place of the update system.
+Completely redesigned the main interface! This allowed me to add the following.
+Mini games that you haven't earned are not shown.
+Fixed that you could not clear your enemy level.
+Fixed a bug with escaping from an info menu in pause menu would unpause you and not actually unpause. Now it just does what the rest of the menus.
+Made it so dropped items, if being dropped in pits, get a special water drop sound.
+Added a drop system. may be buggy. Read the read me for more information.
+made the laser use batteries.
+added more things to sell menu.
+new in 4.1
+fixed anomalies related to playing menu sounds (thanks to NS studios)
+Dramatically increased load time thanks to a magic trick that NS Studios showed me. Wink.
+another attempt of fixing well-known store menues bug, where when clicking go back in the store menu, it would have lead you to another menu you've previously have been in, rather than exiting from menues (thanks to NS studios)
+Added a sell menu. Hit E. (still in beta)
+Added sound packs.
+Changed menu sounds.
+Made walking maximum speed way slower, more realistic.
+Changed running algorithm
+Changed the reel key in audio fishing from shift to control, apparently it interferes with sticky keys.
+Renamed minigames to entertainment center.
+Converted minigames to dlg.
+Changed how enemy's health was reported.
+Updated read me.
+Separated change log from read me.
+Added a key to pause any minigame, P.
+Fixed freezing fishies bug with audio fishing.
+Added a new minigame, Fire escape!
+Added a new minigame. Audio fishing.
+Added an item that can help you walk across pits!
+Made it so enemy can't shoot you a million miles an hour.
+Made the menu sounds don't play a way that the program waits for them to finish (thanks to ns studios)
+made the enemy taunts louder and clearer (thanks to ns studios)
+Made menues not beeing buggy anymore (things such as clicking go back returns you to another menu rather than returning where it should have are now fixed so those cases will not happen anymore) (thanks to ns studios)
+made it so your pusher values save correctly.
+Started implementation of ammo into store.
+Hopefully fixed bug where you fall into a non-existing pit.
+Made the game pause if you go into a menu such as the store, or weapon info, etc.
+Made it so you can hit D to access the data management menu
+Made it so the enemy levels and stuff are saved.
+new in 4.0
+Fixed  bug with data menu.
+Changed a lot of sounds and so it's sounding a lot cooler.
+Limited the minimum times an item can take to spawn, so you can't rack up points and stuff.
+Limited the maximum time an enemy can take to spawn to 20 seconds, so it doesn't get boring.
+Fixed there were 2 helper speed clearing options.
+Added option in main menu that tells you your money and kills!
+Added copter's point of view.
+Removed ammo selecter as people were cheating with it.
+Changed version double to string.
+Fixed weapon menu. It was totally broken.
+Removed check for updates since it was a bit tedious process, and I'm gonna start using installers anyway.
+Changed the gun sound from that horrid clippy thing.
+Made it so the game automatically cleared up entries from older versions. Now, from now on, the game is backwords compatible with itself sort of!
+Made grenades perchaseable in store.
+Added ammo to grenades.
+Changed the musics.
+Shortened menu sounds.
+Changed the way grenades work.
+Fixed a bug with grenade where it hits a dead enemy.
+Fixed some sounds weren't playing when should be.
+Added player sonar for points of view. Hit R to activate.
+Hopefully fixed the sound engine setup entirely!
+fixed a bug with resetting grenade stuff.
+Fixed weapon menu was off center again.
+Added a camera point of view. When in camera pov, hold comma and dot to move your camera back and forth. Hit slash to reset the camera to your position.
+Added point of view mode! Press V to activate the pov menu, and then select one! This should be fun!
+Removed cheats. Mwa haha.
+Sorry, removed taser weapon.
+Changed key of info menu from tab to I, because it interfered with alt+tab.
+added Look menu, accessed with key O.
+Fixed a few more bugs with store.
+added another new weapon.
+fixed where the window title would not change from "beep" to the main game or etc, by removing a simple function.
+Fixed a few issues with earning money in minigames, E.G. It would report the incorrect value of money earned or would say a value but not add it.
+Added easy jumping to the menu items by just pressing keys from 1 to backspace to jump to the menu item from 1 to 13, and right shift+1 - right shift+backspace to jump from item 14 to item 26 (thanks to NS studios).
+Updated the data menu to data management.
+Updated teleporter
+Made it impossible to go past the 0 mark or the max position.
+added a few more things that you can buy to the store.
+Fixed blaster can't give enemy more health.
+Fixed you can't no longer buy your blaster speed down into the negatives.
+Changed the thing from saying water launcher to blaster for consistancy purposes.
+Added teleporter and laser to the weapon menu.
+Got rid of old teleporter and replaced it with a nice teleporter weapon.
+fixed some things in the store.
+upgraded max position in the store. Fwiw.
+renamed a few things in the store to make them more obvious what they are.
+upgraded a few speeds. Move speed, helper speed, copter speed.
+hopefully fixed a bug with enemies not stopping when they were supposed to (E.G when you exited or died or whatever.)
+fixed a bug where if you change your name, your game will just go back to the last thing it was doing.
+new in 3.5
+packed sounds, to 1 make it easier to send out and 2, to stop people from using my sounds. haw, haw. Updates will be lots bigger, though.
+added new store item, teleporter!
+upgraded maximum amount of money
+new in 3.4
+fixed enemy not being quiet when you exited.
+new in 3.3
+fixed a bug with shooting range where when it hit a right wall, and you shot, it would automatically hit the left one.
+added extra lives in shooting range
+changed it so as minibeep goes on, the landed beeps take more health
+added a few nice things to the store
+fixed the whole weapon upgrade menu was off center
+new in 3.2
+fixed pit timer not pausing bug.
+new in 3.1
+made music fade when you clicked options.
+added force update option, for like patches and stuff.
+lowered volumes of some sounds.
+moved max position out of weapon upgrades to extras. Sorry bout that.
+new in 3.0
+fixed now helper is in weapon menu.
+completely redid the store. now has categories!
+added laser, perchasable for 500 dollars.
+rotated weapon set back one so I have more room. basically, accent is fists, 1 is knife, 2 is gun, etc.
+added game tells you if no updates available.
+added check for updates option in main menu.
+added check for updates toggle in settings menu.
+new in 2.91
+rearranged some things so it now shows the window title correctly.
+new in 2.9
+implemented a much nicer check for updates feature
+hopefully fixed a keyhook issue.
+new in 2.8
+added check for updates! Hurray!
+added an option to change your name, in settings.
+added that you need to enter your name now, only one time (maybe for score posting.
+renamed some stuff in the main menu.
+added a boundary thing to the minibeep, so in other words, you can't go to like -200 or whatever and get lost.
+made helper shoot faster.
+added helper range!
+new in 2.7
+fixed if game was paused and user exited, it now unpauses.
+fixed that if the helper was on when you left the game, when you restarted he was invisible. that's fixed.
+fixed bugs with items still spawning in pits.
+changed the helper now follows the player if an enemy is not spawned.
+fixed and added some stuff with the readme.
+fixed some bugs with enemy audio breaking
+added a chance that the enemy will or will not fall in the pit. hit f11 to hear that.
+new in 2.6
+added pit landing sounds.
+added pit boundary sounds.
+fixed minibeep where you can now play more than once per session.
+new in 2.5
+finalized helper speed. max speed is now set definately to 180 when walking.
+made helper be able to push pits off the map. Lol.
+made items fall in pits if they spawned on one.
+made enemies fall in pits randomly.
+made it so pits would randomize every 45 seconds. in addition, gave the user a 3 second warning tone so that the user can ya know, jump.
+made pits less buggy.
+added a fourth pit!
+added 3 pits. they are still buggy.
+added a new minigame, minibeep!
+new in 2.2
+lowered item volume.
+added step sounds for enemy.
+added when helper is chasing an enemy, his pitch increases.
+removed the helper's maximum speed, now it can go as fast as ya like.
+changed helper into a kind of robotic humming thingy. he can still be hurt but he sounds much nicer.
+fixed that you can hit a wall while running to the right more than once, but not the left. now they should, in theory, only hit once anywhere.
+fixed the change log, forgot to add something.
+new in 2.1
+added that you can only hit a wall once.
+put a limmit to 10000 dollars on money. After all, that's plenty.
+put a limmit on the speed things can go. to those who have really fast speeds, sorry, but it's going to go now to the maximum allowed speed rather than what you had it on. Sorry.
+fixed the knife hit sound not playing where it should.
+added or rather fixed, that the enemy now speeds up next time it levels.
+added the total elapsed game time is saved.
+added a few more kill statuses.
+made it so when you hit j and the enemy was dead, it says enemy not spawned.
+new in 2.0
+fixed the side scrolling menu!
+added allow escape to a few menus.
+added a mini game!
+added key to check kills in the entirety of the game's existance on your computer.
+added you can upgrade the copter dammage in the store, and it saves.
+added you can upgrade the copter speed within the store, and it saves.
+added you can press f10 to check player health.
+added that the player helper has health.
+added a lot more things to the settings thing.
+fixed the bugs with pausing.
+added that the helper can get items.
+added you can set master volume now, or in other words, turn the whole game down.
+added the key down arrow to land quickly. note that you must have been in the air for a half a second to be able to come down. it's not that much but it's realistic.
+added the health to the permanant settings.
+added jumping time to permanant settings setup.
+added money to the permant settings setup! May not keep this but we'll see.
+added item grabber to the permanant settings setup thingy! Go buy it and keep it forever! Lol.
+added f9 to check your item count.
+added f7 and f8 to check copter and helper positions.
+removed the key to enable or disable copter shooting, it's now in the options menu.
+added weapon 10, a helper guy.
+added running.
+added some nice options.
+added exit prompt
+completely redid the sounds to make it sound a lot nicer.
+added pause key!
+fixed money not resetting bug.
+Added you can perchase the cheats!
+Added you can clear the cheats in case you lose the file and you must clear it and perchase it again to get it back. Sorry.
+changed cheat algorithm from just that it works to a registry entry.
+added a store!
+Added that you don't have to redraw a weapon anymore when getting an upgrade.
+fixed various bugs.
+new in 1.5
+added and updated the cheats.
+added weapon menu!
+you can still use the number keys though.
+added info menu.
+added f6 for telling enemy position.
+changed control t to t for checking diration due to the key becoming useable again..
+new in 1.1
+added side scrolling menu. Thanks NS Studios, @nikola_stojsic or @nsstudios_co on twitter. use left and right to move, enter or space to select.

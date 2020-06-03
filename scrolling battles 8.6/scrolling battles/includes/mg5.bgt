@@ -1,0 +1,184 @@
+int dice1=0;
+int dice2=0;
+int dicescore;
+int position;
+int results;
+int wife=0;
+int jackpots;
+int computers;
+int houses;
+sound dice, beep1, beep2, step;
+string[] result(6);
+void mg5()
+{
+wait(350);
+speak("Begin.");
+dice2=0;
+houses=0;
+computers=0;
+totaldollars=0;
+position=0;
+dicescore=0;
+dice.load("sounds/soundpacks/"+soundpack+"/diceroll.ogg");
+beep1.load("sounds/soundpacks/"+soundpack+"/dicebeep1.ogg");
+beep2.load("sounds/soundpacks/"+soundpack+"/dicebeep2.ogg");
+while (true)
+{
+if (key_pressed(KEY_ESCAPE))
+{
+dlg("you earned "+totaldollars+" dollars in this game.");
+dollars+=totaldollars;
+registrywrite();
+mgmenu();
+}
+if (key_pressed(KEY_M))
+{
+speak("totaldollars: "+totaldollars);
+}
+if (key_pressed(KEY_S))
+{
+if (dicescore<=0)
+{
+speak(""+dicescore+" points");
+}
+if (dicescore==1)
+{
+speak(""+dicescore+" point");
+}
+if (dicescore>1)
+{
+speak(""+dicescore+" points");
+}
+}
+if (key_pressed(KEY_P))
+{
+speak("position: "+position);
+}
+if (key_pressed(KEY_H))
+{
+if (houses==0)
+{
+speak("no houses");
+}
+if (houses==1)
+{
+speak(""+houses+" house.");
+}
+if (houses>1)
+{
+speak(""+houses+" houses.");
+}
+}
+if (key_pressed(KEY_C))
+{
+if (computers==0)
+{
+speak("no computers");
+}
+if (computers==1)
+{
+speak(computers+" computer.");
+}
+if (computers>1)
+{
+speak(computers+" computers.");
+}
+}
+if (key_pressed(KEY_SPACE))
+{
+dice.play_wait();
+dice1=random(1,6);
+dice2=random(1,6);
+speak("dice are:");
+wait(300);
+beep1.play_wait();
+speak(""+dice1);
+wait(300);
+beep2.play_wait();
+speak(""+dice2);
+wait(300);
+position=position+dice1+dice2;
+checkresult();
+}
+if (totaldollars<=-100)
+{
+speak("You've run out of money! Sorry...");
+wait(3000);
+dlg("you earned "+totaldollars+" dollars.");
+dollars+=totaldollars;
+registrywrite();
+mgmenu();
+}
+if (key_pressed(KEY_J))
+{
+if (jackpots==0)
+{
+speak("no jackpots");
+}
+if (jackpots==1)
+{
+speak(jackpots+" jackpot");
+}
+if (jackpots>=1)
+{
+speak(jackpots+" jackpots");
+}
+}
+if (position>=250)
+{
+dlg("you've beaten dice with a dicescore of "+dicescore+" and "+totaldollars+" dollars!");
+dollars+=totaldollars;
+registrywrite();
+mgmenu();
+}
+}
+}
+void checkresult()
+{
+result[0]="You have killed your friend out of frustration and lose 3 points, and pay a fine of 10 dollars.";
+result[1]="You go to a party and get drunk. Oooooops";
+result[2]="you decide to buy a microphone.";
+result[3]="you buy a house.";
+result[4]="you buy a computer.";
+result[5]="JACKPOT! You earn 50 dollars and 5 points!";
+results=random(0, 5);
+if (results==0)
+{
+speak(result[0]);
+totaldollars-=10;
+dicescore-=3;
+}
+if (results==1)
+{
+speak(result[1]);
+totaldollars-=5;
+dicescore-=5;
+}
+if (results==2)
+{
+speak(result[2]);
+totaldollars-=5;
+dicescore+=3;
+}
+if (results==3)
+{
+speak(result[3]);
+houses+=1;
+totaldollars-=20;
+dicescore+=3;
+}
+if (results==4)
+{
+speak(result[4]);
+totaldollars-=12;
+computers+=1;
+dicescore+=2;
+}
+if (results==5)
+{
+speak(result[5]);
+totaldollars+=50;
+dicescore+=5;
+jackpots+=1;
+}
+}

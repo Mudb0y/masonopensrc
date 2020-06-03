@@ -1,0 +1,38 @@
+turret@[] turrets(0);
+class turret
+{
+int firetime=random(250,340);
+int damage=random(5,15);
+int number=random(1,10);
+int x, y;
+timer firetimer;
+turret(int tx, int ty)
+{
+x=tx;
+y=ty;
+}
+}
+void turretloop()
+{
+for (uint i=0; i<turrets.length(); i++)
+{
+for (uint i2=0; i2<zombies.length(); i2++)
+{
+if (zombies[i2].x>turrets[i].x-10 and zombies[i2].x<turrets[i].x+10 and zombies[i2].y>turrets[i].y-10 and zombies[i2].y<turrets[i].y+10 and turrets[i].firetimer.elapsed>=turrets[i].firetime and zombies[i2].dead==0)
+{
+turrets[i].firetimer.restart();
+p.play_2d("turret"+turrets[i].number+".ogg",me.x,me.y,turrets[i].x,turrets[i].y,false);
+ehit(turrets[i].damage,".9MM Ammo",0,1);
+}
+}
+}
+}
+void spawn_turret(int x, int y)
+{
+turret t1(x,y);
+turrets.insert_last(t1);
+}
+void destroy_all_turrets()
+{
+turrets.resize(0);
+}

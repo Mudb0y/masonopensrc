@@ -1,0 +1,5 @@
+0: 
+1: Event:  has started Scrolling Battles! (6-53 PM)
+2: event. Version=6.7.0.095. (6-53 PM)
+3: Event: mason is using the default Soundpack. (6-53 PM)
+4: Event: mason is using the swimming pool environment. (6-53 PM)

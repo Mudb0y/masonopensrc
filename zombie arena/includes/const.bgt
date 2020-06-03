@@ -1,0 +1,4 @@
+int Left=1;
+int Right=2;
+int Up=3;
+int Down=4;

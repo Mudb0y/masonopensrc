@@ -1,0 +1,249 @@
+#include"number_speaker.bgt"
+#include"sound_pool.bgt"
+number_speaker ns;
+int scoreoption;
+int score=-1;
+int failtime;
+int commandmeasure;
+int command;
+bool succeeded=true;
+sound_pool p;
+int beattime=200;
+int beats;
+int measure;
+int totalscore=-1;
+timer failtimer, beattimer;
+void main()
+{
+ns.prepend="numbers/";
+file f;
+f.open("scoreoption.dat","rb");
+scoreoption=string_to_number(f.read());
+f.close();
+f.open("defaultspeed.dat","rb");
+beattime=string_to_number(f.read());
+f.close();
+f.open("score.dat","rb");
+int hs=string_to_number(string_decrypt(f.read(),"score"));
+f.close();
+f.open("totalscore.dat","rb");
+totalscore=string_to_number(string_decrypt(f.read(),"score"));
+f.close();
+show_game_window("Bop it");
+p.play_stationary("sounds/hs.ogg",false);
+wait(720);
+ns.speak_wait(hs);
+while(true)
+{
+failtime=(beattime*2)+600;
+if (key_pressed(KEY_B) and succeeded==false)
+{
+if (command==1)
+{
+p.play_stationary("sounds/1b.ogg",false);
+succeeded=true;
+beattimer.restart();
+measure=commandmeasure+1;
+beats=1;
+}
+else
+{
+succeeded=false;
+failtimer.force(failtime);
+}
+}
+if (key_pressed(KEY_T) and succeeded==false)
+{
+if (command==3)
+{
+p.play_stationary("sounds/3b.ogg",false);
+succeeded=true;
+beattimer.restart();
+measure=commandmeasure+1;
+beats=1;
+}
+else
+{
+succeeded=false;
+failtimer.force(failtime);
+}
+}
+if (key_pressed(KEY_S) and succeeded==false)
+{
+if (command==4)
+{
+p.play_stationary("sounds/4b.ogg",false);
+succeeded=true;
+beattimer.restart();
+measure=commandmeasure+1;
+beats=1;
+}
+else
+{
+succeeded=false;
+failtimer.force(failtime);
+}
+}
+if (key_pressed(KEY_F) and succeeded==false)
+{
+if (command==5)
+{
+p.play_stationary("sounds/5b.ogg",false);
+succeeded=true;
+beattimer.restart();
+measure=commandmeasure+1;
+beats=1;
+}
+else
+{
+succeeded=false;
+failtimer.force(failtime);
+}
+}
+if (key_pressed(KEY_P) and succeeded==false)
+{
+if (command==2)
+{
+p.play_stationary("sounds/2b.ogg",false);
+succeeded=true;
+beattimer.restart();
+measure=commandmeasure+1;
+beats=1;
+}
+else
+{
+succeeded=false;
+failtimer.force(failtime);
+}
+}
+if (failtimer.elapsed>=failtime and succeeded==false)
+{
+p.play_stationary("sounds/ouch.ogg",false);
+wait(1650);
+playscore();
+exit();
+}
+if (beattimer.elapsed>=beattime)
+{
+beattimer.restart();
+beats+=1;
+if (beats>4)
+{
+beats=1;
+measure+=1;
+}
+checkstuff();
+}
+if (key_pressed(KEY_ESCAPE))
+{
+exit();
+}
+}
+}
+void checkstuff()
+{
+if (beats==1 and measure==0)
+{
+p.play_stationary("sounds/drumkick.ogg",false);
+}
+else if (beats==3 and measure==0)
+{
+p.play_stationary("sounds/drumsnare.ogg",false);
+}
+else if (beats==1 and measure==1)
+{
+p.play_stationary("sounds/drumkick.ogg",false);
+}
+else if (beats==2 and measure==1)
+{
+p.play_stationary("sounds/drumkick.ogg",false);
+}
+else if (beats==3 and measure==1)
+{
+p.play_stationary("sounds/drumsnare.ogg",false);
+}
+else if (beats==4 and measure==1)
+{
+p.play_stationary("sounds/drumkick.ogg",false);
+}
+else if (beats==3 and measure>1)
+{
+p.play_stationary("sounds/drumsnare.ogg",false);
+}
+else if (beats==4 and measure>1)
+{
+p.play_stationary("sounds/drumkick.ogg",false);
+}
+else if (beats==1 and measure>1)
+{
+if (succeeded==true and measure>=commandmeasure+2)
+{
+score+=1;
+totalscore+=1;
+if (beattime>=130)
+beattime-=1;
+command=random(1,5);
+commandmeasure=measure;
+p.play_stationary("sounds/"+command+".ogg",false);
+succeeded=false;
+failtimer.restart();
+}
+}
+}
+void playscore()
+{
+totalscore-=1;
+file f;
+f.open("score.dat","rb");
+int score2=string_to_number(string_decrypt(f.read(),"score"));
+f.close();
+if (score2>=score)
+{
+p.play_stationary("sounds/s.ogg",false);
+wait(800);
+}
+else
+{
+file f;
+f.open("score.dat","wb");
+f.write(string_encrypt(score,"score"));
+f.close();
+p.play_stationary("sounds/hs.ogg",false);
+wait(800);
+}
+f.open("totalscore.dat","wb");
+f.write(string_encrypt(totalscore,"score"));
+f.close();
+int cypher=score;
+if (scoreoption==1)
+{
+while (cypher>0)
+{
+if (cypher>=10)
+{
+cypher-=10;
+p.play_stationary("sounds/3b.ogg",false);
+wait(500);
+}
+else if (cypher>=5 and cypher<10)
+{
+cypher-=5;
+p.play_stationary("sounds/4b.ogg",false);
+wait(400);
+}
+else if (cypher>=1 and cypher<5)
+{
+cypher-=1;
+p.play_stationary("sounds/1c.ogg",false);
+wait(400);
+}
+}
+}
+else
+{
+ns.speak_wait(score);
+}
+p.play_stationary("sounds/totalscore.ogg",false);
+wait(900);
+ns.speak_wait(totalscore);
+}

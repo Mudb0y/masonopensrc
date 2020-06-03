@@ -1,0 +1,4 @@
+New in 3.0
+converted some stuff to pool.
+Removed music.
+Changed from speech to my m class.

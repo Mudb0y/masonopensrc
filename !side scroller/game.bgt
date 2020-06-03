@@ -1,0 +1,432 @@
+#include "sound_positioning.bgt"
+int item4moved=0, item5moved=0, item6moved=0, item7moved=0;
+int flight=0, flytime=25, jumping=0, gun=0, x, item1pos=100, item2pos=200, item3pos=random(5,300), item4pos=random(5,100), item5pos=random(100,200), item6pos=random(200,300), item7pos=random(301,400);
+sound step, item1, item2, item3, item4, item5, item5die, item6, item6die, item7, item7die, jumpup, guntake, fire;
+timer flytimer, item1timer, item2timer, item3timer, item4timer, item5timer, item6timer, item7timer, jumptimer;
+void main()
+{
+show_game_window("side scroller");
+if (screen_reader_is_running(1))
+{
+install_keyhook();
+}
+item1.load("sounds/item1.wav");
+item2.load("sounds/item2.wav");
+item3.load("sounds/item3.wav");
+item4.load("sounds/item4.wav");
+item5.load("sounds/item5.wav");
+item5die.load("sounds/item5die.wav");
+item6.load("sounds/item6.wav");
+item6die.load("sounds/item6die.wav");
+item7.load("sounds/item7.wav");
+item7die.load("sounds/item7die.wav");
+fire.load("sounds/fire.wav");
+guntake.load("sounds/guntake.wav");
+jumpup.load("sounds/jumpup.wav");
+positionsound();
+item1.play_looped();
+item2.play_looped();
+item3.play_looped();
+item4.play_looped();
+item5.play_looped();
+item6.play_looped();
+item7.play_looped();
+game();
+}
+void game()
+{
+while (true)
+{
+if (key_released(KEY_F) or key_released(KEY_D))
+{
+flight=0;
+}
+if (key_down(KEY_F))
+{
+flight=1;
+if (x<=500)
+{
+if (flytimer.elapsed>=flytime)
+{
+if (flight==1)
+{
+x+=1;
+positionsound();
+flytimer.restart();
+}
+}
+}
+}
+if (key_down(KEY_D))
+{
+flight=1;
+if (x>=0)
+{
+if (flytimer.elapsed>=flytime)
+{
+if (flight==1)
+{
+x-=1;
+positionsound();
+flytimer.restart();
+}
+}
+}
+}
+if (x==item3pos)
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+item3.stop();
+guntake.play();
+gun=1;
+item3pos=1000;
+}
+}
+}
+if (x==item5pos)
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+item3.stop();
+item4.stop();
+item5.stop();
+item6.stop();
+item7.stop();
+item5die.play_wait();
+alert("side scroller", "Uh, dood, you're supposed to jump OVER the alarm, not walk THROUGH it.");
+exit();
+}
+}
+}
+if (x==item6pos)
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+item1.stop();
+item2.stop();
+item3.stop();
+item4.stop();
+item5.stop();
+item6.stop();
+item7.stop();
+item6die.play_wait();
+alert("side scroller", "well, you're dumb. You don't get run over, by a car.");
+exit();
+}
+}
+}
+if (x==item7pos)
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+item1.stop();
+item2.stop();
+item3.stop();
+item4.stop();
+item5.stop();
+item6.stop();
+item7.stop();
+item7die.play_wait();
+alert("side scroller", "well I don't blame you, he's an idiot anyway.");
+exit();
+}
+}
+}
+if (item4pos>=100)
+{
+item4moved=1;
+}
+if (item5pos>=200)
+{
+item5moved=1;
+}
+if (item6pos>=300)
+{
+item6moved=1;
+}
+if (item7pos>=400)
+{
+item7moved=1;
+}
+if (item4pos<=0)
+{
+item4moved=0;
+}
+if (item5pos<=101)
+{
+item5moved=0;
+}
+if (item6pos<=201)
+{
+item6moved=0;
+}
+if (item7pos<=301)
+{
+item7moved=0;
+}
+if (item4timer.elapsed>=random(50,200))
+{
+if (item4moved==0)
+{
+item4pos+=2;
+positionsound();
+item4timer.restart();
+}
+if (item4moved==1)
+{
+item4pos-=2;
+positionsound();
+item4timer.restart();
+}
+}
+if (item5timer.elapsed>=random(70,120))
+{
+if (item5moved==0)
+{
+item5pos+=2;
+positionsound();
+item5timer.restart();
+}
+if (x==item5pos)
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+item3.stop();
+item4.stop();
+item5.stop();
+item5die.play_wait();
+alert("side scroller", "Uh, dood, you're supposed to jump OVER the alarm, not walk THROUGH it.");
+exit();
+}
+}
+}
+if (item5moved==1)
+{
+item5pos-=2;
+positionsound();
+item5timer.restart();
+}
+if (x==item5pos)
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+item3.stop();
+item4.stop();
+item5.stop();
+item5die.play_wait();
+alert("side scroller", "Uh, dood, you're supposed to jump OVER the alarm, not walk THROUGH it.");
+exit();
+}
+}
+}
+}
+if (item6timer.elapsed>=random(50,90))
+{
+if (item6moved==0)
+{
+item6pos+=2;
+positionsound();
+item6timer.restart();
+}
+if (x==item6pos)
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+item1.stop();
+item2.stop();
+item3.stop();
+item4.stop();
+item5.stop();
+item6.stop();
+item6die.play_wait();
+alert("side scroller", "well, you're dumb. You don't get run over, by a car.");
+exit();
+}
+}
+}
+if (item6moved==1)
+{
+item6pos-=2;
+positionsound();
+item6timer.restart();
+}
+if (x==item6pos)
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+item1.stop();
+item2.stop();
+item3.stop();
+item4.stop();
+item5.stop();
+item6.stop();
+item7.stop();
+item6die.play_wait();
+alert("side scroller", "well, you're dumb. You don't get run over, by a car.");
+exit();
+}
+}
+}
+}
+if (item7timer.elapsed>=random(30,70))
+{
+if (item7moved==0)
+{
+item7pos+=2;
+positionsound();
+item7timer.restart();
+}
+if (x==item7pos)
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+item1.stop();
+item2.stop();
+item3.stop();
+item4.stop();
+item5.stop();
+item6.stop();
+item7.stop();
+item7die.play_wait();
+alert("side scroller", "well I don't blame you, he's an idiot anyway.");
+exit();
+}
+}
+}
+if (item7moved==1)
+{
+item7pos-=2;
+positionsound();
+item7timer.restart();
+}
+if (x==item7pos)
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+item1.stop();
+item2.stop();
+item3.stop();
+item4.stop();
+item5.stop();
+item6.stop();
+item7.stop();
+item7die.play_wait();
+alert("side scroller", "well I don't blame you, he's an idiot anyway.");
+exit();
+}
+}
+}
+}
+if(key_pressed(KEY_UP))
+{
+if (jumping==0)
+{
+if (flight==0)
+{
+jumptimer.restart();
+jumpup.play();
+jumping=1;
+}
+}
+}
+if (jumping==1 and jumptimer.elapsed>=700)
+{
+jumping=0;
+step.load("sounds/step"+random(1,6)+".wav");
+step.play();
+jumptimer.restart();
+}
+if (key_pressed(KEY_LEFT))
+{
+if (flight==0)
+{
+if (x>=1)
+{
+if (jumping==1)
+{
+x-=1;
+positionsound();
+}
+if (jumping==0)
+{
+step.load("sounds/step"+random(1,6)+".wav");
+step.play();
+x-=1;
+positionsound();
+}
+}
+}
+}
+if (key_pressed(KEY_RIGHT))
+{
+if (flight==0)
+{
+if (x<=500)
+{
+if (jumping==1)
+{
+x+=1;
+positionsound();
+}
+if (jumping==0)
+{
+step.load("sounds/step"+random(1,6)+".wav");
+step.play();
+x+=1;
+positionsound();
+}
+}
+}
+}
+if (key_pressed(KEY_SPACE))
+{
+if (gun==1)
+{
+fire.stop();
+fire.play();
+item5pos-=30;
+item6pos-=30;
+item7pos-=30;
+}
+}
+if (key_pressed(KEY_C))
+{
+alert("side scroller", "your position is "+x+". the gun is at position "+item3pos+". the alarm is at position "+item5pos+". The car is at position "+item6pos+". the mtg robot is at position "+item7pos);
+}
+if (key_pressed(KEY_ESCAPE))
+{
+exit();
+}
+}
+}
+void positionsound()
+{
+position_sound_1d(item1, x, item1pos, 1, 1);
+position_sound_1d(item2, x, item2pos, 1, 1);
+position_sound_1d(item3, x, item3pos, 1, 1);
+position_sound_1d(item4, x, item4pos, 1, 1);
+position_sound_1d(item5, x, item5pos, 1, 1);
+position_sound_1d(item6, x, item6pos, 1, 1);
+position_sound_1d(item7, x, item7pos, 1, 1);
+}

@@ -1,0 +1,279 @@
+int reloadtime;
+int reloading;
+string weapontype;
+int weaponnumber;
+timer firetimer,reloadtimer;
+class wt
+{
+int maxrounds;
+int damage;
+int rounds;
+string shortname;
+string name;
+int ammotype;
+int firetime;
+int reloadtime;
+int range;
+wt(string n,string sn,int mr,int d,int at,int ft,int rt,int rg)
+{
+name=n;
+shortname=sn;
+maxrounds=mr;
+damage=d;
+firetime=ft;
+reloadtime=rt;
+ammotype=at;
+range=rg;
+}
+}
+class pistol
+{
+wt@[] weapons(0);
+void init()
+{
+weapon("GP100","GP100",20,16,0,240,1400,10);
+weapon("glock","glock",15,15,0,260,1400,15);
+}
+void give_eagle()
+{
+weapon("Desert Eagle","eagle",15,10,0,300,800,15);
+}
+void select_weapon()
+{
+if (weapons.length()==0)
+{
+speak("No pistols.");
+}
+else if (weaponnumber<weapons.length())
+{
+changenumber();
+p.play_stationary("draw_"+weapons[weaponnumber].shortname+".ogg",false);
+speak(weapons[weaponnumber].name+" equipped. It has "+weapons[weaponnumber].rounds+" of "+weapons[weaponnumber].maxrounds+" rounds, and you have "+ammo[weapons[weaponnumber].ammotype]+" rounds of "+ammotypes[weapons[weaponnumber].ammotype]+" in reserve.");
+}
+else
+{
+weaponnumber=0;
+p.play_stationary("draw_"+weapons[weaponnumber].shortname+".ogg",false);
+speak(weapons[weaponnumber].name+" equipped. It has "+weapons[weaponnumber].rounds+" of "+weapons[weaponnumber].maxrounds+" rounds, and you have "+ammo[weapons[weaponnumber].ammotype]+" rounds of "+ammotypes[weapons[weaponnumber].ammotype]+" in reserve.");
+}
+}
+void changenumber()
+{
+if (weapontype!="pistol")
+{
+weapontype="pistol";
+weaponnumber=0;
+}
+else
+{
+weaponnumber+=1;
+if (weaponnumber>=weapons.length())
+weaponnumber=0;
+}
+}
+void weapon(string name, string shortname, int maxrounds,int damage,int ammotype,int firetime,int reloadtime,int range)
+{
+wt w1(name,shortname,maxrounds,damage,ammotype,firetime,reloadtime,range);
+weapons.insert_last(w1);
+}
+}
+class shotgun
+{
+wt@[] weapons(0);
+void init()
+{
+}
+void give_benelli()
+{
+weapon("benelli","benelli",8,30,2,240,2000,10);
+}
+void give_spas()
+{
+weapon("SPAS12","spas",9,50,2,290,2000,10);
+}
+void select_weapon()
+{
+if (weapons.length()==0)
+{
+speak("No shotguns.");
+}
+else if (weaponnumber<weapons.length())
+{
+changenumber();
+p.play_stationary("draw_"+weapons[weaponnumber].shortname+".ogg",false);
+speak(weapons[weaponnumber].name+" equipped. It has "+weapons[weaponnumber].rounds+" of "+weapons[weaponnumber].maxrounds+" rounds, and you have "+ammo[weapons[weaponnumber].ammotype]+" rounds of "+ammotypes[weapons[weaponnumber].ammotype]+" in reserve.");
+}
+else
+{
+weaponnumber=0;
+p.play_stationary("draw_"+weapons[weaponnumber].shortname+".ogg",false);
+speak(weapons[weaponnumber].name+" equipped. It has "+weapons[weaponnumber].rounds+" of "+weapons[weaponnumber].maxrounds+" rounds, and you have "+ammo[weapons[weaponnumber].ammotype]+" rounds of "+ammotypes[weapons[weaponnumber].ammotype]+" in reserve.");
+}
+}
+void changenumber()
+{
+if (weapontype!="shotgun")
+{
+weapontype="shotgun";
+weaponnumber=0;
+}
+else
+{
+weaponnumber+=1;
+if (weaponnumber>=weapons.length())
+weaponnumber=0;
+}
+}
+void weapon(string name, string shortname, int maxrounds,int damage,int ammotype,int firetime,int reloadtime,int range)
+{
+wt w1(name,shortname,maxrounds,damage,ammotype,firetime,reloadtime,range);
+weapons.insert_last(w1);
+}
+}
+class melee
+{
+wt@[] weapons(0);
+void init()
+{
+weapon("Knife","knife",0,8,1,200,0,5);
+}
+void init_zombie()
+{
+weapon("claws","claws",0,8,4,450,0,6);
+}
+void give_bat()
+{
+weapon("Baseball Bat","bat",0,8,3,160,0,7);
+}
+void select_weapon()
+{
+if (weapons.length()==0)
+{
+speak("No melee weapons.");
+}
+else if (weaponnumber<weapons.length())
+{
+changenumber();
+p.play_stationary("draw_"+weapons[weaponnumber].shortname+".ogg",false);
+speak(weapons[weaponnumber].name+" equipped.");
+}
+else
+{
+weaponnumber=0;
+p.play_stationary("draw_"+weapons[weaponnumber].shortname+".ogg",false);
+speak(weapons[weaponnumber].name+" equipped.");
+}
+}
+void changenumber()
+{
+if (weapontype!="melee")
+{
+weapontype="melee";
+weaponnumber=0;
+}
+else
+{
+weaponnumber+=1;
+if (weaponnumber>=weapons.length())
+weaponnumber=0;
+}
+}
+void weapon(string name, string shortname, int maxrounds,int damage,int ammotype,int firetime,int reloadtime,int range)
+{
+wt wea1(name,shortname,maxrounds,damage,ammotype,firetime,reloadtime,range);
+weapons.insert_last(wea1);
+}
+}
+void reload_weapon()
+{
+if (weapontype=="pistol" and reloading==0 and ammo[w2.weapons[weaponnumber].ammotype]>0)
+{
+p.play_stationary("reload_"+w2.weapons[weaponnumber].shortname+".ogg",false);
+if (ammo[w2.weapons[weaponnumber].ammotype]<w2.weapons[weaponnumber].maxrounds)
+{
+w2.weapons[weaponnumber].rounds=ammo[w2.weapons[weaponnumber].ammotype];
+}
+else
+{
+w2.weapons[weaponnumber].rounds=w2.weapons[weaponnumber].maxrounds;
+}
+reloadtimer.restart();
+reloading=1;
+reloadtime=w2.weapons[weaponnumber].reloadtime;
+}
+else if (weapontype=="shotgun" and reloading==0 and ammo[w3.weapons[weaponnumber].ammotype]>0)
+{
+p.play_stationary("reload_"+w3.weapons[weaponnumber].shortname+".ogg",false);
+if (ammo[w3.weapons[weaponnumber].ammotype]<w3.weapons[weaponnumber].maxrounds)
+{
+w3.weapons[weaponnumber].rounds=ammo[w3.weapons[weaponnumber].ammotype];
+}
+else
+{
+w3.weapons[weaponnumber].rounds=w3.weapons[weaponnumber].maxrounds;
+}
+reloadtimer.restart();
+reloading=1;
+reloadtime=w3.weapons[weaponnumber].reloadtime;
+}
+}
+void fire_weapon()
+{
+if (weapontype=="pistol" and firetimer.elapsed>=w2.weapons[weaponnumber].firetime and reloading==0)
+{
+if (w2.weapons[weaponnumber].rounds>0)
+{
+firetimer.restart();
+p.play_stationary("fire_"+w2.weapons[weaponnumber].shortname+".ogg",false);
+w2.weapons[weaponnumber].rounds-=1;
+if (ammo[w2.weapons[weaponnumber].ammotype]>0)
+ammo[w2.weapons[weaponnumber].ammotype]-=1;
+ehit(w2.weapons[weaponnumber].damage,ammotypes[w2.weapons[weaponnumber].ammotype],w2.weapons[weaponnumber].range);
+}
+else
+{
+firetimer.restart();
+p.play_stationary("empty_"+w2.weapons[weaponnumber].shortname+".ogg",false);
+}
+}
+if (weapontype=="shotgun" and firetimer.elapsed>=w3.weapons[weaponnumber].firetime and reloading==0)
+{
+if (w3.weapons[weaponnumber].rounds>0)
+{
+firetimer.restart();
+p.play_stationary("fire_"+w3.weapons[weaponnumber].shortname+".ogg",false);
+w3.weapons[weaponnumber].rounds-=1;
+if (ammo[w3.weapons[weaponnumber].ammotype]>0)
+ammo[w3.weapons[weaponnumber].ammotype]-=1;
+ehit(w3.weapons[weaponnumber].damage,ammotypes[w3.weapons[weaponnumber].ammotype],w3.weapons[weaponnumber].range);
+}
+else
+{
+firetimer.restart();
+p.play_stationary("empty_"+w3.weapons[weaponnumber].shortname+".ogg",false);
+}
+}
+if (weapontype=="melee" and firetimer.elapsed>=w1.weapons[weaponnumber].firetime)
+{
+firetimer.restart();
+p.play_stationary("fire_"+w1.weapons[weaponnumber].shortname+".ogg",false);
+ehit(w1.weapons[weaponnumber].damage,ammotypes[w1.weapons[weaponnumber].ammotype],w1.weapons[weaponnumber].range);
+}
+}
+void speak_ammo()
+{
+if (weapontype=="pistol")
+{
+speak(w2.weapons[weaponnumber].rounds+" of "+w2.weapons[weaponnumber].maxrounds+" rounds, and you have "+ammo[w2.weapons[weaponnumber].ammotype]+" rounds of "+ammotypes[w2.weapons[weaponnumber].ammotype]+" in reserve, for your "+w2.weapons[weaponnumber].name);
+}
+if (weapontype=="shotgun")
+{
+speak(w3.weapons[weaponnumber].rounds+" of "+w3.weapons[weaponnumber].maxrounds+" rounds, and you have "+ammo[w3.weapons[weaponnumber].ammotype]+" rounds of "+ammotypes[w3.weapons[weaponnumber].ammotype]+" in reserve, for your "+w3.weapons[weaponnumber].name);
+}
+}
+void clear_weapons()
+{
+w1.weapons.resize(0);
+w2.weapons.resize(0);
+w3.weapons.resize(0);
+}

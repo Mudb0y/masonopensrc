@@ -1,0 +1,17 @@
+0: 
+1: event. Version=9.0.0.125. (10-10-10 PM)
+2: event: Mason has 12 trophies (10-10-11 PM)
+3: Event: Mason is using the default Soundpack. (10-10-11 PM)
+4: Event: Mason is using the forest (default) environment. (10-10-11 PM)
+5: Event. User wants a normal game. (10-10-14 PM)
+6: event: Mason has decided to start a new game. (10-10-14 PM)
+7: A hollow pit spawned at 483 (10-10-14 PM)
+8: A lava pit spawned at 392 (10-10-14 PM)
+9: A casm pit spawned at 538 (10-10-14 PM)
+10: Event: a level 2020 enemy (name samantha) has been spawned at 385 with 3985 HP. (10-10-14 PM)
+11: Event: a level 2020 enemy (name alex mackintosh) has been spawned at 114 with 3332 HP. (10-10-14 PM)
+12: Event: a level 2020 enemy (name microsoft sam) has been spawned at 335 with 2726 HP. (10-10-14 PM)
+13: Event: a level 2020 enemy (name southerner) has been spawned at 378 with 2359 HP. (10-10-14 PM)
+14: Event: Game loaded! (10-10-14 PM)
+15: Event: a level 2020 enemy (name southerner) has been spawned at 44 with 2852 HP. (10-10-17 PM)
+16: event: Mason has decided to exit.

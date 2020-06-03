@@ -1,0 +1,17 @@
+0: 
+1: event. Version=8.0.0.111. (1-23-17 AM)
+2: Event: mason is using the default Soundpack. (1-23-17 AM)
+3: Event: mason is using the spaceship 2 environment. (1-23-17 AM)
+4: Event. User wants a normal game. (1-23-26 AM)
+5: event: mason has decided to start a new game. (1-23-26 AM)
+6: A lava pit spawned at 1261 (1-23-26 AM)
+7: A lava pit spawned at 979 (1-23-26 AM)
+8: A hollow pit spawned at 888 (1-23-26 AM)
+9: Event: a level 4732 enemy (name mason 1) has been spawned at 354 with 5677 HP. (1-23-26 AM)
+10: Event: a level 4732 enemy (name alex mackintosh) has been spawned at 67 with 6646 HP. (1-23-26 AM)
+11: Event: a level 4732 enemy (name microsoft sam) has been spawned at 307 with 7968 HP. (1-23-26 AM)
+12: Event: a level 4732 enemy (name dectalk paul) has been spawned at 1379 with 6888 HP. (1-23-26 AM)
+13: Event: Game loaded! (1-23-26 AM)
+14: event: mason just earned the trophy Obtain 5000 kills! (1-23-30 AM)
+15: Event: a level 4732 enemy (name dectalk paul) has been spawned at 1098 with 7684 HP. (1-23-30 AM)
+16: event: mason has decided to exit.

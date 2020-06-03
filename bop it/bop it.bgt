@@ -1,0 +1,278 @@
+#include"includes/keyhook.bgt"
+#include "includes/m_pro.bgt"
+#include "includes/menu.bgt"
+#include "includes/dlg.bgt"
+#include "includes/dlgplayer.bgt"
+string version="1.0 testing 1";
+string[] commandslist(6);
+int rchoice;
+int autotime=500;
+int autopilot=0;
+string[] commands(6);
+int level=1;
+int maxscore=5;
+int tempscore;
+int musicpitch=100;
+string mode;
+int score;
+int dietime=1000;
+int response;
+int clasiccommands=3;
+int extremecommands=5;
+int advancedcommands=6;
+int maxcommands;
+string sfx="default";
+string vo;
+sound com, start, res, music;
+sound_pool pool;
+timer autotimer, dietimer;
+kh keyhook;
+void main()
+{
+commandslist[0]="bop it";
+commandslist[1]="pull it";
+commandslist[2]="twist it";
+commandslist[3]="spin it";
+commandslist[4]="flick it";
+commandslist[5]="nail it";
+keyhook.install();
+show_game_window("Bop it "+version);
+dlgplay("sounds/music/welcome.ogg", true, 30);
+start.load("sounds/music/start.wav");
+music.load("sounds/music/lev1.wav");
+mainmenu();
+}
+void game()
+{
+gamemenu();
+modemenu();
+if (mode=="vox" or mode=="random")
+{
+vomenu();
+}
+if (vo=="" and mode=="vox" or vo=="" and mode=="random")
+{
+mainmenu();
+}
+dietimer.restart();
+start.play_wait();
+select_command();
+while(true)
+{
+if (dietimer.elapsed>=dietime)
+{
+die();
+}
+if (tempscore>=maxscore)
+{
+levelup();
+}
+if (key_pressed(KEY_ESCAPE))
+{
+stopsounds();
+dlg("you were on level "+level+" and you earned "+score+" points.", "sounds/sfx/ui.ogg");
+mainmenu();
+}
+check_response();
+wait(5);
+}
+}
+void select_command()
+{
+autotimer.restart();
+dietimer.restart();
+int command=random(1,maxcommands);
+if (mode=="vox")
+{
+if (vo!="sr")
+{
+com.load("sounds/vo/"+vo+"/"+command+".wav");
+com.stop();
+com.pitch=musicpitch;
+com.play();
+}
+else
+{
+speak(commandslist[command-1]);
+}
+}
+else if (mode=="beat")
+{
+pool.play_stationary("sounds/sfx/"+sfx+"/"+command+"b.wav", false);
+}
+else if (mode=="random")
+{
+rchoice=random(1,4);
+if (rchoice==1 or rchoice==2)
+{
+com.load("sounds/vo/"+vo+"/"+command+".wav");
+com.stop();
+com.pitch=musicpitch;
+com.play();
+}
+else if (rchoice==3 or rchoice==4)
+{
+pool.play_stationary("sounds/sfx/"+sfx+"/"+command+"b.wav", false);
+}
+}
+music.stop();
+music.pitch=musicpitch;
+music.play();
+response=command;
+}
+void check_response()
+{
+if (autopilot==0)
+{
+if (key_pressed(KEY_DOWN) and dietimer.elapsed<dietime and maxcommands>=1)
+{
+if (response==1)
+{
+dietimer.restart();
+winresponse();
+}
+else
+{
+die();
+}
+}
+if (key_pressed(KEY_LEFT) and dietimer.elapsed<dietime and maxcommands>=2)
+{
+if (response==2)
+{
+dietimer.restart();
+winresponse();
+}
+else
+{
+die();
+}
+}
+if (key_pressed(KEY_RIGHT) and dietimer.elapsed<dietime and maxcommands>=3)
+{
+if (response==3)
+{
+dietimer.restart();
+winresponse();
+}
+else
+{
+die();
+}
+}
+if (key_pressed(KEY_RETURN) and dietimer.elapsed<dietime and maxcommands>=4)
+{
+if (response==4)
+{
+dietimer.restart();
+winresponse();
+}
+else
+{
+die();
+}
+}
+if (key_pressed(KEY_UP) and dietimer.elapsed<dietime and maxcommands>=5)
+{
+if (response==5)
+{
+dietimer.restart();
+winresponse();
+}
+else
+{
+die();
+}
+}
+if (key_pressed(KEY_SPACE) and dietimer.elapsed<dietime and maxcommands>=6)
+{
+if (response==6)
+{
+dietimer.restart();
+winresponse();
+}
+else
+{
+die();
+}
+}
+}
+if (autopilot==1 and autotimer.elapsed>=autotime)
+{
+autotime=random(460,770);
+winresponse();
+autotimer.restart();
+}
+}
+void die()
+{
+music.stop();
+dlgplay("sounds/sfx/"+sfx+"/Die_0"+random(1,2)+".wav");
+dlg("you were on level "+level+" and you earned "+score+" points.", "sounds/sfx/ui.ogg");
+mainmenu();
+}
+void winresponse()
+{
+pool.play_stationary("sounds/sfx/"+sfx+"/"+response+".wav", false);
+tempscore+=1;
+score+=1;
+music.stop();
+music.pitch=musicpitch;
+music.play_wait();
+select_command();
+if (autopilot==1)
+{
+autotimer.restart();
+}
+return;
+}
+void stopsounds()
+{
+pool.destroy_all();
+music.stop();
+com.stop();
+}
+void reset()
+{
+autopilot=0;
+musicpitch=100;
+level=1;
+tempscore=0;
+score=0;
+}
+void levelup()
+{
+level+=1;
+musicpitch+=2;
+dietime-=30;
+tempscore=0;
+maxscore+=2;
+}
+void help(int number)
+{
+string[] gamekey(6);
+gamekey[0]="down arrow";
+gamekey[1]="left arrow";
+gamekey[2]="right arrow";
+gamekey[3]="enter";
+gamekey[4]="up arrow";
+gamekey[5]="space";
+string[] gamesounds(6);
+gamesounds[0]="sounds/sfx/default/1.wav";
+gamesounds[1]="sounds/sfx/default/2.wav";
+gamesounds[2]="sounds/sfx/default/3.wav";
+gamesounds[3]="sounds/sfx/default/4.wav";
+gamesounds[4]="sounds/sfx/default/5.wav";
+gamesounds[5]="sounds/sfx/default/6.wav";
+string[] gamesounds2(6);
+gamesounds2[0]="sounds/sfx/default/1b.wav";
+gamesounds2[1]="sounds/sfx/default/2b.wav";
+gamesounds2[2]="sounds/sfx/default/3b.wav";
+gamesounds2[3]="sounds/sfx/default/4b.wav";
+gamesounds2[4]="sounds/sfx/default/5b.wav";
+gamesounds2[5]="sounds/sfx/default/6b.wav";
+dlg(commands[number-1]+": Key: "+gamekey[number-1]+". Press enter to hear it's sound.", "sounds/sfx/ui.ogg");
+dlgplay(gamesounds[number-1]);
+dlg("press enter to hear it's sound when you are on beat bop mode.", "sounds/sfx/ui.ogg");
+dlgplay(gamesounds2[number-1]);
+}

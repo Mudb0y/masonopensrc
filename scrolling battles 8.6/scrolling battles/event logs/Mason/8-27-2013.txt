@@ -1,0 +1,1039 @@
+0: event: Item spawned!
+1: Enemy Super Slow Down
+2: event: Item retrieved!
+3: event: Enemy spawned!
+4: Event: Enemy death.
+5: event: Enemy spawned!
+6: Event: Enemy fell into a pit! Ha ha ha!
+7: event: Enemy spawned!
+8: event: Item spawned!
+9: Event: Enemy death.
+10: Event: Game loaded successfully!
+11: event: Loading game.
+12: event: Mason has decided to start a new game.
+13: event: going to main screen.
+14: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+15: Retrieving message of the day...
+16: Event: Installing keyhook...
+17: event: Checking name...
+18: event: Setting up registry...
+19: event. Version=5.2.
+20: event. loading started.
+21: 
+0: Event: Enemy fell into a pit! Ha ha ha!
+1: Gun super ammo pack!
+2: event: Item retrieved!
+3: event: Item spawned!
+4: event: Enemy spawned!
+5: event: Item has fallen into a pit!
+6: event: Item spawned!
+7: Event: Enemy death.
+8: Event: Game loaded successfully!
+9: event: Loading game.
+10: event: Mason has decided to start a new game.
+11: event: going to main screen.
+12: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+13: Retrieving message of the day...
+14: Event: Installing keyhook...
+15: event: Checking name...
+16: event: Setting up registry...
+17: event. Version=5.2.
+18: event. loading started.
+19: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy fell into a pit! Ha ha ha!
+3: event: Enemy spawned!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Enemy spawned!
+6: event: Item spawned!
+7: Event: Enemy fell into a pit! Ha ha ha!
+8: event: Enemy spawned!
+9: event: Item spawned!
+10: Event: Enemy death.
+11: Event: Game loaded successfully!
+12: event: Loading game.
+13: event: Mason has decided to start a new game.
+14: event: going to main screen.
+15: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+16: Retrieving message of the day...
+17: Event: Installing keyhook...
+18: event: Checking name...
+19: event: Setting up registry...
+20: event. Version=5.2.
+21: event. loading started.
+22: 
+0: event: Pits have changed.
+1: event: Pits will change in 3 seconds!
+2: event: Pits have changed.
+3: event: Pits will change in 3 seconds!
+4: event: Enemy spawned!
+5: Event: Enemy fell into a pit! Ha ha ha!
+6: event: Enemy spawned!
+7: Event: Enemy fell into a pit! Ha ha ha!
+8: event: Enemy spawned!
+9: Event: Enemy fell into a pit! Ha ha ha!
+10: event: Enemy spawned!
+11: event: Item spawned!
+12: Event: Enemy death.
+13: Event: Game loaded successfully!
+14: event: Loading game.
+15: event: Mason has decided to start a new game.
+16: event: going to main screen.
+17: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+18: Retrieving message of the day...
+19: Event: Installing keyhook...
+20: event: Checking name...
+21: event: Setting up registry...
+22: event. Version=5.2.
+23: event. loading started.
+24: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: event: Item spawned!
+3: Event: Enemy fell into a pit! Ha ha ha!
+4: event: Item has fallen into a pit!
+5: event: Pits have changed.
+6: event: Pits will change in 3 seconds!
+7: event: Item spawned!
+8: event: Item has fallen into a pit!
+9: event: Item spawned!
+10: event: Item spawned!
+11: Enemy Super Stun!
+12: event: Item retrieved!
+13: event: Enemy spawned!
+14: event: Item spawned!
+15: Event: Enemy fell into a pit! Ha ha ha!
+16: event: Enemy spawned!
+17: event: Item has fallen into a pit!
+18: event: Pits have changed.
+19: Event: Enemy fell into a pit! Ha ha ha!
+20: event: Enemy spawned!
+21: event: Pits will change in 3 seconds!
+22: Event: Enemy fell into a pit! Ha ha ha!
+23: event: Enemy spawned!
+24: Event: Enemy fell into a pit! Ha ha ha!
+25: event: Enemy spawned!
+26: Event: Enemy fell into a pit! Ha ha ha!
+27: event: Item spawned!
+28: event: Enemy spawned!
+29: Event: Enemy fell into a pit! Ha ha ha!
+30: event: Enemy spawned!
+31: event: Item has fallen into a pit!
+32: event: Item spawned!
+33: Event: Enemy fell into a pit! Ha ha ha!
+34: event: Enemy spawned!
+35: Super health superboost!
+36: event: Item retrieved!
+37: event: Item spawned!
+38: Event: Enemy fell into a pit! Ha ha ha!
+39: event: Enemy spawned!
+40: Event: Enemy fell into a pit! Ha ha ha!
+41: event: Enemy spawned!
+42: event: Item spawned!
+43: Event: Enemy fell into a pit! Ha ha ha!
+44: event: Enemy spawned!
+45: Event: Enemy fell into a pit! Ha ha ha!
+46: event: Enemy spawned!
+47: Event: Enemy fell into a pit! Ha ha ha!
+48: event: Enemy spawned!
+49: Event: Enemy fell into a pit! Ha ha ha!
+50: event: Enemy spawned!
+51: event: Pits have changed.
+52: event: Pits will change in 3 seconds!
+53: Event: Enemy fell into a pit! Ha ha ha!
+54: event: Enemy spawned!
+55: event: Item spawned!
+56: Event: Enemy fell into a pit! Ha ha ha!
+57: event: Enemy spawned!
+58: event: Item has fallen into a pit!
+59: event: Item spawned!
+60: Event: Enemy fell into a pit! Ha ha ha!
+61: event: Item retrieved!
+62: event: Enemy spawned!
+63: event: Item spawned!
+64: Event: Enemy fell into a pit! Ha ha ha!
+65: event: Enemy spawned!
+66: More Jump time!
+67: event: Item retrieved!
+68: event: Item spawned!
+69: Event: Enemy fell into a pit! Ha ha ha!
+70: event: Enemy spawned!
+71: Item spawns much faster!
+72: event: Item retrieved!
+73: Event: Enemy fell into a pit! Ha ha ha!
+74: event: Enemy spawned!
+75: Event: Enemy fell into a pit! Ha ha ha!
+76: event: Enemy spawned!
+77: event: Item spawned!
+78: Event: Enemy death.
+79: Event: Game loaded successfully!
+80: event: Loading game.
+81: event: Mason has decided to start a new game.
+82: event: going to main screen.
+83: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+84: Retrieving message of the day...
+85: Event: Installing keyhook...
+86: event: Checking name...
+87: event: Setting up registry...
+88: event. Version=5.2.
+89: event. loading started.
+90: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy fell into a pit! Ha ha ha!
+3: event: Enemy spawned!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Enemy spawned!
+6: Event: Enemy fell into a pit! Ha ha ha!
+7: event: Pits have changed.
+8: event: Pits will change in 3 seconds!
+9: event: Enemy spawned!
+10: Event: Enemy fell into a pit! Ha ha ha!
+11: event: Enemy spawned!
+12: Event: Enemy fell into a pit! Ha ha ha!
+13: event: Enemy spawned!
+14: Event: Enemy fell into a pit! Ha ha ha!
+15: event: Enemy spawned!
+16: Event: Enemy fell into a pit! Ha ha ha!
+17: event: Enemy spawned!
+18: Event: Enemy fell into a pit! Ha ha ha!
+19: event: Pits have changed.
+20: event: Enemy spawned!
+21: event: Pits will change in 3 seconds!
+22: Event: Enemy fell into a pit! Ha ha ha!
+23: event: Item spawned!
+24: event: Enemy spawned!
+25: Event: Enemy fell into a pit! Ha ha ha!
+26: event: Enemy spawned!
+27: Way more jump time!
+28: event: Item retrieved!
+29: Event: Enemy fell into a pit! Ha ha ha!
+30: event: Enemy spawned!
+31: event: Item spawned!
+32: Event: Enemy fell into a pit! Ha ha ha!
+33: event: Enemy spawned!
+34: event: Item retrieved!
+35: Event: Enemy fell into a pit! Ha ha ha!
+36: event: Enemy spawned!
+37: Event: Enemy fell into a pit! Ha ha ha!
+38: event: Enemy spawned!
+39: Event: Enemy fell into a pit! Ha ha ha!
+40: event: Enemy spawned!
+41: Event: Enemy fell into a pit! Ha ha ha!
+42: event: Enemy spawned!
+43: Event: Enemy fell into a pit! Ha ha ha!
+44: event: Enemy spawned!
+45: Event: Enemy fell into a pit! Ha ha ha!
+46: event: Enemy spawned!
+47: event: Item spawned!
+48: Event: Enemy fell into a pit! Ha ha ha!
+49: event: Enemy spawned!
+50: event: Item has fallen into a pit!
+51: event: Pits have changed.
+52: Event: Enemy fell into a pit! Ha ha ha!
+53: event: Enemy spawned!
+54: event: Pits will change in 3 seconds!
+55: event: Item spawned!
+56: Event: Enemy fell into a pit! Ha ha ha!
+57: event: Enemy spawned!
+58: event: Item retrieved!
+59: Event: Enemy fell into a pit! Ha ha ha!
+60: event: Enemy spawned!
+61: Event: Enemy fell into a pit! Ha ha ha!
+62: event: Enemy spawned!
+63: Event: Enemy fell into a pit! Ha ha ha!
+64: event: Enemy spawned!
+65: event: Item spawned!
+66: Event: Enemy fell into a pit! Ha ha ha!
+67: event: Enemy spawned!
+68: event: Item has fallen into a pit!
+69: event: Item spawned!
+70: Event: Enemy death.
+71: Event: Game loaded successfully!
+72: event: Loading game.
+73: event: Mason has decided to start a new game.
+74: event: going to main screen.
+75: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+76: Retrieving message of the day...
+77: Event: Installing keyhook...
+78: event: Checking name...
+79: event: Setting up registry...
+80: event. Version=5.2.
+81: event. loading started.
+82: 
+0: event: Mason has decided to exit.
+1: Event: Enemy fell into a pit! Ha ha ha!
+2: event: Enemy spawned!
+3: Event: Enemy fell into a pit! Ha ha ha!
+4: event: Enemy spawned!
+5: event: Item spawned!
+6: Event: Enemy fell into a pit! Ha ha ha!
+7: event: Enemy spawned!
+8: Event: Enemy fell into a pit! Ha ha ha!
+9: event: Enemy spawned!
+10: event: Item spawned!
+11: Event: Enemy fell into a pit! Ha ha ha!
+12: event: Enemy spawned!
+13: Gun Range Upgrade.
+14: event: Item retrieved!
+15: Event: Enemy fell into a pit! Ha ha ha!
+16: event: Enemy spawned!
+17: Event: Enemy fell into a pit! Ha ha ha!
+18: event: Enemy spawned!
+19: event: Item spawned!
+20: Event: Enemy death.
+21: Event: Game loaded successfully!
+22: event: Loading game.
+23: event: Mason has decided to start a new game.
+24: event: going to main screen.
+25: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+26: Retrieving message of the day...
+27: Event: Installing keyhook...
+28: event: Checking name...
+29: event: Setting up registry...
+30: event. Version=5.2.
+31: event. loading started.
+32: 
+0: Event: Enemy fell into a pit! Ha ha ha!
+1: event: Enemy spawned!
+2: Event: Enemy fell into a pit! Ha ha ha!
+3: event: Item spawned!
+4: event: Enemy spawned!
+5: event: Item has fallen into a pit!
+6: event: Item spawned!
+7: Event: Enemy fell into a pit! Ha ha ha!
+8: event: Enemy spawned!
+9: event: Item has fallen into a pit!
+10: event: Item spawned!
+11: Event: Enemy death.
+12: Event: Game loaded successfully!
+13: event: Loading game.
+14: event: Mason has decided to start a new game.
+15: event: going to main screen.
+16: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+17: Retrieving message of the day...
+18: Event: Installing keyhook...
+19: event: Checking name...
+20: event: Setting up registry...
+21: event. Version=5.2.
+22: event. loading started.
+23: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: event: Item spawned!
+3: event: Pits have changed.
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Pits will change in 3 seconds!
+6: event: Enemy spawned!
+7: Event: Enemy fell into a pit! Ha ha ha!
+8: event: Enemy spawned!
+9: Event: Enemy fell into a pit! Ha ha ha!
+10: event: Item spawned!
+11: event: Enemy spawned!
+12: Event: Enemy fell into a pit! Ha ha ha!
+13: event: Enemy spawned!
+14: Gun ammo!
+15: event: Item retrieved!
+16: Event: Enemy fell into a pit! Ha ha ha!
+17: event: Enemy spawned!
+18: Event: Enemy death.
+19: event: Enemy spawned!
+20: event: Item spawned!
+21: Event: Enemy death.
+22: Event: Game loaded successfully!
+23: event: Loading game.
+24: event: Mason has decided to start a new game.
+25: event: going to main screen.
+26: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+27: Retrieving message of the day...
+28: Event: Installing keyhook...
+29: event: Checking name...
+30: event: Setting up registry...
+31: event. Version=5.2.
+32: event. loading started.
+33: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy fell into a pit! Ha ha ha!
+3: event: Enemy spawned!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Enemy spawned!
+6: Event: Enemy fell into a pit! Ha ha ha!
+7: event: Enemy spawned!
+8: Event: Enemy fell into a pit! Ha ha ha!
+9: event: Enemy spawned!
+10: Event: Enemy fell into a pit! Ha ha ha!
+11: event: Item spawned!
+12: event: Enemy spawned!
+13: event: Item has fallen into a pit!
+14: event: Item spawned!
+15: Event: Enemy death.
+16: Event: Game loaded successfully!
+17: event: Loading game.
+18: event: Mason has decided to start a new game.
+19: event: going to main screen.
+20: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+21: Retrieving message of the day...
+22: Event: Installing keyhook...
+23: event: Checking name...
+24: event: Setting up registry...
+25: event. Version=5.2.
+26: event. loading started.
+27: 
+0: event: Mason has decided to exit.
+1: event: Item has fallen into a pit!
+2: event: Item spawned!
+3: Event: Enemy death.
+4: Event: Game loaded successfully!
+5: event: Loading game.
+6: event: Mason has decided to start a new game.
+7: event: going to main screen.
+8: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+9: Retrieving message of the day...
+10: Event: Installing keyhook...
+11: event: Checking name...
+12: event: Setting up registry...
+13: event. Version=5.2.
+14: event. loading started.
+15: 
+0: event: Mason has decided to exit.
+1: event: User decided to go to the store.
+2: event: User decided to go to the store.
+3: event: Enemy spawned!
+4: event: User decided to go to the store.
+5: Event: Enemy fell into a pit! Ha ha ha!
+6: event: Enemy spawned!
+7: event: Item spawned!
+8: Event: Enemy death.
+9: Event: Game loaded successfully!
+10: event: Loading game.
+11: event: Mason has decided to start a new game.
+12: event: going to main screen.
+13: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+14: Retrieving message of the day...
+15: Event: Installing keyhook...
+16: event: Checking name...
+17: event: Setting up registry...
+18: event. Version=5.2.
+19: event. loading started.
+20: 
+0: event: Mason has decided to exit.
+1: event: User decided to go to the store.
+2: event: Pits have changed.
+3: event: Pits will change in 3 seconds!
+4: event: User decided to go to the store.
+5: event: Enemy spawned!
+6: Event: Enemy fell into a pit! Ha ha ha!
+7: event: Enemy spawned!
+8: Event: Enemy fell into a pit! Ha ha ha!
+9: event: Enemy spawned!
+10: event: User decided to go to the store.
+11: Event: Enemy fell into a pit! Ha ha ha!
+12: event: Enemy spawned!
+13: event: User decided to go to the store.
+14: Event: Enemy fell into a pit! Ha ha ha!
+15: event: Enemy spawned!
+16: Event: Enemy fell into a pit! Ha ha ha!
+17: event: Enemy spawned!
+18: event: Item spawned!
+19: Event: Enemy death.
+20: Event: Game loaded successfully!
+21: event: Loading game.
+22: event: Mason has decided to start a new game.
+23: event: Mason has decided to exit.
+24: event: User decided to go to the store.
+25: event: User decided to go to the store.
+26: event: Enemy spawned!
+27: event: User decided to go to the store.
+28: Event: Enemy fell into a pit! Ha ha ha!
+29: event: Enemy spawned!
+30: event: Item spawned!
+31: Event: Enemy death.
+32: Event: Game loaded successfully!
+33: event: Loading game.
+34: event: Mason has decided to start a new game.
+35: event: going to main screen.
+36: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+37: Retrieving message of the day...
+38: Event: Installing keyhook...
+39: event: Checking name...
+40: event: Setting up registry...
+41: event. Version=5.2.
+42: event. loading started.
+43: 
+0: event: Mason has decided to exit.
+1: Event: Player helper killed!
+2: event: Helper detected an enemy!
+3: event: Enemy spawned!
+4: event: Helper stop seeing an enemy!
+5: Event: Enemy death.
+6: event: Pits have changed.
+7: event: User decided to go to the store.
+8: event: Helper detected an enemy!
+9: event: Enemy spawned!
+10: event: Pits will change in 3 seconds!
+11: Event: Enemy death.
+12: event: Enemy spawned!
+13: event: Helper stop seeing an enemy!
+14: Event: Enemy fell into a pit! Ha ha ha!
+15: event: Helper detected an enemy!
+16: event: Enemy spawned!
+17: event: Helper stop seeing an enemy!
+18: Event: Enemy death.
+19: event: Helper detected an enemy!
+20: event: Enemy spawned!
+21: event: User decided to go to the store.
+22: event: User decided to go to the store.
+23: event: Helper stop seeing an enemy!
+24: Event: Enemy death.
+25: event: Helper detected an enemy!
+26: event: Enemy spawned!
+27: event: Helper stop seeing an enemy!
+28: Event: Enemy death.
+29: Event: Player helper spawned!
+30: event: Pits have changed.
+31: event: Pits will change in 3 seconds!
+32: event: User decided to go to the store.
+33: Event: Player helper killed!
+34: event: Helper detected an enemy!
+35: event: Enemy spawned!
+36: event: User decided to go to the store.
+37: event: Helper stop seeing an enemy!
+38: Event: Enemy death.
+39: event: User decided to go to the store.
+40: event: Helper detected an enemy!
+41: event: Enemy spawned!
+42: event: Helper stop seeing an enemy!
+43: Event: Enemy death.
+44: event: Item spawned!
+45: event: Enemy spawned!
+46: Event: Enemy death.
+47: event: Item has fallen into a pit!
+48: event: Pits have changed.
+49: event: Pits will change in 3 seconds!
+50: event: Helper detected an enemy!
+51: event: Enemy spawned!
+52: event: Helper stop seeing an enemy!
+53: Event: Enemy death.
+54: event: Helper detected an enemy!
+55: event: Enemy spawned!
+56: event: Helper stop seeing an enemy!
+57: Event: Enemy death.
+58: event: Helper detected an enemy!
+59: event: Enemy spawned!
+60: Event: Enemy fell into a pit! Ha ha ha!
+61: event: Enemy spawned!
+62: Event: Enemy fell into a pit! Ha ha ha!
+63: event: Enemy spawned!
+64: event: Helper stop seeing an enemy!
+65: Event: Enemy fell into a pit! Ha ha ha!
+66: event: Helper detected an enemy!
+67: event: Enemy spawned!
+68: event: Helper stop seeing an enemy!
+69: Event: Enemy fell into a pit! Ha ha ha!
+70: event: Helper detected an enemy!
+71: event: Enemy spawned!
+72: Event: Enemy fell into a pit! Ha ha ha!
+73: event: Enemy spawned!
+74: event: Pits have changed.
+75: event: Helper stop seeing an enemy!
+76: Event: Enemy fell into a pit! Ha ha ha!
+77: event: Helper detected an enemy!
+78: event: Enemy spawned!
+79: event: Pits will change in 3 seconds!
+80: event: Helper stop seeing an enemy!
+81: Event: Enemy death.
+82: event: Helper detected an enemy!
+83: event: Enemy spawned!
+84: event: Helper stop seeing an enemy!
+85: Event: Enemy fell into a pit! Ha ha ha!
+86: event: Helper detected an enemy!
+87: event: Enemy spawned!
+88: event: Helper stop seeing an enemy!
+89: Event: Enemy death.
+90: event: Helper detected an enemy!
+91: event: Enemy spawned!
+92: event: Helper stop seeing an enemy!
+93: Event: Enemy death.
+94: Event: Player helper spawned!
+95: Event: Player helper no longer spawned!
+96: Event: Player helper spawned!
+97: Event: Player helper no longer spawned!
+98: Event: Player helper spawned!
+99: Event: Player helper no longer spawned!
+100: Event: Player helper spawned!
+101: Event: Player helper no longer spawned!
+102: event: Helper detected an enemy!
+103: Event: Player helper spawned!
+104: event: Enemy spawned!
+105: event: User decided to go to the store.
+106: event: Item spawned!
+107: Event: Enemy fell into a pit! Ha ha ha!
+108: event: Enemy spawned!
+109: event: Item has fallen into a pit!
+110: event: Item spawned!
+111: Event: Enemy death.
+112: Event: Game loaded successfully!
+113: event: Loading game.
+114: event: Mason has decided to start a new game.
+115: event: going to main screen.
+116: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+117: Retrieving message of the day...
+118: Event: Installing keyhook...
+119: event: Checking name...
+120: event: Setting up registry...
+121: event. Version=5.2.
+122: event. loading started.
+123: 
+0: event: Mason has decided to exit.
+1: Event: Enemy fell into a pit! Ha ha ha!
+2: event: Enemy spawned!
+3: event: Item spawned!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Enemy spawned!
+6: Water moves faster!
+7: event: Item retrieved!
+8: event: Item spawned!
+9: Event: Enemy death.
+10: Event: Game loaded successfully!
+11: event: Loading game.
+12: event: Mason has decided to start a new game.
+13: event: going to main screen.
+14: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+15: Retrieving message of the day...
+16: Event: Installing keyhook...
+17: event: Checking name...
+18: event: Setting up registry...
+19: event. Version=5.2.
+20: event. loading started.
+21: 
+0: Enemy Slow Down!
+1: event: Item retrieved!
+2: event: Pits have changed.
+3: event: Copter has killed an enemy!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Item spawned!
+6: event: Pits will change in 3 seconds!
+7: event: Copter has detected an enemy!
+8: event: Enemy spawned!
+9: event: Item has fallen into a pit!
+10: event: Item spawned!
+11: event: Copter has killed an enemy!
+12: Event: Enemy fell into a pit! Ha ha ha!
+13: event: Copter has shot an item.
+14: event: Item spawned!
+15: event: Copter has detected an enemy!
+16: event: Enemy spawned!
+17: event: Copter has killed an enemy!
+18: Event: Enemy fell into a pit! Ha ha ha!
+19: event: Item spawned!
+20: event: Copter has detected an enemy!
+21: Event: Copter spawned!
+22: event: Item has fallen into a pit!
+23: event: Item spawned!
+24: event: Enemy spawned!
+25: Enemy spawns slower!
+26: event: Item retrieved!
+27: event: Item spawned!
+28: Event: Enemy death.
+29: Event: Game loaded successfully!
+30: event: Loading game.
+31: event: Mason has decided to start a new game.
+32: event: going to main screen.
+33: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+34: Retrieving message of the day...
+35: Event: Installing keyhook...
+36: event: Checking name...
+37: event: Setting up registry...
+38: event. Version=5.2.
+39: event. loading started.
+40: 
+0: event: Mason has decided to exit.
+1: event: Helper detected an enemy!
+2: event: Enemy spawned!
+3: event: Helper stop seeing an enemy!
+4: Event: Enemy death.
+5: event: User decided to go to the store.
+6: event: Helper detected an enemy!
+7: event: Enemy spawned!
+8: event: Helper stop seeing an enemy!
+9: Event: Enemy death.
+10: event: Pits have changed.
+11: event: Pits will change in 3 seconds!
+12: event: Helper detected an enemy!
+13: event: Enemy spawned!
+14: event: Helper stop seeing an enemy!
+15: Event: Enemy death.
+16: event: Helper detected an enemy!
+17: event: Enemy spawned!
+18: event: User decided to go to the store.
+19: event: Helper stop seeing an enemy!
+20: Event: Enemy death.
+21: event: Helper detected an enemy!
+22: event: Enemy spawned!
+23: event: User decided to go to the store.
+24: event: Helper stop seeing an enemy!
+25: Event: Enemy death.
+26: Event: Player helper spawned!
+27: event: Enemy spawned!
+28: Event: Enemy death.
+29: event: Pits have changed.
+30: event: Pits will change in 3 seconds!
+31: Event: Player helper no longer spawned!
+32: event: Helper detected an enemy!
+33: event: Enemy spawned!
+34: event: Helper stop seeing an enemy!
+35: Event: Enemy death.
+36: event: Item spawned!
+37: event: Helper detected an enemy!
+38: event: Enemy spawned!
+39: event: Helper stop seeing an enemy!
+40: Event: Enemy death.
+41: event: Pits have changed.
+42: event: Pits will change in 3 seconds!
+43: event: Helper detected an enemy!
+44: event: Enemy spawned!
+45: event: Helper stop seeing an enemy!
+46: Event: Enemy fell into a pit! Ha ha ha!
+47: event: Helper detected an enemy!
+48: event: Enemy spawned!
+49: event: Item spawned!
+50: event: Helper stop seeing an enemy!
+51: Event: Enemy fell into a pit! Ha ha ha!
+52: Enemy random teleport!
+53: event: Helper retrieved an item for you!
+54: event: Helper detected an enemy!
+55: event: Enemy spawned!
+56: event: Helper stop seeing an enemy!
+57: Event: Enemy fell into a pit! Ha ha ha!
+58: event: Helper detected an enemy!
+59: event: Enemy spawned!
+60: event: Item spawned!
+61: event: Helper stop seeing an enemy!
+62: Event: Enemy fell into a pit! Ha ha ha!
+63: event: Helper detected an enemy!
+64: event: Enemy spawned!
+65: event: Helper stop seeing an enemy!
+66: Event: Enemy fell into a pit! Ha ha ha!
+67: event: Helper detected an enemy!
+68: event: Enemy spawned!
+69: Event: Player helper spawned!
+70: Event: Enemy fell into a pit! Ha ha ha!
+71: event: Enemy spawned!
+72: event: User decided to go to the store.
+73: event: Item spawned!
+74: Event: Enemy death.
+75: Event: Game loaded successfully!
+76: event: Loading game.
+77: event: Mason has decided to start a new game.
+78: Enemy Slow Down!
+79: event: Item retrieved!
+80: event: Pits have changed.
+81: event: Copter has killed an enemy!
+82: Event: Enemy fell into a pit! Ha ha ha!
+83: event: Item spawned!
+84: event: Pits will change in 3 seconds!
+85: event: Copter has detected an enemy!
+86: event: Enemy spawned!
+87: event: Item has fallen into a pit!
+88: event: Item spawned!
+89: event: Copter has killed an enemy!
+90: Event: Enemy fell into a pit! Ha ha ha!
+91: event: Copter has shot an item.
+92: event: Item spawned!
+93: event: Copter has detected an enemy!
+94: event: Enemy spawned!
+95: event: Copter has killed an enemy!
+96: Event: Enemy fell into a pit! Ha ha ha!
+97: event: Item spawned!
+98: event: Copter has detected an enemy!
+99: Event: Copter spawned!
+100: event: Item has fallen into a pit!
+101: event: Item spawned!
+102: event: Enemy spawned!
+103: Enemy spawns slower!
+104: event: Item retrieved!
+105: event: Item spawned!
+106: Event: Enemy death.
+107: Event: Game loaded successfully!
+108: event: Loading game.
+109: event: Mason has decided to start a new game.
+110: event: going to main screen.
+111: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+112: Retrieving message of the day...
+113: Event: Installing keyhook...
+114: event: Checking name...
+115: event: Setting up registry...
+116: event. Version=5.2.
+117: event. loading started.
+118: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Super health superboost!
+3: event: Item retrieved!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: User decided to go to the store.
+6: event: Enemy spawned!
+7: Event: Enemy fell into a pit! Ha ha ha!
+8: event: Enemy spawned!
+9: Event: Enemy fell into a pit! Ha ha ha!
+10: event: Enemy spawned!
+11: Event: Enemy fell into a pit! Ha ha ha!
+12: event: Enemy spawned!
+13: event: Item spawned!
+14: Event: Enemy death.
+15: Event: Game loaded successfully!
+16: event: Loading game.
+17: event: Mason has decided to start a new game.
+18: event: going to main screen.
+19: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+20: Retrieving message of the day...
+21: Event: Installing keyhook...
+22: event: Checking name...
+23: event: Setting up registry...
+24: event. Version=5.2.
+25: event. loading started.
+26: 
+0: event: Mason has decided to exit.
+1: Event: Enemy fell into a pit! Ha ha ha!
+2: event: Enemy spawned!
+3: event: Item spawned!
+4: Event: Enemy death.
+5: Event: Game loaded successfully!
+6: event: Loading game.
+7: event: Mason has decided to start a new game.
+8: event: going to main screen.
+9: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+10: Retrieving message of the day...
+11: Event: Installing keyhook...
+12: event: Checking name...
+13: event: Setting up registry...
+14: event. Version=5.2.
+15: event. loading started.
+16: 
+0: event: Item has fallen into a pit!
+1: event: Item spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event: going to main screen.
+7: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+8: Retrieving message of the day...
+9: Event: Installing keyhook...
+10: event: Checking name...
+11: event: Setting up registry...
+12: event. Version=5.2.
+13: event. loading started.
+14: 
+0: event: Mason has decided to exit.
+1: Event: Enemy fell into a pit! Ha ha ha!
+2: event: Item spawned!
+3: event: Enemy spawned!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Enemy spawned!
+6: Machine Gun Damage Upgrade.
+7: event: Item retrieved!
+8: event: Item spawned!
+9: Event: Enemy death.
+10: Event: Game loaded successfully!
+11: event: Loading game.
+12: event: Mason has decided to start a new game.
+13: event: Item has fallen into a pit!
+14: event: Item spawned!
+15: Event: Enemy death.
+16: Event: Game loaded successfully!
+17: event: Loading game.
+18: event: Mason has decided to start a new game.
+19: event: going to main screen.
+20: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+21: Retrieving message of the day...
+22: Event: Installing keyhook...
+23: event: Checking name...
+24: event: Setting up registry...
+25: event. Version=5.2.
+26: event. loading started.
+27: 
+0: event: Mason has decided to exit.
+1: Event: Enemy fell into a pit! Ha ha ha!
+2: event: Enemy spawned!
+3: event: User decided to go to the store.
+4: event: Item spawned!
+5: Event: Enemy death.
+6: Event: Game loaded successfully!
+7: event: Loading game.
+8: event: Mason has decided to start a new game.
+9: event: Mason has decided to exit.
+10: Event: Enemy fell into a pit! Ha ha ha!
+11: event: Item spawned!
+12: event: Enemy spawned!
+13: Event: Enemy fell into a pit! Ha ha ha!
+14: event: Enemy spawned!
+15: Machine Gun Damage Upgrade.
+16: event: Item retrieved!
+17: event: Item spawned!
+18: Event: Enemy death.
+19: Event: Game loaded successfully!
+20: event: Loading game.
+21: event: Mason has decided to start a new game.
+22: event: Item has fallen into a pit!
+23: event: Item spawned!
+24: Event: Enemy death.
+25: Event: Game loaded successfully!
+26: event: Loading game.
+27: event: Mason has decided to start a new game.
+28: event: going to main screen.
+29: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+30: Retrieving message of the day...
+31: Event: Installing keyhook...
+32: event: Checking name...
+33: event: Setting up registry...
+34: event. Version=5.2.
+35: event. loading started.
+36: 
+0: event: Mason has decided to exit.
+1: event: Helper has stopped seeing an enemy!
+2: Event: Enemy death.
+3: event: Helper detected an enemy!
+4: event: Enemy spawned!
+5: event: User decided to go to the store.
+6: event: Helper stop seeing an enemy!
+7: Event: Enemy death.
+8: event: Helper detected an enemy!
+9: event: Enemy spawned!
+10: event: Helper stop seeing an enemy!
+11: Event: Enemy fell into a pit! Ha ha ha!
+12: event: Helper detected an enemy!
+13: event: Enemy spawned!
+14: event: Helper stop seeing an enemy!
+15: Event: Enemy fell into a pit! Ha ha ha!
+16: event: Helper detected an enemy!
+17: event: Enemy spawned!
+18: Event: Player helper spawned!
+19: Event: Teleporter started!
+20: event: Item spawned!
+21: Event: Enemy death.
+22: Event: Game loaded successfully!
+23: event: Loading game.
+24: event: Mason has decided to start a new game.
+25: event: going to main screen.
+26: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+27: Retrieving message of the day...
+28: Event: Installing keyhook...
+29: event: Checking name...
+30: event: Setting up registry...
+31: event. Version=5.2.
+32: event. loading started.
+33: 
+0: event: Mason has decided to exit.
+1: event: Helper detected an enemy!
+2: event: Enemy spawned!
+3: Gun ammo!
+4: event: Helper retrieved an item for you!
+5: event: Item spawned!
+6: event: Helper stop seeing an enemy!
+7: Event: Enemy death.
+8: event: Helper detected an enemy!
+9: event: Enemy spawned!
+10: event: Helper has stopped seeing an enemy!
+11: event: User decided to go to the store.
+12: Event: Enemy death.
+13: event: Helper detected an enemy!
+14: Event: Player helper spawned!
+15: event: Enemy spawned!
+16: event: User decided to go to the store.
+17: event: Item spawned!
+18: Event: Enemy death.
+19: Event: Game loaded successfully!
+20: event: Loading game.
+21: event: Mason has decided to start a new game.
+22: event: going to main screen.
+23: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+24: Retrieving message of the day...
+25: Event: Installing keyhook...
+26: event: Checking name...
+27: event: Setting up registry...
+28: event. Version=5.2.
+29: event. loading started.
+30: 
+0: event: Mason has decided to exit.
+1: event: Item spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event: going to main screen.
+7: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+8: Retrieving message of the day...
+9: Event: Installing keyhook...
+10: event: Checking name...
+11: event: Setting up registry...
+12: event. Version=5.2.
+13: event. loading started.
+14: 
+0: event: Mason has decided to exit.
+1: event: Helper stop seeing an enemy!
+2: Event: Enemy death.
+3: event: Helper detected an enemy!
+4: event: Enemy spawned!
+5: Enemy Slow Down!
+6: event: Helper retrieved an item for you!
+7: event: Item spawned!
+8: event: Helper stop seeing an enemy!
+9: Event: Enemy death.
+10: event: Helper detected an enemy!
+11: event: Enemy spawned!
+12: event: User decided to go to the store.
+13: event: Helper stop seeing an enemy!
+14: Event: Enemy death.
+15: event: Helper detected an enemy!
+16: event: Enemy spawned!
+17: event: User decided to go to the store.
+18: event: Helper stop seeing an enemy!
+19: Event: Enemy death.
+20: event: Helper detected an enemy!
+21: event: Enemy spawned!
+22: event: User decided to go to the store.
+23: event: Helper has stopped seeing an enemy!
+24: Event: Enemy death.
+25: event: Helper detected an enemy!
+26: event: Enemy spawned!
+27: Event: Player helper spawned!
+28: Event: Player helper no longer spawned!
+29: event: Helper stop seeing an enemy!
+30: Event: Enemy fell into a pit! Ha ha ha!
+31: event: Item spawned!
+32: event: Helper detected an enemy!
+33: event: Enemy spawned!
+34: Event: Player helper spawned!
+35: event: Item has fallen into a pit!
+36: event: Item spawned!
+37: Event: Enemy death.
+38: Event: Game loaded successfully!
+39: event: Loading game.
+40: event: Mason has decided to start a new game.
+41: event: going to main screen.
+42: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+43: Retrieving message of the day...
+44: Event: Installing keyhook...
+45: event: Checking name...
+46: event: Setting up registry...
+47: event. Version=5.2.
+48: event. loading started.
+49: 
+0: event: Mason has decided to exit.
+1: event: Item spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event: going to main screen.
+7: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+8: Retrieving message of the day...
+9: Event: Installing keyhook...
+10: event: Checking name...
+11: event: Setting up registry...
+12: event. Version=5.2.
+13: event. loading started.
+14: 

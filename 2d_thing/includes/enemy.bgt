@@ -1,0 +1,81 @@
+class enemy
+{
+int attacktime=random(500,1000);
+int health=100;
+int steptime=220;
+int ex;
+sound egun, ehit, ehit2, stepsound;
+timer attacktimer, steptimer;
+enemy(int enemyx)
+{
+egun.load("egun.ogg");
+ehit.load("ehit.ogg");
+ehit2.load("ehit.ogg");
+ex=enemyx;
+}
+}
+void echeckloop()
+{
+for (uint i=0; i<enemies.length(); i++)
+{
+position_sound_2d(enemies[i].ehit, x, y, enemies[i].ex, 0, 2, 2, 2);
+position_sound_2d(enemies[i].ehit2, x, y, enemies[i].ex, 0, 2, 2, 2);
+position_sound_2d(enemies[i].egun, x, y, enemies[i].ex, 0, 2, 2, 2);
+position_sound_2d(enemies[i].stepsound, x, y, enemies[i].ex, 0, 2, 2, 2);
+if (enemies[i].health<=0)
+{
+enemies.remove_at(i);
+break;
+}
+if (enemies[i].ex==x and y==0 and enemies[i].attacktimer.elapsed>=enemies[i].attacktime)
+{
+enemies[i].attacktimer.restart();
+enemies[i].egun.stop();
+position_sound_2d(enemies[i].egun, x, y, enemies[i].ex, 0, 2, 2, 2);
+enemies[i].egun.play();
+health-=random(1,5);
+}
+if (enemies[i].ex<x and enemies[i].steptimer.elapsed>=enemies[i].steptime)
+{
+enemies[i].steptimer.restart();
+enemies[i].ex+=1;
+enemies[i].stepsound.load("step"+random(1,5)+".ogg");
+position_sound_2d(enemies[i].stepsound, x, y, enemies[i].ex, 0, 2, 2, 2);
+enemies[i].stepsound.play();
+}
+else if (enemies[i].ex>x and enemies[i].steptimer.elapsed>=enemies[i].steptime)
+{
+enemies[i].steptimer.restart();
+enemies[i].ex-=1;
+enemies[i].stepsound.load("step"+random(1,5)+".ogg");
+position_sound_2d(enemies[i].stepsound, x, y, enemies[i].ex, 0, 2, 2, 2);
+enemies[i].stepsound.play();
+}
+}
+}
+void ehit(int wnum)
+{
+for (uint i=0; i<enemies.length(); i++)
+{
+if (wnum==1)
+{
+if (enemies[i].ex<=x+kniferange and enemies[i].ex>=x-kniferange)
+{
+enemies[i].ehit.stop();
+position_sound_2d(enemies[i].ehit, x, y, enemies[i].ex, 0, 2, 2, 2);
+enemies[i].ehit.play();
+enemies[i].health-=knifedamage;
+}
+}
+if (wnum==2)
+{
+if (enemies[i].ex<=x+gunrange and enemies[i].ex>=x-gunrange)
+{
+enemies[i].ehit2.stop();
+position_sound_2d(enemies[i].ehit2, x, y, enemies[i].ex, 0, 2, 2, 2);
+enemies[i].ehit2.play();
+enemies[i].health-=gundamage;
+}
+}
+}
+}

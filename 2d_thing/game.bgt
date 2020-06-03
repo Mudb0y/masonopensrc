@@ -1,0 +1,364 @@
+#include"includes/plane.bgt"
+#include"includes/car.bgt"
+#include"includes/dlgplayer.bgt"
+#include"includes/enemy.bgt"
+#include"includes/item.bgt"
+#include"includes/fire.bgt"
+#include"includes/keyhook.bgt"
+#include"includes/m_pro.bgt"
+#include"sound_pool.bgt"
+int releasetime=50;
+int fallpos;
+bool falling;
+int uptime=90;
+int flytime=70;
+bool flying;
+int maxy=200;
+int tempy1, tempy2;
+int health=150;
+int kniferange=2;
+int gunrange=4;
+int knifedamage=5;
+int gundamage=10;
+int weapon;
+int jumpheight=5;
+bool ascending=true;
+int falltime=80;
+int jumping=0;
+int maxpos=200;
+int doorx=maxpos;
+int doory=0;
+int door;
+int walktime=200;
+int x, y;
+sound_pool pool;
+timer releasetimer, falltimer, uptimer, walktimer;
+car@[] cars(0);
+plane@[] planes(0);
+enemy@[] enemies(0);
+fire@[] fires(0);
+obj@[] objs(0);
+kh key;
+void main()
+{
+pool.pan_step=2;
+pool.volume_step=2;
+show_game_window("game");
+set_sound_decryption_key("game", true);
+set_sound_storage("sounds.dat");
+key.install();
+pool.play_stationary_extended("amb.ogg", true, 0, 0, -10, 100);
+door=pool.play_2d("door.ogg", x, y, doorx, doory, true);
+pool.play_stationary("start.ogg", false);
+plane plane1(random(10,maxpos), random(10,maxy), random(100,350));
+planes.insert_last(plane1);
+plane plane2(random(10,maxpos), random(10,maxy), random(100,350));
+planes.insert_last(plane2);
+plane plane3(random(10,maxpos), random(10,maxy), random(100,350));
+planes.insert_last(plane3);
+plane plane4(random(10,maxpos), random(10,maxy), random(100,350));
+planes.insert_last(plane4);
+plane plane5(random(10,maxpos), random(10,maxy), random(100,350));
+planes.insert_last(plane5);
+plane plane6(random(10,maxpos), random(10,maxy), random(100,350));
+planes.insert_last(plane6);
+plane plane7(random(10,maxpos), random(10,maxy), random(100,350));
+planes.insert_last(plane7);
+plane plane8(random(10,maxpos), random(10,maxy), random(100,350));
+planes.insert_last(plane8);
+plane plane9(random(10,maxpos), random(10,maxy), random(100,350));
+planes.insert_last(plane9);
+plane plane10(random(10,maxpos), random(10,maxy), random(100,350));
+planes.insert_last(plane10);
+car car1(random(10,maxpos), random(100,350));
+cars.insert_last(car1);
+car car2(random(10,maxpos), random(100,350));
+cars.insert_last(car2);
+car car3(random(10,maxpos), random(100,350));
+cars.insert_last(car3);
+car car4(random(10,maxpos), random(100,350));
+cars.insert_last(car4);
+car car5(random(10,maxpos), random(100,350));
+cars.insert_last(car5);
+enemy enemy1(30);
+enemies.insert_last(enemy1);
+fire fire1(20, 0);
+fires.insert_last(fire1);
+fire fire2(40, 0);
+fires.insert_last(fire2);
+fire fire3(10, 8);
+fires.insert_last(fire3);
+fire fire4(10, 20);
+fires.insert_last(fire4);
+fire fire5(10, 40);
+fires.insert_last(fire5);
+fire fire6(10, 60);
+fires.insert_last(fire6);
+fire fire7(10, 80);
+fires.insert_last(fire7);
+fire fire8(10, 100);
+fires.insert_last(fire8);
+fire fire9(10, 120);
+fires.insert_last(fire9);
+fire fire10(10, 140);
+fires.insert_last(fire10);
+fire fire11(10, 160);
+fires.insert_last(fire11);
+fire fire12(60, 0);
+fires.insert_last(fire12);
+fire fire13(80, 0);
+fires.insert_last(fire13);
+fire fire14(120, 0);
+fires.insert_last(fire14);
+fire fire15(160, 0);
+fires.insert_last(fire15);
+while (true)
+{
+planecheckloop();
+carcheckloop();
+if (key_pressed(KEY_F3) and falltime>10)
+{
+falltime-=2;
+speak("jumptime decreased to "+falltime);
+}
+if (key_pressed(KEY_F4) and falltime<250)
+{
+falltime+=2;
+speak("jumptime increased to "+falltime);
+}
+if (key_pressed(KEY_F5) and releasetime>10)
+{
+releasetime-=2;
+speak("release time decreased to "+releasetime);
+}
+if (key_pressed(KEY_F6) and releasetime<250)
+{
+releasetime+=2;
+speak("release time increased to "+releasetime);
+}
+icheckloop();
+echeckloop();
+fcheckloop();
+if (key_pressed(KEY_SEMICOLON))
+{
+speak("released.");
+falling=true;
+fallpos=0;
+}
+if (falling==true and releasetimer.elapsed>=releasetime)
+{
+releasetimer.restart();
+if (y>fallpos)
+{
+y-=1;
+}
+if (y==fallpos)
+{
+y=fallpos;
+if (y==0)
+{
+pool.play_stationary("land.ogg", false);
+}
+falling=false;
+}
+}
+if (key_pressed(KEY_F1))
+{
+speak("you can jump "+jumpheight+" squares up!");
+}
+if (key_pressed(KEY_F2))
+{
+speak(objs.length()+" items.");
+}
+if (key_down(KEY_I) and uptimer.elapsed>=uptime)
+{
+uptimer.restart();
+if (y<maxy)
+{
+flying=true;
+y+=1;
+}
+if (y==maxy)
+{
+pool.play_stationary("wall.ogg", false);
+}
+}
+if (key_down(KEY_K) and flying==true and uptimer.elapsed>=uptime)
+{
+uptimer.restart();
+if (y>0)
+{
+y-=1;
+}
+if (y==0)
+{
+pool.play_stationary("land.ogg", false);
+flying=false;
+}
+}
+if (health<=0)
+{
+alert("oops", "you died");
+exit();
+}
+if (key_pressed(KEY_H))
+{
+speak(health+" hp");
+}
+if (key_pressed(KEY_1) and weapon!=1)
+{
+pool.play_stationary("drawknife.ogg", false);
+speak("knife");
+weapon=1;
+}
+if (key_pressed(KEY_2) and weapon!=2)
+{
+pool.play_stationary("drawgun.ogg", false);
+speak("gun");
+weapon=2;
+}
+if (key_pressed(KEY_SPACE))
+{
+if (weapon==1)
+{
+pool.play_stationary("knife.ogg", false);
+ehit(1);
+}
+if (weapon==2)
+{
+pool.play_stationary("gun.ogg", false);
+ehit(2);
+}
+}
+if (key_pressed(KEY_RETURN) and x==doorx and y==doory)
+{
+pool.destroy_sound(door);
+dlgplay("dooropen.ogg");
+exit();
+}
+if (key_pressed(KEY_ESCAPE))
+{
+exit();
+}
+if (key_down(KEY_LEFT) or key_down(KEY_J))
+{
+if (walktimer.elapsed>=walktime and x>=0 and y==0)
+{
+walktimer.restart();
+if (x==0)
+{
+pool.play_stationary("wall.ogg", false);
+}
+else
+{
+x-=1;
+pool.play_stationary("step"+random(1,5)+".ogg", false);
+}
+}
+}
+if (key_down(KEY_LEFT) or key_down(KEY_J))
+{
+if(walktimer.elapsed>=flytime and x>=0 and y>0)
+{
+walktimer.restart();
+if (x==0)
+{
+pool.play_stationary("wall.ogg", false);
+}
+else
+{
+x-=1;
+}
+}
+}
+if (key_down(KEY_RIGHT) or key_down(KEY_L))
+{
+if (walktimer.elapsed>=walktime and x<=maxpos and y==0)
+{
+walktimer.restart();
+if (x==maxpos)
+{
+pool.play_stationary("wall.ogg", false);
+}
+else
+{
+x+=1;
+pool.play_stationary("step"+random(1,5)+".ogg", false);
+}
+}
+}
+if (key_down(KEY_RIGHT) or key_down(KEY_L))
+{
+if (walktimer.elapsed>=flytime and x<=maxpos and y>0)
+{
+walktimer.restart();
+if (x==maxpos)
+{
+pool.play_stationary("wall.ogg", false);
+}
+else
+{
+x+=1;
+}
+}
+}
+if (key_pressed(KEY_DOWN) and jumping==1 and ascending==true)
+{
+ascending=false;
+}
+if (key_pressed(KEY_UP) and jumping==0)
+{
+tempy1=y+jumpheight;
+tempy2=y;
+ascending=true;
+falltimer.restart();
+pool.play_stationary("jump.ogg", false);
+jumping=1;
+}
+if (jumping==1 and falltimer.elapsed>=falltime)
+{
+falltimer.restart();
+if (ascending==true)
+{
+y+=1;
+}
+if (ascending==false)
+{
+y-=1;
+}
+}
+if (y>=tempy1 and ascending==true and jumping==1 or y>=maxy and ascending==true and jumping==1)
+{
+if (y==maxy)
+{
+pool.play_stationary("wall.ogg", false);
+}
+ascending=false;
+}
+if (y<=tempy2 and ascending==false and jumping==1)
+{
+y=tempy2;
+jumping=0;
+if (y==0)
+{
+pool.play_stationary("land.ogg", false);
+}
+if (y>0)
+{
+pool.play_stationary("landair.ogg", false);
+}
+falltimer.restart();
+falltimer.pause();
+}
+if (key_pressed(KEY_C))
+{
+speak(x+", "+y);
+}
+positions();
+wait(5);
+}
+}
+void positions()
+{
+pool.update_listener_2d(x, y);
+}

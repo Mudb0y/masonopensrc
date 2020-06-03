@@ -1,0 +1,818 @@
+0: 
+1: event. Version=6.4.0.091.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A lava pit spawned at 46
+5: A water pit spawned at 63
+6: A lava pit spawned at 91
+7: Event: a level 5173 enemy (name microsoft sam) has been spawned at 113 with 6901 HP.
+8: Event: a level 5173 enemy (name microsoft sam) has been spawned at 114 with 7995 HP.
+9: Event: a level 5173 enemy (name dectalk paul) has been spawned at 38 with 5800 HP.
+10: Event: a level 5173 enemy (name microsoft sam) has been spawned at 250 with 5571 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 5173 enemy (name eloquence) has been spawned at 163 with 8824 HP.
+18: Event: Enemy has jumped over a pit.
+19: Event: Enemy has jumped over a pit.
+20: Event: a level 5173 enemy (name Behemoth) has been spawned at 139 with 6304 HP.
+21: Event: An item has spawned!
+22: Event: an enemy has been killed.
+23: Event: an enemy has been killed.
+24: Event: an enemy has been killed.
+25: Event: an enemy has been killed.
+26: Event: an enemy has been killed.
+27: Event: An item has spawned!
+28: Event: An item has spawned!
+29: Event: Game paused>
+30: Event: An item has spawned!
+31: Event: An item has spawned!
+32: Event: a level 5178 enemy (name Behemoth) has been spawned at 256 with 7600 HP.
+33: Event: an enemy has been killed.
+34: Event: a level 5179 enemy (name microsoft sam) has been spawned at 214 with 5924 HP.
+35: event: mason has decided to exit.
+0: 
+1: event. Version=6.4.0.091.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A lava pit spawned at 95
+5: A hollow pit spawned at 128
+6: A lava pit spawned at 91
+7: Event: a level 5179 enemy (name samantha) has been spawned at 64 with 7969 HP.
+8: Event: a level 5179 enemy (name dectalk paul) has been spawned at 109 with 10112 HP.
+9: Event: a level 5179 enemy (name mason 1) has been spawned at 73 with 7688 HP.
+10: Event: a level 5179 enemy (name dectalk paul) has been spawned at 253 with 10306 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 5179 enemy (name dectalk paul) has been spawned at 42 with 6630 HP.
+18: Event: Enemy has jumped over a pit.
+19: Event: Game paused>
+20: Event: An item has spawned!
+21: Event: a level 5179 enemy (name Behemoth) has been spawned at 170 with 10298 HP.
+22: Event: An item has spawned!
+23: Event: An item has spawned!
+24: Event: An item has spawned!
+25: Event: Enemy has jumped over a pit.
+26: Event: An item has spawned!
+27: event: mason has decided to exit.
+0: 
+1: event. Version=6.4.0.091.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A lava pit spawned at 291
+5: A water pit spawned at 163
+6: A lava pit spawned at 135
+7: Event: a level 5179 enemy (name samantha) has been spawned at 93 with 7198 HP.
+8: Event: a level 5179 enemy (name dectalk paul) has been spawned at 99 with 9961 HP.
+9: Event: a level 5179 enemy (name mason 2) has been spawned at 249 with 10016 HP.
+10: Event: a level 5179 enemy (name mason 2) has been spawned at 49 with 5981 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 5179 enemy (name dectalk paul) has been spawned at 135 with 7469 HP.
+18: Event: Enemy has jumped over a pit.
+19: Event: Game paused>
+20: Event: An item has spawned!
+21: Event: a level 5179 enemy (name samantha) has been spawned at 63 with 65 HP.
+22: Event: An item has spawned!
+23: Event: An item has spawned!
+24: Event: An item has spawned!
+25: Event: an enemy has been killed.
+26: Event: An item has spawned!
+27: Event: a level 5180 enemy (name Behemoth) has been spawned at 173 with 76 HP.
+28: Event: an enemy has been killed.
+29: Event: an enemy has been killed.
+30: Event: Enemy has jumped over a pit.
+31: Event: an enemy has been killed.
+32: Event: a level 5183 enemy (name samantha) has been spawned at 62 with 82 HP.
+33: event: mason has decided to exit.
+0: 
+1: event. Version=6.4.0.091.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A fire pit spawned at 172
+5: A water pit spawned at 46
+6: A lava pit spawned at 261
+7: Event: a level 5183 enemy (name mason 2) has been spawned at 150 with 58 HP.
+8: Event: a level 5183 enemy (name microsoft sam) has been spawned at 286 with 59 HP.
+9: Event: a level 5183 enemy (name alex mackintosh) has been spawned at 245 with 57 HP.
+10: Event: a level 5183 enemy (name dectalk paul) has been spawned at 238 with 83 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 5183 enemy (name microsoft sam) has been spawned at 155 with 69 HP.
+18: Event: Game paused>
+19: Event: An item has spawned!
+20: Event: a level 1 enemy (name mason 1) has been spawned at 62 with 69 HP.
+21: Event: An item has spawned!
+22: event: mason has decided to exit.
+0: 
+1: event. Version=6.5.0.092.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A fire pit spawned at 39
+5: A hollow pit spawned at 307
+6: A water pit spawned at 266
+7: Event: a level 1 enemy (name alex mackintosh) has been spawned at 220 with 63 HP.
+8: Event: a level 1 enemy (name Behemoth) has been spawned at 298 with 80 HP.
+9: Event: a level 1 enemy (name eloquence) has been spawned at 177 with 74 HP.
+10: Event: a level 1 enemy (name samantha) has been spawned at 262 with 71 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 1 enemy (name samantha) has been spawned at 89 with 78 HP.
+18: Event: Game paused>
+19: Event: An item has spawned!
+20: Event: a level 1 enemy (name samantha) has been spawned at 210 with 67 HP.
+21: Event: An item has spawned!
+22: Event: An item has spawned!
+23: Event: An item has spawned!
+24: Event: An item has spawned!
+25: Event: a level 1 enemy (name microsoft sam) has been spawned at 224 with 82 HP.
+26: Event: a level 1 enemy (name alex mackintosh) has been spawned at 230 with 57 HP.
+27: Event: a level 1 enemy (name mason 2) has been spawned at 128 with 90 HP.
+28: Event: a level 1 enemy (name Behemoth) has been spawned at 285 with 94 HP.
+29: Event: a level 1 enemy (name samantha) has been spawned at 256 with 75 HP.
+30: Event: Enemy has jumped over a pit.
+31: Event: Enemy has jumped over a pit.
+32: Event: a level 1 enemy (name eloquence) has been spawned at 224 with 86 HP.
+33: Event: Enemy has jumped over a pit.
+34: A fire pit spawned at 263
+35: A lava pit spawned at 47
+36: A hollow pit spawned at 185
+37: Event: Enemy has jumped over a pit.
+38: Event: Enemy has jumped over a pit.
+39: Event: a level 1 enemy (name samantha) has been spawned at 140 with 57 HP.
+40: Event: Enemy has jumped over a pit.
+41: Event: a level 1 enemy (name samantha) has been spawned at 96 with 66 HP.
+42: Event: Enemy has jumped over a pit.
+43: Event: Enemy has jumped over a pit.
+44: Event: a level 1 enemy (name eloquence) has been spawned at 179 with 80 HP.
+45: Event: Enemy has jumped over a pit.
+46: Event: a level 1 enemy (name dectalk paul) has been spawned at 8 with 66 HP.
+47: Event: a level 1 enemy (name mason 2) has been spawned at 137 with 90 HP.
+48: Event: an enemy has been killed.
+49: Event: an enemy has been killed.
+50: Event: an enemy has been killed.
+51: Event: an enemy has been killed.
+52: Event: an enemy has been killed.
+53: Event: an enemy has been killed.
+54: Event: an enemy has been killed.
+55: Event: an enemy has been killed.
+56: Event: an enemy has been killed.
+57: Event: an enemy has been killed.
+58: Event: an enemy has been killed.
+59: Event: an enemy has been killed.
+60: Event: an enemy has been killed.
+61: Event: an enemy has been killed.
+62: Event: an enemy has been killed.
+63: Event: an enemy has been killed.
+64: Event: a level 17 enemy (name mason 1) has been spawned at 11 with 99 HP.
+65: Event: a level 17 enemy (name dectalk paul) has been spawned at 56 with 106 HP.
+66: A hollow pit spawned at 59
+67: A lava pit spawned at 124
+68: A hollow pit spawned at 133
+69: Event: an enemy has been killed.
+70: Event: an enemy has been killed.
+71: Event: a level 19 enemy (name dectalk paul) has been spawned at 59 with 121 HP.
+72: Event: an enemy has been killed.
+73: Event: Enemy has jumped over a pit.
+74: event: mason has decided to exit.
+0: 
+1: event. Version=6.5.0.092.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A hollow pit spawned at 121
+5: A hollow pit spawned at 45
+6: A lava pit spawned at 162
+7: Event: a level 20 enemy (name Death elf) has been spawned at 231 with 132 HP.
+8: Event: a level 20 enemy (name dectalk paul) has been spawned at 175 with 122 HP.
+9: Event: a level 20 enemy (name Giovani) has been spawned at 21 with 109 HP.
+10: Event: a level 20 enemy (name eloquence) has been spawned at 198 with 83 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 20 enemy (name Death elf) has been spawned at 34 with 98 HP.
+18: Event: a level 20 enemy (name mason 1) has been spawned at 141 with 96 HP.
+19: Event: an enemy has been killed.
+20: Event: an enemy has been killed.
+21: Event: An item has spawned!
+22: Event: an enemy has been killed.
+23: Event: an enemy has been killed.
+24: Event: an enemy has been killed.
+25: Event: An item has spawned!
+26: Event: a level 25 enemy (name microsoft sam) has been spawned at 102 with 79 HP.
+27: Event: An item has spawned!
+28: Event: An item has spawned!
+29: Event: An item has spawned!
+30: Event: a level 25 enemy (name Death elf) has been spawned at 161 with 74 HP.
+31: Event: Enemy has jumped over a pit.
+32: Event: Enemy has jumped over a pit.
+33: Event: Enemy has jumped over a pit.
+34: Event: a level 25 enemy (name alex mackintosh) has been spawned at 49 with 93 HP.
+35: Event: an enemy has been killed.
+36: Event: an enemy has been killed.
+37: Event: an enemy has been killed.
+38: Event: an enemy has been killed.
+39: Event: Item has been retrieved!
+40: Event: Item has been retrieved!
+41: Event: a level 29 enemy (name mason 1) has been spawned at 295 with 86 HP.
+42: Event: Game paused>
+43: Event: An item has spawned!
+44: Event: a level 20 enemy (name dectalk paul) has been spawned at 187 with 85 HP.
+45: Event: An item has spawned!
+46: Event: Item has been retrieved!
+47: Event: Game was paused by the user
+48: event: mason has decided to exit.
+0: 
+1: event. Version=6.5.0.092.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A hollow pit spawned at 121
+5: A hollow pit spawned at 45
+6: A lava pit spawned at 162
+7: Event: a level 20 enemy (name Death elf) has been spawned at 231 with 132 HP.
+8: Event: a level 20 enemy (name dectalk paul) has been spawned at 175 with 122 HP.
+9: Event: a level 20 enemy (name Giovani) has been spawned at 21 with 109 HP.
+10: Event: a level 20 enemy (name eloquence) has been spawned at 198 with 83 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 20 enemy (name Death elf) has been spawned at 34 with 98 HP.
+18: Event: a level 20 enemy (name mason 1) has been spawned at 141 with 96 HP.
+19: Event: an enemy has been killed.
+20: Event: an enemy has been killed.
+21: Event: An item has spawned!
+22: Event: an enemy has been killed.
+23: Event: an enemy has been killed.
+24: Event: an enemy has been killed.
+25: Event: An item has spawned!
+26: Event: a level 25 enemy (name microsoft sam) has been spawned at 102 with 79 HP.
+27: Event: An item has spawned!
+28: Event: An item has spawned!
+29: Event: An item has spawned!
+30: Event: a level 25 enemy (name Death elf) has been spawned at 161 with 74 HP.
+31: Event: Enemy has jumped over a pit.
+32: Event: Enemy has jumped over a pit.
+33: Event: Enemy has jumped over a pit.
+34: Event: a level 25 enemy (name alex mackintosh) has been spawned at 49 with 93 HP.
+35: Event: an enemy has been killed.
+36: Event: an enemy has been killed.
+37: Event: an enemy has been killed.
+38: Event: an enemy has been killed.
+39: Event: Item has been retrieved!
+40: Event: Item has been retrieved!
+41: Event: a level 29 enemy (name mason 1) has been spawned at 295 with 86 HP.
+42: Event: Game paused>
+43: Event: An item has spawned!
+44: Event: a level 20 enemy (name dectalk paul) has been spawned at 187 with 85 HP.
+45: Event: An item has spawned!
+46: Event: Item has been retrieved!
+47: Event: Game was paused by the user
+48: event: mason has decided to exit.
+49: Event. User wants a normal game.
+50: event: mason has decided to start a new game.
+51: A water pit spawned at 27
+52: A lava pit spawned at 148
+53: A lava pit spawned at 265
+54: Event: a level 20 enemy (name mason 1) has been spawned at 225 with 128 HP.
+55: Event: a level 20 enemy (name Behemoth) has been spawned at 52 with 69 HP.
+56: Event: a level 20 enemy (name dectalk paul) has been spawned at 119 with 117 HP.
+57: Event: a level 20 enemy (name dectalk paul) has been spawned at 145 with 114 HP.
+58: Event: Game loaded!
+59: Event: a level 20 enemy (name alex mackintosh) has been spawned at 35 with 117 HP.
+60: Event: a level 20 enemy (name microsoft sam) has been spawned at 241 with 79 HP.
+61: Event: Enemy has jumped over a pit.
+62: Event: an enemy has been killed.
+63: Event: An item has spawned!
+64: Event: a level 21 enemy (name eloquence) has been spawned at 274 with 98 HP.
+65: Event: an enemy has been killed.
+66: Event: a level 22 enemy (name Behemoth) has been spawned at 255 with 107 HP.
+67: Event: Item has been retrieved!
+68: Event: Enemy has jumped over a pit.
+69: Event: a level 22 enemy (name microsoft sam) has been spawned at 270 with 72 HP.
+70: event: mason has decided to exit.
+0: 
+1: event. Version=6.5.0.092.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A water pit spawned at 149
+5: A water pit spawned at 7
+6: A lava pit spawned at 274
+7: Event: a level 22 enemy (name dectalk paul) has been spawned at 200 with 112 HP.
+8: Event: a level 22 enemy (name samantha) has been spawned at 237 with 141 HP.
+9: Event: a level 22 enemy (name mason 2) has been spawned at 17 with 119 HP.
+10: Event: a level 22 enemy (name dectalk paul) has been spawned at 11 with 95 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 22 enemy (name mason 1) has been spawned at 154 with 78 HP.
+18: Event: a level 22 enemy (name mason 1) has been spawned at 117 with 116 HP.
+19: Event: An item has spawned!
+20: Event: Enemy has jumped over a pit.
+21: Event: Enemy has jumped over a pit.
+22: Event: Enemy has jumped over a pit.
+23: Event: An item has spawned!
+24: Event: An item has spawned!
+25: Event: a level 22 enemy (name samantha) has been spawned at 114 with 75 HP.
+26: Event: An item has spawned!
+27: Event: an enemy has been killed.
+28: Event: an enemy has been killed.
+29: Event: an enemy has been killed.
+30: Event: an enemy has been killed.
+31: Event: An item has spawned!
+32: Event: an enemy has been killed.
+33: Event: an enemy has been killed.
+34: event: mason has decided to exit.
+0: 
+1: event. Version=6.5.0.092.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A water pit spawned at 149
+5: A water pit spawned at 7
+6: A lava pit spawned at 274
+7: Event: a level 22 enemy (name dectalk paul) has been spawned at 200 with 112 HP.
+8: Event: a level 22 enemy (name samantha) has been spawned at 237 with 141 HP.
+9: Event: a level 22 enemy (name mason 2) has been spawned at 17 with 119 HP.
+10: Event: a level 22 enemy (name dectalk paul) has been spawned at 11 with 95 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 22 enemy (name mason 1) has been spawned at 154 with 78 HP.
+18: Event: a level 22 enemy (name mason 1) has been spawned at 117 with 116 HP.
+19: Event: An item has spawned!
+20: Event: Enemy has jumped over a pit.
+21: Event: Enemy has jumped over a pit.
+22: Event: Enemy has jumped over a pit.
+23: Event: An item has spawned!
+24: Event: An item has spawned!
+25: Event: a level 22 enemy (name samantha) has been spawned at 114 with 75 HP.
+26: Event: An item has spawned!
+27: Event: an enemy has been killed.
+28: Event: an enemy has been killed.
+29: Event: an enemy has been killed.
+30: Event: an enemy has been killed.
+31: Event: An item has spawned!
+32: Event: an enemy has been killed.
+33: Event: an enemy has been killed.
+34: event: mason has decided to exit.
+35: Event. User wants a normal game.
+36: event: mason has decided to start a new game.
+37: A hollow pit spawned at 307
+38: A lava pit spawned at 68
+39: A fire pit spawned at 65
+40: Event: a level 28 enemy (name mason 2) has been spawned at 224 with 148 HP.
+41: Event: a level 28 enemy (name alex mackintosh) has been spawned at 14 with 131 HP.
+42: Event: a level 28 enemy (name Death elf) has been spawned at 151 with 115 HP.
+43: Event: a level 28 enemy (name Death elf) has been spawned at 158 with 137 HP.
+44: Event: Game loaded!
+45: Event: a level 28 enemy (name alex mackintosh) has been spawned at 222 with 106 HP.
+46: Event: a level 28 enemy (name Behemoth) has been spawned at 292 with 132 HP.
+47: Event: an enemy has been killed.
+48: Event: an enemy has been killed.
+49: Event: an enemy has been killed.
+50: Event: an enemy has been killed.
+51: Event: an enemy has been killed.
+52: Event: an enemy has been killed.
+53: Event: a level 34 enemy (name eloquence) has been spawned at 231 with 137 HP.
+54: Event: a level 34 enemy (name mason 1) has been spawned at 81 with 141 HP.
+55: Event: Game was paused by the user
+56: Event: Game was unpaused by the user
+57: Event: a level 34 enemy (name mason 2) has been spawned at 88 with 97 HP.
+58: Event: Enemy has jumped over a pit.
+59: Event: a level 34 enemy (name Behemoth) has been spawned at 166 with 156 HP.
+60: Event: a level 34 enemy (name eloquence) has been spawned at 101 with 128 HP.
+61: A lava pit spawned at 303
+62: A lava pit spawned at 206
+63: A water pit spawned at 308
+64: Event: Enemy has jumped over a pit.
+65: Event: a level 34 enemy (name mason 1) has been spawned at 19 with 149 HP.
+66: Event: a level 34 enemy (name eloquence) has been spawned at 222 with 103 HP.
+67: Event: a level 34 enemy (name Giovani) has been spawned at 54 with 161 HP.
+68: Event: an enemy has been killed.
+69: Event: an enemy has been killed.
+70: Event: an enemy has been killed.
+71: Event: an enemy has been killed.
+72: Event: an enemy has been killed.
+73: Event: an enemy has been killed.
+74: Event: an enemy has been killed.
+75: Event: an enemy has been killed.
+76: Event: a level 42 enemy (name mason 2) has been spawned at 198 with 129 HP.
+77: Event: a level 42 enemy (name alex mackintosh) has been spawned at 74 with 161 HP.
+78: Event: a level 42 enemy (name Death elf) has been spawned at 98 with 149 HP.
+79: Event: Item has been retrieved!
+80: Event: an enemy has been killed.
+81: Event: Item has been retrieved!
+82: A lava pit spawned at 214
+83: A lava pit spawned at 102
+84: A lava pit spawned at 137
+85: Event: a level 43 enemy (name eloquence) has been spawned at 36 with 153 HP.
+86: Event: an enemy has been killed.
+87: Event: An item has spawned!
+88: Event: Item has been retrieved!
+89: Event: a level 44 enemy (name eloquence) has been spawned at 155 with 172 HP.
+90: Event: An item has spawned!
+91: Event: a level 44 enemy (name Behemoth) has been spawned at 230 with 149 HP.
+92: Event: an enemy has been killed.
+93: Event: An item has spawned!
+94: Event: a level 45 enemy (name Death elf) has been spawned at 96 with 138 HP.
+95: Event: an enemy has been killed.
+96: Event: Item has been retrieved!
+97: Event: Item has been retrieved!
+98: Event: Game was paused by the user
+99: Event: Game was unpaused by the user
+100: Event: a level 46 enemy (name alex mackintosh) has been spawned at 78 with 152 HP.
+101: Event: Enemy has jumped over a pit.
+102: Event: Enemy has jumped over a pit.
+103: Event: Enemy has jumped over a pit.
+104: Event: an enemy has been killed.
+105: Event: An item has spawned!
+106: Event: An item has spawned!
+107: Event: a level 47 enemy (name mason 2) has been spawned at 172 with 172 HP.
+108: Event: Item has been retrieved!
+109: Event: a level 47 enemy (name mason 1) has been spawned at 14 with 132 HP.
+110: A water pit spawned at 79
+111: A hollow pit spawned at 167
+112: A lava pit spawned at 8
+113: Event: Enemy has jumped over a pit.
+114: Event: Enemy has jumped over a pit.
+115: Event: Enemy has jumped over a pit.
+116: Event: a level 47 enemy (name samantha) has been spawned at 217 with 160 HP.
+117: Event: An item has spawned!
+118: Event: Item has been retrieved!
+119: Event: a level 47 enemy (name Behemoth) has been spawned at 46 with 130 HP.
+120: event: mason has decided to exit.
+0: 
+1: event. Version=6.5.0.092.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A water pit spawned at 149
+5: A water pit spawned at 7
+6: A lava pit spawned at 274
+7: Event: a level 22 enemy (name dectalk paul) has been spawned at 200 with 112 HP.
+8: Event: a level 22 enemy (name samantha) has been spawned at 237 with 141 HP.
+9: Event: a level 22 enemy (name mason 2) has been spawned at 17 with 119 HP.
+10: Event: a level 22 enemy (name dectalk paul) has been spawned at 11 with 95 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 22 enemy (name mason 1) has been spawned at 154 with 78 HP.
+18: Event: a level 22 enemy (name mason 1) has been spawned at 117 with 116 HP.
+19: Event: An item has spawned!
+20: Event: Enemy has jumped over a pit.
+21: Event: Enemy has jumped over a pit.
+22: Event: Enemy has jumped over a pit.
+23: Event: An item has spawned!
+24: Event: An item has spawned!
+25: Event: a level 22 enemy (name samantha) has been spawned at 114 with 75 HP.
+26: Event: An item has spawned!
+27: Event: an enemy has been killed.
+28: Event: an enemy has been killed.
+29: Event: an enemy has been killed.
+30: Event: an enemy has been killed.
+31: Event: An item has spawned!
+32: Event: an enemy has been killed.
+33: Event: an enemy has been killed.
+34: event: mason has decided to exit.
+35: Event. User wants a normal game.
+36: event: mason has decided to start a new game.
+37: A hollow pit spawned at 307
+38: A lava pit spawned at 68
+39: A fire pit spawned at 65
+40: Event: a level 28 enemy (name mason 2) has been spawned at 224 with 148 HP.
+41: Event: a level 28 enemy (name alex mackintosh) has been spawned at 14 with 131 HP.
+42: Event: a level 28 enemy (name Death elf) has been spawned at 151 with 115 HP.
+43: Event: a level 28 enemy (name Death elf) has been spawned at 158 with 137 HP.
+44: Event: Game loaded!
+45: Event: a level 28 enemy (name alex mackintosh) has been spawned at 222 with 106 HP.
+46: Event: a level 28 enemy (name Behemoth) has been spawned at 292 with 132 HP.
+47: Event: an enemy has been killed.
+48: Event: an enemy has been killed.
+49: Event: an enemy has been killed.
+50: Event: an enemy has been killed.
+51: Event: an enemy has been killed.
+52: Event: an enemy has been killed.
+53: Event: a level 34 enemy (name eloquence) has been spawned at 231 with 137 HP.
+54: Event: a level 34 enemy (name mason 1) has been spawned at 81 with 141 HP.
+55: Event: Game was paused by the user
+56: Event: Game was unpaused by the user
+57: Event: a level 34 enemy (name mason 2) has been spawned at 88 with 97 HP.
+58: Event: Enemy has jumped over a pit.
+59: Event: a level 34 enemy (name Behemoth) has been spawned at 166 with 156 HP.
+60: Event: a level 34 enemy (name eloquence) has been spawned at 101 with 128 HP.
+61: A lava pit spawned at 303
+62: A lava pit spawned at 206
+63: A water pit spawned at 308
+64: Event: Enemy has jumped over a pit.
+65: Event: a level 34 enemy (name mason 1) has been spawned at 19 with 149 HP.
+66: Event: a level 34 enemy (name eloquence) has been spawned at 222 with 103 HP.
+67: Event: a level 34 enemy (name Giovani) has been spawned at 54 with 161 HP.
+68: Event: an enemy has been killed.
+69: Event: an enemy has been killed.
+70: Event: an enemy has been killed.
+71: Event: an enemy has been killed.
+72: Event: an enemy has been killed.
+73: Event: an enemy has been killed.
+74: Event: an enemy has been killed.
+75: Event: an enemy has been killed.
+76: Event: a level 42 enemy (name mason 2) has been spawned at 198 with 129 HP.
+77: Event: a level 42 enemy (name alex mackintosh) has been spawned at 74 with 161 HP.
+78: Event: a level 42 enemy (name Death elf) has been spawned at 98 with 149 HP.
+79: Event: Item has been retrieved!
+80: Event: an enemy has been killed.
+81: Event: Item has been retrieved!
+82: A lava pit spawned at 214
+83: A lava pit spawned at 102
+84: A lava pit spawned at 137
+85: Event: a level 43 enemy (name eloquence) has been spawned at 36 with 153 HP.
+86: Event: an enemy has been killed.
+87: Event: An item has spawned!
+88: Event: Item has been retrieved!
+89: Event: a level 44 enemy (name eloquence) has been spawned at 155 with 172 HP.
+90: Event: An item has spawned!
+91: Event: a level 44 enemy (name Behemoth) has been spawned at 230 with 149 HP.
+92: Event: an enemy has been killed.
+93: Event: An item has spawned!
+94: Event: a level 45 enemy (name Death elf) has been spawned at 96 with 138 HP.
+95: Event: an enemy has been killed.
+96: Event: Item has been retrieved!
+97: Event: Item has been retrieved!
+98: Event: Game was paused by the user
+99: Event: Game was unpaused by the user
+100: Event: a level 46 enemy (name alex mackintosh) has been spawned at 78 with 152 HP.
+101: Event: Enemy has jumped over a pit.
+102: Event: Enemy has jumped over a pit.
+103: Event: Enemy has jumped over a pit.
+104: Event: an enemy has been killed.
+105: Event: An item has spawned!
+106: Event: An item has spawned!
+107: Event: a level 47 enemy (name mason 2) has been spawned at 172 with 172 HP.
+108: Event: Item has been retrieved!
+109: Event: a level 47 enemy (name mason 1) has been spawned at 14 with 132 HP.
+110: A water pit spawned at 79
+111: A hollow pit spawned at 167
+112: A lava pit spawned at 8
+113: Event: Enemy has jumped over a pit.
+114: Event: Enemy has jumped over a pit.
+115: Event: Enemy has jumped over a pit.
+116: Event: a level 47 enemy (name samantha) has been spawned at 217 with 160 HP.
+117: Event: An item has spawned!
+118: Event: Item has been retrieved!
+119: Event: a level 47 enemy (name Behemoth) has been spawned at 46 with 130 HP.
+120: event: mason has decided to exit.
+121: Event: An item has spawned!
+122: Event: a level 47 enemy (name Death elf) has been spawned at 265 with 129 HP.
+123: Event: Item has been retrieved!
+124: event: mason has decided to exit.
+0: 
+1: event. Version=6.6.0.093.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A hollow pit spawned at 5
+5: A lava pit spawned at 209
+6: A hollow pit spawned at 238
+7: Event: a level 47 enemy (name mason 1) has been spawned at 321 with 136 HP.
+8: Event: a level 47 enemy (name Death elf) has been spawned at 227 with 102 HP.
+9: Event: a level 47 enemy (name Giovani) has been spawned at 144 with 96 HP.
+10: Event: a level 47 enemy (name alex mackintosh) has been spawned at 32 with 115 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 47 enemy (name Giovani) has been spawned at 222 with 159 HP.
+18: Event: a level 47 enemy (name eloquence) has been spawned at 324 with 109 HP.
+19: Event: An item has spawned!
+20: Event: Enemy has jumped over a pit.
+21: Event: an enemy has been killed.
+22: Event: Item has been retrieved!
+23: Event: An item has spawned!
+24: Event: a level 48 enemy (name eloquence) has been spawned at 20 with 194 HP.
+25: Event: An item has spawned!
+26: Event: Enemy has jumped over a pit.
+27: Event: An item has spawned!
+28: Event: An item has spawned!
+29: Event: an enemy has been killed.
+30: Event: An item has spawned!
+31: Event: a level 49 enemy (name microsoft sam) has been spawned at 107 with 118 HP.
+32: Event: a level 49 enemy (name mason 2) has been spawned at 241 with 164 HP.
+33: Event: Item has been retrieved!
+34: Event: Enemy has jumped over a pit.
+35: Event: a level 49 enemy (name dectalk paul) has been spawned at 12 with 175 HP.
+36: Event: an enemy has been killed.
+37: Event: an enemy has been killed.
+38: Event: a level 51 enemy (name mason 2) has been spawned at 130 with 141 HP.
+39: A lava pit spawned at 98
+40: A water pit spawned at 141
+41: A fire pit spawned at 171
+42: Event: An item has spawned!
+43: Event: a level 51 enemy (name samantha) has been spawned at 228 with 192 HP.
+44: Event: Enemy has jumped over a pit.
+45: Event: a level 51 enemy (name microsoft sam) has been spawned at 98 with 170 HP.
+46: Event: Enemy has jumped over a pit.
+47: Event: an enemy has been killed.
+48: Event: an enemy has been killed.
+49: Event: Enemy has jumped over a pit.
+50: Event: a level 53 enemy (name mason 1) has been spawned at 35 with 168 HP.
+51: Event: a level 53 enemy (name alex mackintosh) has been spawned at 297 with 143 HP.
+52: Event: a level 53 enemy (name dectalk paul) has been spawned at 131 with 176 HP.
+53: Event: Enemy has jumped over a pit.
+54: Event: a level 53 enemy (name dectalk paul) has been spawned at 251 with 197 HP.
+55: Event: an enemy has been killed.
+56: Event: an enemy has been killed.
+57: Event: Enemy has jumped over a pit.
+58: A water pit spawned at 109
+59: A water pit spawned at 192
+60: A water pit spawned at 331
+61: Event: a level 55 enemy (name samantha) has been spawned at 297 with 159 HP.
+62: Event: Enemy has jumped over a pit.
+63: Event: a level 55 enemy (name alex mackintosh) has been spawned at 237 with 135 HP.
+64: Event: an enemy has been killed.
+65: Event: a level 56 enemy (name alex mackintosh) has been spawned at 343 with 140 HP.
+66: Event: Item has been retrieved!
+67: Event: Item has been retrieved!
+68: Event: Item has been retrieved!
+69: Event: Item has been retrieved!
+70: Event: Item has been retrieved!
+71: Event: a level 56 enemy (name mason 2) has been spawned at 359 with 201 HP.
+72: Event: Helper has been spawned onto the map.
+73: Event: Helper has been removed from the map.
+74: Event: an enemy has been killed.
+75: Event: an enemy has been killed.
+76: Event: an enemy has been killed.
+77: Event: an enemy has been killed.
+78: Event: an enemy has been killed.
+79: Event: an enemy has been killed.
+80: Event: an enemy has been killed.
+81: Event: an enemy has been killed.
+82: Event: an enemy has been killed.
+83: Event: an enemy has been killed.
+84: Event: an enemy has been killed.
+85: Event: an enemy has been killed.
+86: Event: a level 68 enemy (name samantha) has been spawned at 138 with 124 HP.
+87: Event: An item has spawned!
+88: Event: Item has been retrieved!
+89: Event: An item has spawned!
+90: Event: An item has spawned!
+91: Event: a level 68 enemy (name dectalk paul) has been spawned at 135 with 132 HP.
+92: Event: An item has spawned!
+93: Event: An item has spawned!
+94: Event: An item has spawned!
+95: Event: a level 68 enemy (name samantha) has been spawned at 178 with 143 HP.
+96: A water pit spawned at 256
+97: A water pit spawned at 32
+98: A lava pit spawned at 73
+99: Event: a level 68 enemy (name alex mackintosh) has been spawned at 132 with 231 HP.
+100: Event: an enemy has been killed.
+101: Event: an enemy has been killed.
+102: Event: an enemy has been killed.
+103: Event: an enemy has been killed.
+104: Event: a level 72 enemy (name Death elf) has been spawned at 123 with 159 HP.
+105: Event: an enemy has been killed.
+106: Event: a level 73 enemy (name mason 1) has been spawned at 231 with 186 HP.
+107: Event: a level 73 enemy (name alex mackintosh) has been spawned at 223 with 206 HP.
+108: Event: Item has been retrieved!
+109: Event: Item has been retrieved!
+110: Event: Item has been retrieved!
+111: Event: Item has been retrieved!
+112: Event: Item has been retrieved!
+113: Event: a level 73 enemy (name samantha) has been spawned at 276 with 191 HP.
+114: Event: An item has spawned!
+115: Event: a level 73 enemy (name mason 1) has been spawned at 27 with 198 HP.
+116: Event: An item has spawned!
+117: Event: An item has spawned!
+118: Event: An item has spawned!
+119: Event: An item has spawned!
+120: Event: Enemy has jumped over a pit.
+121: Event: Enemy has jumped over a pit.
+122: Event: a level 73 enemy (name Giovani) has been spawned at 326 with 243 HP.
+123: A lava pit spawned at 102
+124: A water pit spawned at 275
+125: A lava pit spawned at 13
+126: Event: a level 73 enemy (name mason 1) has been spawned at 71 with 158 HP.
+127: Event: a level 73 enemy (name eloquence) has been spawned at 13 with 190 HP.
+128: Event: Enemy has jumped over a pit.
+129: Event: Helper has been spawned onto the map.
+130: Event: Helper has been removed from the map.
+131: Event: an enemy has been killed.
+132: Event: an enemy has been killed.
+133: Event: an enemy has been killed.
+134: Event: an enemy has been killed.
+135: Event: an enemy has been killed.
+136: Event: a level 78 enemy (name mason 1) has been spawned at 355 with 209 HP.
+137: Event: an enemy has been killed.
+138: Event: an enemy has been killed.
+139: Event: a level 80 enemy (name microsoft sam) has been spawned at 273 with 222 HP.
+140: Event: Item has been retrieved!
+141: Event: a level 80 enemy (name mason 1) has been spawned at 53 with 210 HP.
+142: Event: an enemy has been killed.
+143: Event: an enemy has been killed.
+144: Event: an enemy has been killed.
+145: Event: a level 83 enemy (name dectalk paul) has been spawned at 344 with 139 HP.
+146: A fire pit spawned at 249
+147: A fire pit spawned at 7
+148: A lava pit spawned at 194
+149: Event: An item has spawned!
+150: Event: a level 83 enemy (name Behemoth) has been spawned at 245 with 140 HP.
+151: Event: Enemy has jumped over a pit.
+152: Event: a level 83 enemy (name Death elf) has been spawned at 259 with 203 HP.
+153: Event: an enemy has been killed.
+154: Event: an enemy has been killed.
+155: Event: Item has been retrieved!
+156: Event: an enemy has been killed.
+157: Event: a level 86 enemy (name alex mackintosh) has been spawned at 44 with 248 HP.
+158: Event: a level 86 enemy (name alex mackintosh) has been spawned at 280 with 155 HP.
+159: event: mason has decided to exit.
+0: 
+1: event. Version=6.6.0.093.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A water pit spawned at 252
+5: A fire pit spawned at 335
+6: A hollow pit spawned at 270
+7: Event: a level 86 enemy (name Behemoth) has been spawned at 12 with 176 HP.
+8: Event: a level 86 enemy (name microsoft sam) has been spawned at 185 with 173 HP.
+9: Event: a level 86 enemy (name Death elf) has been spawned at 339 with 135 HP.
+10: Event: a level 86 enemy (name mason 1) has been spawned at 76 with 216 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 86 enemy (name mason 2) has been spawned at 192 with 189 HP.
+18: Event: an enemy has been killed.
+19: Event: an enemy has been killed.
+20: Event: an enemy has been killed.
+21: Event: an enemy has been killed.
+22: Event: an enemy has been killed.
+23: Event: a level 91 enemy (name microsoft sam) has been spawned at 131 with 278 HP.
+24: Event: An item has spawned!
+25: Event: An item has spawned!
+26: Event: a level 91 enemy (name mason 1) has been spawned at 188 with 275 HP.
+27: Event: An item has spawned!
+28: Event: An item has spawned!
+29: Event: An item has spawned!
+30: Event: a level 91 enemy (name dectalk paul) has been spawned at 228 with 181 HP.
+31: Event: a level 91 enemy (name dectalk paul) has been spawned at 142 with 278 HP.
+32: Event: a level 91 enemy (name Death elf) has been spawned at 121 with 277 HP.
+33: Event: a level 91 enemy (name alex mackintosh) has been spawned at 353 with 186 HP.
+34: A water pit spawned at 292
+35: A hollow pit spawned at 267
+36: A hollow pit spawned at 212
+37: Event: a level 91 enemy (name Behemoth) has been spawned at 333 with 237 HP.
+38: Event: a level 91 enemy (name alex mackintosh) has been spawned at 29 with 186 HP.
+39: Event: Item has been retrieved!
+40: Event: Item has been retrieved!
+41: Event: Item has been retrieved!
+42: Event: Item has been retrieved!
+43: Event: Item has been retrieved!
+44: Event: Helper has been spawned onto the map.
+45: Event: a level 91 enemy (name alex mackintosh) has been spawned at 273 with 187 HP.
+46: Event: Helper has been removed from the map.
+47: Event: an enemy has been killed.
+48: Event: an enemy has been killed.
+49: Event: an enemy has been killed.
+50: Event: an enemy has been killed.
+51: Event: an enemy has been killed.
+52: Event: an enemy has been killed.
+53: Event: an enemy has been killed.
+54: Event: an enemy has been killed.
+55: Event: an enemy has been killed.
+56: Event: a level 100 enemy (name microsoft sam) has been spawned at 317 with 238 HP.
+57: Event: An item has spawned!
+58: Event: Item has been retrieved!
+59: Event: An item has spawned!
+60: event: mason has decided to exit.

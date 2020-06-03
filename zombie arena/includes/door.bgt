@@ -1,0 +1,54 @@
+door@[] doors(0);
+sound_pool doorp;
+class door
+{
+int x;
+int y;
+string location;
+int doorsound;
+string dcs, dos;
+door(int dx, int dy, string dloc, string snd="door.ogg", string snd2="dooropen.ogg", string snd3="doorclose.ogg")
+{
+location=dloc;
+x=dx;
+y=dy;
+p.play_2d(snd, me.x, me.y, x, y, true);
+dos=snd2;
+dcs=snd3;
+}
+}
+void doorcheckloop()
+{
+for (uint i=0; i<doors.length(); i++)
+{
+if (me.x==doors[i].x and me.y==doors[i].y and key_pressed(KEY_RETURN))
+{
+p.destroy_sound(doors[i].doorsound);
+string loc=doors[i].location;
+doorp.play_stationary(doors[i].dos, false);
+doors.remove_at(i);
+go(loc);
+}
+}
+}
+void spawn_door(int dx, int dy, string where,string s1="door.ogg", string s2="dooropen.ogg",string s3="doorclose.ogg")
+{
+door door1(dx, dy, where,s1,s2,s3);
+doors.insert_last(door1);
+}
+void go(string w)
+{
+if (w=="out")
+{
+reset();
+wait(2500);
+p.play_stationary("winlevel.ogg",false);
+wait(2500);
+mainmenu();
+}
+else if (w!="out")
+{
+tempreset();
+draw_map(w);
+}
+}

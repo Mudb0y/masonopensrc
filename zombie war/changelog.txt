@@ -1,0 +1,67 @@
+New in 0.52
+Implemented a reset function. Now, the game will reset back to the main menu when dying and when exiting with escape (thanks John for suggestion.)
+New in 0.51
+Added 2 new weapons.
+Added a new skill called XP Master.
+New in 0.5
+Added a launches counter.
+Changed a few sounds.
+Arrow keys have been added in addition to A S D and W for moving.
+New in 0.41
+Changed the way humans work slightly.
+Improved combat with zombie mode.
+New in 0.4
+Added a new mode!
+New in 0.3
+Zombies can attack themselves.
+Bugs with attacking with your weapons have been fixed, making the game a little more easier
+Added a baseball bat, thanks to Baylee!
+New in 0.25
+Changed the level system quite a lot.
+Made the menu not exit when you spend points.
+made it so sounds play when you spend points and when they either max out or run out.
+Made it so you can press letters in the points menu.
+Adds the quantifier points.
+Dramatically increased each point's worth.
+New in 0.24
+Added kills.
+Increased maximum allowed points in speed, in addition, lowered the amount of speed each point gave.
+New in 0.23
+Some internal stuff to stop cheaters ... Hint hint.
+New in 0.22
+Adds medkits, and a heal power point to go along with it.
+Made another point called extra damage, which replaces the weapon damage that you got in defense. Can't make it too easy for ya, now, could I?
+Fixed now the data that is supposed to start at a number will, rather than starting at 0.
+Increased the maximum points for health.
+New in 0.21
+made crates and objs way less picky when getting them.
+New in 0.2
+Made beacons speak there distance now. Yay!
+Fixed some issues with weapon classes that had no weapons in them.
+Added loot.
+Added a new weapon.
+New in 0.1
+Updated crates so they included number of crates found when deciding how much xp to give you.
+New in 0.09
+made higher level zombies walk faster.
+New in 0.08
+Added a level up sound.
+New in 0.07
+Made it so if you're level 50 or higher, the guards go away.
+Made crates speak what they contain.
+New in 0.06
+Added a description to each skill in the menu.
+Changed the defense skill a bit, making it more useful.
+New in 0.05
+Fixed defense item.
+New in 0.04
+Saved more stuff in the save file.
+Added defense.
+Increased maximum speed capacity.
+New in 0.03
+Added a save file.
+Added leveling.
+Bumped the number of guards down a little bit.
+Made zombies more realistic when they fall.
+New in 0.02
+Added beacons, shift grave and shift 1. Hit n to play the sound at the beacon's position.

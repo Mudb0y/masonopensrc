@@ -1,0 +1,17 @@
+0: 
+1: event. Version=8.0.0.111. (1-18-55 AM)
+2: Event: mason is using the default Soundpack. (1-18-55 AM)
+3: Event: mason is using the spaceship 2 environment. (1-18-55 AM)
+4: Event. User wants a normal game. (1-19-00 AM)
+5: event: mason has decided to start a new game. (1-19-00 AM)
+6: A lava pit spawned at 1139 (1-19-00 AM)
+7: A hollow pit spawned at 393 (1-19-00 AM)
+8: A hollow pit spawned at 653 (1-19-00 AM)
+9: Event: a level 4731 enemy (name microsoft sam) has been spawned at 408 with 6143 HP. (1-19-00 AM)
+10: Event: a level 4731 enemy (name southerner) has been spawned at 970 with 5888 HP. (1-19-00 AM)
+11: Event: a level 4731 enemy (name alex mackintosh) has been spawned at 1140 with 8740 HP. (1-19-00 AM)
+12: Event: a level 4731 enemy (name samantha) has been spawned at 1172 with 6192 HP. (1-19-00 AM)
+13: Event: Game loaded! (1-19-00 AM)
+14: Event: a level 4731 enemy (name southerner) has been spawned at 667 with 6740 HP. (1-19-02 AM)
+15: Event: an enemy has been killed. (1-19-04 AM)
+16: event: mason has decided to exit.

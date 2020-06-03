@@ -1,0 +1,141 @@
+timer shottimer, flytimer, lifetimer;
+int lives=10;
+int gamekills=0;
+int reversed=0;
+int shottime=1000;
+int dollarsammount;
+int score=0;
+int shot=0;
+int flyspeed=200;
+sound lost, hitwall1, hitwall2, hitcan, flycan;
+void mg1()
+{
+gamepaused=0;
+lives=10;
+reversed=0;
+shottime=1000;
+dollarsammount=0;
+score=0;
+shot=0;
+flyspeed=200;
+lost.load("sounds/soundpacks/"+soundpack+"/lost.ogg");
+hitwall1.load("sounds/soundpacks/"+soundpack+"/hitwall1.ogg");
+hitwall2.load("sounds/soundpacks/"+soundpack+"/hitwall2.ogg");
+flycan.load("sounds/soundpacks/"+soundpack+"/flycan"+random(1,3)+".ogg");
+flycan.pan=-30;
+flycan.play_looped();
+while (true)
+{
+if (key_pressed(KEY_P))
+{
+if (gamepaused==0)
+{
+gamepaused=1;
+flytimer.pause();
+flycan.pause();
+}
+else if (gamepaused==1)
+{
+gamepaused=0;
+flytimer.resume();
+flycan.play_looped();
+}
+}
+if (lives<=0)
+{
+hitwall1.stop();
+hitwall2.stop();
+flycan.stop();
+hitcan.stop();
+lost.play_wait();
+dollars+=dollarsammount;
+dlg("you earned a total of "+dollarsammount+" dollars in this game!");
+dollarsammount=0;
+registrywrite();
+mgmenu();
+}
+if (flyspeed<=30)
+{
+flyspeed=30;
+}
+if (shot==1)
+{
+if (shottimer.elapsed>=shottime)
+{
+flycan.load("sounds/soundpacks/"+soundpack+"/flycan"+random(1,3)+".ogg");
+flycan.pan=-30;
+flycan.play_looped();
+shot=0;
+shottimer.restart();
+}
+}
+if (flytimer.elapsed>=flyspeed)
+{
+if (reversed==0)
+{
+flycan.pan=flycan.pan+2;
+flytimer.restart();
+}
+if (reversed==1)
+{
+flycan.pan=flycan.pan-2;
+flytimer.restart();
+}
+}
+if (flycan.pan<=-30 and reversed==1)
+{
+lives-=1;
+hitwall1.stop();
+hitwall1.play();
+flycan.pan=-29;
+reversed=0;
+}
+if (flycan.pan>=30)
+{
+lives-=1;
+hitwall2.stop();
+hitwall2.play();
+flycan.pan=29;
+reversed=1;
+}
+if (key_pressed(KEY_SPACE) and gamepaused==0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/gun.ogg", false);
+if (flycan.pan==-2 or flycan.pan==-1 or flycan.pan==0 or flycan.pan==1 or flycan.pan==2)
+{
+reversed=0;
+hitcan.load("sounds/soundpacks/"+soundpack+"/hitcan"+random(1,3)+".ogg");
+flycan.stop();
+dollarsammount+=random(1,3);
+gamekills+=1;
+hitcan.play();
+flyspeed-=5;
+if (gamekills==5 or gamekills==10 or gamekills==20 or gamekills==30 or gamekills==40 or gamekills==50)
+{
+speak("extra life!");
+lives+=1;
+}
+shot=1;
+}
+}
+if(key_pressed(KEY_ESCAPE))
+{
+hitwall1.stop();
+hitwall2.stop();
+flycan.stop();
+hitcan.stop();
+dlg("you earned a total of "+dollarsammount+" dollars in this game!");
+registrywrite();
+dollarsammount=0;
+mgmenu();
+}
+if (key_pressed(KEY_K))
+{
+speak("gamekills "+gamekills);
+}
+if (key_pressed(KEY_L))
+{
+speak("lives "+lives+"");
+}
+}
+}

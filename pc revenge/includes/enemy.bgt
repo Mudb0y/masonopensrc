@@ -1,0 +1,79 @@
+class enemy
+{
+int reset=0;
+int health=100;
+int speed=random(120,450);
+bool stepped;
+int spawned;
+int pos;
+sound diesound, hitsound, spawnsound, stepsound;
+timer dietimer, walktimer;
+enemy(int position, int hp=100)
+{
+health=hp;
+pos=position;
+spawnsound.load("sounds/spawn.ogg");
+spawnsound.stop();
+spawnsound.play();
+spawned=1;
+}
+}
+void echeckloop()
+{
+for (uint i=0; i<enemies.length(); i++)
+{
+position_sound_1d(enemies[i].diesound, x, enemies[i].pos, 1, 1);
+position_sound_1d(enemies[i].stepsound, x, enemies[i].pos, 1, 1);
+if (enemies[i].spawned==0 and enemies.length()>=i)
+{
+if (enemies[i].reset==0)
+{
+enemies[i].dietimer.restart();
+enemies[i].reset=1;
+}
+if (enemies[i].dietimer.elapsed>=enemies[i].diesound.length and enemies.length>=i)
+{
+enemies.remove_at(i);
+}
+}
+else if (enemies[i].spawned==1 and enemies.length()>=i)
+{
+if (enemies[i].pos>x and enemies[i].walktimer.elapsed>=enemies[i].speed)
+{
+enemies[i].walktimer.restart();
+enemies[i].pos-=1;
+playenemystep(i);
+}
+else if (enemies[i].pos<x and enemies[i].walktimer.elapsed>=enemies[i].speed)
+{
+enemies[i].walktimer.restart();
+enemies[i].pos+=1;
+playenemystep(i);
+}
+}
+}
+}
+void playenemystep(uint enemynumber)
+{
+enemies[enemynumber].stepsound.load("sounds/"+random(1,5)+".ogg");
+position_sound_1d(enemies[enemynumber].stepsound, x, enemies[enemynumber].pos, 1, 1);
+enemies[enemynumber].stepsound.stop();
+enemies[enemynumber].stepsound.play();
+enemies[enemynumber].stepped=true;
+}
+void edie(uint enemy)
+{
+enemies[enemy].diesound.stop();
+enemies[enemy].diesound.load("sounds/enemydeath.ogg");
+position_sound_1d(enemies[enemy].diesound, x, enemies[enemy].pos, 1, 1);
+enemies[enemy].diesound.play();
+enemies[enemy].spawned=0;
+ram+=4;
+}
+void ehit(uint enemy)
+{
+enemies[enemy].hitsound.stop();
+enemies[enemy].hitsound.load("sounds/enemypain.ogg");
+position_sound_1d(enemies[enemy].hitsound, x, enemies[enemy].pos, 1, 1);
+enemies[enemy].hitsound.play();
+}

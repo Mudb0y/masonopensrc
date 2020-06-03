@@ -1,0 +1,135 @@
+#include "m.bgt"
+sound matedge, exiting, menumus;
+dynamic_menu menu;
+int mres;
+int menu_position;
+void fpmenu()
+{
+exiting.load("sounds/menu/mm04.ogg");
+matedge.load("sounds/menu/atedge.ogg");
+menumus.load("sounds/menu/background.ogg");
+menumus.play_looped();
+menu.reset(false);
+menu.add_edge_sound("sounds/menu/matedge.ogg");
+menu.add_click_sound("sounds/menu/move.ogg");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item("sounds/menu/mm02.ogg");
+menu.add_item("sounds/menu/mm03.ogg");
+mres=menu.run("sounds/menu/mm01.ogg", false);
+if (mres==-1)
+{
+exit();
+}
+if (mres==0)
+{
+matedge.stop();
+exiting.play();
+matedge.play();
+fade(menumus,-40,10);
+menumus.stop();
+exit();
+}
+if (mres==1)
+{
+matedge.stop();
+matedge.play();
+fade(menumus,-40,10);
+menumus.stop();
+game();
+}
+if (mres==2)
+{
+exiting.play();
+matedge.stop();
+matedge.play();
+fade(menumus,-40,10);
+menumus.stop();
+exit();
+}
+}
+void results()
+{
+menu.reset(false);
+menu.add_edge_sound("sounds/menu/matedge.ogg");
+menu.add_click_sound("sounds/menu/move.ogg");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("level, "+level+".");
+menu.add_item_tts("score, "+score+".");
+menu.add_item_tts("crackerjacks, "+crackerjacks+".");
+menu.add_item_tts("Copy stats to the clipboard");
+menu.add_item_tts("done");
+mres=menu.run("results menu", true);
+if (mres==-1)
+{
+exit();
+}
+if (mres==0)
+{
+zeroout();
+fpmenu();
+}
+if (mres==1)
+{
+results();
+}
+if (mres==2)
+{
+results();
+}
+if (mres==3)
+{
+results();
+}
+if (mres==4)
+{
+voice.speak_wait("copied");
+clipboard_copy_text("level, "+level+".
+score, "+score+".
+crackerjacks, "+crackerjacks+".");
+results();
+}
+if (mres==5)
+{
+zeroout();
+fpmenu();
+}
+}
+void tempresults()
+{
+menu.reset(false);
+menu.add_edge_sound("sounds/menu/matedge.ogg");
+menu.add_click_sound("sounds/menu/move.ogg");
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("level, "+level+".");
+menu.add_item_tts("score, "+score+".");
+menu.add_item_tts("crackerjacks, "+crackerjacks+".");
+menu.add_item_tts("go back");
+mres=menu.run("results menu", true);
+if (mres==-1)
+{
+exit();
+}
+if (mres==0)
+{
+game();
+}
+if (mres==1)
+{
+results();
+}
+if (mres==2)
+{
+results();
+}
+if (mres==3)
+{
+results();
+}
+if (mres==4)
+{
+game();
+}
+}

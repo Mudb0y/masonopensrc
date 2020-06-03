@@ -1,0 +1,256 @@
+class obj
+{
+int maxitems=23;
+int spawntime;
+int spawned;
+int number;
+int position=-50;
+sound loop, get;
+timer spawntimer;
+void spawn()
+{
+number=random(0,maxitems);
+position=random(2,maxpos);
+loop.load("sounds/soundpacks/"+soundpack+"/item.ogg");
+if (pov==0)
+{
+position_sound_1d(loop, x, position, 1, 1);
+}
+else if (pov==1)
+{
+position_sound_1d(loop, helperpos, position, 1, 1);
+}
+else if (pov==3)
+{
+position_sound_1d(loop, povsquare, x, 1, 1);
+}
+loop.play_looped();
+spawned=1;
+spawntimer.restart();
+spawntimer.pause();
+event("Event: An item has spawned!");
+}
+void take()
+{
+loop.stop();
+get.load("sounds/soundpacks/"+soundpack+"/itemget.ogg");
+get.stop();
+get.play();
+position=-5;
+spawned=0;
+spawntimer.restart();
+checknumber();
+event("Event: Item has been retrieved!");
+}
+void destroy()
+{
+loop.stop();
+position=-5;
+spawned=0;
+spawntimer.restart();
+}
+void checknumber()
+{
+if (number==0)
+{
+speak("Health boost!");
+playerhealth+=10;
+}
+else if (number==1)
+{
+speak("Super Health boost!");
+playerhealth+=50;
+}
+else if (number==2)
+{
+speak("Super Health Superboost!");
+playerhealth+=random(100,250);
+}
+else if (number==3)
+{
+speak("Knife damage upgrade!");
+knifedamage+=5;
+}
+else if (number==4)
+{
+speak("Gun damage upgrade!");
+gundamage+=5;
+}
+else if (number==5)
+{
+speak("Machine gun damage upgrade!");
+macgundamage+=5;
+}
+else if (number==6)
+{
+speak("Pusher Damage Upgrade!");
+pusherdamage+=5;
+}
+else if (number==7)
+{
+speak("Laser damage upgrade!");
+laserdamage+=5;
+}
+else if (number==8)
+{
+speak("Knife Range Upgrade!");
+kniferange+=5;
+}
+else if (number==9)
+{
+speak("Gun range upgrade!");
+gunrange+=5;
+}
+else if (number==10)
+{
+speak("Machine gun range upgrade!");
+macgunrange+=5;
+}
+else if (number==11)
+{
+speak("Pusher range upgrade!");
+pusherrange+=5;
+}
+else if (number==12)
+{
+speak("Blaster Speed upgrade!");
+blasterspeed-=20;
+}
+else if (number==13)
+{
+speak("blaster damage upgrade!");
+blasterdefdamage+=20;
+}
+else if (number==14)
+{
+speak("Laser Range Upgrade!");
+laserrange+=5;
+}
+else if (number==15)
+{
+speak("Max Position upgrade!");
+maxpos+=10;
+}
+else if (number==16)
+{
+speak("Super Max position upgrade!");
+maxpos+=50;
+}
+else if (number==17)
+{
+speak("Helper Health upgrade!");
+helperhealth+=100;
+}
+else if (number==18)
+{
+speak("Helper damage upgrade!");
+helperdamage+=5;
+}
+else if (number==19)
+{
+speak("Helper range upgrade!");
+helperrange+=2;
+}
+else if (number==20)
+{
+speak("grenade pack!");
+grenades+=5;
+}
+else if (number==21)
+{
+speak("Machine gun ammo pack!");
+macgunammo+=20;
+}
+else if (number==22)
+{
+speak("Gun ammo pack!");
+gunammo+=50;
+}
+else if (number==23)
+{
+speak("Laser battery pack!");
+batteries+=10;
+}
+}
+}
+void iloop(obj@ ihandle)
+{
+if (pov==0)
+{
+position_sound_1d(ihandle.loop, x, ihandle.position, 1, 1);
+}
+else if (pov==1)
+{
+position_sound_1d(ihandle.loop, helperpos, ihandle.position, 1, 1);
+}
+else if (pov==3)
+{
+position_sound_1d(ihandle.loop, povsquare, ihandle.position, 1, 1);
+}
+if (ihandle.spawntimer.elapsed>=ihandle.spawntime and ihandle.spawned==0 and paused==0)
+{
+ihandle.spawn();
+}
+if (x==ihandle.position and jumping==0)
+{
+ihandle.take();
+}
+if (helperpos==ihandle.position)
+{
+ihandle.take();
+}
+}
+void stopitems()
+{
+item1.loop.stop();
+item2.loop.stop();
+item3.loop.stop();
+item4.loop.stop();
+item5.loop.stop();
+}
+void pauseitems()
+{
+if (item1.spawned==1)
+{
+item1.loop.pause();
+}
+if (item2.spawned==1)
+{
+item2.loop.pause();
+}
+if (item3.spawned==1)
+{
+item3.loop.pause();
+}
+if (item4.spawned==1)
+{
+item4.loop.pause();
+}
+if (item5.spawned==1)
+{
+item5.loop.pause();
+}
+}
+void playitems()
+{
+if (item1.spawned==1)
+{
+item1.loop.play_looped();
+}
+if (item2.spawned==1)
+{
+item2.loop.play_looped();
+}
+if (item3.spawned==1)
+{
+item3.loop.play_looped();
+}
+if (item4.spawned==1)
+{
+item4.loop.play_looped();
+}
+if (item5.spawned==1)
+{
+item5.loop.play_looped();
+}
+}

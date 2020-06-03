@@ -1,0 +1,1601 @@
+#include"includes/trophy.bgt"
+#include"includes/webstuff.bgt"
+#include"includes/charparse.bgt"
+#include"includes/checkver.bgt"
+#include"includes/dateandtime.bgt"
+#include"includes/positions.bgt"
+#include"includes/enemy.bgt"
+#include"includes/reg.bgt"
+#include"includes/pit.bgt"
+#include"includes/readfuncs.bgt"
+#include"includes/urlreader.bgt"
+#include"includes/menu.bgt"
+#include"includes/dlg.bgt"
+#include"includes/dlgplayer.bgt"
+#include"includes/item.bgt"
+#include"includes/mg1.bgt"
+#include "includes/mg2.bgt"
+#include"includes/mg3.bgt"
+#include"includes/mg4.bgt"
+#include"includes/mg5.bgt"
+#include"includes/mg6.bgt"
+#include"includes/mg7.bgt"
+#include "includes/m_pro.bgt"
+#include"includes/sz.bgt"
+#include"includes/sound_pool.bgt"
+#include"sound_positioning.bgt"
+#include"includes/elapsed.bgt"
+#include"includes/menu.bgt"
+#include"includes/keyhook.bgt"
+#include "includes/extrafuncs.bgt"
+int tempy1, tempy2;
+string thedate, thetime;
+dictionary data, data2;
+string character="default";
+int airtime;
+int trophy1unlocked=0;
+int trophy2unlocked=0;
+int trophy3unlocked=0;
+int trophy4unlocked=0;
+int trophy5unlocked=0;
+int trophy6unlocked=0;
+int trophy7unlocked=0;
+int trophy8unlocked=0;
+int trophy9unlocked=0;
+int trophy10unlocked=0;
+int trophy11unlocked=0;
+int trophy12unlocked=0;
+int trophy13unlocked=0;
+int trophy14unlocked=0;
+int trophy15unlocked=0;
+int trophy16unlocked=0;
+int trophy17unlocked=0;
+int trophy18unlocked=0;
+int trophy19unlocked=0;
+string menutheme="building (default)";
+string runs;
+string environment="forest (default)";
+string pitname;
+int hotkeybought;
+string enemyname;
+string[] eventlog;
+int enableevents=1;
+int enemyminhealth=50;
+int enemymaxhealth=100;
+int enemyminspeed=600;
+int enemymaxspeed=1200;
+int maxchance=0;
+int playerchance=0;
+bool dev=false;
+enemy@[] enemies(0);
+pit@[] pits(0);
+int advancedmode;
+obj item1, item2, item3, item4, item5;
+int szradaron=0;
+int bufferlength;
+int buffernumber;
+string[] speechbuffer();
+int batteries=100;
+string soundpack="sounds";
+int datavalue=0;
+int grenades=10;
+int playersonaron;
+int povspeed=40;
+int povsquare;
+int playerpos;
+int grenadepos2=0;
+int pov=0;
+int grenadelaunched=0;
+int grenadepos=0;
+int grenadespeed=80;
+int grenademove=4;
+int grenadedamage=50;
+int grenaderange=5;
+int telespeed=200;
+int telepos=0;
+int teleon=0;
+int telegot=0;
+int telerange=5;
+int lasergot=0;
+int laserrange=5;
+int laserdamage=15;
+string name;
+string version="9.6.0.133";
+int helperrange=2;
+int hitwall=0;
+string killcomment;
+int gametime;
+int kills=0;
+int helperhealth=500;
+int helperdamage=8;
+int helperspeed3=1;
+int helperfire=80;
+int helperon=0;
+int helperspeed=350;
+int helperspeed2=60;
+int helpertime=100;
+int helperpos;
+string healthstatus;
+int enablelogo;
+int enableyn;
+int paused=0;
+int dollars;
+int playerhit=0;
+int grabberget;
+double musvol;
+int blasttime=2000;
+int blasterpos=20;
+int blasterspeed=150;
+int weapon=1;
+int pusherpos=2;
+int direction=1;
+int jumpheight=5;
+int jumptime=70;
+bool ascending;
+double x, y;
+int blasteron=0;
+double maxpos=100;
+int speedtime=450;
+int speedtime2;
+int enemypos=-100;
+int playerhealth=150;
+int jumping=0;
+int fistrange=2;
+int kniferange=4;
+int gunrange=8;
+int macgunrange=12;
+int pusherrange=8;
+int gunammo=250;
+int fistdamage=2;
+int gundamage=8;
+int knifedamage=4;
+int macgundamage=6;
+int pusherdamage=2;
+int blasterdamage=25;
+int blasterdefdamage=30;
+int macgunammo=200;
+int macguntime=100;
+int weapontime=0;
+int attackspeed=1500;
+int attackspeed2=400;
+int mres, mres2;
+time_elapsed timeelapsed;
+kh keyhook;
+dynamic_menu_pro menu;
+sound ambience, szradarsound1, szradarsound2, playersonar, grenaderoll, explode, spawn, knifehit, helperdeath, helperpain, helpergun, helper, see, kill, wallblast, gamemusic, blaster;
+sound_pool pool(250);
+sz sz1, sz2;
+timer povtimer, grenadespeedtimer, grenadetimer, teletimer, helpertimer, helpertimer2, blasteront, blastertimer, gametimer, vtimer, speedtimer, jumptimer, weapontimer;
+void main()
+{
+item1.spawntime=9500;
+item2.spawntime=15950;
+item3.spawntime=12800;
+item4.spawntime=14250;
+item5.spawntime=15025;
+sz1.length=5;
+sz2.length=5;
+event("event. Version="+version+".");
+timeelapsed.set_timer(gametimer);
+if (!directory_exists(DIRECTORY_APPDATA+"/sb"))
+{
+directory_create(DIRECTORY_APPDATA+"/sb");
+}
+registry();
+if (name=="")
+{
+event("Event: User is now setting his or her name.");
+name=input_box("set name", "welcome to the new scrolling battles "+version+"! Please enter your name to continue.");
+write(DIRECTORY_APPDATA+"/sb/name.dat", name);
+}
+keyhook.install();
+show_game_window(name+" - Scrolling Battles v "+version);
+charparse();
+if (SCRIPT_COMPILED==true)
+{
+urlreader("http://mtgstudiosus.tk/sb/motd.txt", "Message of the day");
+}
+gettrophycount();
+event("event: "+name+" has "+totaltrophies+" trophies");
+event("Event: "+name+" is using the "+soundpack+" Soundpack.");
+event("Event: "+name+" is using the "+environment+" environment.");
+if (SCRIPT_COMPILED==true)
+{
+getruns();
+event("Event: Scrolling Battles has been ran worldwide a total of "+runs+" times, including yours!");
+}
+if (enablelogo==0)
+{
+mainmenu();
+}
+else if (enablelogo==1)
+{
+mainmenu();
+}
+}
+void logoplay()
+{
+int logoslot=pool.play_1d("sounds/soundpacks/"+soundpack+"/logo.ogg", x, x, false, false);
+while (pool.sound_is_playing(logoslot))
+{
+if (key_pressed(KEY_SPACE) or key_pressed(KEY_RETURN))
+{
+pool.destroy_sound(logoslot);
+mainmenu();
+}
+}
+mainmenu();
+}
+void game()
+{
+difmenu();
+if (advancedmode==1)
+{
+event("event. User wants an advanced game.");
+}
+else if (advancedmode==0)
+{
+event("Event. User wants a normal game.");
+}
+pittimer.restart();
+item1.spawntimer.restart();
+item2.spawntimer.restart();
+item3.spawntimer.restart();
+item4.spawntimer.restart();
+item5.spawntimer.restart();
+event("event: "+name+" has decided to start a new game.");
+ambience.load("sounds/environments/"+environment+"/ambience.ogg");
+szradarsound1.load("sounds/soundpacks/"+soundpack+"/szradar.ogg");
+szradarsound2.load("sounds/soundpacks/"+soundpack+"/szradar.ogg");
+playersonar.load("sounds/soundpacks/"+soundpack+"/playersonar.ogg");
+grenaderoll.load("sounds/soundpacks/"+soundpack+"/grenaderoll.ogg");
+knifehit.load("sounds/soundpacks/"+soundpack+"/knifehit.ogg");
+helper.load("sounds/soundpacks/"+soundpack+"/helper.ogg");
+helperpain.load("sounds/soundpacks/"+soundpack+"/helperpain.ogg");
+helperdeath.load("sounds/soundpacks/"+soundpack+"/helperdeath.ogg");
+helpergun.load("sounds/soundpacks/"+soundpack+"/helperknife.ogg");
+gamemusic.load("sounds/environments/"+environment+"/music.ogg");
+blaster.load("sounds/soundpacks/"+soundpack+"/blaster_loop.ogg");
+wallblast.load("sounds/environments/"+environment+"/wall.ogg");
+datavalue=1;
+positions();
+gametimer.restart();
+gamemusic.volume=musvol;
+gamemusic.play_looped();
+positions();
+gametimer.force(gametime);
+regenerate_pits();
+generate_enemies();
+ambience.play_looped();
+event("Event: Game loaded!");
+while (true)
+{
+airtime=speedtime2/3;
+if (trophy1unlocked==0 and kills>=500)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy Obtain 500 kills!");
+event("event: "+name+" just earned the trophy Obtain 500 kills!");
+trophy1unlocked=1;
+}
+if (trophy2unlocked==0 and kills>=1000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy Obtain 1000 kills!");
+event("event: "+name+" just earned the trophy Obtain 1000 kills!");
+trophy2unlocked=1;
+}
+if (trophy3unlocked==0 and kills>=2000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy Obtain 2000 kills!");
+event("event: "+name+" just earned the trophy Obtain 2000 kills!");
+trophy3unlocked=1;
+}
+if (trophy4unlocked==0 and kills>=5000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy Obtain 5000 kills!");
+event("event: "+name+" just earned the trophy Obtain 5000 kills!");
+trophy4unlocked=1;
+}
+if (trophy7unlocked==0 and dollars>=10000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy have a total of 10000 dollars!");
+event("event: "+name+" just earned the trophy Have a total of 10000 dollars!");
+trophy7unlocked=1;
+}
+if (trophy8unlocked==0 and dollars>=100000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy have a total of 100000 dollars!");
+event("event: "+name+" just earned the trophy Have a total of 100000 dollars!");
+trophy8unlocked=1;
+}
+if (trophy9unlocked==0 and dollars>=1000000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy have a total of 1000000 dollars!");
+event("event: "+name+" just earned the trophy Have a total of 1000000 dollars!");
+trophy9unlocked=1;
+}
+if (trophy10unlocked==0 and dollars>=5000000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy have a total of 5000000 dollars!");
+event("event: "+name+" just earned the trophy Have a total of 5000000 dollars!");
+trophy10unlocked=1;
+}
+if (trophy11unlocked==0 and dollars>=10000000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy have a total of 10000000 dollars!");
+event("event: "+name+" just earned the trophy Have a total of 10000000 dollars!");
+trophy11unlocked=1;
+}
+if (trophy12unlocked==0 and jumptime>=60000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy obtain 1 minute of jumptime!");
+event("event: "+name+" just earned the trophy Obtain 1 minute of jumptime!");
+trophy12unlocked=1;
+}
+if (trophy13unlocked==0 and jumptime>=120000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy obtain 2 minutes of jumptime!");
+event("event: "+name+" just earned the trophy Obtain 2 minutes of jumptime!");
+trophy13unlocked=1;
+}
+if (trophy14unlocked==0 and enemies.length()>=25)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy let 25 enemies spawn on the map at once");
+event("event: "+name+" just earned the trophy Let 25 enemies spawn on the map at once!");
+trophy14unlocked=1;
+}
+if (trophy15unlocked==0 and enemies.length()>=50)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy let 50 enemies spawn on the map at once");
+event("event: "+name+" just earned the trophy Let 25 enemies spawn on the map at once!");
+trophy15unlocked=1;
+}
+if (trophy16unlocked==0 and enemies.length()>=100)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy force 100 enemies to spawn on the map at once");
+event("event: "+name+" just earned the trophy Force 100 enemies to spawn on the map at once!");
+trophy16unlocked=1;
+}
+if (trophy17unlocked==0)
+{
+if(TIME_HOUR>21 or TIME_HOUR<3)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy play scrolling battles late at night");
+event("event: "+name+" just earned the trophy Play scrolling battles late at night!");
+trophy17unlocked=1;
+}
+}
+if (trophy18unlocked==0)
+{
+if (TIME_HOUR>15 and TIME_HOUR<17)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy play scrolling battles in the middle of the day");
+event("event: "+name+" just earned the trophy Play scrolling battles in the middle of the day!");
+trophy18unlocked=1;
+}
+}
+if (trophy19unlocked==0)
+{
+if (TIME_HOUR>7 and TIME_HOUR<12)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/trophy.ogg", false);
+dlg("Alert! You have successfully earned the trophy play scrolling battles in the morning");
+event("event: "+name+" just earned the trophy Play scrolling battles in the morning!");
+trophy19unlocked=1;
+}
+}
+if (key_pressed(KEY_F12))
+{
+speak(get_time(true, false));
+}
+if (key_pressed(KEY_F9) and hotkeybought==1)
+{
+pause();
+pitmenu();
+if (paused==0)
+{
+unpause();
+}
+}
+if (key_pressed(KEY_F10))
+{
+string enemiesnumber=input_box("Spawn enemies", "Enter how many enemies should spawn now.");
+int number=string_to_number(enemiesnumber);
+for (uint i=0; i<number; i++)
+{
+enemy enemy7(random(sz1.finish+2,sz2.start-2), random(enemyminhealth,enemymaxhealth));
+enemies.insert_last(enemy7);
+}
+}
+if (key_pressed(KEY_F11) and hotkeybought==1)
+{
+pause();
+spawnmenu();
+if (paused==0)
+{
+unpause();
+}
+}
+if (enemymaxspeed<=250)
+{
+enemymaxspeed=250;
+}
+if (enemyminspeed<=50)
+{
+enemyminspeed=50;
+}
+if (key_pressed(KEY_N))
+{
+pause();
+enemymenu();
+if (paused==0)
+{
+unpause();
+}
+}
+if (key_pressed(KEY_B))
+{
+if (szradaron==0)
+{
+szradaron=1;
+speak("Safe Zone Radar beacon on.");
+szradarsound1.play_looped();
+szradarsound2.play_looped();
+}
+else if (szradaron==1)
+{
+szradaron=0;
+speak("Safe Zone Radar beacon off.");
+szradarsound1.stop();
+szradarsound2.stop();
+}
+}
+if (key_pressed(KEY_LBRACKET))
+{
+if (buffernumber>0)
+{
+buffernumber-=1;
+speak(buffernumber+": "+speechbuffer[buffernumber]);
+}
+}
+if (key_pressed(KEY_SEMICOLON))
+{
+buffernumber=0;
+speak(buffernumber+": "+speechbuffer[buffernumber]);
+}
+if (key_pressed(KEY_RBRACKET))
+{
+if (buffernumber<speechbuffer.length()-2)
+{
+buffernumber+=1;
+speak(buffernumber+": "+speechbuffer[buffernumber]);
+}
+}
+if (key_pressed(KEY_APOSTROPHE))
+{
+buffernumber=speechbuffer.length()-2;
+speak(buffernumber+": "+speechbuffer[buffernumber]);
+}
+speedtime2=speedtime-80;
+if (key_pressed(KEY_R) and pov>0)
+{
+if (playersonaron==0)
+{
+speak("player sonar on");
+playersonaron=1;
+playersonar.play_looped();
+}
+else if (playersonaron==1)
+{
+speak("player sonar off");
+playersonaron=0;
+playersonar.stop();
+}
+}
+if (key_down(KEY_COMMA) and pov==3)
+{
+if (povtimer.elapsed>=povspeed)
+{
+povtimer.restart();
+if (povsquare>0)
+{
+povsquare-=1;
+}
+}
+}
+if (key_down(KEY_PERIOD) and pov==3)
+{
+if (povtimer.elapsed>=povspeed)
+{
+povtimer.restart();
+if (povsquare<maxpos)
+{
+povsquare+=1;
+}
+}
+}
+if (key_pressed(KEY_SLASH) and pov==3)
+{
+povsquare=x;
+}
+if (key_down(KEY_LSHIFT) and key_pressed(KEY_X) and pov==3 or key_down(KEY_RSHIFT) and key_pressed(KEY_X) and pov==3)
+{
+string thesquare=input_box("camera", "Enter the position you want to put your camera at, from 0 to "+maxpos+".");
+int whichsquare=string_to_number(thesquare);
+if (whichsquare>=maxpos or whichsquare<0)
+{
+alert("error!", "number out of range!");
+}
+else
+{
+povsquare=whichsquare;
+}
+}
+if (key_pressed(KEY_X))
+{
+speak(povsquare+" of "+maxpos);
+}
+if (pov==1 and helperon==0)
+{
+playersonar.stop();
+playersonaron=0;
+pov=0;
+}
+if (key_pressed(KEY_V))
+{
+pause();
+povmenu();
+if (paused==0)
+{
+unpause();
+}
+}
+if (x>maxpos)
+{
+pool.play_1d("sounds/soundpacks/"+soundpack+"/wall.ogg", x, x, false);
+x=maxpos;
+}
+if (x<0)
+{
+pool.play_1d("sounds/soundpacks/"+soundpack+"/wall.ogg", x, x, false);
+x=0;
+}
+if (telepos<0)
+{
+telepos=0;
+}
+if (telepos>maxpos)
+{
+telepos=maxpos;
+}
+if (telespeed<=5)
+{
+telespeed=5;
+}
+if (blasterspeed<=50)
+{
+blasterspeed=50;
+}
+if (helperspeed<=30)
+{
+helperspeed=50;
+}
+if (dollars>10000000)
+{
+dollars=10000000;
+}
+if (macguntime<50)
+{
+macguntime=50;
+}
+if (speedtime<200)
+{
+speedtime=200;
+}
+if (key_pressed(KEY_K))
+{
+speak("you have made "+kills+" kills in the time you got this game. Player status, "+killcomment);
+}
+if (key_pressed(KEY_F4))
+{
+if (helperon==1)
+{
+speak("helper position, "+helperpos+" of "+maxpos);
+}
+else if (helperon==0)
+{
+speak("helper not spawned");
+}
+}
+if (key_pressed(KEY_F5))
+{
+speak("helper health, "+helperhealth+" HP.");
+}
+if (key_pressed(KEY_P))
+{
+if (paused==0)
+{
+pause();
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/pause.ogg", false, false);
+paused=1;
+event("Event: Game was paused by the user");
+}
+else if (paused==1)
+{
+unpause();
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/unpause.ogg", false, false);
+paused=0;
+event("Event: Game was unpaused by the user");
+}
+}
+if (key_pressed(KEY_S))
+{
+pause();
+scatmenu();
+if (paused==0)
+{
+unpause();
+}
+}
+if (key_pressed(KEY_Z))
+{
+pause();
+szinfomenu();
+if (paused==0)
+{
+unpause();
+}
+}
+if (key_pressed(KEY_E))
+{
+pause();
+sellmenu();
+if (paused==0)
+{
+unpause();
+}
+}
+if (key_pressed(KEY_M))
+{
+speak(dollars+" dollars.");
+}
+if (key_pressed(KEY_T))
+{
+speak(""+timeelapsed.m()+" mins, "+timeelapsed.s()+" secs");
+}
+if (key_pressed(KEY_W))
+{
+weaponmenu();
+}
+if (key_pressed(KEY_I))
+{
+pause();
+infomenu();
+if (paused==0)
+{
+unpause();
+}
+}
+if (key_pressed(KEY_HOME))
+{
+set_sound_master_volume(sound_master_volume+2);
+}
+if (key_pressed(KEY_END) and sound_master_volume>=-50)
+{
+set_sound_master_volume(sound_master_volume-2);
+}
+if (key_down(KEY_PRIOR) and vtimer.elapsed>=90)
+{
+gamemusic.volume=gamemusic.volume+1;
+data.set("musicvolume", gamemusic.volume);
+vtimer.restart();
+}
+if (key_down(KEY_NEXT) and vtimer.elapsed>=90)
+{
+gamemusic.volume=gamemusic.volume-1;
+data.set("musicvolume", gamemusic.volume);
+vtimer.restart();
+}
+if (key_pressed(KEY_F1))
+{
+speak("your speed, "+speedtime);
+}
+if (key_pressed(KEY_F2))
+{
+speak("jump time, "+jumptime);
+}
+if (key_pressed(KEY_F3))
+{
+speak("there are "+enemies.length()+" enemies and "+pits.length()+" pits on the map.");
+}
+if (key_pressed(KEY_F))
+{
+if (direction==1)
+{
+speak("facing right");
+}
+if (direction==0)
+{
+speak("facing left");
+}
+}
+if (key_pressed(KEY_C))
+{
+double percent=round(x/maxpos*100, 2);
+speak("position: "+x+", ("+percent+" percent)");
+}
+if (key_pressed(KEY_Q))
+{
+speak(maxpos+" total max position");
+}
+if (key_pressed(KEY_GRAVE) and paused==0 and weapon!=1)
+{
+speak("fists");
+weapon=1;
+}
+if (key_pressed(KEY_1) and paused==0 and weapon!=2)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/drawknife.ogg", x, x, false, false);
+speak("knife");
+weapon=2;
+}
+if (key_pressed(KEY_2) and paused==0 and weapon!=3)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/drawgun.ogg", x, x, false, false);
+speak("gun");
+weapon=3;
+}
+if (key_pressed(KEY_3) and paused==0 and weapon!=4)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/drawmacgun.ogg", x, x, false, false);
+speak("machine gun");
+weapon=4;
+}
+if (key_pressed(KEY_4) and paused==0 and weapon!=5)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/draw_pusher.ogg", x, x, false, false);
+speak("Pusher");
+weapon=5;
+}
+if (key_pressed(KEY_5) and paused==0 and weapon!=6)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/draw_blaster.ogg", x, x, false, false);
+speak("Water Blaster");
+weapon=6;
+}
+if (key_pressed(KEY_6) and paused==0 and grabberget==1 and weapon!=7)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/draw_grabber.ogg", x, x, false, false);
+speak("Item Grabber");
+weapon=7;
+}
+if (key_pressed(KEY_7) and paused==0 and weapon!=8)
+{
+speak("Player helper");
+weapon=8;
+}
+if (key_pressed(KEY_8) and paused==0 and lasergot==1 and weapon!=9)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/draw_laser.ogg", x, x, false, false);
+speak("Laser Gun");
+weapon=9;
+}
+if (key_pressed(KEY_9) and paused==0 and telegot==1 and weapon!=10)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/drawtele.ogg", x, x, false, false);
+speak("Teleporter");
+weapon=10;
+}
+if (key_pressed(KEY_0) and paused==0 and weapon!=11)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/draw_grenade.ogg", x, x, false, false);
+speak("Grenade Launcher");
+weapon=11;
+}
+if (key_pressed(KEY_A))
+{
+if (weapon==1)
+{
+speak("this weapon doesn't take ammo!");
+}
+if (weapon==2)
+{
+speak("this weapon doesn't take ammo!");
+}
+if (weapon==3)
+{
+speak(gunammo);
+}
+if (weapon==4)
+{
+speak(macgunammo);
+}
+if (weapon==9)
+{
+speak(batteries);
+}
+if (weapon==11)
+{
+speak(grenades);
+}
+}
+if (key_pressed(KEY_H))
+{
+speak(playerhealth+" HP. "+healthstatus+" condition.");
+}
+if (key_pressed(KEY_ESCAPE))
+{
+registrywrite();
+if (enableyn==1)
+{
+registry();
+exitmenu();
+}
+if (enableyn==0)
+{
+close();
+mainmenu();
+}
+}
+if (key_pressed(KEY_SPACE) and paused==0)
+{
+if (x>sz1.finish and x<sz2.start or x>sz2.finish)
+{
+if (weapon==1)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/fist.ogg", x, x, false, false);
+ehit(1);
+}
+if (weapon==2)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/knife.ogg", x, x, false, false);
+ehit(2);
+}
+if (weapon==3)
+{
+if (gunammo>0)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/gun.ogg", x, x, false, false);
+gunammo-=1;
+ehit(3);
+}
+}
+if (weapon==5)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/pusher.ogg", x, x, false, false);
+ehit(5);
+}
+if (weapon==6 and blasteron==0)
+{
+blasteront.restart();
+blasterdamage=blasterdefdamage;
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/blaster.ogg", x, x, false, false);
+blasterpos=x;
+blaster.play_looped();
+blasteron=1;
+}
+if (weapon==7)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/grabber.ogg", x, x, false, false);
+if (item1.spawned==1)
+{
+item1.take();
+}
+if (item2.spawned==1)
+{
+item2.take();
+}
+if (item3.spawned==1)
+{
+item3.take();
+}
+if (item4.spawned==1)
+{
+item4.take();
+}
+if (item5.spawned==1)
+{
+item5.take();
+}
+}
+if (weapon==8)
+{
+if(helperon==1)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/helperoff.ogg", x, x, false, false);
+helperon=0;
+helper.stop();
+helperpos=x;
+event("Event: Helper has been removed from the map.");
+}
+else if (helperon==0)
+{
+if (helperhealth<=0)
+{
+speak("he is dead. go buy more helper health to use him.");
+}
+if (helperhealth>0)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/helperon.ogg", x, x, false, false);
+helper.play_looped();
+helperon=1;
+helperpos=x;
+event("Event: Helper has been spawned onto the map.");
+}
+}
+}
+if (weapon==9)
+{
+if (batteries>=0)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/laser.ogg", x, x, false, false);
+batteries-=1;
+ehit(9);
+}
+}
+if (weapon==10)
+{
+if (teleon==1)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/tele.ogg", x, x, false, false);
+teleon=0;
+}
+else if (teleon==0)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/tele.ogg", x, x, false, false);
+if (direction==1)
+{
+telepos=x+telerange;
+}
+if (direction==0)
+{
+telepos=x-telerange;
+}
+teleon=1;
+}
+}
+if (weapon==11 and grenadelaunched==0)
+{
+if (grenades>0)
+{
+grenadepos2=x;
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/grenade.ogg", x, x, false);
+grenades-=1;
+grenadespeedtimer.restart();
+if (direction==1)
+{
+grenadepos=x+grenademove;
+}
+if (direction==0)
+{
+grenadepos=x-grenademove;
+}
+grenaderoll.play_looped();
+grenadelaunched=1;
+}
+}
+}
+else
+{
+speak("Can not fire in the safe zone!");
+}
+}
+if (grenadetimer.elapsed>=grenadespeed)
+{
+grenadetimer.restart();
+if (grenadelaunched==1)
+{
+if (grenadepos2>grenadepos)
+{
+grenadepos2-=1;
+ehit(10);
+}
+if (grenadepos2<grenadepos)
+{
+grenadepos2+=1;
+ehit(10);
+}
+if (grenadepos2==grenadepos)
+{
+grenaderoll.stop();
+explode.load("sounds/soundpacks/"+soundpack+"/grenade_explode"+random(1,4)+".ogg");
+position_sound_pov(explode, grenadepos, 1, 1);
+explode.play();
+grenadelaunched=0;
+}
+}
+}
+if (teleon==1 and teletimer.elapsed>=telespeed)
+{
+jumptimer.restart();
+jumping=1;
+teletimer.restart();
+if (x>telepos)
+{
+x-=1;
+}
+if (x<telepos)
+{
+x+=1;
+}
+if (x==telepos)
+{
+jumptimer.force(500000);
+teleon=0;
+}
+}
+if (blasterpos==0 or blasterpos==maxpos and blasteron==1 and paused==0)
+{
+blaster.stop();
+wallblast.play();
+blasteron=0;
+if (blasterpos==0)
+{
+blasterpos-=1;
+}
+if (blasterpos==maxpos)
+{
+blasterpos+=1;
+}
+}
+if (blasteron==1 and blasteront.elapsed>=blasttime)
+{
+blasteron=0;
+blaster.stop();
+}
+if (direction==0 and blastertimer.elapsed>=blasterspeed and blasteron==1)
+{
+if (paused==0)
+{
+blastertimer.restart();
+if (blasterdamage>=0)
+{
+blasterdamage-=2;
+}
+blasterpos-=1;
+ehit(6);
+}
+}
+if (direction==1 and blastertimer.elapsed>=blasterspeed and blasteron==1)
+{
+if (paused==0)
+{
+blastertimer.restart();
+blasterdamage-=2;
+blasterpos+=1;
+ehit(6);
+}
+}
+if (helperhealth<=0 and helperon==1)
+{
+helperdeath.play();
+helperpos=x;
+helper.stop();
+helperon=0;
+event("Event: Helper death!");
+}
+if (helpertimer.elapsed>=helperspeed and helperon==1)
+{
+if (paused==0)
+{
+helpertimer.restart();
+if (helperpos<=x)
+{
+helperpos+=1;
+}
+if (helperpos>=x)
+{
+helperpos-=1;
+}
+for (uint i=0; i<enemies.length(); i++)
+{
+if (enemies[i].pos<helperpos+helperrange and enemies[i].pos>helperpos-helperrange)
+{
+helpergun.stop();
+helpergun.play();
+enemies[i].health-=helperdamage;
+}
+}
+}
+}
+if (key_down(KEY_SPACE) and weapontimer.elapsed>=macguntime and weapon==4 and paused==0)
+{
+if (x>sz1.finish and x<sz2.start or x>sz2.finish)
+{
+weapontimer.restart();
+if (macgunammo>0)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/macgun.ogg", x, x, false, false);
+macgunammo-=1;
+ehit(4);
+}
+}
+}
+if(key_pressed(KEY_UP) and paused==0)
+{
+if (jumping==0)
+{
+playerpos=pool.play_1d("sounds/characters/"+character+"/jump.ogg", x, x, false, false);
+tempy1=y;
+tempy2=y+jumpheight;
+positions();
+jumptimer.restart();
+jumping=1;
+ascending=true;
+}
+}
+if (jumping==1 and jumptimer.elapsed>=jumptime)
+{
+jumptimer.restart();
+if (ascending==true)
+{
+y+=1;
+if (y>=tempy2)
+{
+ascending=false;
+}
+}
+else if (ascending==false)
+{
+y-=1;
+if (y<=tempy1)
+{
+y=tempy1;
+jumping=0;
+if (x<=sz1.finish and x>=sz1.start or x>=sz2.start and x<=sz2.finish)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/szland.ogg", x, x, false, false);
+playerpos=pool.play_1d("sounds/environments/"+environment+"/szstep"+random(1,5)+".ogg", x, x, false, false);
+}
+else
+{
+playlandsound();
+}
+jumptimer.restart();
+}
+}
+}
+if (key_down(KEY_RIGHT) and speedtimer.elapsed>=speedtime and jumping==0 and paused==0)
+{
+playerchance=random(0,maxchance);
+direction=1;
+speedtimer.restart();
+if (x==maxpos and hitwall==0)
+{
+positions();
+playerpos=pool.play_1d("sounds/environments/"+environment+"/wall.ogg", x, x, false, false);
+hitwall=1;
+}
+if (x<maxpos)
+{
+x+=1;
+if (x<=sz1.finish and x>=sz1.start or x>=sz2.start and x<=sz2.finish)
+{
+playerpos=pool.play_1d("sounds/environments/"+environment+"/szstep"+random(1,5)+".ogg", x, x, false, false);
+}
+else
+{
+playwalksound();
+}
+positions();
+}
+}
+if (key_down(KEY_LCONTROL) and key_down(KEY_RIGHT) and speedtimer.elapsed>=speedtime2 and jumping==0 and paused==0 or key_down(KEY_RCONTROL) and key_down(KEY_RIGHT) and speedtimer.elapsed>=speedtime2 and jumping==0 and paused==0)
+{
+playerchance=random(0,maxchance);
+direction=1;
+speedtimer.restart();
+if (x==maxpos and hitwall==0)
+{
+positions();
+playerpos=pool.play_1d("sounds/environments/"+environment+"/wall.ogg", x, x, false, false);
+hitwall=1;
+}
+if (x<maxpos)
+{
+x+=1;
+if (x<=sz1.finish and x>=sz1.start or x>=sz2.start and x<=sz2.finish)
+{
+playerpos=pool.play_1d("sounds/environments/"+environment+"/szstep"+random(1,5)+".ogg", x, x, false, false);
+}
+else
+{
+playwalksound();
+}
+positions();
+hitwall=0;
+}
+}
+if (key_down(KEY_LEFT) and speedtimer.elapsed>=speedtime and jumping==0 and paused==0)
+{
+playerchance=random(0,maxchance);
+direction=0;
+speedtimer.restart();
+if (x==0 and hitwall==0)
+{
+positions();
+playerpos=pool.play_1d("sounds/environments/"+environment+"/wall.ogg", x, x, false, false);
+hitwall=1;
+}
+if (x>0)
+{
+x-=1;
+if (x<=sz1.finish and x>=sz1.start or x>=sz2.start and x<=sz2.finish)
+{
+playerpos=pool.play_1d("sounds/environments/"+environment+"/szstep"+random(1,5)+".ogg", x, x, false, false);
+}
+else
+{
+playwalksound();
+}
+positions();
+hitwall=0;
+}
+}
+if (key_down(KEY_LCONTROL) and key_down(KEY_LEFT) and speedtimer.elapsed>=speedtime2 and jumping==0 and paused==0 or key_down(KEY_RCONTROL) and key_down(KEY_LEFT) and speedtimer.elapsed>=speedtime2 and jumping==0 and paused==0)
+{
+playerchance=random(0,maxchance);
+direction=0;
+speedtimer.restart();
+if (x==0 and hitwall==0)
+{
+positions();
+playerpos=pool.play_1d("sounds/environments/"+environment+"/wall.ogg", x, x, false, false);
+hitwall=1;
+}
+if (x>0)
+{
+x-=1;
+if (x<=sz1.finish and x>=sz1.start or x>=sz2.start and x<=sz2.finish)
+{
+playerpos=pool.play_1d("sounds/environments/"+environment+"/szstep"+random(1,5)+".ogg", x, x, false, false);
+}
+else
+{
+playwalksound();
+}
+positions();
+hitwall=0;
+}
+}
+if (key_down(KEY_LEFT) and jumping==1 and paused==0 and speedtimer.elapsed>=airtime)
+{
+speedtimer.restart();
+direction=0;
+if (x==0 and hitwall==0)
+{
+positions();
+playerpos=pool.play_1d("sounds/environments/"+environment+"/wall.ogg", x, x, false, false);
+hitwall=1;
+}
+if (x>0)
+{
+positions();
+x-=1;
+hitwall=0;
+}
+}
+if (key_down(KEY_RIGHT) and jumping==1 and paused==0 and speedtimer.elapsed>=airtime)
+{
+speedtimer.restart();
+direction=1;
+if (x==maxpos and hitwall==0)
+{
+positions();
+playerpos=pool.play_1d("sounds/environments/"+environment+"/wall.ogg", x, x, false, false);
+hitwall=1;
+}
+positions();
+if (x<maxpos)
+{
+positions();
+x+=1;
+hitwall=0;
+}
+}
+if (playerhealth<1)
+{
+registrywrite();
+close();
+mainmenu();
+}
+if (kills<10)
+{
+killcomment="just starting out";
+}
+if (kills>=10 and kills<100)
+{
+killcomment="beginner";
+}
+if (kills>=100 and kills<200)
+{
+killcomment="moderate beginner";
+}
+if (kills>=200 and kills<300)
+{
+killcomment="nearly an average player";
+}
+if (kills>=300 and kills<400)
+{
+killcomment="average player.";
+}
+if (kills>=400 and kills<500)
+{
+killcomment="nearly a devoted player.";
+}
+if (kills>=500 and kills<600)
+{
+killcomment="devoted player.";
+}
+if (kills>=600 and kills<1000)
+{
+killcomment="nearly a fan.";
+}
+if (kills>=1000 and kills<1500)
+{
+killcomment="An official scrolling battles fan.";
+}
+if (kills>=1500 and kills<2000)
+{
+killcomment="An impressive player! Wow!";
+}
+if (kills>=2000 and kills<2500)
+{
+killcomment="A player worth mentioning! Tweet mtg_studios_us or thetechman393 to be mentioned!";
+}
+if (kills>=2500 and kills<3000)
+{
+killcomment="...Um...Are you sure you are not cheating?";
+}
+if (kills>=3000 and kills<3500)
+{
+killcomment="A number 1 player!";
+}
+if (kills>=3500 and kills<4000)
+{
+killcomment="An excellent player!";
+}
+if (kills>=4000 and kills<4500)
+{
+killcomment="Wow, I'm surely impressed! You're doing...Just great!";
+}
+if (kills>=4500 and kills<5000)
+{
+killcomment="You must, just must be cheating! Must!";
+}
+if (kills>=5000 and kills<5500)
+{
+killcomment="Brilliant! Just brilliant!";
+}
+if (kills>=5500)
+{
+killcomment="Maximum status!";
+}
+if (playerhealth<10)
+{
+healthstatus="dead";
+}
+if (playerhealth>=10 and playerhealth<50)
+{
+healthstatus="extremely critical";
+}
+if (playerhealth>=50 and playerhealth<100)
+{
+healthstatus="critical";
+}
+if (playerhealth>=100 and playerhealth<200)
+{
+healthstatus="bad";
+}
+if (playerhealth>=200 and playerhealth<800)
+{
+healthstatus="Normal";
+}
+if (playerhealth>=800 and playerhealth<1000)
+{
+healthstatus="OK";
+}
+if (playerhealth>=1000 and playerhealth<2500)
+{
+healthstatus="decent";
+}
+if (playerhealth>=2500 and playerhealth<5000)
+{
+healthstatus="good";
+}
+if (playerhealth>=5000 and playerhealth<10000)
+{
+healthstatus="great";
+}
+if (playerhealth>=10000 and playerhealth<20000)
+{
+healthstatus="excellent";
+}
+if (playerhealth>=20000 and playerhealth<25000)
+{
+healthstatus="super excellent";
+}
+if (playerhealth>=25000 and playerhealth<50000)
+{
+healthstatus="best";
+}
+if (playerhealth>=50000 and playerhealth<75000)
+{
+healthstatus="Super best";
+}
+if (playerhealth>=75000 and playerhealth<100000)
+{
+healthstatus=", well, superman";
+}
+if (playerhealth>=100000 and playerhealth<200000)
+{
+healthstatus="Breathtaking";
+}
+if (playerhealth>=200000)
+{
+healthstatus="Unbelieveable";
+}
+positions();
+healloop();
+iloop(item1);
+iloop(item2);
+iloop(item3);
+iloop(item4);
+iloop(item5);
+checkloop();
+echeckloop();
+wait(10);
+}
+}
+void reset()
+{
+buffernumber=0;
+playersonaron=0;
+pov=0;
+grenadelaunched=0;
+teleon=0;
+helperon=0;
+paused=0;
+blasttime=2000;
+blasterpos=20;
+weapon=1;
+pusherpos=2;
+direction=1;
+x=0;
+blasteron=0;
+speedtime2=180;
+fistrange=2;
+fistdamage=2;
+blasterdamage=25;
+blasterdefdamage=30;
+}
+void pause()
+{
+pool.pause_all();
+ambience.pause();
+pause_all_enemies();
+pause_all_pits();
+pauseitems();
+if (playersonaron==1)
+{
+playersonar.pause();
+}
+gametimer.pause();
+gamemusic.pause();
+if (helperon==1)
+{
+helper.pause();
+helpertimer.pause();
+helpertimer2.pause();
+}
+if (jumping==1)
+{
+jumptimer.pause();
+}
+}
+void unpause()
+{
+pool.resume_all();
+ambience.play_looped();
+gamemusic.play_looped();
+play_all_enemies();
+play_all_pits();
+gametimer.resume();
+playitems();
+if (playersonaron==1)
+{
+playersonar.play_looped();
+}
+if (helperon==1)
+{
+helper.play_looped();
+helpertimer.resume();
+helpertimer2.resume();
+}
+if (jumping==1)
+{
+jumptimer.resume();
+}
+}
+void saveevent()
+{
+thedate="";
+thetime="";
+if (enableevents==1)
+{
+thedate=get_date(false, true);
+thetime=get_time(true, false);
+if (!directory_exists("event logs"))
+{
+directory_create("event logs");
+}
+if (!directory_exists("event logs/"+name))
+{
+directory_create("event logs/"+name);
+}
+if (!directory_exists("event logs/"+name+"/"+thedate))
+{
+directory_create("event logs/"+name+"/"+thedate);
+}
+file tmpfile;
+tmpfile.open("event logs/"+name+"/"+thedate+"/"+thetime+".txt", "a");
+for(uint i3=0; i3<speechbuffer.length(); i3++)
+{
+eventlog.insert_last(speechbuffer[i3]);
+}
+eventlog.reverse();
+for(uint i2=0; i2<eventlog.length(); i2++)
+{
+tmpfile.write(i2+": "+eventlog[i2]+"
+");
+}
+tmpfile.close();
+}
+eventlog.resize(0);
+}
+void close()
+{
+bufferlength+=1;
+speechbuffer.resize(bufferlength);
+speechbuffer.insert_at(0, "event: "+name+" has decided to exit.");
+pool.destroy_all();
+stopitems();
+szradarsound1.stop();
+szradarsound2.stop();
+playersonar.stop();
+helper.stop();
+gamemusic.stop();
+blaster.stop();
+registry();
+ambience.stop();
+grenaderoll.stop();
+destroy_all_pits();
+destroyallenemies();
+saveevent();
+}
+void event(string eventtext)
+{
+bufferlength+=1;
+speechbuffer.resize(bufferlength);
+speechbuffer.insert_at(0, eventtext+" ("+get_time(true, true)+")");
+}
+void retrieve_enemy()
+{
+string[] temporary=find_directories("sounds/enemies/*");
+enemyname=temporary[random(0,temporary.length()-1)];
+}

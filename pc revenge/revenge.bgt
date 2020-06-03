@@ -1,0 +1,214 @@
+#include"includes/dlgplayer.bgt"
+#include"includes/enemy.bgt"
+#include"includes/m.bgt"
+#include"includes/menu.bgt"
+#include"includes/pit.bgt"
+#include"includes/weapons.bgt"
+#include"sound_pool.bgt"
+int spawnable=0;
+int enemytime=200;
+int weapon1range=5;
+int weapon1damage=15;
+int weapon2range=8;
+int weapon2damage=20;
+int weapon3range=15;
+int weapon3damage=60;
+int weapon;
+string[] weapons(3);
+bool stepped=false;
+int ram=192;
+int maxpos=100;
+int x=0;
+int walktime=350;
+int runtime=190;
+int jumping=0;
+int jumptime=800;
+pit@[] pits(0);
+enemy@[] enemies(0);
+sound_pool pool;
+timer enemytimer, jumptimer, walktimer;
+tts_voice voice;
+string version="alpha 4";
+void main()
+{
+weapons[0]="laser";
+weapons[1]="handgun";
+weapons[2]="Sniper";
+show_game_window("PC Revenge "+version);
+install_keyhook();
+dlgplay("sounds/logo.ogg", true, 20);
+mainmenu();
+}
+void game()
+{
+enemy enemy1(15);
+enemies.insert_last(enemy1);
+enemy enemy2(50);
+enemies.insert_last(enemy2);
+enemy enemy3(75);
+enemies.insert_last(enemy3);
+enemy enemy4(100);
+enemies.insert_last(enemy4);
+pit pit1(15, "sounds/pit.ogg");
+pits.insert_last(pit1);
+pit pit2(50, "sounds/pit.ogg");
+pits.insert_last(pit2);
+pit pit3(75, "sounds/pit.ogg");
+pits.insert_last(pit3);
+pool.play_stationary("sounds/amb.ogg", true);
+while(true)
+{
+if (key_pressed(KEY_F5))
+{
+speak("Manual pit spawn");
+pit pit5(random(x+2, x+15), "sounds/pit.ogg");
+pits.insert_last(pit5);
+}
+if (key_pressed(KEY_F6))
+{
+speak("Manual enemy spawn");
+enemy enemy5(random(0,maxpos));
+enemies.insert_last(enemy5);
+}
+if (key_pressed(KEY_F7))
+{
+speak("Destroy all pits");
+for (uint i=0; i<pits.length(); i++)
+{
+pits[i].destroy();
+}
+pits.resize(1);
+}
+if (key_pressed(KEY_F8))
+{
+speak("Destroy all enemies");
+enemies.resize(0);
+}
+if (key_pressed(KEY_F9))
+{
+speak("Destroy everything");
+for (uint i=0; i<pits.length(); i++)
+{
+pits[i].destroy();
+}
+enemies.resize(0);
+pits.resize(1);
+}
+if (key_pressed(KEY_F2))
+{
+if (spawnable==0)
+{
+speak("Auto spawn on");
+spawnable=1;
+}
+else
+{
+speak("Auto spawn off");
+spawnable=0;
+}
+}
+if (key_pressed(KEY_F3) and enemytime>=50)
+{
+enemytime-=10;
+speak("Auto spawn time increased to "+enemytime+" ms.");
+}
+if (key_pressed(KEY_F4) and enemytime<=4000)
+{
+enemytime+=10;
+speak("Auto spawn time increased to "+enemytime+" ms.");
+}
+if (enemytimer.elapsed>=enemytime and spawnable==1)
+{
+enemytimer.restart();
+enemy enemy5(x+random(-50,50));
+enemies.insert_last(enemy5);
+}
+if (key_pressed(KEY_F1))
+{
+speak((enemies.length())+" enemies, and "+(pits.length())+" pits.");
+}
+if (key_pressed(KEY_SPACE))
+{
+fire();
+}
+if (key_pressed(KEY_R))
+{
+speak(ram+" mb of ram.");
+}
+if (key_pressed(KEY_C))
+{
+voice.speak_interrupt(x+" of "+maxpos);
+}
+if (key_pressed(KEY_ESCAPE))
+{
+reset();
+}
+if (key_down(KEY_LEFT) and jumping==0 and x>0 and walktimer.elapsed>=walktime)
+{
+stepped=false;
+walktimer.restart();
+x-=1;
+playwalksound();
+}
+if (key_down(KEY_LCONTROL) and key_down(KEY_LEFT) and jumping==0 and x>0 and walktimer.elapsed>=runtime or key_down(KEY_RCONTROL) and key_down(KEY_LEFT) and jumping==0 and x>0 and walktimer.elapsed>=runtime)
+{
+stepped=false;
+walktimer.restart();
+x-=1;
+playwalksound();
+}
+if (key_down(KEY_RIGHT) and jumping==0 and x<maxpos and walktimer.elapsed>=walktime)
+{
+stepped=false;
+walktimer.restart();
+x+=1;
+playwalksound();
+}
+if (key_down(KEY_LCONTROL) and key_down(KEY_RIGHT) and jumping==0 and x<maxpos and walktimer.elapsed>=runtime or key_down(KEY_RCONTROL) and key_down(KEY_RIGHT) and jumping==0 and x<maxpos and walktimer.elapsed>=runtime)
+{
+stepped=false;
+walktimer.restart();
+x+=1;
+playwalksound();
+}
+if (key_pressed(KEY_LEFT) and jumping==1 and x>0)
+{
+x-=1;
+}
+if (key_pressed(KEY_RIGHT) and jumping==1 and x<maxpos)
+{
+x+=1;
+}
+if (key_pressed(KEY_UP) and jumping==0)
+{
+pool.play_stationary("sounds/jump.ogg", false);
+jumping=1;
+jumptimer.restart();
+}
+if (jumping==1 and jumptimer.elapsed>=jumptime)
+{
+pool.play_stationary("sounds/land.ogg", false);
+jumping=0;
+}
+weaponloop();
+checkloop();
+if (enemies.length()>=1)
+{
+echeckloop();
+}
+wait(5);
+}
+}
+void reset()
+{
+x=0;
+ram=192;
+pool.destroy_all();
+for (uint i=0; i<pits.length(); i++)
+{
+pits[i].destroy();
+}
+enemies.resize(0);
+pits.resize(0);
+mainmenu();
+}

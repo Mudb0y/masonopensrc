@@ -1,0 +1,57 @@
+settings setting;
+void main()
+{
+bool success=setting.setup("MTG Studios", "Scrolling Battles1", true);
+string doit=input_box("scrolling battles tools", "type view or edit");
+doit=string_to_lower_case(doit);
+if (doit=="edit")
+{
+editor();
+}
+if (doit=="view")
+{
+viewer();
+}
+}
+void viewer()
+{
+string view=input_box("scrolling battles viewer", "enter what you'd like to view. must be direct thing, like playerhealth or dollars. look in your registry to find this info.");
+if (setting.exists(view))
+{
+if (view!="registered")
+{
+string viewit=setting.read_number(view);
+alert("scrolling battles viewer", ""+view+" equals "+viewit);
+}
+else
+{
+alert("error!", "this value does not exist!");
+}
+}
+else
+{
+alert("error!", "this value does not exist!");
+}
+}
+void editor()
+{
+string edit=input_box("scrolling battles editor", "enter what you'd like to edit. must be direct thing, like playerhealth or dollars. look in your registry to find this info.");
+if (setting.exists(edit))
+{
+if (edit!="registered")
+{
+string edit2=input_box("scrolling battles editor", "enter how much "+edit+" you want.");
+int edit3=string_to_number(edit2);
+setting.write_number(edit, edit3);
+alert("success!", ""+edit+" updated to "+edit2+" successfully!");
+}
+else
+{
+alert("error!", "this value does not exist!");
+}
+}
+else
+{
+alert("error!", "this value does not exist!");
+}
+}

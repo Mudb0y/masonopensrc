@@ -1,0 +1,484 @@
+dictionary map;
+bool playedgesound;
+int river;
+int sonartime=240;
+int playtime=60;
+int fallsound;
+string hazard="hazard";
+string concrete="concrete";
+string ice="ice";
+string metal="metal";
+string metal2="metal2";
+string mud="mud";
+string plastic="plastic";
+string rocks="rocks";
+string stone="stone";
+string wall="wall";
+string wall2="wall2";
+string water="water";
+string currenttile, currentcameratile;
+string t1, t2, t3, t4, t5;
+string up1, up2, up3, up4;
+timer playtimer, sonartimer;
+uint i;
+void drawmap(int rnum)
+{
+if (rnum==1)
+{
+maxpos=70;
+maxy=110;
+win.x=10;
+win.y=60;
+spawn_key(68, 28, 1);
+draw_floor(concrete);
+draw_walls();
+p.play_stationary("sounds/start.ogg", false);
+p.play_stationary("sounds/amb.ogg", true);
+p.play_2d("sounds/win.ogg", me.x, me.y, win.x, win.y, true);
+spawn_platform(6, 12, 4, metal);
+spawn_platform(10, 24, 8, metal);
+spawn_platform(23, 32, 12, metal);
+spawn_platform(30, 40, 16, metal);
+spawn_platform(38, 46, 20, metal);
+spawn_platform(48, 56, 24, metal);
+spawn_platform(55, 80, 28, metal);
+spawn_platform(48, 65, 32, metal2);
+spawn_platform(43, 52, 36, metal2);
+spawn_platform(32, 45, 40, metal2);
+spawn_platform(25, 34, 44, metal2);
+spawn_platform(17, 27, 48, metal2);
+spawn_platform(9, 19, 52, metal2);
+spawn_platform(4, 12, 56, metal2);
+spawn_platform(8, 11, 60, plastic);
+spawn_platform(12, 40, 64, plastic);
+spawn_platform(19, 22, 4, ice);
+}
+}
+void gettile()
+{
+if (map.exists(me.x+":"+me.y))
+{
+map.get(me.x+":"+me.y, currenttile);
+}
+else
+{
+currenttile="";
+}
+}
+void getcameratile()
+{
+if (map.exists(camera.x+":"+camera.y))
+{
+map.get(camera.x+":"+camera.y, currentcameratile);
+}
+else
+{
+currentcameratile="";
+}
+}
+void checktile(int j=0)
+{
+gettile();
+if (currenttile=="concrete" or currenttile=="ice" or currenttile=="metal" or currenttile=="metal2" or currenttile=="plastic" or currenttile=="rocks" or currenttile=="mud" or currenttile=="water" or currenttile=="stone")
+{
+if (j==0)
+{
+p.play_stationary("sounds/"+currenttile+"step"+random(1,5)+".ogg", false);
+checkforedges();
+}
+else if (j==1)
+{
+if (fallheight<10)
+{
+p.play_stationary("sounds/"+currenttile+"land.ogg", false);
+}
+if (fallheight>=5 and buildermode==false)
+{
+health-=fallheight*25;
+}
+if (fallheight>5 and buildermode==false)
+{
+p.play_stationary("sounds/land"+random(1,3)+".ogg", false);
+}
+if (fallheight>=10)
+{
+p.play_stationary("sounds/"+currenttile+"hardland.ogg", false);
+}
+fallheight=0;
+jumping=0;
+playtimer.restart();
+playedge(1);
+}
+else if (j==2)
+{
+if (fallheight<10)
+{
+p.play_stationary("sounds/"+currenttile+"land.ogg", false);
+}
+if (fallheight>=5 and buildermode==false)
+{
+health-=fallheight*25;
+}
+if (fallheight>5 and buildermode==false)
+{
+p.play_stationary("sounds/land"+random(1,3)+".ogg", false);
+}
+if (fallheight>=10)
+{
+p.play_stationary("sounds/"+currenttile+"hardland.ogg", false);
+}
+p.destroy_sound(fallsound);
+p.play_stationary("sounds/land"+random(1,3)+".ogg", false);
+falling=false;
+falltime=deffalltime;
+fallheight=0;
+playtimer.restart();
+playedge(1);
+}
+}
+else if (currenttile=="wall" and j==0 or currenttile=="wall2" and j==0)
+{
+p.play_stationary("sounds/wall.ogg", false);
+if (facing==0)
+{
+me.x+=1;
+}
+else if (facing==1)
+{
+me.x-=1;
+}
+}
+if (currenttile=="" and jumping==0 and falling==false or currenttile=="hazard" and jumping==0 and falling==false)
+{
+p.play_stationary("sounds/fall.ogg", false);
+fallsound=p.play_stationary("sounds/falling.ogg", false);
+falling=true;
+}
+}
+void check_for_walls(int mode=0)
+{
+gettile();
+if (currenttile=="wall" or currenttile=="wall2")
+{
+if (mode==0)
+{
+p.play_stationary("sounds/wall.ogg", false);
+ascending=false;
+}
+if (mode==1)
+{
+p.play_stationary("sounds/wall.ogg", false);
+if (facing==1)
+{
+me.x+=1;
+}
+else if (facing==0)
+{
+me.x-=1;
+}
+}
+if (mode==2)
+{
+p.play_stationary("sounds/wall.ogg", false);
+ascending=false;
+jumping=0;
+falling=false;
+}
+}
+}
+void checkcameratile()
+{
+getcameratile();
+if (currentcameratile=="" or currentcameratile=="wall2")
+{
+p.play_2d("sounds/notile.ogg", me.x, me.y, camera.x, camera.y, false);
+}
+else if (currentcameratile=="hazard")
+{
+p.play_2d("sounds/hazardtile.ogg", me.x, me.y, camera.x, camera.y, false);
+}
+else
+{
+p.play_2d("sounds/"+currentcameratile+"tile.ogg", me.x, me.y, camera.x, camera.y, false);
+}
+}
+void checkforedges()
+{
+t1="";
+t2="";
+t3="";
+t4="";
+t5="";
+if (facing==0)
+{
+if (map.exists((me.x-1)+":"+me.y))
+{
+map.get((me.x-1)+":"+me.y, t1);
+if (t1=="hazard")
+{
+t1="";
+}
+}
+if (map.exists((me.x-2)+":"+me.y))
+{
+map.get((me.x-2)+":"+me.y, t2);
+if (t2=="hazard")
+{
+t2="";
+}
+}
+if (map.exists((me.x-3)+":"+me.y))
+{
+map.get((me.x-3)+":"+me.y, t3);
+if (t3=="hazard")
+{
+t3="";
+}
+}
+if (map.exists((me.x-4)+":"+me.y))
+{
+map.get((me.x-4)+":"+me.y, t4);
+if (t4=="hazard")
+{
+t4="";
+}
+}
+if (map.exists((me.x-5)+":"+me.y))
+{
+map.get((me.x-5)+":"+me.y, t5);
+if (t5=="hazard")
+{
+t5="";
+}
+}
+}
+if (facing==1)
+{
+if (map.exists((me.x+1)+":"+me.y))
+{
+map.get((me.x+1)+":"+me.y, t1);
+if (t1=="hazard")
+{
+t1="";
+}
+}
+if (map.exists((me.x+2)+":"+me.y))
+{
+map.get((me.x+2)+":"+me.y, t2);
+if (t2=="hazard")
+{
+t2="";
+}
+}
+if (map.exists((me.x+3)+":"+me.y))
+{
+map.get((me.x+3)+":"+me.y, t3);
+if (t3=="hazard")
+{
+t3="";
+}
+}
+if (map.exists((me.x+4)+":"+me.y))
+{
+map.get((me.x+4)+":"+me.y, t4);
+if (t4=="hazard")
+{
+t4="";
+}
+}
+if (map.exists((me.x+5)+":"+me.y))
+{
+map.get((me.x+5)+":"+me.y, t5);
+if (t5=="hazard")
+{
+t5="";
+}
+}
+}
+}
+void playedge(int forced=0)
+{
+checkifplay();
+if (playtimer.elapsed>=playtime and jumping==0 and playedgesound==true or playtimer.elapsed>=playtime and forced==1)
+{
+playtimer.restart();
+playtimer.pause();
+if (t1=="")
+{
+if (facing==0)
+{
+p.play_2d("sounds/"+currenttile+"step"+random(1,5)+".ogg", me.x, me.y, me.x, me.y, false);
+}
+else if (facing==1)
+{
+p.play_2d("sounds/"+currenttile+"step"+random(1,5)+".ogg", me.x, me.y, me.x, me.y, false);
+}
+}
+if (t1!="" and t2=="")
+{
+if (facing==0)
+{
+p.play_2d("sounds/"+currenttile+"step"+random(1,5)+".ogg", me.x, me.y, me.x-1, me.y, false);
+}
+else if (facing==1)
+{
+p.play_2d("sounds/"+currenttile+"step"+random(1,5)+".ogg", me.x, me.y, me.x+1, me.y, false);
+}
+}
+if (t1!="" and t2!="" and t3=="")
+{
+if (facing==0)
+{
+p.play_2d("sounds/"+currenttile+"step"+random(1,5)+".ogg", me.x, me.y, me.x-2, me.y, false);
+}
+else if (facing==1)
+{
+p.play_2d("sounds/"+currenttile+"step"+random(1,5)+".ogg", me.x, me.y, me.x+2, me.y, false);
+}
+}
+if (t1!="" and t2!="" and t3!="" and t4=="")
+{
+if (facing==0)
+{
+p.play_2d("sounds/"+currenttile+"step"+random(1,5)+".ogg", me.x, me.y, me.x-3, me.y, false);
+}
+else if (facing==1)
+{
+p.play_2d("sounds/"+currenttile+"step"+random(1,5)+".ogg", me.x, me.y, me.x+3, me.y, false);
+}
+}
+if (t1!="" and t2!="" and t3!="" and t4!="" and t5=="")
+{
+if (facing==0)
+{
+p.play_2d("sounds/"+currenttile+"step"+random(1,5)+".ogg", me.x, me.y, me.x-4, me.y, false);
+}
+else if (facing==1)
+{
+p.play_2d("sounds/"+currenttile+"step"+random(1,5)+".ogg", me.x, me.y, me.x+4, me.y, false);
+}
+}
+}
+}
+void checkifplay()
+{
+if (me.y==0)
+{
+if (me.x==5 or me.x==4 or me.x==3 or me.x==2 or me.x==1 or me.x==0 or me.x==maxpos-5 or me.x==maxpos-4 or me.x==maxpos-3 or me.x==maxpos-2 or me.x==maxpos-1 or me.x==maxpos)
+{
+playedgesound=false;
+}
+else
+{
+playedgesound=true;
+}
+}
+else
+{
+playedgesound=true;
+}
+}
+void checkabove()
+{
+up1="";
+up2="";
+up3="";
+up4="";
+if (map.exists(me.x+":"+(me.y+1)))
+{
+map.get(me.x+":"+(me.y+1), up1);
+if (up1=="wall" or up1=="wall2")
+{
+up1="";
+}
+}
+if (map.exists(me.x+":"+(me.y+2)))
+{
+map.get(me.x+":"+(me.y+2), up2);
+if (up2=="wall" or up2=="wall2")
+{
+up2="";
+}
+}
+if (map.exists(me.x+":"+(me.y+3)))
+{
+map.get(me.x+":"+(me.y+3), up3);
+if (up3=="wall" or up3=="wall2")
+{
+up3="";
+}
+}
+if (map.exists(me.x+":"+(me.y+4)))
+{
+map.get(me.x+":"+(me.y+4), up4);
+if (up4=="wall" or up1=="wall2")
+{
+up4="";
+}
+}
+}
+void sonarplay()
+{
+if (sonaron==1 and sonartimer.elapsed>=sonartime)
+{
+sonartimer.restart();
+if (up1!="")
+{
+p.play_2d("sounds/sonar.ogg", me.x, me.y, me.x, me.y+1, false);
+}
+else if (up2!="")
+{
+p.play_2d("sounds/sonar.ogg", me.x, me.y, me.x, me.y+2, false);
+}
+else if (up3!="")
+{
+p.play_2d("sounds/sonar.ogg", me.x, me.y, me.x, me.y+3, false);
+}
+else if (up4!="")
+{
+p.play_2d("sounds/sonar.ogg", me.x, me.y, me.x, me.y+4, false);
+}
+}
+}
+void spawn_fires_room2()
+{
+spawn_fire(10, 13);
+spawn_fire(15, 29);
+spawn_fire(29, 29);
+spawn_fire(40, 29);
+spawn_fire(53, 29);
+spawn_fire(63, 29);
+spawn_fire(79, 29);
+spawn_fire(99, 29);
+}
+void spawn_platform(int leftx, int rightx, int platy, string type)
+{
+for (uint i=leftx; i<=rightx; i++)
+{
+map.set(i+":"+platy, type);
+map.set(i+":"+(platy-1), wall2);
+}
+}
+void draw_walls()
+{
+for (uint i=0; i<=maxy; i++)
+{
+map.set("-1:"+i, wall);
+map.set((maxpos+1)+":"+i, wall);
+}
+}
+void draw_floor(string type)
+{
+for (uint i=0; i<=maxpos; i++)
+{
+map.set(i+":0", type);
+map.set(i+":maxpos", wall);
+}
+}
+void spawn_rung(int leftx, int rightx, int platy, string type)
+{
+for (uint i=leftx; i<=rightx; i++)
+{
+map.set(i+":"+platy, type);
+}
+}

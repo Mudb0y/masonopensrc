@@ -1,0 +1,1017 @@
+#include"includes/beacon.bgt"
+#include"includes/crate.bgt"
+#include"includes/dlgplayer.bgt"
+#include"includes/m_pro.bgt"
+#include"includes/map.bgt"
+#include"includes/object.bgt"
+#include"includes/turret.bgt"
+#include"includes/weapons.bgt"
+#include"includes/zomby.bgt"
+#include"sound_pool.bgt"
+int spashas;
+int xpmaster;
+string version="0.52 testing";
+int clawdamage=0;
+int gamemode;
+int quantifier;
+int kills;
+int healpower;
+int medtime=1200;
+int meds;
+int extradamage=0;
+int go, go2;
+string godir;
+string godir2;
+int eaglehas=0;
+int benellihas=0;
+int bathas=0;
+string[] itemtypes(6);
+double defense;
+int healthpoints;
+int points=0;
+int level=1;
+double xp=0;
+double xprequired=120;
+int useamb=0;
+int spawntime=8000;
+int ambtime=5000;
+double maxhealth=100;
+int healtime=200;
+double hp=100;
+int zonestatus=1;
+string currentloc;
+string[] ammotypes(5);
+int[] ammo(ammotypes.length());
+int maxx=10;
+int maxy=10;
+bool onwall;
+sound_pool p;
+dictionary map;
+string tile;
+int movetime;
+int walktime=280;
+int walktime2=820;
+int speed=0;
+vector me();
+vector tracker();
+melee w1;
+pistol w2;
+shotgun w3;
+timer medtimer, spawntimer, ambtimer, healtimer, movetimer;
+dynamic_menu_pro m;
+void main()
+{
+itemtypes[0]="benelli";
+itemtypes[1]=".9 MM ammo";
+itemtypes[2]="eagle";
+itemtypes[3]="med";
+itemtypes[4]="bat";
+itemtypes[5]="spas";
+ammotypes[0]=".9MM Ammo";
+ammotypes[1]="knife";
+ammotypes[2]="shotgun shells";
+ammotypes[3]="bat";
+ammotypes[4]="claws";
+ammo[0]=200;
+ammo[1]=0;
+ammo[2]=300;
+ammo[3]=0;
+ammo[4]=0;
+set_sound_storage("sounds.dat");
+set_sound_decryption_key("zwar",true);
+show_game_window("Zombie War version "+version);
+if (screen_reader_is_running(1))
+{
+install_keyhook();
+}
+p.pan_step=3;
+zp.pan_step=3;
+p.volume_step=2;
+zp.volume_step=2;
+p.max_distance=40;
+zp.max_distance=40;
+dlgplay("logo.ogg",true,25);
+mainmenu();
+}
+void game()
+{
+if (gamemode==0)
+loaddata();
+else if (gamemode==1)
+loaddata2();
+if (gamemode==0)
+{
+w1.init();
+w2.init();
+w3.init();
+}
+else if (gamemode==1)
+{
+w1.init_zombie();
+}
+draw_map("m1");
+for (uint i=0; i<1; i++)
+{
+spawn_zomby(random(0,200),random(0,200),random(25,50));
+}
+if (gamemode==0)
+spawn_crate();
+if (gamemode==0)
+spawn_object(0,0,"shotgun","benelli");
+if (eaglehas==1 and gamemode==0)
+{
+w2.give_eagle();
+}
+if (benellihas==1 and gamemode==0)
+{
+w3.give_benelli();
+}
+if (spashas==1 and gamemode==0)
+{
+w3.give_spas();
+}
+if (bathas==1 and gamemode==0)
+{
+w1.give_bat();
+}
+while(true)
+{
+if (gamemode==0)
+oloop();
+zloop();
+positions();
+checktile();
+checkloc();
+crateloop();
+turretloop();
+maxhealth=100+(healthpoints*10);
+if (key_pressed(KEY_F12))
+{
+xp+=60000000;
+}
+if (key_pressed(KEY_K))
+{
+speak(kills+" kills");
+}
+if (healthpoints>level)
+{
+alert("Hey!", "You be cheating! That, sorry, is not allowed in this game. Go cheat somewhere else!");
+healthpoints=0;
+exit();
+}
+if (points>level)
+{
+alert("Hey!", "You be cheating! That, sorry, is not allowed in this game. Go cheat somewhere else!");
+points=0;
+exit();
+}
+if (hp>maxhealth)
+hp=maxhealth;
+if (key_up(KEY_LSHIFT) and key_up(KEY_RSHIFT) and key_down(KEY_GRAVE) and medtimer.elapsed>=medtime and gamemode==0)
+{
+medtimer.restart();
+if (meds>0)
+{
+p.play_stationary("use_med.ogg",false);
+meds-=1;
+if (healpower>0)
+{
+if (hp<maxhealth)
+{
+hp+=10+(healpower*5);
+speak("healed to "+hp+" hp");
+}
+}
+else
+{
+if (hp<maxhealth)
+{
+hp+=10;
+speak("healed to "+hp+" HP");
+}
+}
+}
+else
+{
+p.play_stationary("no_med.ogg",false);
+}
+}
+if (key_pressed(KEY_M) and gamemode==0)
+{
+speak(meds+" medkits");
+}
+if (level>=50 and turrets.length()>0)
+{
+turrets.resize(0);
+}
+if (level==0)
+{
+level=1;
+}
+if (key_pressed(KEY_RETURN))
+{
+if (currentloc=="safe zone")
+{
+if (gamemode==0)
+pointsmenu();
+else if (gamemode==1)
+points2menu();
+}
+}
+if (xp>=xprequired)
+{
+p.play_stationary("level.ogg",false);
+level+=1;
+points+=1;
+xprequired=(20*(level*(level*2)));
+}
+if (key_pressed(KEY_V))
+{
+speak("You are level "+level+" with "+xp+" experience. Your next level requires "+(xprequired-xp)+" experience");
+}
+if (key_pressed(KEY_N))
+{
+if (tracker.x==0 and tracker.y==0)
+{
+speak("No beacon");
+}
+else
+{
+p.play_2d("beacon.ogg",me.x,me.y,tracker.x,tracker.y,false);
+check_tracker_distance();
+speak((go+go2)+" tiles. "+godir2+" "+go2+" and to the "+godir+" "+go);
+}
+}
+if (key_down(KEY_LSHIFT) or key_down(KEY_RSHIFT))
+{
+if (key_pressed(KEY_GRAVE))
+{
+speak("Tracking safe zone.");
+track(szb.x,szb.y);
+}
+if (key_pressed(KEY_1))
+{
+speak("Tracking hideout room.");
+track(hrb.x,hrb.y);
+}
+}
+if (key_pressed(KEY_F2))
+{
+if (useamb==0)
+{
+useamb=1;
+speak("off");
+}
+else if (useamb==1)
+{
+useamb=0;
+speak("on");
+}
+}
+if (key_pressed(KEY_F1))
+{
+if (gamemode==0)
+speak(zombies.length()+" Zombies.");
+else
+speak(zombies.length()+" Humans.");
+}
+if (spawntimer.elapsed>=spawntime)
+{
+spawntimer.restart();
+spawn_zomby(random(0,100),random(0,100),random(25,50)+(level*2));
+}
+if (key_pressed(KEY_Q) and gamemode==0)
+{
+speak(gottencrates+" crates found.");
+}
+if (ambtimer.elapsed>=ambtime and useamb==0)
+{
+ambtimer.restart();
+ambtime=random(100,400);
+p.play_2d("ambrand"+random(1,20)+".ogg",me.x,me.y,random(0,maxx),random(0,maxy),false);
+}
+if (currentloc=="safe zone" and healtimer.elapsed>=healtime and hp<maxhealth)
+{
+healtimer.restart();
+hp+=1;
+}
+if (key_pressed(KEY_H))
+{
+speak("health: "+round(hp/maxhealth*100,2)+" percent, "+hp+" of "+maxhealth+" points. Your defense is protecting you by "+round(defense*5/(level)*100,2)+" percent");
+}
+if (hp<0)
+{
+p.play_stationary("death"+random(1,3)+".ogg",false);
+wait(1500);
+reset();
+mainmenu();
+}
+if (key_pressed(KEY_Z))
+{
+if (zonestatus==0)
+{
+speak("Zones spoken");
+zonestatus=1;
+}
+else
+{
+speak("Zones hidden");
+zonestatus=0;
+}
+}
+if (key_pressed(KEY_X))
+{
+speak_ammo();
+}
+if (key_down(KEY_SPACE))
+{
+fire_weapon();
+}
+if (reloading==1 and reloadtimer.elapsed>=reloadtime)
+{
+reloadtimer.restart();
+reloading=0;
+}
+if (key_pressed(KEY_R))
+{
+reload_weapon();
+}
+if (key_pressed(KEY_1))
+{
+w1.select_weapon();
+}
+if (key_pressed(KEY_2) and gamemode==0)
+{
+w2.select_weapon();
+}
+if (key_pressed(KEY_3) and gamemode==0)
+{
+w3.select_weapon();
+}
+if (key_pressed(KEY_B))
+{
+if (locations.exists(me.x+":"+me.y))
+{
+string locate;
+locations.get(me.x+":"+me.y,locate);
+speak("Current location: "+locate+" of "+mapname);
+}
+else
+{
+speak("Current location: uncharted area on "+mapname);
+}
+}
+if (gamemode==0)
+{
+movetime=walktime-(speed*5);
+}
+else
+{
+movetime=walktime2-(speed*10);
+}
+if (key_pressed(KEY_ESCAPE))
+{
+if (gamemode==0)
+savedata();
+else
+savedata2();
+reset();
+mainmenu();
+}
+if (key_pressed(KEY_C))
+{
+speak(me.x+", "+me.y);
+}
+if (key_down(KEY_A) and movetimer.elapsed>=movetime or key_down(KEY_LEFT) and movetimer.elapsed>=movetime)
+{
+movetimer.restart();
+checktile();
+if (me.x<=0)
+{
+p.play_stationary("wall.ogg",false);
+}
+else if (me.x>0)
+{
+me.x-=1;
+checktile();
+if (tile=="wall")
+{
+p.play_stationary("wall.ogg",false);
+me.x+=1;
+}
+p.play_stationary(tile+"step"+random(1,5)+".ogg",false);
+}
+}
+if (key_down(KEY_D) and movetimer.elapsed>=movetime or key_down(KEY_RIGHT) and movetimer.elapsed>=movetime)
+{
+movetimer.restart();
+if (me.x>=maxx)
+{
+p.play_stationary("wall.ogg",false);
+}
+else if (me.x<maxx)
+{
+onwall=false;
+me.x+=1;
+checktile();
+if (tile=="wall")
+{
+p.play_stationary("wall.ogg",false);
+me.x-=1;
+}
+p.play_stationary(tile+"step"+random(1,5)+".ogg",false);
+}
+}
+if (key_down(KEY_S) and movetimer.elapsed>=movetime or key_down(KEY_DOWN) and movetimer.elapsed>=movetime)
+{
+movetimer.restart();
+if (me.y<=0)
+{
+p.play_stationary("wall.ogg",false);
+}
+else if (me.y>0)
+{
+me.y-=1;
+checktile();
+if (tile=="wall")
+{
+p.play_stationary("wall.ogg",false);
+me.y+=1;
+}
+p.play_stationary(tile+"step"+random(1,5)+".ogg",false);
+}
+}
+if (key_down(KEY_W) and movetimer.elapsed>=movetime or key_down(KEY_UP) and movetimer.elapsed>=movetime)
+{
+movetimer.restart();
+if (me.y>=maxy)
+{
+p.play_stationary("wall.ogg",false);
+}
+else if (me.y<maxy and tile!="wall")
+{
+me.y+=1;
+checktile();
+if (tile=="wall")
+{
+p.play_stationary("wall.ogg",false);
+me.y-=1;
+}
+p.play_stationary(tile+"step"+random(1,5)+".ogg",false);
+}
+}
+}
+}
+void checktile()
+{
+tile="";
+if (map.exists(me.x+":"+me.y))
+{
+map.get(me.x+":"+me.y,tile);
+}
+}
+void checkloc()
+{
+if (locations.exists(me.x+":"+me.y))
+{
+string locate;
+locations.get(me.x+":"+me.y,locate);
+if (locate!=currentloc)
+{
+if (zonestatus==1)
+speak(locate);
+currentloc=locate;
+}
+}
+else
+{
+if (currentloc!="")
+{
+if (zonestatus==1)
+speak("Uncharted area");
+currentloc="";
+}
+}
+}
+void positions()
+{
+p.update_listener_2d(me.x,me.y);
+zp.update_listener_2d(me.x,me.y);
+}
+void track(int x, int y)
+{
+tracker.x=x;
+tracker.y=y;
+}
+void pointsmenu()
+{
+m.reset(true);
+m.enable_first_letter_navigation=true;
+m.letters_autoactivate=true;
+m.click_sound="menuclick.ogg";
+m.enter_sound="menuenter.ogg";
+m.open_sound="menuopen.ogg";
+m.enable_up_and_down=true;
+m.add_item_tts("speed (contains "+speed+" of 30 points). Each point put into this skill allows you to move faster.","speed");
+m.add_item_tts("health (contains "+healthpoints+" of 10000 points). Each point put into this skill allows you to have 10 extra hp.","health");
+m.add_item_tts("defense (contains "+defense+" of 10000 points). Each point put into this skill allows you to have more protection when getting hit","defense");
+m.add_item_tts("Extra zombie damage (contains "+extradamage+" of 10000 points.) Each point put into this skill increases weapon damage by 2.","damage");
+m.add_item_tts("medic (contains "+healpower+" of 10000 points.) Each point put into this skill gives each medkit you use 5 extra HP.", "healpower");
+m.add_item_tts("quantifier (contains "+quantifier+" of 10000 points.) Each point put into this skill gives each loot you get however much you were supposed to get times the quantifier, and a little crate bonus as well.", "quantifier");
+m.add_item_tts("xp master (contains "+xpmaster+" of 200 points.) Each point put into this skill gives you a little extra xp per zombie killed.", "xpmaster");
+m.add_item_tts("go back","back");
+int mres=m.run("points menu. You have "+points+" points to spend.", true);
+if (mres==0 or m.get_item_name(mres)=="back")
+{
+return;
+}
+if (m.get_item_name(mres)=="speed")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (speed>=30)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+speed+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+pointsmenu();
+}
+if (m.get_item_name(mres)=="health")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (healthpoints>=10000)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+healthpoints+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+pointsmenu();
+}
+if (m.get_item_name(mres)=="healpower")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (healpower>=10000)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+healpower+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+pointsmenu();
+}
+if (m.get_item_name(mres)=="quantifier")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (quantifier>=10000)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+quantifier+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+pointsmenu();
+}
+if (m.get_item_name(mres)=="xpmaster")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (xpmaster>=200)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+xpmaster+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+pointsmenu();
+}
+if (m.get_item_name(mres)=="defense")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (defense>=10000)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+defense+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+pointsmenu();
+}
+if (m.get_item_name(mres)=="damage")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (extradamage>=10000)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+extradamage+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+pointsmenu();
+}
+}
+void points2menu()
+{
+m.reset(true);
+m.enable_first_letter_navigation=true;
+m.letters_autoactivate=true;
+m.click_sound="menuclick.ogg";
+m.enter_sound="menuenter.ogg";
+m.open_sound="menuopen.ogg";
+m.enable_up_and_down=true;
+m.add_item_tts("speed (contains "+speed+" of 72 points). Each point put into this skill allows you to move faster.","speed");
+m.add_item_tts("health (contains "+healthpoints+" of 100 points). Each point put into this skill allows you to have 10 extra hp.","health");
+m.add_item_tts("defense (contains "+defense+" of 10000 points). Each point put into this skill allows you to have more protection when getting hit","defense");
+m.add_item_tts("Claw damage (contains "+clawdamage+" of 500 points.) Each point put into this skill allows your claws to become much more deadly.","claw");
+m.add_item_tts("xp master (contains "+xpmaster+" of 200 points.) Each point put into this skill gives you a little extra xp per zombie killed.", "xpmaster");
+m.add_item_tts("go back","back");
+int mres=m.run("points menu. You have "+points+" points to spend.", true);
+if (mres==0 or m.get_item_name(mres)=="back")
+{
+return;
+}
+if (m.get_item_name(mres)=="speed")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (speed>=72)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+speed+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+points2menu();
+}
+if (m.get_item_name(mres)=="xpmaster")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (xpmaster>=200)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+xpmaster+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+points2menu();
+}
+if (m.get_item_name(mres)=="claw")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (clawdamage>=500)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+clawdamage+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+points2menu();
+}
+if (m.get_item_name(mres)=="defense")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (defense>=10000)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+defense+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+points2menu();
+}
+if (m.get_item_name(mres)=="health")
+{
+if (points<=0)
+{
+p.play_stationary("error.ogg",false);
+}
+else
+{
+if (healthpoints>=100)
+{
+p.play_stationary("error2.ogg",false);
+}
+else
+{
+points-=1;
+healthpoints+=1;
+p.play_stationary("success.ogg",false);
+}
+}
+points2menu();
+}
+}
+void savedata()
+{
+dictionary sd;
+sd.set("hp",hp);
+sd.set("maxhealth",maxhealth);
+sd.set("healthpoints",healthpoints);
+sd.set("level",level);
+sd.set("points",points);
+sd.set("xp",xp);
+sd.set("speed",speed);
+sd.set("useamb",useamb);
+sd.set("xprequired",xprequired);
+sd.set("gottencrates",gottencrates);
+sd.set("defense",defense);
+sd.set("me_x",me.x);
+sd.set("me_y",me.y);
+sd.set("eaglehas",eaglehas);
+sd.set("benellihas",benellihas);
+for (uint i=0; i<ammotypes.length(); i++)
+{
+sd.set(ammotypes[i],ammo[i]);
+}
+sd.set("extradamage",extradamage);
+sd.set("meds",meds);
+sd.set("healpower",healpower);
+sd.set("kills",kills);
+sd.set("quantifier",quantifier);
+sd.set("xpmaster",xpmaster);
+sd.set("bathas",bathas);
+sd.set("spashas",spashas);
+file s;
+s.open("data.sav","wb");
+s.write(serialize(sd));
+s.close();
+}
+void savedata2()
+{
+dictionary sd;
+sd.set("clawdamage",clawdamage);
+sd.set("hp",hp);
+sd.set("maxhealth",maxhealth);
+sd.set("healthpoints",healthpoints);
+sd.set("level",level);
+sd.set("points",points);
+sd.set("xp",xp);
+sd.set("speed",speed);
+sd.set("useamb",useamb);
+sd.set("xprequired",xprequired);
+sd.set("defense",defense);
+sd.set("me_x",me.x);
+sd.set("me_y",me.y);
+sd.set("kills",kills);
+sd.set("xpmaster",xpmaster);
+file s;
+s.open("data2.sav","wb");
+s.write(serialize(sd));
+s.close();
+}
+void loaddata()
+{
+file s;
+s.open("data.sav","rb");
+dictionary sd;
+sd=deserialize(s.read());
+s.close();
+if (sd.exists("quantifier"))
+sd.get("quantifier",quantifier);
+if (sd.exists("hp"))
+sd.get("hp",hp);
+if (sd.exists("maxhealth"))
+sd.get("maxhealth",maxhealth);
+if (sd.exists("healthpoints"))
+sd.get("healthpoints",healthpoints);
+if (sd.exists("level"))
+sd.get("level",level);
+if (sd.exists("points"))
+sd.get("points",points);
+if (sd.exists("xprequired"))
+sd.get("xprequired",xprequired);
+if (sd.exists("xp"))
+sd.get("xp",xp);
+if (sd.exists("speed"))
+sd.get("speed",speed);
+if (sd.exists("useamb"))
+sd.get("useamb",useamb);
+if (sd.exists("gottencrates"))
+sd.get("gottencrates",gottencrates);
+if (sd.exists("defense"))
+sd.get("defense",defense);
+if (sd.exists("me_x"))
+sd.get("me_x",me.x);
+if (sd.exists("me_y"))
+sd.get("me_y",me.y);
+if (sd.exists("eaglehas"))
+sd.get("eaglehas",eaglehas);
+if (sd.exists("benellihas"))
+sd.get("benellihas",benellihas);
+for (uint i=0; i<ammotypes.length(); i++)
+{
+if (sd.exists(ammotypes[i]))
+sd.get(ammotypes[i],ammo[i]);
+}
+if (sd.exists("extradamage"))
+sd.get("extradamage",extradamage);
+if (sd.exists("meds"))
+sd.get("meds",meds);
+if (sd.exists("healpower"))
+sd.get("healpower",healpower);
+if (sd.exists("kills"))
+sd.get("kills",kills);
+if (sd.exists("bathas"))
+sd.get("bathas",bathas);
+if (sd.exists("xpmaster"))
+sd.get("xpmaster",xpmaster);
+if (sd.exists("spashas"))
+sd.get("spashas",spashas);
+}
+void loaddata2()
+{
+file s;
+s.open("data2.sav","rb");
+dictionary sd;
+sd=deserialize(s.read());
+s.close();
+if (sd.exists("hp"))
+sd.get("hp",hp);
+if (sd.exists("maxhealth"))
+sd.get("maxhealth",maxhealth);
+if (sd.exists("healthpoints"))
+sd.get("healthpoints",healthpoints);
+if (sd.exists("level"))
+sd.get("level",level);
+if (sd.exists("points"))
+sd.get("points",points);
+if (sd.exists("speed"))
+sd.get("speed",speed);
+if (sd.exists("xprequired"))
+sd.get("xprequired",xprequired);
+if (sd.exists("xp"))
+sd.get("xp",xp);
+if (sd.exists("useamb"))
+sd.get("useamb",useamb);
+if (sd.exists("defense"))
+sd.get("defense",defense);
+if (sd.exists("me_x"))
+sd.get("me_x",me.x);
+if (sd.exists("me_y"))
+sd.get("me_y",me.y);
+if (sd.exists("kills"))
+sd.get("kills",kills);
+if (sd.exists("clawdamage"))
+sd.get("clawdamage",clawdamage);
+if (sd.exists("xpmaster"))
+sd.get("xpmaster",xpmaster);
+}
+void check_tracker_distance()
+{
+if (me.x<=tracker.x)
+{
+godir="right";
+go=tracker.x-me.x;
+}
+else if (me.x>=tracker.x)
+{
+godir="left";
+go=me.x-tracker.x;
+}
+if (me.y<=tracker.y)
+{
+godir2="in front";
+go2=tracker.y-me.y;
+}
+else if (me.y>=tracker.y)
+{
+godir2="behind";
+go2=me.y-tracker.y;
+}
+}
+void mainmenu()
+{
+m.reset(true);
+m.enable_first_letter_navigation=true;
+m.letters_autoactivate=true;
+m.click_sound="menuclick.ogg";
+m.enter_sound="menuenter.ogg";
+m.open_sound="menuopen.ogg";
+m.enable_up_and_down=true;
+m.add_item_tts("Play as human","0");
+m.add_item_tts("play as zombie In the works. Press enter to try it out.","1");
+m.add_item_tts("exit","exit");
+int mres=m.run("select what you would like to do.",true);
+if (mres==0 or m.get_item_name(mres)=="exit")
+{
+exit();
+}
+else if (m.get_item_name(mres)=="0")
+{
+gamemode=0;
+game();
+}
+else if (m.get_item_name(mres)=="1")
+{
+gamemode=1;
+game();
+}
+}
+void reset()
+{
+p.destroy_all();
+destroy_all_zombies();
+destroy_all_turrets();
+destroy_all_objects();
+destroy_all_crates();
+clear_weapons();
+map.delete_all();
+}

@@ -1,0 +1,378 @@
+int enemymaxchance=1;
+int spawntime=7000;
+timer spawntimer;
+class enemy
+{
+int hitrange=4;
+int damage=15;
+int chance=0;
+string name;
+int attacktime=random(400,1200);
+int speed=250;
+int reset=0;
+int defhealth, health=300;
+int jumping;
+int jumptime;
+bool stepped;
+int spawned;
+int pos;
+sound diesound, gun, hitsound, jumpsound, landsound, loop, spawnsound, stepsound;
+timer attacktimer, dietimer, jumptimer, walktimer;
+enemy(int position, string thename="")
+{
+if (thename=="")
+{
+retrieve_enemy();
+name=enemyname;
+}
+else
+{
+name=thename;
+}
+if(file_exists("sounds/enemies/"+name+"/info.dat"))
+{
+file info;
+bool success = info.open("sounds/enemies/"+name+"/info.dat", "rb");
+if(!success)
+{
+alert("Fatal error", "enemy "+name+" must have no info.set file!");
+registrywrite();
+close();
+mainmenu();
+}
+string content=info.read();
+string[] peramitors=string_split(content, "\r\n", true);
+string[] values;
+for(uint i=0; i<peramitors.length(); i++)
+{
+values.insert_at(i,string_replace(peramitors[i], string_left(peramitors[i], string_contains(peramitors[i], "=", 1)+1), "", true));
+peramitors[i]=string_replace(peramitors[i], "="+values[i], "", true);
+}
+if(peramitors.find("speed")!=-1)
+{
+speed=string_to_number(values[peramitors.find("speed")]);
+}
+if(peramitors.find("attacktime")!=-1)
+{
+attacktime=string_to_number(values[peramitors.find("attacktime")]);
+}
+if(peramitors.find("health")!=-1)
+{
+health=string_to_number(values[peramitors.find("health")]);
+}
+if(peramitors.find("damage")!=-1)
+{
+damage=string_to_number(values[peramitors.find("damage")]);
+}
+if(peramitors.find("hitrange")!=-1)
+{
+hitrange=string_to_number(values[peramitors.find("hitrange")]);
+}
+}
+defhealth=health;
+pos=position;
+spawnsound.load("sounds/enemies/"+name+"/spawn.ogg");
+position_sound_pov(spawnsound, pos, 1, 1);
+spawnsound.play();
+loop.load("sounds/enemies/"+name+"/taunt.ogg");
+position_sound_pov(loop, pos, 1, 1);
+loop.play_looped();
+gun.load("sounds/enemies/"+name+"/gun.ogg");
+position_sound_pov(gun, pos, 1, 1);
+spawned=1;
+event("Event: an enemy (name "+name+") has been spawned at "+pos+" with "+health+" HP.");
+}
+}
+void echeckloop()
+{
+if (paused==0)
+{
+if (spawntimer.elapsed>=spawntime and enemies.length<50)
+if (spawntimer.elapsed>=spawntime and enemies.length<50)
+{
+spawntimer.restart();
+enemy enemy5(random(sz1.finish+2,sz2.start-2));
+enemies.insert_last(enemy5);
+}
+for (uint i=0; i<enemies.length(); i++)
+{
+position_sound_pov(enemies[i].spawnsound, enemies[i].pos, 1, 1);
+position_sound_pov(enemies[i].gun, enemies[i].pos, 1, 1);
+position_sound_pov(enemies[i].jumpsound, enemies[i].pos, 1, 1);
+position_sound_pov(enemies[i].landsound, enemies[i].pos, 1, 1);
+position_sound_pov(enemies[i].loop, enemies[i].pos, 1, 1);
+position_sound_pov(enemies[i].diesound, enemies[i].pos, 1, 1);
+position_sound_pov(enemies[i].stepsound, enemies[i].pos, 1, 1);
+if (enemies[i].spawned==0 and enemies.length()>=i)
+{
+if (enemies[i].reset==0)
+{
+enemies[i].dietimer.restart();
+enemies[i].reset=1;
+}
+if (enemies[i].dietimer.elapsed>=enemies[i].diesound.length and enemies.length>=i)
+{
+dollars+=enemies[i].defhealth;
+enemies.remove_at(i);
+kills+=1;
+enemymaxchance+=1;
+event("Event: an enemy has been killed.");
+}
+}
+else if (enemies[i].spawned==1 and enemies.length()>=i)
+{
+if (enemies[i].pos<x+enemies[i].hitrange and enemies[i].pos>x-enemies[i].hitrange and jumping==0 and enemies[i].attacktimer.elapsed>=enemies[i].attacktime and x>sz1.finish and x<sz2.start)
+{
+enemies[i].attacktimer.restart();
+enemies[i].gun.stop();
+position_sound_pov(enemies[i].gun, enemies[i].pos, 1, 1);
+enemies[i].gun.play();
+pool.play_stationary("sounds/characters/"+character+"/pain"+random(1,5)+".ogg", false);
+if (advancedmode==0)
+{
+playerhealth-=enemies[i].damage;
+}
+else if (advancedmode==1)
+{
+playerhealth-=random(3,7);
+}
+}
+if (enemies[i].pos<=sz1.finish+1)
+{
+ehit(11);
+}
+else if (enemies[i].pos>=sz2.start-1)
+{
+ehit(12);
+}
+for (uint i2=0; i2<pits.length(); i2++)
+{
+if (enemies[i].pos==pits[i2].pos-2 or enemies[i].pos==pits[i2].pos-1 or enemies[i].pos==pits[i2].pos+1 or enemies[i].pos==pits[i2].pos+2)
+{
+if(enemies[i].jumping==0)
+{
+enemies[i].jumpsound.load("sounds/soundpacks/"+soundpack+"/jump.ogg");
+position_sound_pov(enemies[i].jumpsound, enemies[i].pos, 1, 1);
+enemies[i].jumpsound.play();
+enemies[i].jumptimer.restart();
+enemies[i].jumptime=random(700,1100);
+enemies[i].jumping=1;
+}
+}
+if (enemies[i].pos==pits[i2].pos-1 or enemies[i].pos==pits[i2].pos or enemies[i].pos==pits[i2].pos+1)
+{
+if(enemies[i].jumping==0 and enemies[i].chance==1)
+{
+enemies[i].diesound.load("sounds/pits/"+pits[i2].name+"/fall.ogg");
+position_sound_pov(enemies[i].diesound, enemies[i].pos, 1, 1);
+enemies[i].diesound.play();
+edie(i, true);
+}
+}
+}
+if (enemies[i].jumptimer.elapsed>=enemies[i].jumptime and enemies[i].jumping==1)
+{
+enemies[i].jumping=0;
+}
+if (enemies[i].health<=0)
+{
+edie(i);
+}
+if (enemies[i].pos>x and enemies[i].walktimer.elapsed>=enemies[i].speed)
+{
+enemies[i].walktimer.restart();
+enemies[i].pos-=1;
+playenemystep(i);
+}
+else if (enemies[i].pos<x and enemies[i].walktimer.elapsed>=enemies[i].speed)
+{
+enemies[i].walktimer.restart();
+enemies[i].pos+=1;
+playenemystep(i);
+}
+}
+}
+}
+}
+void playenemystep(uint enemynumber)
+{
+enemies[enemynumber].chance=random(0,enemymaxchance);
+if (enemies[enemynumber].jumping==0)
+{
+enemies[enemynumber].stepsound.load("sounds/environments/"+environment+"/step"+random(1,5)+".ogg");
+enemies[enemynumber].stepsound.stop();
+position_sound_pov(enemies[enemynumber].stepsound, enemies[enemynumber].pos, 1, 1);
+enemies[enemynumber].stepsound.play();
+enemies[enemynumber].stepped=true;
+}
+}
+void edie(uint enemy, bool silent=false)
+{
+if (silent==false)
+{
+enemies[enemy].diesound.stop();
+enemies[enemy].diesound.load("sounds/enemies/"+enemies[enemy].name+"/death.ogg");
+position_sound_pov(enemies[enemy].diesound, enemies[i].pos, 1, 1);
+enemies[enemy].diesound.play();
+}
+enemies[enemy].loop.stop();
+enemies[enemy].spawned=0;
+}
+void ehit(int hitwith)
+{
+for (uint i=0; i<enemies.length(); i++)
+{
+if (enemies[i].spawned==1)
+{
+if (hitwith==1)
+{
+if (enemies[i].pos<x+fistrange and enemies[i].pos>x-fistrange)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/fisthit"+random(1,2)+".ogg", x, x, false);
+enemies[i].hitsound.stop();
+enemies[i].hitsound.load("sounds/enemies/"+enemies[i].name+"/hit.ogg");
+position_sound_pov(enemies[i].hitsound, enemies[i].pos, 1, 1);
+enemies[i].hitsound.play();
+enemies[i].health-=fistdamage;
+}
+}
+if (hitwith==2)
+{
+if (enemies[i].pos<x+kniferange and enemies[i].pos>x-kniferange)
+{
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/knifehit.ogg", x, x, false);
+enemies[i].hitsound.stop();
+enemies[i].hitsound.load("sounds/enemies/"+enemies[i].name+"/hit.ogg");
+position_sound_pov(enemies[i].hitsound, enemies[i].pos, 1, 1);
+enemies[i].hitsound.play();
+enemies[i].health-=knifedamage;
+}
+}
+if (hitwith==3)
+{
+if (enemies[i].pos<x+gunrange and enemies[i].pos>x-gunrange)
+{
+enemies[i].hitsound.stop();
+enemies[i].hitsound.load("sounds/enemies/"+enemies[i].name+"/hit.ogg");
+position_sound_pov(enemies[i].hitsound, enemies[i].pos, 1, 1);
+enemies[i].hitsound.play();
+enemies[i].health-=gundamage;
+}
+}
+if (hitwith==4)
+{
+if (enemies[i].pos<x+macgunrange and enemies[i].pos>x-macgunrange)
+{
+enemies[i].hitsound.stop();
+enemies[i].hitsound.load("sounds/enemies/"+enemies[i].name+"/hit.ogg");
+position_sound_pov(enemies[i].hitsound, enemies[i].pos, 1, 1);
+enemies[i].hitsound.play();
+enemies[i].health-=macgundamage;
+}
+}
+if (hitwith==5)
+{
+if (enemies[i].pos<x+pusherrange and enemies[i].pos>x-pusherrange)
+{
+enemies[i].hitsound.stop();
+enemies[i].hitsound.load("sounds/enemies/"+enemies[i].name+"/hit.ogg");
+position_sound_pov(enemies[i].hitsound, enemies[i].pos, 1, 1);
+enemies[i].hitsound.play();
+if (direction==1)
+{
+enemies[i].pos+=pusherpos;
+}
+else if (direction==0)
+{
+enemies[i].pos-=pusherpos;
+}
+enemies[i].health-=pusherdamage;
+}
+}
+if (hitwith==6)
+{
+if (enemies[i].pos==blasterpos)
+{
+enemies[i].hitsound.stop();
+enemies[i].hitsound.load("sounds/enemies/"+enemies[i].name+"/hit.ogg");
+position_sound_pov(enemies[i].hitsound, enemies[i].pos, 1, 1);
+enemies[i].hitsound.play();
+enemies[i].health-=blasterdamage;
+blasteron=0;
+blaster.stop();
+}
+}
+if (hitwith==9)
+{
+if (enemies[i].pos<x+laserrange and enemies[i].pos>x-laserrange)
+{
+enemies[i].hitsound.stop();
+enemies[i].hitsound.load("sounds/enemies/"+enemies[i].name+"/hit.ogg");
+position_sound_pov(enemies[i].hitsound, enemies[i].pos, 1, 1);
+enemies[i].hitsound.play();
+enemies[i].health-=laserdamage;
+}
+}
+if (hitwith==10)
+{
+if (enemies[i].pos<grenadepos+grenaderange and enemies[i].pos>grenadepos-grenaderange)
+{
+grenaderoll.stop();
+explode.load("sounds/soundpacks/"+soundpack+"/grenade_explode"+random(1,4)+".ogg");
+explode.play();
+enemies[i].hitsound.stop();
+enemies[i].hitsound.load("sounds/enemies/"+enemies[i].name+"/hit.ogg");
+position_sound_pov(enemies[i].hitsound, enemies[i].pos, 1, 1);
+enemies[i].hitsound.play();
+enemies[i].health-=grenadedamage;
+grenadelaunched=0;
+}
+}
+if (hitwith==11)
+{
+enemies[i].hitsound.stop();
+enemies[i].hitsound.load("sounds/enemies/"+enemies[i].name+"/hit.ogg");
+position_sound_pov(enemies[i].hitsound, enemies[i].pos, 1, 1);
+enemies[i].hitsound.play();
+enemies[i].health-=sz1.damage;
+enemies[i].pos+=random(4,8);
+}
+if (hitwith==12)
+{
+enemies[i].hitsound.stop();
+enemies[i].hitsound.load("sounds/enemies/"+enemies[i].name+"/hit.ogg");
+position_sound_pov(enemies[i].hitsound, enemies[i].pos, 1, 1);
+enemies[i].hitsound.play();
+enemies[i].health-=sz2.damage;
+enemies[i].pos-=random(4,8);
+}
+}
+}
+}
+void destroyallenemies()
+{
+for (uint i=0; i<enemies.length; i++)
+{
+enemies[i].loop.stop();
+}
+enemies.resize(0);
+}
+void pause_all_enemies()
+{
+for (uint i=0; i<enemies.length; i++)
+{
+enemies[i].loop.pause();
+}
+}
+void play_all_enemies()
+{
+for (uint i=0; i<enemies.length; i++)
+{
+enemies[i].loop.play_looped();
+}
+}
+void generate_enemies()
+{
+enemy enemy1(random(sz1.finish+2,sz2.start-2));
+enemies.insert_last(enemy1);
+}

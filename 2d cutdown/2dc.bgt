@@ -1,0 +1,570 @@
+#include"number_speaker.bgt"
+#include"sound_pool.bgt"
+#include"includes/dlgplayer.bgt"
+#include"includes/fire.bgt"
+#include"includes/fadepool.bgt"
+#include"includes/item.bgt"
+#include"includes/key.bgt"
+#include"includes/keyhook.bgt"
+#include"includes/m_pro.bgt"
+#include"includes/menu.bgt"
+#include"includes/map.bgt"
+bool atapex=false;
+bool trestarted=false;
+bool speakcameracoordinate=false;
+bool speakcoordinate=false;
+bool buildermode=false;
+int tilevoice;
+int cameratime=140;
+int maxrooms=1;
+int room=1;
+int jumpmod=0;
+int superrun=0;
+string cheats="Press Delete to get to the cheat prompt. The cheats are as follows.
+mody
+Allows you to press I and K once this cheat is active to change your Y position. Then, you can move and take your chances.
+superrun
+Allows you to use shift and the arrows to run really fast
+jumpmod
+allows you to press f3 and f4 to adjust how high you jump.";
+int modtime=70;
+int flyable=0;
+int sonres=0;
+int sonaron=0;
+int musvol=-10;
+double percent;
+double health=5000;
+int fallheight=0;
+int restarted=0;
+int facing;
+int falltime=120;
+int deffalltime=120;
+int airtime=110;
+bool falling;
+bool ascending=false;
+int maxjump=5;
+int tempy1, tempy2;
+int apextime=250;
+int jumptime=50;
+int jumping;
+int movetime;
+int walktime=280;
+int runtime=220;
+int superruntime=100;
+int maxpos=70;
+int maxy=120;
+vector me(0, 0);
+vector camera(0, 0);
+vector win(10, 60);
+sound_pool p;
+timer apextimer, speaktimer, cameratimer, modtimer, airtimer, falltimer, jumptimer, movetimer;
+fire@[] fires(0);
+obj@[] objs(0);
+key@[] keys(0);
+kh k;
+string version="0.51";
+number_speaker ns;
+void main()
+{
+playtimer.pause();
+show_game_window("2d cutdown");
+ns.prepend="sounds/";
+ns.append=".ogg";
+k.install();
+p.pan_step=3;
+p.volume_step=2.5;
+p.behind_pitch_decrease=4;
+mainmenu();
+}
+void game()
+{
+drawmap(room);
+while(true)
+{
+keyloop();
+if (buildermode==false)
+{
+icheckloop();
+}
+checkabove();
+if (speakcameracoordinate==true)
+{
+speakcameracoordinates();
+}
+if (speakcoordinate==true)
+{
+speakcoordinates();
+}
+if (ns.speak_next()==1)
+{
+ns.speak_next();
+}
+if (key_pressed(KEY_R))
+{
+ns.speak(room);
+}
+if (key_pressed(KEY_F3) and jumpmod==1 and maxjump>1)
+{
+maxjump-=1;
+speak("jump height decreased to "+maxjump+" squares.");
+}
+if (key_pressed(KEY_F4) and jumpmod==1 and maxjump<150)
+{
+maxjump+=1;
+speak("jump height increased to "+maxjump+" squares.");
+}
+if (key_up(KEY_LCONTROL) and key_up(KEY_RCONTROL) and key_up(KEY_LSHIFT) and key_up(KEY_RSHIFT))
+{
+movetime=walktime;
+}
+else if (key_down(KEY_LCONTROL) or key_down(KEY_RCONTROL))
+{
+movetime=runtime;
+}
+else if (key_up(KEY_LCONTROL) and key_up(KEY_RCONTROL))
+{
+if(key_down(KEY_LSHIFT) and superrun==1 or key_down(KEY_RSHIFT) and superrun==1)
+{
+movetime=superruntime;
+}
+}
+if (falltime<=40)
+{
+falltime=40;
+}
+if (key_pressed(KEY_F1))
+{
+ns.speak(objs.length());
+}
+if (key_down(KEY_I) and flyable==1 and me.y<maxy and modtimer.elapsed>=modtime)
+{
+modtimer.restart();
+me.y+=1;
+p.play_stationary("sounds/mody.ogg", false);
+ns.speak(me.y);
+}
+if (key_down(KEY_K) and flyable==1 and me.y>0 and modtimer.elapsed>=modtime)
+{
+modtimer.restart();
+me.y-=1;
+p.play_stationary("sounds/mody.ogg", false);
+ns.speak(me.y);
+}
+if (key_pressed(KEY_DELETE))
+{
+cheat();
+}
+if (sonaron==1 and up1=="" and up2=="" and up3=="" and up4=="")
+{
+sonartimer.restart();
+sonres=1;
+}
+else
+{
+checkabove();
+if (sonres==1)
+{
+sonartimer.force(sonartime);
+sonres=0;
+}
+sonarplay();
+}
+if (key_pressed(KEY_O))
+{
+if (sonaron==1)
+{
+p.play_stationary("sounds/sonaroff.ogg", false);
+sonaron=0;
+}
+else if (sonaron==0)
+{
+p.play_stationary("sounds/sonaron.ogg", false);
+sonaron=1;
+}
+}
+if (me.y<0 and me.x!=20 and room==1)
+{
+me.x=20;
+}
+playedge();
+if (health<=0)
+{
+dlgplay("death.ogg", false);
+fade_pool(p);
+mainmenu();
+}
+if (key_pressed(KEY_H))
+{
+ns.speak(health);
+}
+if (key_pressed(KEY_RETURN) and me.x==win.x and me.y==win.y)
+{
+if (ks.exists(room))
+{
+p.play_stationary("sounds/winlevel.ogg", false);
+if (buildermode==false)
+{
+fade_pool(p);
+if (file_exists("cheats.txt"))
+{
+file cheatsfile;
+string cheatsstring;
+cheatsfile.open("cheats.txt", "rb");
+cheatsstring=cheatsfile.read();
+if (cheatsstring!=cheats)
+{
+cheatsfile.close();
+cheatsfile.open("cheats.txt", "wb");
+cheatsfile.write(cheats);
+p.play_stationary("sounds/cheatsupdate.ogg", false);
+wait(450);
+cheatsfile.close();
+}
+}
+else if (!file_exists("cheats.txt"))
+{
+file cheatsfile;
+cheatsfile.open("cheats.txt", "wb");
+cheatsfile.write(cheats);
+p.play_stationary("sounds/cheatsget.ogg", false);
+cheatsfile.close();
+wait(450);
+}
+nextroom();
+}
+}
+else
+{
+p.play_stationary("sounds/winlocked.ogg", false);
+}
+}
+positions();
+fcheckloop();
+if (me.x<0)
+{
+me.x=0;
+}
+if (me.x>maxpos)
+{
+me.x=maxpos;
+}
+if (key_up(KEY_G))
+{
+camera.x=me.x;
+camera.y=me.y;
+}
+if (key_down(KEY_G))
+{
+if (key_pressed(KEY_T))
+{
+if (currentcameratile!="")
+{
+tilevoice=p.play_stationary(currentcameratile+".ogg", false);
+}
+else
+{
+p.play_stationary("sounds/nothing.ogg", false);
+}
+}
+if (key_pressed(KEY_C))
+{
+trestarted=false;
+speakcameracoordinate=true;
+}
+if (key_down(KEY_LEFT) and camera.x>=0 and cameratimer.elapsed>=cameratime)
+{
+cameratimer.restart();
+camera.x-=1;
+checkcameratile();
+}
+if (key_down(KEY_RIGHT) and camera.x<maxpos and cameratimer.elapsed>=cameratime)
+{
+cameratimer.restart();
+camera.x+=1;
+checkcameratile();
+}
+if (key_down(KEY_UP) and camera.y<maxy and cameratimer.elapsed>=cameratime)
+{
+cameratimer.restart();
+camera.y+=1;
+checkcameratile();
+}
+if (key_down(KEY_DOWN) and camera.y>0 and cameratimer.elapsed>=cameratime)
+{
+cameratimer.restart();
+camera.y-=1;
+checkcameratile();
+}
+}
+if (falling==true and jumping==0 and falltimer.elapsed>=falltime)
+{
+falltimer.restart();
+me.y-=1;
+fallheight+=1;
+checktile(2);
+falltime-=2;
+}
+if (key_up(KEY_G) and key_pressed(KEY_UP) and jumping==0 and falling==false)
+{
+p.play_stationary("sounds/jump.ogg", false);
+tempy1=me.y;
+tempy2=me.y+maxjump;
+jumping=1;
+gettile();
+ascending=true;
+jumptimer.restart();
+}
+if (jumping==1 and jumptimer.elapsed>=jumptime)
+{
+jumptimer.restart();
+if (ascending==true and atapex==false)
+{
+me.y+=1;
+check_for_walls(0);
+}
+if (ascending==false)
+{
+me.y-=1;
+checktile(1);
+check_for_walls(2);
+}
+}
+if (me.y>=tempy2 and ascending==true and jumping==1 and atapex==false or me.y>=maxy and ascending==true and jumping==1 and atapex==false)
+{
+atapex=true;
+apextimer.restart();
+}
+if (apextimer.elapsed>=apextime and atapex==true)
+{
+ascending=false;
+atapex=false;
+}
+if (me.y<=tempy1 and ascending==false and jumping==1)
+{
+me.y=tempy1;
+gettile();
+if (currenttile!="" and me.y>0)
+{
+jumping=0;
+jumptimer.restart();
+checktile(0);
+jumptimer.pause();
+}
+else
+{
+tempy1-=1;
+fallheight+=1;
+checktile(0);
+}
+}
+if (key_up(KEY_G) and key_pressed(KEY_T))
+{
+if (currenttile!="")
+{
+tilevoice=p.play_stationary(currenttile+".ogg", false);
+}
+else
+{
+p.play_stationary("sounds/nothing.ogg", false);
+}
+}
+if (key_pressed(KEY_ESCAPE))
+{
+fade_pool(p);
+mainmenu();
+}
+if (key_up(KEY_G) and key_down(KEY_LEFT))
+{
+facing=0;
+if (movetimer.elapsed>=movetime and jumping==0 or movetimer.elapsed>=movetime and falling==false)
+{
+if (restarted==0)
+{
+playtimer.restart();
+restarted=1;
+}
+movetimer.restart();
+me.x-=1;
+restarted=0;
+checktile(0);
+}
+else if (airtimer.elapsed>=airtime and jumping==1 or airtimer.elapsed>=airtime and falling==true)
+{
+airtimer.restart();
+me.x-=1;
+checktile(-1);
+check_for_walls(1);
+}
+}
+if (key_up(KEY_G) and key_released(KEY_LEFT))
+{
+restarted=0;
+}
+if (key_up(KEY_G) and key_released(KEY_RIGHT))
+{
+restarted=0;
+}
+if (key_up(KEY_G) and key_down(KEY_RIGHT))
+{
+facing=1;
+if (movetimer.elapsed>=movetime and jumping==0)
+{
+if (restarted==0)
+{
+playtimer.restart();
+restarted=1;
+}
+movetimer.restart();
+restarted=0;
+me.x+=1;
+checktile(0);
+}
+else if (airtimer.elapsed>=airtime and jumping==1 or airtimer.elapsed>=airtime and falling==true)
+{
+airtimer.restart();
+me.x+=1;
+checktile(-1);
+check_for_walls(1);
+}
+}
+if (key_up(KEY_G) and key_pressed(KEY_C))
+{
+trestarted=false;
+speakcoordinate=true;
+}
+wait(5);
+}
+}
+void cheat()
+{
+string cheat=input_box("cheat box", "enter a cheat");
+cheat=string_to_lower_case(cheat);
+if (cheat=="mody")
+{
+p.play_stationary("sounds/cheat.ogg", false);
+flyable=1;
+}
+else if (cheat=="superrun")
+{
+p.play_stationary("sounds/cheat.ogg", false);
+superrun=1;
+}
+else if (cheat=="jumpmod")
+{
+p.play_stationary("sounds/cheat.ogg", false);
+jumpmod=1;
+}
+else
+{
+p.play_stationary("sounds/cheaterror.ogg", false);
+return;
+}
+}
+void reset()
+{
+destroy_all_keys();
+ks.delete_all();
+destroy_all_objs();
+destroy_all_fires();
+win.x=0;
+win.y=0;
+map.delete_all();
+room=1;
+jumpmod=0;
+superrun=0;
+flyable=0;
+sonres=0;
+sonaron=0;
+musvol=-10;
+health=5000;
+fallheight=0;
+restarted=0;
+falling=false;
+ascending=false;
+tempy1=1;
+tempy2=2;
+jumping=0;
+me.x=0;
+me.y=0;
+}
+void nextroom()
+{
+room+=1;
+if (room>maxrooms)
+{
+mainmenu();
+}
+else
+{
+tempreset();
+drawmap(room);
+}
+}
+void tempreset()
+{
+destroy_all_objs();
+destroy_all_fires();
+map.delete_all();
+musvol=-10;
+fallheight=0;
+restarted=0;
+falling=false;
+ascending=false;
+jumping=0;
+me.x=0;
+me.y=0;
+}
+void positions()
+{
+p.update_listener_2d(me.x, me.y);
+if (room==3)
+{
+p.update_sound_range_2d(river, me.x-31, 17, 0, 0);
+}
+}
+void speakcameracoordinates()
+{
+if (speakcameracoordinate==true)
+{
+if (trestarted==false)
+{
+speaktimer.restart();
+trestarted=true;
+ns.speak(camera.x);
+}
+if (ns.speak_next()==1)
+{
+speaktimer.restart();
+}
+if (speaktimer.elapsed>=ns.number_speech.length)
+{
+speaktimer.restart();
+speaktimer.pause();
+ns.speak(camera.y);
+speakcameracoordinate=false;
+}
+}
+}
+void speakcoordinates()
+{
+if (speakcoordinate==true)
+{
+if (trestarted==false)
+{
+speaktimer.restart();
+trestarted=true;
+ns.speak(me.x);
+}
+if (ns.speak_next()==1)
+{
+speaktimer.restart();
+}
+if (speaktimer.elapsed>=ns.number_speech.length)
+{
+speaktimer.restart();
+speaktimer.pause();
+ns.speak(me.y);
+speakcoordinate=false;
+}
+}
+}

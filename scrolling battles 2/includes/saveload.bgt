@@ -1,0 +1,155 @@
+int maxnum=46;
+void savegame(int slot)
+{
+if (!directory_exists(DIRECTORY_COMMON_APPDATA+"/sb2"))
+{
+directory_create(DIRECTORY_COMMON_APPDATA+"/sb2");
+}
+savefile.open(DIRECTORY_COMMON_APPDATA+"/sb2/savegame"+slot+".sav", "w");
+savefile.write(string_encrypt(level+"+"+x+"+"+health+"+"+weapon+"+"+e1attacktime+"+"+e1spawned+"+"+e1health+"+"+e1defaulthealth+"+"+e1speed+"+"+e1spawntime+"+"+e1pos+"+"+e2attacktime+"+"+e2spawned+"+"+e2health+"+"+e2defaulthealth+"+"+e2speed+"+"+e2spawntime+"+"+e2pos+"+"+maxpos+"+"+healthspawned+"+"+healthpos+"+"+fireactive+"+"+firepos+"+"+gunammo+"+"+macgunammo+"+"+rifleammo+"+"+points+"+"+movetime+"+"+fire2pos+"+"+fire2active+"+"+switched+"+"+rifletime+"+"+batdamage+"+"+gundamage+"+"+macgundamage+"+"+rifledamage+"+"+telepos+"+"+bossspawned+"+"+bosshealth+"+"+bosspos+"+"+part+"+"+kills+"+"+bathits+"+"+batbroken+"+"+totalbathits, "13849347w1238342b3A93C4mN1GfXyzXcvg423mnIoO19_3Gc"));
+savefile.close();
+speak("saved");
+}
+void loadgame(int slot)
+{
+reset();
+if (!file_exists(DIRECTORY_COMMON_APPDATA+"/sb2/savegame"+slot+".sav"))
+{
+alert("Error", "Nothing saved in this slot!");
+loadmenu();
+}
+else
+{
+speak("Loading");
+savefile.open(DIRECTORY_COMMON_APPDATA+"/sb2/savegame"+slot+".sav", "r");
+string[] tmp=string_split(string_decrypt(savefile.read(), "13849347w1238342b3A93C4mN1GfXyzXcvg423mnIoO19_3Gc"), "+", true);
+string tmplength=tmp.length();
+if (tmplength<maxnum)
+{
+alert("error", "save file incompatible with this version! Removing save file.");
+savefile.close();
+file_delete(DIRECTORY_COMMON_APPDATA+"/sb2/savegame"+slot+".sav");
+loadmenu();
+}
+else
+{
+string num1=tmp[0];
+level=string_to_number(num1);
+string num2=tmp[1];
+x=string_to_number(num2);
+string num3=tmp[2];
+health=string_to_number(num3);
+string num4=tmp[3];
+weapon=string_to_number(num4);
+string num5=tmp[4];
+e1attacktime=string_to_number(num5);
+string num6=tmp[5];
+e1spawned=string_to_number(num6);
+string num7=tmp[6];
+e1health=string_to_number(num7);
+string num8=tmp[7];
+e1defaulthealth=string_to_number(num8);
+string num9=tmp[8];
+e1speed=string_to_number(num9);
+string num10=tmp[9];
+e1spawntime=string_to_number(num10);
+string num11=tmp[10];
+e1pos=string_to_number(num11);
+string num12=tmp[11];
+e2attacktime=string_to_number(num12);
+string num13=tmp[12];
+e2spawned=string_to_number(num13);
+string num14=tmp[13];
+e2health=string_to_number(num14);
+string num15=tmp[14];
+e2defaulthealth=string_to_number(num15);
+string num16=tmp[15];
+e2speed=string_to_number(num16);
+string num17=tmp[16];
+e2spawntime=string_to_number(num17);
+string num18=tmp[17];
+e2pos=string_to_number(num18);
+string num19=tmp[18];
+maxpos=string_to_number(num19);
+string num20=tmp[19];
+healthspawned=string_to_number(num20);
+string num21=tmp[20];
+healthpos=string_to_number(num21);
+string num22=tmp[21];
+fireactive=string_to_number(num22);
+string num23=tmp[22];
+firepos=string_to_number(num23);
+string num24=tmp[23];
+gunammo=string_to_number(num24);
+string num25=tmp[24];
+macgunammo=string_to_number(num25);
+string num26=tmp[25];
+rifleammo=string_to_number(num26);
+string num27=tmp[26];
+points=string_to_number(num27);
+string num28=tmp[27];
+movetime=string_to_number(num28);
+string num29=tmp[28];
+fire2pos=string_to_number(num29);
+string num30=tmp[29];
+fire2active=string_to_number(num30);
+string num31=tmp[30];
+switched=string_to_number(num31);
+string num32=tmp[31];
+rifletime=string_to_number(num32);
+string num33=tmp[32];
+batdamage=string_to_number(num33);
+string num34=tmp[33];
+gundamage=string_to_number(num34);
+string num35=tmp[34];
+macgundamage=string_to_number(num35);
+string num36=tmp[35];
+rifledamage=string_to_number(num36);
+string num37=tmp[36];
+telepos=string_to_number(num37);
+string num38=tmp[37];
+bossspawned=string_to_number(num38);
+string num39=tmp[38];
+bosshealth=string_to_number(num39);
+string num40=tmp[39];
+bosspos=string_to_number(num40);
+string num41=tmp[40];
+part=string_to_number(num41);
+string num42=tmp[41];
+kills=string_to_number(num42);
+string num43=tmp[42];
+bathits=string_to_number(num43);
+string num44=tmp[43];
+batbroken=string_to_number(num44);
+string num45=tmp[44];
+totalbathits=string_to_number(num45);
+finishloading();
+}
+}
+}
+void finishloading()
+{
+if (healthspawned==1)
+{
+position_sound_1d(healthsound, x, healthpos, 1, 1);
+healthsound.play_looped();
+}
+if (fireactive==1)
+{
+position_sound_1d(firesound, x, firepos, 1, 1);
+firesound.play_looped();
+}
+if (fire2active==1)
+{
+position_sound_1d(fire2sound, x, fire2pos, 1, 1);
+fire2sound.play_looped();
+}
+if (level==7)
+{
+position_switch();
+}
+savefile.close();
+speak("Loaded");
+loaded=1;
+game();
+}

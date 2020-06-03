@@ -1,0 +1,151 @@
+#include "sound_positioning.bgt"
+int x;
+int spawntime=random(3000,6000);
+int spawnable=0;
+int enemypos=random(1,20);
+int playerhealth=100;
+int enemyhealth=20;
+int jumping=0;
+sound amb, enemy, enemyhit, enemydeath, gun, jump, pain, playerdeath, step, wall;
+tts_voice voice;
+timer spawntimer, attacktimer, jumptimer;
+void main()
+{
+spawntimer.pause();
+if (screen_reader_is_running(1))
+install_keyhook();
+show_game_window("test sidescroller");
+amb.load("sounds/amb.wav");
+enemy.load("sounds/enemy.wav");
+enemyhit.load("sounds/enemyhit.wav");
+enemydeath.load("sounds/enemydeath.wav");
+gun.load("sounds/gun.wav");
+gun.volume=-5;
+playerdeath.load("sounds/playerdeath.ogg");
+wall.load("sounds/wall.ogg");
+jump.load("sounds/jump.wav");
+amb.play_looped();
+positions();
+enemy.play_looped();
+while (true)
+{
+if (key_pressed(KEY_H))
+{
+voice.speak_interrupt(playerhealth+" percent");
+}
+if (key_pressed(KEY_ESCAPE))
+{
+exit();
+}
+if (key_pressed(KEY_SPACE))
+{
+gun.stop();
+gun.play();
+if (enemypos>=x-4 and enemypos<=x+4)
+{
+enemyhit.stop();
+enemyhit.play();
+enemyhealth-=2;
+if (enemyhealth==0)
+{
+enemy.stop();
+enemydeath.play();
+enemypos=-1;
+spawntimer.restart();
+spawnable=1;
+}
+}
+}
+if (spawntimer.elapsed>=spawntime and spawnable==1)
+{
+enemypos=random(1,20);
+enemyhealth=20;
+positions();
+enemy.play_looped();
+spawntimer.pause();
+spawnable=0;
+}
+if(key_pressed(KEY_UP))
+{
+if (jumping==0)
+{
+jump.stop();
+jump.play();
+jumptimer.restart();
+jumping=1;
+}
+}
+if (jumping==1 and jumptimer.elapsed>=1000)
+{
+jumping=0;
+step.load("sounds/steps/"+random(1,5)+".wav");
+step.stop();
+step.play();
+jumptimer.restart();
+}
+if (key_pressed(KEY_RIGHT))
+{
+if (x==25)
+{
+wall.stop();
+wall.play();
+}
+if (x<25)
+{
+if (jumping==0)
+{
+step.load("sounds/steps/"+random(1,5)+".wav");
+step.stop();
+step.play();
+}
+positions();
+x+=1;
+}
+}
+if (key_pressed(KEY_LEFT))
+{
+if (x==0)
+{
+wall.stop();
+wall.play();
+}
+if (x>0)
+{
+if (jumping==0)
+{
+step.load("sounds/steps/"+random(1,5)+".wav");
+step.stop();
+step.play();
+}
+positions();
+x-=1;
+}
+}
+if (enemypos>=x-2 and enemypos<=x+2)
+{
+if (jumping==0)
+{
+if (attacktimer.elapsed>=600)
+{
+pain.load("sounds/pain"+random(1,5)+".ogg");
+pain.stop();
+pain.play();
+playerhealth-=random(1,5);
+attacktimer.restart();
+}
+}
+}
+if (playerhealth<1)
+{
+playerdeath.play_wait();
+exit();
+}
+wait(10);
+}
+}
+void positions()
+{
+position_sound_1d(enemy, x, enemypos, 1, 1);
+position_sound_1d(enemyhit, x, enemypos, 1, 1);
+position_sound_1d(enemydeath, x, enemypos, 1, 1);
+}

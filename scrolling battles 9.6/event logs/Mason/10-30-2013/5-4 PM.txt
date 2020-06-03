@@ -1,0 +1,8 @@
+0: 
+1: event. Version=7.7.0.108. (5-4-28 PM)
+2: Event: mason is using the default Soundpack. (5-4-28 PM)
+3: Event: mason is using the Town environment. (5-4-28 PM)
+0: 
+1: event. Version=7.7.0.108. (5-4-44 PM)
+2: Event: mason is using the default Soundpack. (5-4-44 PM)
+3: Event: mason is using the Town environment. (5-4-44 PM)

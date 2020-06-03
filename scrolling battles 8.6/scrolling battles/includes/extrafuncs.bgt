@@ -1,0 +1,992 @@
+﻿int amount;
+int amount2;
+void buyhealth()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+playerhealth+=amount;
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buyspeed()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0 or speedtime<=200)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+speedtime-=amount;
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buychance()
+{
+int costs=100;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+maxchance+=amount;
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buyknifedamage()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+knifedamage+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buygundamage()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+gundamage+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buymacgundamage()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+macgundamage+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buypusherdamage()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+pusherdamage+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buylaserdamage()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+laserdamage+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buykniferange()
+{
+int costs=15;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+kniferange+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buygunrange()
+{
+int costs=15;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+gunrange+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buymacgunrange()
+{
+int costs=15;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+macgunrange+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buypusherrange()
+{
+int costs=15;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+pusherrange+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buyblasterspeed()
+{
+int costs=15;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0 and blasterspeed<=20)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+blasterspeed-=amount*20;
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buyblasterdamage()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+blasterdefdamage+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buylaserrange()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+laserrange+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buygrabber()
+{
+if (grabberget==1)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else if (dollars<100)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else if (dollars>=100)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+dollars-=100;
+grabberget=1;
+setting.write_number("grabberget", grabberget);
+}
+}
+void buymacguntime()
+{
+int costs=15;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0 or macguntime<=50)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+macguntime-=(amount*50);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buymaxpos()
+{
+int costs=15;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+maxpos+=(amount*10);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buyhelperhealth()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+helperhealth+=(amount*10);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buyhelperspeed()
+{
+int costs=20;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0 or helperspeed-(amount*20)<=180)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+helperspeed-=(amount*20);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buyhelperdamage()
+{
+int costs=20;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+helperdamage+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buyhelperrange()
+{
+int costs=20;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+helperrange+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buylaser()
+{
+if (lasergot==1)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else if (dollars<500)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+if (dollars>=500)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+dollars-=500;
+lasergot=1;
+setting.write_number("lasergot", lasergot);
+}
+}
+void buyteleport()
+{
+if (dollars<1000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+if (dollars>=1000)
+{
+dollars-=1000;
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+telegot=1;
+setting.write_number("telegot", telegot);
+}
+}
+void buytelerange()
+{
+int costs=20;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+telerange+=(amount*10);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buytelespeed()
+{
+int costs=20;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0 or telespeed-(amount*5)<=20)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+telespeed-=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buygrenadespeed()
+{
+int costs=20;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0 or grenadespeed-(amount*5)<=20)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+grenadespeed+=(amount*5);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buygrenaderange()
+{
+int costs=20;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+grenaderange+=(amount*2);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buygrenaderange2()
+{
+int costs=20;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+grenademove+=(amount*2);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buygrenades()
+{
+int costs=50;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+grenades+=amount;
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buymacgunammo()
+{
+int costs=25;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+macgunammo+=(amount*10);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buygunammo()
+{
+int costs=25;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+gunammo+=(amount*10);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buybatteries()
+{
+int costs=25;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+batteries+=(amount*10);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buypusherpos()
+{
+int costs=5;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+pusherpos+=(amount*2);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buysz1maxhealth()
+{
+int costs=100;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+sz1.maxhealth+=(amount*200);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buysz1damage()
+{
+int costs=50;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+sz1.damage+=(amount*10);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buysz1size()
+{
+int costs=250;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+sz1.length+=(amount*2);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buysz2size()
+{
+int costs=250;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+sz2.length+=(amount*2);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buysz2maxhealth()
+{
+int costs=100;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+sz2.maxhealth+=(amount*200);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buysz2damage()
+{
+int costs=50;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+sz2.damage+=(amount*10);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buyjumptime()
+{
+int costs=10;
+string howmuch=input_box("store", "how much do you want? each one of this item costs "+costs+" dollars.");
+amount=string_to_number(howmuch);
+amount2=amount*costs;
+if (amount<=0)
+{
+alert("uh, hello", "don't go trying to sell yourself out here.");
+}
+else if (amount2>dollars)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else
+{
+dollars-=amount2;
+jumptime+=(amount*1);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void buyhotkey()
+{
+if (dollars<15000)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/notenoughmoney.ogg", false);
+}
+else if(hotkeybought==1)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else
+{
+dollars-=15000;
+hotkeybought=1;
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/perchased.ogg", false);
+}
+}
+void sellmaxpos()
+{
+if (maxpos<40)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else if (maxpos>=40)
+{
+dollars+=25;
+maxpos-=10;
+}
+}
+void sellmaxpos2()
+{
+if (maxpos<40)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else if (maxpos>=40)
+{
+dollars+=50;
+maxpos-=20;
+}
+}
+void sellgunammo()
+{
+if (gunammo<0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else if (gunammo>=0)
+{
+dollars+=25;
+gunammo-=10;
+}
+}
+void sellgunammo2()
+{
+if (gunammo<0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else if (gunammo>=0)
+{
+dollars+=50;
+gunammo-=20;
+}
+}
+void sellmacgunammo()
+{
+if (macgunammo<0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else if (macgunammo>=0)
+{
+dollars+=25;
+macgunammo-=10;
+}
+}
+void sellmacgunammo2()
+{
+if (macgunammo<0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else if (macgunammo>=0)
+{
+dollars+=50;
+macgunammo-=20;
+}
+}
+void sellgrenades()
+{
+if (grenades<0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else if (grenades>=0)
+{
+dollars+=50;
+grenades-=5;
+}
+}
+void sellgrenades2()
+{
+if (grenades<0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/maximumobject.ogg", false);
+}
+else if (grenades>=0)
+{
+dollars+=100;
+grenades-=10;
+}
+}
+void selllaser()
+{
+if (lasergot!=0)
+{
+dollars+=500;
+lasergot=0;
+setting.write_number("lasergot", lasergot);
+if (weapon==10)
+{
+weapon=1;
+}
+}
+}
+void sellsz1size()
+{
+if (sz1.length>=3)
+{
+dollars+=200;
+sz1.length-=2;
+}
+}
+void sellsz2size()
+{
+if (sz2.length>=3)
+{
+dollars+=200;
+sz2.length-=2;
+}
+}

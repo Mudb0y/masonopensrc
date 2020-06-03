@@ -1,0 +1,75 @@
+string updatever;
+string link="http://mtgstudiosus.tk/sb/dl.txt";
+string ver="http://mtgstudiosus.tk/sb/ver.txt";
+string url;
+http download;
+file setup;
+void checkversion()
+{
+url=download.get(link);
+if(get_last_error()!=0)
+{
+alert("Error", "An error occured.\r\nDescription: "+url);
+}
+else
+{
+while(download.progress)
+{
+url+=download.request();
+}
+initial();
+}
+}
+void initial()
+{
+updatever=download.get(ver);
+if(get_last_error()!=0)
+{
+alert("Error", "An error occured.\r\nDescription: "+updatever);
+}
+else
+{
+while(download.progress)
+{
+updatever+=download.request();
+}
+int answer=question("Scrolling Battles", "The latest online version of sb is "+updatever+". You are using "+version+". You may already be using the latest version. Would you like to download it?");
+if (answer==1)
+{
+dl();
+}
+else
+{
+return;
+}
+}
+}
+void dl()
+{
+speak("downloading");
+string installer=download.get(url);
+if(get_last_error()!=0)
+{
+alert("Error", "An error occured.\r\nDescription: "+installer);
+}
+else
+{
+while(download.progress)
+{
+installer+=download.request();
+}
+setup.open("sb_setup_v"+updatever+".exe", "wb");
+setup.write(installer);
+setup.close();
+}
+int answer=question("Finished", "Would you like to run the SB installer now?");
+if (answer==1)
+{
+run("sb_setup_v"+updatever+".exe", false, false, false);
+exit();
+}
+else
+{
+return;
+}
+}

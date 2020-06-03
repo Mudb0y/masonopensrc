@@ -1,0 +1,265 @@
+#include "dlg.bgt"
+#include "keyhook.bgt"
+#include "m.bgt"
+#include "sounds.dat"
+sound menuenter, menuclose, menumove, menubound, logo, music, welcome;
+kh keyhook;
+string title, text;
+int mres;
+pack_file pfile;
+file exporter;
+dynamic_menu menu;
+void main()
+{
+pfile.open("*");
+set_sound_decryption_key("m1t2g3s12131415", true);
+set_sound_storage("*");
+music.load("music.wav");
+logo.load("logo.wav");
+welcome.load("welcome.wav");
+keyhook.install();
+set_sound_master_volume(-5);
+show_game_window("personal Dialog Assistant");
+logo.play();
+while(logo.playing)
+{
+if(key_pressed(KEY_RETURN) or key_pressed(KEY_SPACE))
+{
+fade(logo,-40,30);
+logo.stop();
+welcome.play_wait();
+mainmenu();
+}
+}
+welcome.play_wait();
+mainmenu();
+}
+void mainmenu()
+{
+music.volume=-10;
+music.play_looped();
+menu.reset(true);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.click_at_edge(false);
+menu.enable_up_and_down(true);
+menu.repeat_last_item_at_bottom(true);
+menu.add_click_sound("menumove.wav");
+menu.add_escape_sound("menuclose.wav");
+menu.add_enter_sound("menuenter.wav");
+menu.add_edge_sound("menubound.wav");
+menu.add_item_tts("make a dialog");
+menu.add_item_tts("help");
+menu.add_item_tts("exit");
+mres=menu.run("Personal Dialog Assistant Menu", true);
+if (mres==0)
+{
+fade(music, -40, 20);
+exit();
+}
+if (mres==1)
+{
+dialogmenu();
+}
+if (mres==2)
+{
+helpscreen();
+}
+if (mres==3)
+{
+fade(music, -40, 20);
+exit();
+}
+}
+void dialogmenu()
+{
+menu.click_at_edge(false);
+menu.enable_up_and_down(true);
+menu.repeat_last_item_at_bottom(true);
+menu.add_click_sound("menumove.wav");
+menu.add_escape_sound("menuclose.wav");
+menu.add_enter_sound("menuenter.wav");
+menu.add_edge_sound("menubound.wav");
+menu.reset(true);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("set the title of your dialog");
+menu.add_item_tts("set the text of your dialog");
+if (title=="" or text=="")
+{
+menu.add_item_tts("cancel");
+}
+else
+{
+menu.add_item_tts("show dialog");
+menu.add_item_tts("export");
+menu.add_item_tts("clear entries");
+menu.add_item_tts("cancel");
+}
+mres=menu.run("Dialog Creation Menu. Select an option.", true);
+if (mres==0)
+{
+mainmenu();
+}
+if (mres==1)
+{
+settitle();
+}
+if (mres==2)
+{
+settext();
+}
+if (mres==3)
+{
+if (title=="" or text=="")
+{
+mainmenu();
+}
+else
+{
+showdialog();
+}
+}
+if (mres==4)
+{
+if (title==""or text=="")
+{
+dlg("no dialog to export!");
+dialogmenu();
+}
+else
+{
+exportmenu();
+}
+}
+if (mres==5)
+{
+if (title=="" and text=="")
+{
+dlg("already empty");
+dialogmenu();
+}
+else
+{
+title="";
+text="";
+dlg("cleared");
+dialogmenu();
+}
+}
+if (mres==6)
+{
+mainmenu();
+}
+}
+void settitle()
+{
+title=input_box("personal dialog assistant", "enter the title of your dialog", title);
+if (title=="")
+{
+dlg("The title is empty!");
+dialogmenu();
+}
+else
+{
+dialogmenu();
+}
+}
+void settext()
+{
+text=input_box("personal dialog assistant", "enter the text you want displayed.", text);
+if (text=="")
+{
+dlg("The text is empty!");
+dialogmenu();
+}
+else
+{
+dialogmenu();
+}
+}
+void showdialog()
+{
+if (title=="" or text=="")
+{
+alert("error", "you haven't finished creating your dialog yet!");
+dialogmenu();
+}
+else
+{
+alert(title, text);
+dialogmenu();
+}
+}
+void exportmenu()
+{
+menu.click_at_edge(false);
+menu.enable_up_and_down(true);
+menu.repeat_last_item_at_bottom(true);
+menu.add_click_sound("menumove.wav");
+menu.add_escape_sound("menuclose.wav");
+menu.add_enter_sound("menuenter.wav");
+menu.add_edge_sound("menubound.wav");
+menu.reset(true);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("Export to a text file.");
+menu.add_item_tts("export to clipboard.");
+menu.add_item_tts("cancel");
+mres=menu.run("Export menu.", true);
+if (mres==0)
+{
+dialogmenu();
+}
+if (mres==1)
+{
+if (directory_exists("dialogs"))
+{
+exporttext();
+}
+else
+{
+directory_create("dialogs");
+exporttext();
+}
+}
+if (mres==2)
+{
+exportclipboard();
+}
+if (mres==3)
+{
+dialogmenu();
+}
+}
+void exporttext()
+{
+exporter.open("dialogs/"+title+".txt", "w");
+exporter.write("dialog title. "+title+"
+dialog text. "+text+"
+");
+exporter.close();
+dlg("File exported in dialogs folder. name: "+title+".txt");
+dialogmenu();
+}
+void exportclipboard()
+{
+clipboard_copy_text("dialog title. "+title+"
+dialog text. "+text+"
+");
+dlg("copied");
+dialogmenu();
+}
+void helpscreen()
+{
+dlg("hello, and welcome to Personal Dialog Assistant Remake! In this dialog, hit enter or escape to continue, or one of the arrow keys to repeat the spoken text.");
+dlg("firstly, you would click on make a dialog to begin.");
+dlg("after you click on that, you are presented with a dialog creation menu.");
+dlg("click on title or text to enter those items.");
+dlg("after you enter those items, more items show up. show dialog, export, clear, and cancel.");
+dlg("Clicking clear will clear the title and text, therefore making those items unavailable again. You have to then reenter those.");
+dlg("export allows you to copy to the clipboard or into a text file the dialog you just made.");
+dlg("finally, click cancel to get back to the main menu.");
+dlg("thanks to ns studios for teaching me the pack function.");
+mainmenu();
+}

@@ -1,0 +1,88 @@
+dictionary map;
+void draw_map(string name)
+{
+if (name=="arena")
+{
+maxx=120;
+p.play_stationary("amb2.ogg",true);
+spawn_platform(0,10,0,"concrete",false);
+spawn_platform(11,20,0,"gravel",false);
+spawn_platform(21,120,0,"shortgrass",false);
+}
+if (name=="attack")
+{
+maxx=80;
+p.play_stationary("amb2.ogg",true);
+spawn_platform(0,10,0,"gravel",false);
+spawn_platform(11,80,0,"shortgrass",false);
+spawn_door(80,0,"out","door2.ogg","dooropen2.ogg","doorclose2.ogg");
+for (uint i=20; i<120; i+=10)
+{
+spawn_zombie(1,i,0);
+}
+}
+if (name=="wh")
+{
+maxx=100;
+p.play_stationary("amb1.ogg",true);
+spawn_platform(0,100,0,"concrete",false);
+spawn_platform(15,25,0,"gravel",false);
+spawn_platform(10,30,3,"metal");
+spawn_platform(20,40,6,"metal");
+spawn_platform(41,70,9,"metal4");
+spawn_platform(75,85,0,"gravel",false);
+spawn_door(100,0,"out");
+spawn_hazard(20,80,0,2,"fire.ogg");
+}
+}
+void spawn_platform(int mx, int mx2, int my, string plattype,bool ends=true)
+{
+if (ends==true)
+{
+p.play_2d("platwarning.ogg",me.x,me.y,mx,my,true);
+p.play_2d("platwarning.ogg",me.x,me.y,mx2,my,true);
+}
+for (uint i=mx; i<=mx2; i++)
+{
+map.set(i+":"+my,plattype);
+map.set(i+":"+(my-1),"wall");
+}
+}
+void playstep()
+{
+if (gmt()=="wall")
+{
+p.play_stationary("wall.ogg",false);
+bounce();
+}
+else
+{
+p.play_stationary(""+gmt()+"step"+random(1,5)+".ogg",false);
+}
+}
+string gmt()
+{
+if (map.exists(me.x+":"+me.y))
+{
+string outval;
+map.get(me.x+":"+me.y, outval);
+return outval;
+}
+return "";
+}
+string gct()
+{
+if (map.exists(camera.x+":"+camera.y))
+{
+string outval;
+map.get(camera.x+":"+camera.y, outval);
+return outval;
+}
+return "";
+}
+string get_tile_at(int x, int y)
+{
+string outval;
+map.get(x+":"+y, outval);
+return outval;
+}

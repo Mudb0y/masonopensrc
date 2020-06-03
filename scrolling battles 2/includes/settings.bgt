@@ -1,0 +1,42 @@
+int slength=4;
+void writesettings()
+{
+savefile.open(DIRECTORY_COMMON_APPDATA+"\\sb2/settings.sav", "wb");
+if (!directory_exists(DIRECTORY_COMMON_APPDATA+"\\sb2"))
+directory_create(DIRECTORY_COMMON_APPDATA+"\\sb2");
+savefile.write(string_base64_encode(enablelogo+"+"+sound_master_volume+"+"+enablepb+"+"+music.volume));
+savefile.close();
+}
+void readsettings()
+{
+savefile.open(DIRECTORY_COMMON_APPDATA+"/sb2/settings.sav", "r");
+string[] tmp=string_split(string_base64_decode(savefile.read()), "+", true);
+if (tmp.length<slength)
+{
+alert("error", "settings file is invalid. This may happen if I have updated the way settings work. Resetting to defaults.");
+settodefaults();
+}
+else
+{
+string number1=tmp[0];
+enablelogo=string_to_number(number1);
+string number2=tmp[1];
+int mastervol=string_to_number(number2);
+set_sound_master_volume(mastervol);
+string number3=tmp[2];
+enablepb=string_to_number(number3);
+string number4=tmp[3];
+savedmusicvolume=string_to_number(number4);
+savefile.close();
+}
+savefile.open(DIRECTORY_COMMON_APPDATA+"/sb2/data.dat", "r");
+string temp2=string_base64_decode(savefile.read());
+gamewon=string_to_number(temp2);
+}
+void settodefaults()
+{
+set_sound_master_volume(0);
+enablelogo=1;
+enablepb=1;
+writesettings();
+}

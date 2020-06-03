@@ -1,0 +1,18 @@
+0: 
+1: event. Version=8.0.0.111. (2-23-53 AM)
+2: Event: mason is using the default Soundpack. (2-23-53 AM)
+3: Event: mason is using the spaceship 2 environment. (2-23-53 AM)
+4: Event. User wants a normal game. (2-23-57 AM)
+5: event: mason has decided to start a new game. (2-23-57 AM)
+6: A water pit spawned at 364 (2-23-57 AM)
+7: A lava pit spawned at 597 (2-23-57 AM)
+8: A fire pit spawned at 763 (2-23-57 AM)
+9: Event: a level 4733 enemy (name mason 2) has been spawned at 1250 with 5936 HP. (2-23-57 AM)
+10: Event: a level 4733 enemy (name Behemoth) has been spawned at 1039 with 7603 HP. (2-23-57 AM)
+11: Event: a level 4733 enemy (name mason 2) has been spawned at 838 with 7724 HP. (2-23-57 AM)
+12: Event: a level 4733 enemy (name alex mackintosh) has been spawned at 925 with 7322 HP. (2-23-57 AM)
+13: Event: Game loaded! (2-23-57 AM)
+14: event: mason just earned the trophy Have a total of 100000 dollars! (2-23-59 AM)
+15: event: mason just earned the trophy Have a total of 1000000 dollars! (2-24-01 AM)
+16: Event: a level 4733 enemy (name Death elf) has been spawned at 1084 with 6225 HP. (2-24-01 AM)
+17: event: mason has decided to exit.

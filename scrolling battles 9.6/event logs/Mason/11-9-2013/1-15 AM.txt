@@ -1,0 +1,26 @@
+0: 
+1: event. Version=8.0.0.111. (1-14-48 AM)
+2: Event: mason is using the default Soundpack. (1-14-48 AM)
+3: Event: mason is using the spaceship 2 environment. (1-14-48 AM)
+4: Event. User wants a normal game. (1-15-00 AM)
+5: event: mason has decided to start a new game. (1-15-00 AM)
+6: A water pit spawned at 176 (1-15-00 AM)
+7: A fire pit spawned at 633 (1-15-01 AM)
+8: A lava pit spawned at 1214 (1-15-01 AM)
+9: Event: a level 4731 enemy (name mason 2) has been spawned at 474 with 4936 HP. (1-15-01 AM)
+10: Event: a level 4731 enemy (name microsoft sam) has been spawned at 457 with 6150 HP. (1-15-01 AM)
+11: Event: a level 4731 enemy (name microsoft sam) has been spawned at 310 with 9223 HP. (1-15-01 AM)
+12: Event: a level 4731 enemy (name alex mackintosh) has been spawned at 1143 with 9421 HP. (1-15-01 AM)
+13: Event: Game loaded! (1-15-01 AM)
+14: event: mason just earned the trophy Obtain 1000 kills! (1-15-05 AM)
+15: Event: a level 4731 enemy (name samantha) has been spawned at 1232 with 8483 HP. (1-15-05 AM)
+16: event: mason has decided to exit.
+17: Event: An item has spawned! (1-15-25 AM)
+18: Event: An item has spawned! (1-15-25 AM)
+19: Event: An item has spawned! (1-15-25 AM)
+20: Event: An item has spawned! (1-15-25 AM)
+21: Event: An item has spawned! (1-15-25 AM)
+22: Event: a level 4731 enemy (name Behemoth) has been spawned at 104 with 6986 HP. (1-15-25 AM)
+23: event: mason has decided to exit.
+24: Event: a level 4731 enemy (name alex mackintosh) has been spawned at 965 with 6870 HP. (1-15-32 AM)
+25: event: mason has decided to exit.

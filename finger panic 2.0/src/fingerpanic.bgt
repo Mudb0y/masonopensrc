@@ -1,0 +1,365 @@
+#include "fpmenu.bgt"
+#include "fade.bgt"
+int paused1=1;
+int paused2=0;
+int turb=0;
+int crackerx=0;
+int cheating=0;
+int unlocked=0;
+int leveled=0;
+int crackerjacks=0;
+int crackery=0;
+int level=1;
+int x=0;
+int y=0;
+int score=0;
+int movetime=100;
+int gametime=10000;
+tts_voice voice;
+timer movetimer, gametimer;
+sound click, intro2, gpaused, unpaused, cheatsunlocked, readyset, go, intro, nextlevel, nofind, found, background, move, atedge;
+file cheats;
+void main()
+{
+if (screen_reader_is_running(1))
+install_keyhook();
+show_game_window("finger panic");
+intro2.load("sounds/intro2.ogg");
+intro2.play();
+while (intro2.playing)
+{
+if(key_pressed(KEY_RETURN) or key_pressed(KEY_SPACE))
+{
+fade(intro2,-50,10);
+intro2.stop();
+intro1();
+}
+}
+intro1();
+}
+void intro1()
+{
+intro.load("sounds/intro.ogg");
+intro.play();
+while (intro.playing)
+{
+if(key_pressed(KEY_RETURN) or key_pressed(KEY_SPACE))
+{
+fade(intro,-50,10);
+intro.stop();
+loadallsounds();
+fpmenu();
+}
+}
+loadallsounds();
+fpmenu();
+}
+void game()
+{
+readyset.play_wait();
+go.play();
+background.play_looped();
+crackerx=random(1,4);
+crackery=random(1,4);
+gametimer.restart();
+while (true)
+{
+if (key_pressed(KEY_S))
+{
+tempresults();
+}
+if (key_pressed(KEY_END))
+{
+click.play();
+set_sound_master_volume(sound_master_volume-2);
+}
+if (key_pressed(KEY_HOME))
+{
+click.play();
+set_sound_master_volume(sound_master_volume+2);
+}
+if (key_pressed(KEY_SPACE))
+{
+if (paused1==1)
+{
+if (turb==1)
+{
+}
+found.stop();
+found.play();
+crackerx=random(1,4);
+crackery=random(1,4);
+crackerjacks+=1;
+}
+}
+if (key_pressed(KEY_U))
+{
+if (paused2==1)
+{
+background.play_looped();
+gametimer.resume();
+paused1=1;
+paused2=0;
+unpaused.stop();
+unpaused.play();
+}
+}
+if(key_pressed(KEY_P))
+{
+if (paused1==1)
+{
+background.pause();
+gametimer.pause();
+paused1=0;
+paused2=1;
+gpaused.stop();
+gpaused.play();
+}
+}
+if (key_pressed(KEY_DELETE))
+{
+gametimer.pause();
+string cheat=input_box("finger panic", "enter a cheat");
+cheat=string_to_lower_case(cheat);
+if (cheat=="where is the crackerjack?")
+{
+alert("finger panic", "the cracker jack is at "+crackerx+", "+crackery);
+}
+if (cheat=="speed me up!")
+{
+voice.speak("activated");
+movetime-=10;
+}
+if (cheat=="turbolift")
+{
+voice.speak("activated");
+turb=1;
+}
+if (paused1==1)
+{
+gametimer.resume();
+}
+}
+if (score>=1000)
+{
+if (unlocked==0)
+{
+cheatsunlocked.play();
+cheats.open("cheats.txt", "w");
+cheats.write("speed me up! speeds your running up
+where is the crackerjack? tells you at which position the crackerjack is hidden.
+turbolift lets you hit space to get crackerjacks. you will receive 0 points for the turbolifted crackerjacks");
+unlocked=1;
+}
+}
+if (crackerjacks==10 or crackerjacks==20 or crackerjacks==30 or crackerjacks==40 or crackerjacks==50 or crackerjacks==60 or crackerjacks==70)
+{
+if (leveled==0)
+{
+level+=1;
+nextlevel.play();
+gametime-=1000;
+leveled=1;
+gametimer.restart();
+}
+}
+if (gametimer.elapsed>=gametime)
+{
+background.stop();
+nofind.play_wait();
+results();
+}
+if (x==crackerx and y==crackery)
+{
+found.play();
+crackerx=random(1,4);
+crackery=random(1,4);
+crackerjacks+=1;
+if (cheating==1)
+{
+score+=25;
+}
+if (cheating==0)
+{
+score+=50;
+}
+gametimer.restart();
+}
+if (key_pressed(KEY_ESCAPE))
+{
+if (paused1==1)
+{
+fade (background,-50,10);
+background.stop();
+}
+results();
+}
+if (leveled>=0)
+{
+if (crackerjacks==11 or crackerjacks==21 or crackerjacks==31 or crackerjacks==41 or crackerjacks==51 or crackerjacks==61 or crackerjacks==71)
+{
+leveled=0;
+}
+}
+if (key_pressed(KEY_UP))
+{
+if (paused2==0)
+{
+if (y<=4)
+{
+move.stop();
+move.play();
+movetimer.restart();
+y+=1;
+movetimer.restart();
+}
+if (y>=5)
+{
+move.stop();
+atedge.stop();
+atedge.play();
+movetimer.restart();
+y=5;
+}
+}
+}
+if (key_down(KEY_RCONTROL) and key_down(KEY_LEFT) and movetimer.elapsed>=movetime or key_down(KEY_LCONTROL) and key_down(KEY_LEFT) and movetimer.elapsed>=movetime)
+{
+if (paused2==0)
+{
+cheating=1;
+if (x>=0)
+{
+move.stop();
+move.play();
+x-=1;
+movetimer.restart();
+}
+if (x<=0)
+{
+move.stop();
+atedge.stop();
+atedge.play();
+x=0;
+movetimer.restart();
+}
+}
+}
+if (key_down(KEY_RCONTROL) and key_down(KEY_RIGHT) and movetimer.elapsed>=movetime or key_down(KEY_LCONTROL) and key_down(KEY_RIGHT) and movetimer.elapsed>=movetime)
+{
+if (paused2==0)
+{
+cheating=1;
+if (x<=4)
+{
+move.stop();
+move.play();
+x+=1;
+movetimer.restart();
+}
+if (x>=5)
+{
+move.stop();
+atedge.stop();
+atedge.play();
+x=5;
+movetimer.restart();
+}
+}
+}
+if (key_released(KEY_LCONTROL) or key_released(KEY_RCONTROL))
+{
+cheating=0;
+}
+if (key_pressed(KEY_DOWN))
+{
+if (paused2==0)
+{
+if (y>=0)
+{
+move.stop();
+move.play();
+y-=1;
+movetimer.restart();
+}
+if (y<=0)
+{
+move.stop();
+atedge.stop();
+atedge.play();
+y=0;
+movetimer.restart();
+}
+}
+}
+if (key_pressed(KEY_LEFT))
+{
+if (paused2==0)
+{
+if (x>=0)
+{
+move.stop();
+move.play();
+x-=1;
+movetimer.restart();
+}
+if (x<=0)
+{
+move.stop();
+atedge.stop();
+atedge.play();
+x=0;
+movetimer.restart();
+}
+}
+}
+if (key_pressed(KEY_RIGHT))
+{
+if (paused2==0)
+{
+if (x<=4)
+{
+move.stop();
+move.play();
+x+=1;
+movetimer.restart();
+}
+if (x>=5)
+{
+move.stop();
+atedge.stop();
+atedge.play();
+x=5;
+movetimer.restart();
+}
+}
+}
+}
+}
+void loadallsounds()
+{
+nextlevel.load("sounds/nextlevel.ogg");
+nofind.load("sounds/nofind.ogg");
+found.load("sounds/found.ogg");
+background.load("sounds/background.ogg");
+atedge.load("sounds/atedge.ogg");
+move.load("sounds/move.ogg");
+readyset.load("sounds/readyset.ogg");
+go.load("sounds/go.ogg");
+cheatsunlocked.load("sounds/cheats.ogg");
+unpaused.load("sounds/unpaused.ogg");
+gpaused.load("sounds/paused.ogg");
+click.load("sounds/menu/move.ogg");
+}
+void zeroout()
+{
+score=0;
+x=0;
+y=0;
+crackerjacks=0;
+level=1;
+cheating=0;
+turb=0;
+movetime=100;
+gametime=10000;
+}

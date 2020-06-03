@@ -1,0 +1,66 @@
+int ispawntime=15000;
+timer ispawntimer;
+class obj
+{
+int number=random(0,2);
+int ix, iy;
+sound itemsound;
+obj(int itemx, int itemy)
+{
+ix=itemx;
+iy=itemy;
+itemsound.load("item.ogg");
+position_sound_2d(itemsound, me.x, me.y, ix, iy, 2, 2, 4);
+itemsound.play_looped();
+}
+void take()
+{
+itemsound.stop();
+checknum();
+}
+void checknum()
+{
+if (number==0)
+{
+speak("250 health!");
+health+=250;
+}
+else if (number==1)
+{
+speak("500 health!");
+health+=500;
+}
+else if (number==2)
+{
+speak("1000 health!");
+health+=1000;
+}
+}
+}
+void icheckloop()
+{
+if (ispawntimer.elapsed>=ispawntime)
+{
+ispawntimer.restart();
+spawn_item(random(0,maxpos), random(0,maxy));
+}
+for (uint i=0; i<objs.length(); i++)
+{
+position_sound_2d(objs[i].itemsound, me.x, me.y, objs[i].ix, objs[i].iy, 2, 2, 4);
+if (me.x==objs[i].ix and me.y==objs[i].iy)
+{
+objs[i].take();
+objs.remove_at(i);
+break;
+}
+}
+}
+void destroy_all_objs()
+{
+objs.resize(0);
+}
+void spawn_item(int itemx, int itemy)
+{
+obj obj1(itemx, itemy);
+objs.insert_last(obj1);
+}

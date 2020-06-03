@@ -1,0 +1,1256 @@
+#include"includes/dlg.bgt"
+#include"includes/dlgplayer.bgt"
+#include"includes/editor.bgt"
+#include"includes/extrafuncs.bgt"
+#include"includes/keyhook.bgt"
+#include"includes/m.bgt"
+#include"includes/menu.bgt"
+#include"includes/saveload.bgt"
+#include"includes/settings.bgt"
+#include"includes/sound_pool.bgt"
+int gvoltime=50;
+int savedmusicvolume;
+int prog0, prog25, prog50, prog75;
+int enablepb=1;
+int totalbathits;
+int batbroken;
+int bathits;
+int gamewon=0;
+int boss;
+int boss2;
+int part=1;
+int bossspawned=0;
+int bosshealth=5000;
+int bossdefaulthealth=5000;
+int bossspeed=400;
+int bosspos=180;
+int bossrange=5;
+int bossdamage=10;
+int bossattacktime=500;
+int boss2spawned=0;
+int boss2health=7000;
+int boss2defaulthealth=7000;
+int boss2speed=300;
+int boss2pos=100;
+int boss2range=8;
+int boss2damage=6;
+int boss2attacktime=800;
+int kills;
+int switched=0;
+int switchpos=250;
+int survival=0;
+int points=0;
+int gunammo=100;
+int macgunammo=100;
+int rifleammo=50;
+int fireactive=0;
+int firepos=-20;
+int firespeed=300;
+int fire2active=0;
+int fire2pos=-20;
+int fire2speed=200;
+int loaded=0;
+file savefile;
+int healthspawned=0;
+int healthpos=-500;
+int enablelogo=1;
+int maxlevel=12;
+int ambsound;
+int telepos;
+int level=1;
+int riflereloaded=1;
+int riflereloaded2=0;
+int rifletime=1000;
+int rifletime2=500;
+int macguntime=100;
+int jumptime=900;
+int maxpos=100;
+string version="1.3";
+int e1damage=3;
+int e1range=7;
+int e2damage=6;
+int e2range=5;
+int health=200;
+int fistsdamage=2;
+int batdamage=5;
+int gundamage=5;
+int macgundamage=10;
+int rifledamage=50;
+int fistsrange=2;
+int batrange=4;
+int gunrange=5;
+int macgunrange=7;
+int riflerange=20;
+int e1;
+int e1attacktime=1200;
+int e1spawned=0;
+int e1health=0;
+int e1defaulthealth=25;
+int e1speed=400;
+int e1spawntime=8000;
+int e1pos=-500;
+int e2;
+int e2attacktime=1500;
+int e2spawned=0;
+int e2health=0;
+int e2defaulthealth=50;
+int e2speed=450;
+int e2spawntime=7000;
+int e2pos=-500;
+int jumping=0;
+int playerpos;
+int x=0;
+int movetime=300;
+int movetime2=movetime-100;
+int weapon=1;
+sound music, boss2loop, boss2hit, boss2hit2, boss2shoot, boss2move, bossloop, bosshit, bosshit2, bossshoot, bossmove, firesound, fire2sound, switchsound, telesound, healthsound, e1shoot, e1hit, e1hit2, e1move, e2shoot, e2hit, e2hit2, e2move;
+sound_pool pool;
+kh key;
+timer gvoltimer, boss2attacktimer, boss2timer, boss2timer2, bossattacktimer, bosstimer, bosstimer2, firetimer, fire2timer, healthtimer, rifletimer, rifletimer2, macguntimer, jumptimer, e1attacktimer, e1timer, e1timer2, e2timer, e2attacktimer, e2timer2, movetimer;
+void main()
+{
+if (!file_exists(DIRECTORY_COMMON_APPDATA+"/sb2/settings.sav"))
+{
+writesettings();
+readsettings();
+}
+else
+{
+readsettings();
+}
+show_game_window("Scrolling Battles 2 version "+version);
+int loading=pool.play_stationary("sounds/other/loading.ogg", false);
+if (enablepb==1)
+{
+prog0=pool.play_stationary("sounds/progress/0.ogg", false);
+}
+key.install();
+bossloop.stream("sounds/boss/loop.ogg");
+boss2loop.stream("sounds/boss2/loop.ogg");
+bossshoot.stream("sounds/boss/gun.ogg");
+boss2shoot.stream("sounds/boss2/gun.ogg");
+if (enablepb==1)
+{
+pool.destroy_sound(prog0);
+prog25=pool.play_stationary("sounds/progress/25.ogg", false);
+}
+firesound.stream("sounds/ambience/fire.ogg");
+fire2sound.stream("sounds/ambience/fire2.ogg");
+switchsound.stream("sounds/other/switch.ogg");
+if (enablepb==1)
+{
+pool.destroy_sound(prog25);
+prog50=pool.play_stationary("sounds/progress/50.ogg", false);
+}
+telesound.stream("sounds/ambience/tele.ogg");
+if (enablepb==1)
+{
+pool.destroy_sound(prog50);
+prog75=pool.play_stationary("sounds/progress/75.ogg", false);
+}
+healthsound.stream("sounds/other/health.ogg");
+e1shoot.stream("sounds/enemy/gun.ogg");
+e2shoot.stream("sounds/enemy/gun.ogg");
+pool.destroy_sound(loading);
+if (enablepb==1)
+{
+pool.destroy_sound(prog75);
+pool.play_stationary("sounds/progress/100.ogg", false);
+}
+if (enablelogo==1)
+{
+dlgplay("sounds/logo.ogg", true, 10);
+}
+mainmenu();
+}
+void game()
+{
+if (loaded==0)
+{
+totalbathits=random(80,120);
+}
+checklevelpos();
+e1timer.restart();
+e2timer.restart();
+ambsound=pool.play_stationary("sounds/ambience/"+level+".ogg", true);
+if (survival==0)
+{
+position_teleporter();
+}
+else
+{
+telepos=1000;
+}
+healthtimer.restart();
+if (loaded==1)
+{
+if (healthspawned==1)
+{
+position_sound_1d(healthsound, x, healthpos, 1, 1);
+healthsound.play_looped();
+}
+if (fireactive==1)
+{
+position_sound_1d(firesound, x, firepos, 1, 1);
+firesound.play_looped();
+}
+if (fire2active==1)
+{
+position_sound_1d(fire2sound, x, fire2pos, 1, 1);
+fire2sound.play_looped();
+}
+}
+playmusic();
+while(true)
+{
+if (key_down(KEY_NEXT) and gvoltimer.elapsed>=gvoltime)
+{
+music.volume=music.volume-2;
+writesettings();
+gvoltimer.restart();
+}
+if (key_down(KEY_PRIOR) and gvoltimer.elapsed>=voltime)
+{
+music.volume=music.volume+2;
+writesettings();
+gvoltimer.restart();
+}
+if (key_pressed(KEY_K))
+{
+speak(kills+" kills");
+}
+if (key_pressed(KEY_L))
+{
+speak("level "+level);
+}
+checklevelpos();
+if (level==7)
+{
+if (x==switchpos-3 or x==switchpos-2 or x==switchpos-1 or x==switchpos or x==switchpos+1 or x==switchpos+2 or x==switchpos+3)
+{
+if (key_pressed(KEY_RETURN))
+{
+switchsound.stop();
+pool.play_stationary("sounds/other/switched.ogg", false);
+fire2active=0;
+fire2sound.stop();
+fire2sound.stream("sounds/ambience/fire2out.ogg");
+fire2sound.play();
+switched=1;
+}
+}
+}
+movetime2=movetime-100;
+if (key_pressed(KEY_P))
+{
+speak(points+" points");
+}
+if (key_down(KEY_LMENU) and key_pressed(KEY_S) or key_down(KEY_RMENU) and key_pressed(KEY_S))
+{
+store();
+}
+if (key_pressed(KEY_A))
+{
+if (weapon==3)
+{
+speak(gunammo);
+}
+if (weapon==4)
+{
+speak(macgunammo);
+}
+if (weapon==5)
+{
+speak(rifleammo);
+}
+}
+if (level==6 and survival==0)
+{
+fireactive=1;
+}
+else
+{
+fireactive=0;
+}
+if (level==7 and survival==0)
+{
+fire2active=1;
+}
+else
+{
+fire2active=0;
+}
+if (fireactive==1)
+{
+if (x<=firepos)
+{
+pool.play_stationary("sounds/player/death"+random(1,3)+".ogg", false);
+wait(2500);
+pool.destroy_all();
+music.stop();
+firesound.stop();
+fire2sound.stop();
+switchsound.stop();
+healthsound.stop();
+bossloop.stop();
+reset();
+mainmenu();
+}
+if (firetimer.elapsed>=firespeed)
+{
+firetimer.restart();
+firepos+=1;
+}
+}
+if (fire2active==1 and switched==0)
+{
+if (x<=fire2pos)
+{
+pool.play_stationary("sounds/player/death"+random(1,3)+".ogg", false);
+wait(2500);
+pool.destroy_all();
+firesound.stop();
+fire2sound.stop();
+switchsound.stop();
+healthsound.stop();
+music.stop();
+bossloop.stop();
+reset();
+mainmenu();
+}
+if (fire2timer.elapsed>=fire2speed)
+{
+fire2timer.restart();
+fire2pos+=1;
+}
+}
+if (key_pressed(KEY_HOME))
+{
+set_sound_master_volume(sound_master_volume+2);
+writesettings();
+}
+if (key_pressed(KEY_END))
+{
+set_sound_master_volume(sound_master_volume-2);
+writesettings();
+}
+if (healthtimer.elapsed>=random(15000,35000))
+{
+healthtimer.restart();
+healthtimer.pause();
+healthpos=x+random(1,30);
+if (healthpos>=maxpos)
+{
+healthpos=maxpos-1;
+}
+position_sound_1d(healthsound, x, healthpos, 1, 1);
+healthsound.play_looped();
+healthspawned=1;
+}
+if (x==healthpos and healthspawned==1 and jumping==0)
+{
+healthsound.stop();
+pool.play_stationary("sounds/other/get_health.ogg", false);
+health+=random(10,50);
+healthpos=-500;
+healthspawned=0;
+healthtimer.restart();
+}
+if (key_pressed(KEY_F1))
+{
+speak("enemy 1 position "+e1pos);
+}
+if (key_pressed(KEY_F2))
+{
+speak("enemy 1 spawn time, "+e1spawntime);
+}
+if (key_pressed(KEY_F3))
+{
+speak("enemy 1 spawned, "+e1spawned);
+}
+if (key_pressed(KEY_F4))
+{
+speak("enemy 2 position "+e2pos);
+}
+if (key_pressed(KEY_F5))
+{
+speak("enemy 2 spawn time, "+e2spawntime);
+}
+if (key_pressed(KEY_F6))
+{
+speak("enemy 2 spawned, "+e2spawned);
+}
+if (key_pressed(KEY_S) and survival==0)
+{
+savemenu();
+}
+if (x==telepos and survival==0)
+{
+changelevel();
+}
+if (key_pressed(KEY_UP) and jumping==0)
+{
+jumptimer.restart();
+pool.play_stationary("sounds/steps/jumpup.ogg", false);
+jumping=1;
+}
+if (jumping==1 and jumptimer.elapsed>=jumptime)
+{
+jumping=0;
+pool.play_stationary("sounds/steps/"+level+"/land.ogg", false);
+}
+if (key_pressed(KEY_H))
+{
+speak(health+" HP.");
+}
+if (key_pressed(KEY_C))
+{
+speak(x+" of "+maxpos);
+}
+if (health<=0)
+{
+pool.play_stationary("sounds/player/death"+random(1,3)+".ogg", false);
+wait(2500);
+firesound.stop();
+fire2sound.stop();
+switchsound.stop();
+healthsound.stop();
+pool.destroy_all();
+music.stop();
+bossloop.stop();
+reset();
+mainmenu();
+}
+if (bossspawned==0 and part==1 and survival==0)
+{
+if (level==9 and part==1)
+{
+position_sound_1d(bossloop, x, bosspos, 1, 1);
+bossloop.play_looped();
+bossspawned=1;
+}
+}
+if (bossspawned==1 and part==1 and survival==0)
+{
+if (bosshealth<=0)
+{
+bossloop.stop();
+bossspawned=0;
+dlgplay("sounds/boss/death.ogg");
+points+=random(1000,10000);
+kills+=1;
+part=2;
+}
+if (bossattacktimer.elapsed>=bossattacktime)
+{
+if (bosspos<=x+bossrange and bosspos>=x-bossrange)
+{
+bossattacktimer.restart();
+bossshoot.stop();
+position_sound_1d(bossshoot, x, bosspos, 1, 1);
+bossshoot.play();
+pool.play_stationary("sounds/player/hit"+random(1,5)+".ogg", false);
+health-=bossdamage;
+}
+}
+if (bosstimer2.elapsed>=bossspeed)
+{
+bosstimer2.restart();
+if (bossspeed>=150)
+{
+bossspeed-=random(0,2);
+}
+if (bosspos>x)
+{
+bossmove.stream("sounds/steps/"+level+"/"+random(1,10)+".ogg");
+bossmove.stop();
+position_sound_1d(bossmove, x, bosspos, 1, 1);
+bossmove.play();
+bosspos-=1;
+}
+else if (bosspos<x)
+{
+bossmove.stream("sounds/steps/"+level+"/"+random(1,10)+".ogg");
+bossmove.stop();
+position_sound_1d(bossmove, x, bosspos, 1, 1);
+bossmove.play();
+bosspos+=1;
+}
+}
+}
+if (boss2spawned==0 and survival==0)
+{
+if (level==12)
+{
+position_sound_1d(boss2loop, x, boss2pos, 1, 1);
+boss2loop.play_looped();
+boss2spawned=1;
+}
+}
+if (boss2spawned==1 and survival==0)
+{
+if (boss2health<=0)
+{
+bossloop.stop();
+bossspawned=0;
+boss2loop.stop();
+boss2spawned=0;
+pool.destroy_all();
+healthsound.stop();
+firesound.stop();
+fire2sound.stop();
+switchsound.stop();
+bossloop.stop();
+telesound.stop();
+dlgplay("sounds/boss2/death.ogg");
+gamewon=1;
+savefile.open(DIRECTORY_COMMON_APPDATA+"/sb2/data.dat", "r");
+string tmp=savefile.read();
+if (tmp=="" or tmp=="0")
+{
+savefile.close();
+savefile.open(DIRECTORY_COMMON_APPDATA+"/sb2/data.dat", "w");
+savefile.write(string_base64_encode(gamewon));
+savefile.close();
+mainmenu();
+}
+else
+{
+mainmenu();
+}
+}
+if (boss2attacktimer.elapsed>=boss2attacktime)
+{
+if (boss2pos<=x+boss2range and boss2pos>=x-boss2range)
+{
+boss2attacktimer.restart();
+boss2shoot.stop();
+position_sound_1d(boss2shoot, x, boss2pos, 1, 1);
+boss2shoot.play();
+pool.play_stationary("sounds/player/hit"+random(1,5)+".ogg", false);
+health-=boss2damage;
+}
+}
+if (boss2timer2.elapsed>=boss2speed)
+{
+boss2timer2.restart();
+if (boss2speed>=150)
+{
+boss2speed-=random(0,1);
+}
+if (boss2pos>x)
+{
+boss2move.stream("sounds/steps/"+level+"/"+random(1,10)+".ogg");
+boss2move.stop();
+position_sound_1d(boss2move, x, boss2pos, 1, 1);
+boss2move.play();
+boss2pos-=1;
+}
+else if (boss2pos<x)
+{
+boss2move.stream("sounds/steps/"+level+"/"+random(1,10)+".ogg");
+boss2move.stop();
+position_sound_1d(boss2move, x, boss2pos, 1, 1);
+boss2move.play();
+boss2pos+=1;
+}
+}
+}
+if (e1spawned==0 and level!=9)
+{
+if (e1timer.elapsed>=e1spawntime)
+{
+e1health=e1defaulthealth;
+e1spawned=1;
+e1pos=x-random(-50, 50);
+}
+}
+if (e1spawned==1 and level!=9)
+{
+if (e1health<=0)
+{
+if (e1speed>=50)
+{
+e1speed-=15;
+}
+if (e1attacktime>=50)
+{
+e1attacktime-=15;
+}
+e1defaulthealth+=10;
+e1timer.restart();
+e1spawned=0;
+points+=random(1,10);
+kills+=1;
+}
+if (e1attacktimer.elapsed>=e1attacktime and jumping==0)
+{
+if (e1pos<=x+e1range and e1pos>=x-e1range)
+{
+e1attacktimer.restart();
+e1shoot.stop();
+position_sound_1d(e1shoot, x, e1pos, 1, 1);
+e1shoot.play();
+pool.play_stationary("sounds/player/hit"+random(1,5)+".ogg", false);
+health-=e1damage;
+}
+}
+if (e1timer2.elapsed>=e1speed)
+{
+e1timer2.restart();
+if (e1pos>x)
+{
+e1move.stream("sounds/steps/"+level+"/"+random(1,10)+".ogg");
+e1move.stop();
+position_sound_1d(e1move, x, e1pos, 1, 1);
+e1move.play();
+e1pos-=1;
+}
+else if (e1pos<x)
+{
+e1move.stream("sounds/steps/"+level+"/"+random(1,10)+".ogg");
+e1move.stop();
+position_sound_1d(e1move, x, e1pos, 1, 1);
+e1move.play();
+e1pos+=1;
+}
+}
+}
+if (e2spawned==0 and level!=9)
+{
+if (e2timer.elapsed>=e2spawntime)
+{
+e2health=e2defaulthealth;
+e2spawned=1;
+e2pos=x-random(-50, 50);
+}
+}
+if (e2spawned==1 and level!=9)
+{
+if (e2health<=0)
+{
+if (e2speed>=50)
+{
+e2speed-=15;
+}
+if (e2attacktime>=50)
+{
+e2attacktime-=15;
+}
+e2defaulthealth+=10;
+e2timer.restart();
+e2spawned=0;
+points+=random(1,10);
+kills+=1;
+}
+if (e2attacktimer.elapsed>=e2attacktime and jumping==0)
+{
+if (e2pos<=x+e2range and e2pos>=x-e2range)
+{
+e2attacktimer.restart();
+e2shoot.stop();
+position_sound_1d(e2shoot, x, e2pos, 1, 1);
+e2shoot.play();
+pool.play_stationary("sounds/player/hit"+random(1,5)+".ogg", false);
+health-=e2damage;
+}
+}
+if (e2timer2.elapsed>=e2speed)
+{
+e2timer2.restart();
+if (e2pos>x)
+{
+e2move.stream("sounds/steps/"+level+"/"+random(1,10)+".ogg");
+e2move.stop();
+position_sound_1d(e2move, x, e2pos, 1, 1);
+e2move.play();
+e2pos-=1;
+}
+else if (e2pos<x)
+{
+e2move.stream("sounds/steps/"+level+"/"+random(1,10)+".ogg");
+e2move.stop();
+position_sound_1d(e2move, x, e2pos, 1, 1);
+e2move.play();
+e2pos+=1;
+}
+}
+}
+if (key_pressed(KEY_ESCAPE))
+{
+pool.destroy_all();
+healthsound.stop();
+firesound.stop();
+fire2sound.stop();
+switchsound.stop();
+bossloop.stop();
+telesound.stop();
+music.stop();
+reset();
+mainmenu();
+}
+if (key_pressed(KEY_1))
+{
+pool.play_stationary("sounds/weapons/fists.ogg", false);
+weapon=1;
+}
+if (key_pressed(KEY_2) and batbroken==0)
+{
+pool.play_stationary("sounds/weapons/bat.ogg", false);
+pool.play_stationary("sounds/weapons/batdraw.ogg", false);
+weapon=2;
+}
+if (key_pressed(KEY_3))
+{
+pool.play_stationary("sounds/weapons/gun.ogg", false);
+pool.play_stationary("sounds/weapons/gundraw.ogg", false);
+weapon=3;
+}
+if (key_pressed(KEY_4))
+{
+pool.play_stationary("sounds/weapons/macgun.ogg", false);
+pool.play_stationary("sounds/weapons/macgundraw.ogg", false);
+weapon=4;
+}
+if (key_pressed(KEY_5))
+{
+pool.play_stationary("sounds/weapons/rifle.ogg", false);
+pool.play_stationary("sounds/weapons/rifledraw.ogg", false);
+weapon=5;
+}
+if (key_down(KEY_SPACE) and macguntimer.elapsed>=macguntime and macgunammo>0)
+{
+macguntimer.restart();
+if (weapon==4)
+{
+pool.play_stationary("sounds/weapons/macgunfire.ogg", false);
+macgunammo-=1;
+firecheck();
+}
+}
+if (key_pressed(KEY_SPACE))
+{
+if (weapon==1)
+{
+pool.play_stationary("sounds/weapons/fistsfire.ogg", false);
+firecheck();
+}
+if (weapon==2 and batbroken==0)
+{
+pool.play_stationary("sounds/weapons/batfire.ogg", false);
+firecheck();
+}
+if (weapon==3 and gunammo>0)
+{
+pool.play_stationary("sounds/weapons/gunfire.ogg", false);
+gunammo-=1;
+firecheck();
+}
+if (weapon==5 and riflereloaded==1 and rifleammo>0)
+{
+pool.play_stationary("sounds/weapons/riflefire.ogg", false);
+riflereloaded=0;
+rifleammo-=1;
+rifletimer.restart();
+firecheck();
+}
+}
+if (rifletimer.elapsed>=rifletime and riflereloaded==0 and riflereloaded2==0)
+{
+pool.play_stationary("sounds/weapons/riflereload.ogg", false);
+riflereloaded2=1;
+rifletimer.restart();
+rifletimer2.restart();
+}
+if (rifletimer2.elapsed>=rifletime2 and riflereloaded2==1)
+{
+riflereloaded=1;
+riflereloaded2=0;
+}
+if (key_down(KEY_LEFT) and movetimer.elapsed>=movetime and jumping==0)
+{
+movetimer.restart();
+if (x>0)
+{
+x-=1;
+pool.play_stationary("sounds/steps/"+level+"/"+random(1,10)+".ogg", false);
+}
+}
+if (key_pressed(KEY_LEFT) and jumping==1)
+{
+if (x>0)
+{
+x-=1;
+}
+}
+if (key_pressed(KEY_RIGHT) and jumping==1)
+{
+if (x<maxpos)
+{
+x+=1;
+}
+}
+if (key_down(KEY_LCONTROL) and key_down(KEY_LEFT) and movetimer.elapsed>=movetime2 and jumping==0 or key_down(KEY_RCONTROL) and key_down(KEY_LEFT) and movetimer.elapsed>=movetime2 and jumping==0)
+{
+movetimer.restart();
+if (x>0)
+{
+x-=1;
+pool.play_stationary("sounds/steps/"+level+"/"+random(1,10)+".ogg", false);
+}
+}
+if (key_down(KEY_RIGHT) and movetimer.elapsed>=movetime and jumping==0)
+{
+movetimer.restart();
+if (x<maxpos)
+{
+x+=1;
+pool.play_stationary("sounds/steps/"+level+"/"+random(1,10)+".ogg", false);
+}
+}
+if (key_down(KEY_LCONTROL) and key_down(KEY_RIGHT) and movetimer.elapsed>=movetime2 and jumping==0 or key_down(KEY_RCONTROL) and key_down(KEY_RIGHT) and movetimer.elapsed>=movetime2 and jumping==0)
+{
+movetimer.restart();
+if (x<maxpos)
+{
+x+=1;
+pool.play_stationary("sounds/steps/"+level+"/"+random(1,10)+".ogg",  false);
+}
+}
+positions();
+wait(5);
+}
+}
+void positions()
+{
+pool.update_listener_1d(x);
+pool.update_sound_1d(e2, x);
+position_sound_1d(healthsound, x, healthpos, 1, 1);
+position_sound_1d(telesound, x, telepos, 1, 1);
+position_sound_1d(firesound, x, firepos, 1, 1);
+position_sound_1d(switchsound, x, switchpos, 1, 1);
+position_sound_1d(fire2sound, x, fire2pos, 1, 1);
+position_sound_1d(bossloop, x, bosspos, 1, 1);
+}
+void firecheck()
+{
+if (weapon==1)
+{
+if (bosspos<=x+fistsrange and bosspos>=x-fistsrange and bossspawned==1)
+{
+boss=pool.play_1d("sounds/weapons/fistshit"+random(1,2)+".ogg", x, e1pos, false);
+bosshit2.stream("sounds/boss/hit"+random(1,4)+".ogg");
+bosshit2.stop();
+position_sound_1d(bosshit2, x, bosspos, 1, 1);
+bosshit2.play();
+bosshealth-=fistsdamage;
+}
+if (boss2pos<=x+fistsrange and boss2pos>=x-fistsrange and boss2spawned==1)
+{
+boss2=pool.play_1d("sounds/weapons/fistshit"+random(1,2)+".ogg", x, e1pos, false);
+boss2hit2.stream("sounds/boss2/hit"+random(1,4)+".ogg");
+boss2hit2.stop();
+position_sound_1d(boss2hit2, x, boss2pos, 1, 1);
+boss2hit2.play();
+boss2health-=fistsdamage;
+}
+if (e1pos<=x+fistsrange and e1pos>=x-fistsrange and e1spawned==1)
+{
+e1=pool.play_1d("sounds/weapons/fistshit"+random(1,2)+".ogg", x, e1pos, false);
+e1hit2.stream("sounds/enemy/hit"+random(1,5)+".ogg");
+e1hit2.stop();
+position_sound_1d(e1hit2, x, e1pos, 1, 1);
+e1hit2.play();
+e1health-=fistsdamage;
+points+=random(2,5);
+}
+if (e2pos<=x+fistsrange and e2pos>=x-fistsrange and e2spawned==1)
+{
+e2hit2.stream("sounds/enemy/hit"+random(1,5)+".ogg");
+e2hit2.stop();
+position_sound_1d(e2hit2, x, e1pos, 1, 1);
+e2hit2.play();
+e2=pool.play_1d("sounds/weapons/fistshit"+random(1,2)+".ogg", x, e2pos, false);
+e2health-=fistsdamage;
+points+=random(2,5);
+}
+}
+if (weapon==2 and batbroken==0)
+{
+if (bosspos<=x+batrange and bosspos>=x-batrange and bossspawned==1)
+{
+boss=pool.play_1d("sounds/weapons/bathit"+random(1,2)+".ogg", x, e1pos, false);
+bosshit2.stream("sounds/boss/hit"+random(1,4)+".ogg");
+bosshit2.stop();
+position_sound_1d(bosshit2, x, bosspos, 1, 1);
+bosshit2.play();
+bosshealth-=batdamage;
+bathits+=1;
+}
+if (boss2pos<=x+batrange and boss2pos>=x-batrange and boss2spawned==1)
+{
+boss2=pool.play_1d("sounds/weapons/bathit"+random(1,2)+".ogg", x, e1pos, false);
+boss2hit2.stream("sounds/boss2/hit"+random(1,4)+".ogg");
+boss2hit2.stop();
+position_sound_1d(boss2hit2, x, boss2pos, 1, 1);
+boss2hit2.play();
+boss2health-=batdamage;
+bathits+=1;
+}
+if (e1pos<=x+batrange and e1pos>=x-batrange and e1spawned==1)
+{
+e1=pool.play_1d("sounds/weapons/bathit"+random(1,2)+".ogg", x, e1pos, false);
+e1hit2.stream("sounds/enemy/hit"+random(1,5)+".ogg");
+e1hit2.stop();
+position_sound_1d(e1hit2, x, e1pos, 1, 1);
+e1hit2.play();
+e1health-=batdamage;
+points+=random(1,3);
+bathits+=1;
+}
+if (e2pos<=x+batrange and e2pos>=x-batrange and e2spawned==1)
+{
+e2hit2.stream("sounds/enemy/hit"+random(1,5)+".ogg");
+e2hit2.stop();
+position_sound_1d(e2hit2, x, e1pos, 1, 1);
+e2hit2.play();
+e2=pool.play_1d("sounds/weapons/bathit"+random(1,2)+".ogg", x, e2pos, false);
+e2health-=batdamage;
+points+=random(1,3);
+bathits+=1;
+}
+if (bathits>=totalbathits)
+{
+pool.play_stationary("sounds/weapons/batbreak.ogg", false);
+batbroken=1;
+weapon=1;
+}
+}
+if (weapon==3)
+{
+if (bosspos<=x+gunrange and bosspos>=x-gunrange and bossspawned==1)
+{
+bosshit2.stream("sounds/boss/hit"+random(1,4)+".ogg");
+bosshit2.stop();
+position_sound_1d(bosshit2, x, bosspos, 1, 1);
+bosshit2.play();
+bosshealth-=gundamage;
+}
+if (boss2pos<=x+gunrange and boss2pos>=x-gunrange and boss2spawned==1)
+{
+boss2hit2.stream("sounds/boss2/hit"+random(1,4)+".ogg");
+boss2hit2.stop();
+position_sound_1d(boss2hit2, x, boss2pos, 1, 1);
+boss2hit2.play();
+boss2health-=gundamage;
+}
+if (e1pos<=x+gunrange and e1pos>=x-gunrange and e1spawned==1)
+{
+e2hit2.stream("sounds/enemy/hit"+random(1,5)+".ogg");
+e2hit2.stop();
+position_sound_1d(e2hit2, x, e1pos, 1, 1);
+e2hit2.play();
+e1health-=gundamage;
+points+=random(1,1);
+}
+if (e2pos<=x+gunrange and e2pos>=x-gunrange and e2spawned==1)
+{
+e2hit2.stream("sounds/enemy/hit"+random(1,5)+".ogg");
+e2hit2.stop();
+position_sound_1d(e2hit2, x, e1pos, 1, 1);
+e2hit2.play();
+e2health-=gundamage;
+points+=random(1,1);
+}
+}
+if (weapon==4)
+{
+if (bosspos<=x+macgunrange and bosspos>=x-macgunrange and bossspawned==1)
+{
+bosshit2.stream("sounds/boss/hit"+random(1,4)+".ogg");
+bosshit2.stop();
+position_sound_1d(bosshit2, x, bosspos, 1, 1);
+bosshit2.play();
+bosshealth-=macgundamage;
+}
+if (boss2pos<=x+macgunrange and boss2pos>=x-macgunrange and boss2spawned==1)
+{
+boss2hit2.stream("sounds/boss2/hit"+random(1,4)+".ogg");
+boss2hit2.stop();
+position_sound_1d(boss2hit2, x, boss2pos, 1, 1);
+boss2hit2.play();
+boss2health-=macgundamage;
+}
+if (e1pos<=x+macgunrange and e1pos>=x-macgunrange and e1spawned==1)
+{
+e1hit2.stream("sounds/enemy/hit"+random(1,5)+".ogg");
+e1hit2.stop();
+position_sound_1d(e1hit2, x, e1pos, 1, 1);
+e1hit2.play();
+e1health-=macgundamage;
+}
+if (e2pos<=x+macgunrange and e2pos>=x-macgunrange and e2spawned==1)
+{
+e2hit2.stream("sounds/enemy/hit"+random(1,5)+".ogg");
+e2hit2.stop();
+position_sound_1d(e2hit2, x, e2pos, 1, 1);
+e2hit2.play();
+e2health-=macgundamage;
+}
+}
+if (weapon==5)
+{
+if (bosspos<=x+riflerange and bosspos>=x-riflerange and bossspawned==1)
+{
+bosshit2.stream("sounds/boss/hit"+random(1,4)+".ogg");
+bosshit2.stop();
+position_sound_1d(bosshit2, x, bosspos, 1, 1);
+bosshit2.play();
+bosshealth-=rifledamage;
+}
+if (boss2pos<=x+riflerange and boss2pos>=x-riflerange and boss2spawned==1)
+{
+boss2=pool.play_1d("sounds/weapons/fistshit"+random(1,2)+".ogg", x, e1pos, false);
+boss2hit2.stream("sounds/boss2/hit"+random(1,4)+".ogg");
+boss2hit2.stop();
+position_sound_1d(boss2hit2, x, boss2pos, 1, 1);
+boss2hit2.play();
+boss2health-=rifledamage;
+}
+if (e1pos<=x+riflerange and e1pos>=x-riflerange and e1spawned==1)
+{
+e1hit2.stream("sounds/enemy/hit"+random(1,5)+".ogg");
+e1hit2.stop();
+position_sound_1d(e1hit2, x, e1pos, 1, 1);
+e1hit2.play();
+e1health-=rifledamage;
+points-=random(1,3);
+}
+if (e2pos<=x+riflerange and e2pos>=x-riflerange and e2spawned==1)
+{
+e2hit2.stream("sounds/enemy/hit"+random(1,5)+".ogg");
+e2hit2.stop();
+position_sound_1d(e2hit2, x, e2pos, 1, 1);
+e2hit2.play();
+e2health-=rifledamage;
+points-=random(1,3);
+}
+}
+}
+void position_teleporter()
+{
+if (level!=12)
+{
+if (level!=9)
+{
+telepos=maxpos;
+}
+else
+{
+telepos=500;
+}
+position_sound_1d(telesound, x, telepos, 1, 1);
+telesound.play_looped();
+}
+}
+void changelevel()
+{
+music.stop();
+switchsound.stop();
+telesound.stop();
+x=0;
+pool.destroy_sound(ambsound);
+firesound.stop();
+fire2sound.stop();
+pool.play_stationary("sounds/ambience/teleport.ogg", false);
+wait(500);
+if (level<maxlevel)
+{
+level+=1;
+wait(1000);
+}
+else
+{
+wait(2500);
+music.stop();
+alert("scrolling battles 2", "You have beaten scrolling battles 2!");
+pool.destroy_all();
+healthsound.stop();
+firesound.stop();
+fire2sound.stop();
+telesound.stop();
+reset();
+mainmenu();
+}
+wait(1000);
+ambsound=pool.play_stationary("sounds/ambience/"+level+".ogg", true);
+if (level==12)
+{
+dlgplay("sounds/boss2/appear.ogg");
+}
+jumping=1;
+wait(1700);
+if (level!=9 or level!=12)
+{
+checklevelpos();
+position_teleporter();
+}
+else
+{
+maxpos=500;
+position_teleporter();
+checklevelpos();
+}
+position_sound_1d(firesound, x, firepos, 1, 1);
+if (level==6)
+{
+firesound.play_looped();
+fireactive=1;
+}
+if (level==7)
+{
+fire2sound.play_looped();
+fire2active=1;
+position_switch();
+}
+if (level==9)
+{
+bossspawned=1;
+}
+playmusic();
+}
+void reset()
+{
+batbroken=0;
+bathits=0;
+kills=0;
+boss2spawned=0;
+boss2health=boss2defaulthealth;
+bossspawned=0;
+part=1;
+bosshealth=bossdefaulthealth;
+fire2sound.stream("sounds/ambience/fire2.ogg");
+survival=0;
+points=0;
+gunammo=0;
+macgunammo=100;
+rifleammo=50;
+firepos=-20;
+fireactive=0;
+fire2pos=-20;
+fire2active=0;
+telesound;
+ambsound;
+telepos;
+level=1;
+riflereloaded=1;
+riflereloaded2=0;
+macguntime=100;
+jumptime=900;
+maxpos=100;
+e1damage=3;
+e1range=7;
+e2damage=6;
+e2range=5;
+health=200;
+fistsdamage=2;
+batdamage=5;
+gundamage=5;
+macgundamage=10;
+rifledamage=50;
+fistsrange=2;
+batrange=4;
+gunrange=5;
+macgunrange=7;
+riflerange=20;
+e1attacktime=1200;
+e1spawned=0;
+e1health=0;
+e1defaulthealth=25;
+e1speed=400;
+e1spawntime=8000;
+e1pos=-500;
+e2attacktime=1500;
+e2spawned=0;
+e2health=0;
+e2defaulthealth=50;
+e2speed=450;
+e2spawntime=7000;
+e2pos=-500;
+jumping=0;
+playerpos=0;
+x=0;
+movetime=300;
+movetime2=movetime-100;
+weapon=1;
+}
+void position_switch()
+{
+position_sound_1d(switchsound, x, switchpos, 1, 1);
+switchsound.play_looped();
+}
+void checklevelpos()
+{
+if (level==1)
+{
+maxpos=150;
+}
+if (level==2)
+{
+maxpos=200;
+}
+if (level==3)
+{
+maxpos=250;
+}
+if (level==4)
+{
+maxpos=300;
+}
+if (level==5)
+{
+maxpos=350;
+}
+if (level==6)
+{
+maxpos=400;
+}
+if (level==7)
+{
+maxpos=450;
+}
+if (level==8)
+{
+maxpos=500;
+}
+if (level==9)
+{
+if (part==1)
+{
+maxpos=180;
+}
+else
+{
+maxpos=500;
+}
+}
+if (level==10)
+{
+maxpos=600;
+}
+if (level==11)
+{
+maxpos=350;
+}
+if (level==12)
+{
+maxpos=80;
+}
+}
+void playmusic()
+{
+music.stream("sounds/music/level"+level+".ogg");
+readsettings();
+music.volume=savedmusicvolume;
+music.play_looped();
+}

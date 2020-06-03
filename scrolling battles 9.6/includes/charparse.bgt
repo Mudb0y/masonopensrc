@@ -1,0 +1,49 @@
+void charparse()
+{
+if(file_exists("sounds/characters/"+character+"/info.dat"))
+{
+file info;
+bool success = info.open("sounds/characters/"+character+"/info.dat", "rb");
+if(!success)
+{
+alert("Fatal error", "character "+character+" must have no info.set file!");
+registrywrite();
+close();
+mainmenu();
+}
+string content=info.read();
+string[] peramitors=string_split(content, "\r\n", true);
+string[] values;
+for(uint i=0; i<peramitors.length(); i++)
+{
+values.insert_at(i,string_replace(peramitors[i], string_left(peramitors[i], string_contains(peramitors[i], "=", 1)+1), "", true));
+peramitors[i]=string_replace(peramitors[i], "="+values[i], "", true);
+}
+if(peramitors.find("jumpheight")!=-1)
+{
+jumpheight=string_to_number(values[peramitors.find("jumpheight")]);
+}
+if(peramitors.find("jumptime")!=-1)
+{
+jumptime=string_to_number(values[peramitors.find("jumptime")]);
+if (jumptime>150 or jumptime<25)
+{
+alert("error", "jump time must be less than 150 and greighter than 25!");
+registrywrite();
+close();
+mainmenu();
+}
+}
+if(peramitors.find("speed")!=-1)
+{
+speedtime=string_to_number(values[peramitors.find("speed")]);
+if (speedtime>650 or speedtime<120)
+{
+alert("error", "speed time must be less than 650 and greighter than 120!");
+registrywrite();
+close();
+mainmenu();
+}
+}
+}
+}

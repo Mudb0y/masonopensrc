@@ -1,0 +1,75 @@
+dynamic_menu_pro m;
+void setupmenu(bool music=false)
+{
+m.reset(false);
+if(music==true)
+{
+m.add_music("menumus.ogg");
+}
+m.enable_first_letter_navigation=true;
+m.click_sound="menuclick.ogg";
+m.enter_sound="menuenter.ogg";
+m.enable_up_and_down=true;
+m.wrap=false;
+m.enable_home_and_end=true;
+}
+void mainmenu()
+{
+setupmenu(true);
+m.add_item_tts("Story mode","play");
+m.add_item_tts("Arena survival mode","arena");
+m.add_item_tts("exit","exit");
+int mres=m.run("Main menu. Select an option.",true);
+if (m.get_item_name(mres)=="play")
+{
+levelmenu();
+}
+else if (m.get_item_name(mres)=="arena")
+{
+m.fade_music(20);
+spawnarena();
+}
+else
+{
+m.fade_music(20);
+exit();
+}
+}
+void levelmenu()
+{
+setupmenu(true);
+m.add_item_tts("Warehouse fire","wh");
+m.add_item_tts("The attack","attack");
+m.add_item_tts("Back","back");
+int mres=m.run("Select a level",true);
+if (mres==0 or m.get_item_name(mres)=="back")
+{
+mainmenu();
+}
+else
+{
+m.fade_music(20);
+reset();
+levelname=m.get_item_name(mres);
+draw_map(m.get_item_name(mres));
+game();
+}
+}
+void spawnarena()
+{
+string ms=input_box("arena setup","How many ms between zombie respawns?");
+if (ms=="")
+mainmenu();
+arenatime=string_to_number(ms);
+ms=input_box("arena setup","How many zombies per spawn?");
+if (ms=="")
+mainmenu();
+arenazombies=string_to_number(ms);
+ms=input_box("arena setup","Which type of zombie do you want to fight against? enter 0 for mixed. choices are. 1, normal. 2, giant. 3, canine.");
+if (ms=="")
+mainmenu();
+arenatype=string_to_number(ms);
+draw_map("arena");
+arena=true;
+game();
+}

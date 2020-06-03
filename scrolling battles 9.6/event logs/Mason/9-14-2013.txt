@@ -1,0 +1,118 @@
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy fell into a pit! Ha ha ha!
+3: event: Enemy spawned!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Enemy spawned!
+6: Event: Enemy death.
+7: Event: Game loaded successfully!
+8: event: Loading game.
+9: event: Mason has decided to start a new game.
+10: event. User wants a normal game.
+11: Retrieving message of the day...
+12: Event: Installing keyhook...
+13: event: Checking name...
+14: event: Setting up registry...
+15: event. Version=5.5.0.070.
+16: event. loading started.
+17: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=5.5.0.070.
+12: event. loading started.
+13: 
+0: event: Mason has decided to exit.
+1: Event: Enemy fell into a pit! Ha ha ha!
+2: event: Enemy spawned!
+3: Event: Enemy death.
+4: Event: Game loaded successfully!
+5: event: Loading game.
+6: event: Mason has decided to start a new game.
+7: event. User wants a normal game.
+8: Retrieving message of the day...
+9: Event: Installing keyhook...
+10: event: Checking name...
+11: event: Setting up registry...
+12: event. Version=5.5.0.070.
+13: event. loading started.
+14: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy fell into a pit! Ha ha ha!
+3: event: Enemy spawned!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Enemy spawned!
+6: Event: Enemy death.
+7: Event: Game loaded successfully!
+8: event: Loading game.
+9: event: Mason has decided to start a new game.
+10: event. User wants a normal game.
+11: Retrieving message of the day...
+12: Event: Installing keyhook...
+13: event: Checking name...
+14: event: Setting up registry...
+15: event. Version=5.5.0.070.
+16: event. loading started.
+17: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=5.5.0.070.
+12: event. loading started.
+13: 
+0: event: Mason has decided to exit.
+1: Event: Enemy fell into a pit! Ha ha ha!
+2: event: Enemy spawned!
+3: Event: Enemy death.
+4: Event: Game loaded successfully!
+5: event: Loading game.
+6: event: Mason has decided to start a new game.
+7: event. User wants a normal game.
+8: Retrieving message of the day...
+9: Event: Installing keyhook...
+10: event: Checking name...
+11: event: Setting up registry...
+12: event. Version=5.5.0.070.
+13: event. loading started.
+14: 
+0: event: Mason has decided to exit.
+1: event: Pits have changed.
+2: event: Pits will change in 3 seconds!
+3: Event: Player helper no longer spawned!
+4: Event: Player helper spawned!
+5: Event: Player helper no longer spawned!
+6: event: Helper detected an enemy!
+7: Event: Player helper spawned!
+8: event: User has decided to sell stuff.
+9: event: Enemy spawned!
+10: Event: Enemy death.
+11: event: Enemy spawned!
+12: Event: Enemy death.
+13: Event: Game loaded successfully!
+14: event: Loading game.
+15: event: Mason has decided to start a new game.
+16: event. User wants a normal game.
+17: Retrieving message of the day...
+18: Event: Installing keyhook...
+19: event: Checking name...
+20: event: Setting up registry...
+21: event. Version=5.5.0.070.
+22: event. loading started.
+23: 

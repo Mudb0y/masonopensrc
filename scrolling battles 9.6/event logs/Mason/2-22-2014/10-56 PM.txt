@@ -1,0 +1,17 @@
+0: 
+1: event. Version=9.0.0.125. (10-56-43 PM)
+2: event: Mason has 0 trophies (10-56-43 PM)
+3: Event: Mason is using the default Soundpack. (10-56-43 PM)
+4: Event: Mason is using the forest (default) environment. (10-56-43 PM)
+5: Event. User wants a normal game. (10-56-46 PM)
+6: event: Mason has decided to start a new game. (10-56-46 PM)
+7: A casm pit spawned at 20 (10-56-46 PM)
+8: A casm pit spawned at 39 (10-56-46 PM)
+9: A hollow pit spawned at 37 (10-56-46 PM)
+10: Event: a level 0 enemy (name mason 1) has been spawned at 53 with 58 HP. (10-56-46 PM)
+11: Event: a level 0 enemy (name eloquence) has been spawned at 39 with 80 HP. (10-56-46 PM)
+12: Event: a level 0 enemy (name Death elf) has been spawned at 58 with 77 HP. (10-56-46 PM)
+13: Event: a level 0 enemy (name southerner) has been spawned at 55 with 71 HP. (10-56-46 PM)
+14: Event: Game loaded! (10-56-46 PM)
+15: event: Mason just earned the trophy Play scrolling battles late at night! (10-56-47 PM)
+16: event: Mason has decided to exit.

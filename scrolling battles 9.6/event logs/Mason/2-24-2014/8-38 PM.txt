@@ -1,0 +1,15 @@
+0: 
+1: event. Version=9.5.0.129. (8-38-12 PM)
+2: event: mason has 17 trophies (8-38-13 PM)
+3: Event: mason is using the default Soundpack. (8-38-13 PM)
+4: Event: mason is using the Town environment. (8-38-13 PM)
+5: Event. User wants a normal game. (8-38-16 PM)
+6: event: mason has decided to start a new game. (8-38-16 PM)
+7: A lava pit spawned at 184 (8-38-16 PM)
+8: A hollow pit spawned at 168 (8-38-16 PM)
+9: A lava pit spawned at 116 (8-38-16 PM)
+10: Event: an enemy (name dectalk paul) has been spawned at 15 with 300 HP. (8-38-16 PM)
+11: Event: Game loaded! (8-38-16 PM)
+12: Event: an enemy (name samantha) has been spawned at 157 with 300 HP. (8-38-20 PM)
+13: Event: an enemy has been killed. (8-38-21 PM)
+14: event: mason has decided to exit.

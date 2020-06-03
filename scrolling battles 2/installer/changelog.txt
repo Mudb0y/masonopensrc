@@ -1,0 +1,15 @@
+1.2
+Fixed the save file not compatible error.
+Added music for each level. Due to this, settings files are again, corrupted. Sorry.
+Changed menu sounds.
+Made a new nicer logo!
+1.1
+Made the logo fade faster.
+Added an option to set your options back to defaults.
+Added an optional progress bar at the beginning when the game loads. This is enabled by default. Note your settings files will be reverted. Sorry.
+Made it so your bat can wear out and break. Mwa ha ha.
+Changed save file encryption methid. Now, it's at least a bit more secure...
+added you can check kills.
+Forgot to add the key to hit the switch in readme. Added now.
+fixed a bug where if you didn't hit the switch in level 7, it would just be a frozen sound, stuck at position 250 of all the remaining levels.
+Added a save file editor, that you get once you win the game for the first time.

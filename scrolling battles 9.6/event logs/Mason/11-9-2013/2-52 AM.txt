@@ -1,0 +1,16 @@
+0: 
+1: event. Version=8.0.0.111. (2-52-17 AM)
+2: Event: mason is using the default Soundpack. (2-52-17 AM)
+3: Event: mason is using the spaceship 2 environment. (2-52-17 AM)
+4: Event. User wants a normal game. (2-52-19 AM)
+5: event: mason has decided to start a new game. (2-52-19 AM)
+6: A fire pit spawned at 1425 (2-52-20 AM)
+7: A water pit spawned at 1110 (2-52-20 AM)
+8: A hollow pit spawned at 42 (2-52-20 AM)
+9: Event: a level 5610 enemy (name southerner) has been spawned at 552 with 7008 HP. (2-52-20 AM)
+10: Event: a level 5610 enemy (name mason 2) has been spawned at 76 with 8775 HP. (2-52-20 AM)
+11: Event: a level 5610 enemy (name microsoft sam) has been spawned at 1369 with 5676 HP. (2-52-20 AM)
+12: Event: a level 5610 enemy (name Behemoth) has been spawned at 1116 with 9448 HP. (2-52-20 AM)
+13: Event: Game loaded! (2-52-20 AM)
+14: event: mason just earned the trophy Obtain 2 minutes of jumptime! (2-52-22 AM)
+15: event: mason has decided to exit.

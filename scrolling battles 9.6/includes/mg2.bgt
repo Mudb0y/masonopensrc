@@ -1,0 +1,127 @@
+int beeptime=250;
+int totaldollars=0;
+int health=100;
+int health1=1;
+int health2=2;
+timer moveTimer;
+timer beepTimer;
+sound beep, bottom, miss, hit, win, winfull, music, sonar, killed;
+void mg2()
+{
+gamepaused=0;
+beeptime=250;
+totaldollars=0;
+health=100;
+beep.load("sounds/soundpacks/"+soundpack+"/beep.ogg");
+miss.load("sounds/soundpacks/"+soundpack+"/miss.ogg");
+hit.load("sounds/soundpacks/"+soundpack+"/hit.ogg");
+win.load("sounds/soundpacks/"+soundpack+"/win.ogg");
+killed.load("sounds/soundpacks/"+soundpack+"/killed.ogg");
+bottom.load("sounds/soundpacks/"+soundpack+"/bottom.ogg");
+winfull.load("sounds/soundpacks/"+soundpack+"/winfull.ogg");
+sonar.load("sounds/soundpacks/"+soundpack+"/sonar.ogg");
+beep.pitch=100;
+beep.pan=random(-20,20);
+beep.play_looped();
+while(true)
+{
+if (key_pressed(KEY_P))
+{
+if (gamepaused==0)
+{
+gamepaused=1;
+beepTimer.pause();
+beep.pause();
+}
+else if (gamepaused==1)
+{
+gamepaused=0;
+beepTimer.resume();
+beep.play_looped();
+}
+}
+if (beepTimer.elapsed>=beeptime)
+{
+beep.pitch=beep.pitch-1;
+beepTimer.restart();
+}
+if (key_pressed(KEY_ESCAPE)) {
+beep.stop();
+sonar.stop();
+dlg("you have earned a total of "+totaldollars+" dollars in this game.");
+dollars+=totaldollars;
+registrywrite();
+totaldollars=0;
+mgmenu();
+}
+if (beep.pan<=3 and beep.pan>=-3)
+{
+sonar.play_looped();
+}else{
+sonar.stop();
+}
+if (key_pressed(KEY_H)) {
+speak(health+" percent");
+}
+if (key_down(KEY_LEFT) and moveTimer.elapsed>=50 and gamepaused==0) {
+if (beep.pan<=15)
+{
+pool.play_stationary("sounds/environments/"+environment+"/step"+random(1,5)+".ogg", false);
+beep.pan=beep.pan+2;
+moveTimer.restart();
+}
+}
+if (key_down(KEY_RIGHT) and moveTimer.elapsed>=50 and gamepaused==0) {
+if (beep.pan>=-15)
+{
+pool.play_stationary("sounds/environments/"+environment+"/step"+random(1,5)+".ogg", false);
+beep.pan=beep.pan-2;
+moveTimer.restart();
+}
+}
+if (key_pressed(KEY_SPACE) and gamepaused==0) {
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/gun.ogg", false);
+if (beep.pan>=-3 and beep.pan<=3)
+{
+beephit();
+beep.pitch=100;beep.pan=random(-30,30);beep.play_looped();
+}
+}
+if (beep.pitch<=10)
+{
+beep.stop();
+bottom.stop();
+bottom.play_wait();
+health-=random(health1, health2);
+beep.pitch=100;
+beep.play_looped();
+}
+if (health<=0)
+{
+beep.stop();
+sonar.stop();
+killed.play_wait();
+dlg("you earned "+totaldollars+" dollars in this game.");
+dollars+=totaldollars;
+registrywrite();
+totaldollars=0;
+mgmenu();
+}
+wait(5);
+}
+}
+void beephit()
+{
+health1+=1;
+health2+=2;
+sonar.stop();
+beep.stop();
+hit.stop();
+hit.play();
+wait(400);
+totaldollars+=random(3,6);
+if (beeptime>=20)
+{
+beeptime-=10;
+}
+}

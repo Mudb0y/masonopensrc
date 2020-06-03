@@ -1,0 +1,56 @@
+0: 
+1: event. Version=6.6.0.093.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A hollow pit spawned at 376
+5: A fire pit spawned at 235
+6: A hollow pit spawned at 381
+7: Event: a level 100 enemy (name Behemoth) has been spawned at 50 with 289 HP.
+8: Event: a level 100 enemy (name samantha) has been spawned at 41 with 152 HP.
+9: Event: a level 100 enemy (name microsoft sam) has been spawned at 319 with 267 HP.
+10: Event: a level 100 enemy (name alex mackintosh) has been spawned at 361 with 222 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 100 enemy (name eloquence) has been spawned at 326 with 256 HP.
+18: event: mason has decided to exit.
+0: 
+1: event. Version=6.6.0.094.
+2: Event. User wants a normal game.
+3: event: mason has decided to start a new game.
+4: A water pit spawned at 385
+5: A lava pit spawned at 291
+6: A lava pit spawned at 284
+7: Event: a level 100 enemy (name mason 2) has been spawned at 101 with 250 HP.
+8: Event: a level 100 enemy (name dectalk paul) has been spawned at 194 with 258 HP.
+9: Event: a level 100 enemy (name microsoft sam) has been spawned at 107 with 149 HP.
+10: Event: a level 100 enemy (name samantha) has been spawned at 310 with 290 HP.
+11: Event: Game loaded!
+12: Event: Item has been retrieved!
+13: Event: Item has been retrieved!
+14: Event: Item has been retrieved!
+15: Event: Item has been retrieved!
+16: Event: Item has been retrieved!
+17: Event: a level 100 enemy (name Death elf) has been spawned at 39 with 273 HP.
+18: Event: a level 100 enemy (name eloquence) has been spawned at 261 with 203 HP.
+19: Event: An item has spawned!
+20: Event: An item has spawned!
+21: Event: a level 100 enemy (name dectalk paul) has been spawned at 371 with 275 HP.
+22: Event: An item has spawned!
+23: Event: An item has spawned!
+24: Event: An item has spawned!
+25: Event: Enemy has jumped over a pit.
+26: Event: an enemy has been killed.
+27: Event: a level 101 enemy (name eloquence) has been spawned at 326 with 236 HP.
+28: Event: Item has been retrieved!
+29: Event: Enemy has jumped over a pit.
+30: Event: a level 101 enemy (name mason 2) has been spawned at 408 with 150 HP.
+31: Event: an enemy has been killed.
+32: Event: an enemy has been killed.
+33: Event: an enemy has been killed.
+34: Event: an enemy has been killed.
+35: Event: a level 105 enemy (name Death elf) has been spawned at 290 with 248 HP.
+36: event: mason has decided to exit.

@@ -1,0 +1,104 @@
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: event: Pits have changed.
+3: Event: Enemy fell into a pit! Ha ha ha!
+4: event: Pits will change in 3 seconds!
+5: event: Enemy spawned!
+6: Event: Enemy death.
+7: Event: Game loaded successfully!
+8: event: Loading game.
+9: event: Mason has decided to start a new game.
+10: event: going to main screen.
+11: Retrieving message of the day...
+12: Event: Installing keyhook...
+13: event: Checking name...
+14: event: Setting up registry...
+15: event. Version=5.5.0.069.
+16: event. loading started.
+17: 
+0: event: Mason has decided to exit.
+1: event: Pits have changed.
+2: event: Pits will change in 3 seconds!
+3: event: Helper detected an enemy!
+4: event: Enemy spawned!
+5: event: Helper stop seeing an enemy!
+6: Event: Enemy death.
+7: event: Helper detected an enemy!
+8: event: Enemy spawned!
+9: Event: Enemy death.
+10: event: Enemy spawned!
+11: event: Helper stop seeing an enemy!
+12: Event: Enemy death.
+13: event: Helper detected an enemy!
+14: event: Enemy spawned!
+15: event: Helper stop seeing an enemy!
+16: Event: Enemy death.
+17: event: Helper detected an enemy!
+18: event: Enemy spawned!
+19: Event: Enemy death.
+20: event: Enemy spawned!
+21: event: Helper stop seeing an enemy!
+22: Event: Enemy death.
+23: event: Helper detected an enemy!
+24: event: Enemy spawned!
+25: event: Helper stop seeing an enemy!
+26: Event: Enemy death.
+27: event: Helper detected an enemy!
+28: event: Enemy spawned!
+29: event: Helper stop seeing an enemy!
+30: Event: Enemy death.
+31: event: Pits have changed.
+32: event: Pits will change in 3 seconds!
+33: event: Helper detected an enemy!
+34: event: Enemy spawned!
+35: Event: Enemy death.
+36: event: Enemy spawned!
+37: event: Helper stop seeing an enemy!
+38: Event: Enemy death.
+39: event: Helper detected an enemy!
+40: event: Enemy spawned!
+41: Event: Enemy death.
+42: event: Enemy spawned!
+43: event: Helper stop seeing an enemy!
+44: Event: Enemy death.
+45: event: Helper detected an enemy!
+46: event: Enemy spawned!
+47: event: Helper stop seeing an enemy!
+48: Event: Enemy fell into a pit! Ha ha ha!
+49: event: Helper detected an enemy!
+50: event: Enemy spawned!
+51: Event: Enemy death.
+52: event: Enemy spawned!
+53: event: Helper stop seeing an enemy!
+54: Event: Enemy fell into a pit! Ha ha ha!
+55: event: Pits have changed.
+56: event: Helper detected an enemy!
+57: event: Enemy spawned!
+58: event: Pits will change in 3 seconds!
+59: event: Helper stop seeing an enemy!
+60: Event: Enemy death.
+61: event: Helper detected an enemy!
+62: event: Enemy spawned!
+63: Event: Player helper spawned!
+64: Event: Player helper no longer spawned!
+65: event: Helper stop seeing an enemy!
+66: Event: Enemy death.
+67: event: Helper detected an enemy!
+68: Event: Player helper spawned!
+69: event: Enemy spawned!
+70: Event: Enemy fell into a pit! Ha ha ha!
+71: event: Pits have changed.
+72: event: Pits will change in 3 seconds!
+73: event: Enemy spawned!
+74: Event: Enemy death.
+75: Event: Game loaded successfully!
+76: event: Loading game.
+77: event: Mason has decided to start a new game.
+78: event: going to main screen.
+79: Retrieving message of the day...
+80: Event: Installing keyhook...
+81: event: Checking name...
+82: event: Setting up registry...
+83: event. Version=5.5.0.069.
+84: event. loading started.
+85: 

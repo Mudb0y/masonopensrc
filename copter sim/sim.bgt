@@ -1,0 +1,403 @@
+#include"m.bgt"
+#include"sound_pool.bgt"
+string version="2.1.0";
+int fuel=2000;
+int flighttime=100;
+int muson=1;
+int fueltime=2000;
+int alarmsound=1;
+int beepsound=1;
+int ammo=500;
+int macguntime=70;
+int falltime=random(450,1000);
+int dfalltime=random(550,1300);
+int started=0;
+int landed=0;
+int keyreleased=0;
+int altitude=0;
+timer macguntimer, fueltimer, starttimer, falltimer, falltimer2, flighttimer;
+sound_pool pool;
+sound reloading, start, hstop, freefall, groundwarning, fivefeet, alarm, alarm2, crash, land, engine;
+int waiting, horn, reloadingvoc, reloadingvoc2, lowfuel, lowfuel2;
+void main()
+{
+show_game_window("copter simulator version "+version);
+waiting=pool.play_stationary("sounds/waiting.wav", true);
+reloading.load("sounds/reloading.wav");
+hstop.load("sounds/stop.wav");
+start.load("sounds/start.wav");
+freefall.load("sounds/freefall.wav");
+groundwarning.load("sounds/groundwarning.wav");
+fivefeet.load("sounds/5feet.wav");
+alarm.load("sounds/alarm.wav");
+alarm2.load("sounds/alarm2.wav");
+crash.load("sounds/crash.wav");
+engine.load("sounds/engine.wav");
+land.load("sounds/land.wav");
+pool.destroy_sound(waiting);
+freefall.play_looped();
+freefall.volume=-60;
+while (true)
+{
+if (key_down(KEY_LCONTROL) and macguntimer.elapsed>=macguntime)
+{
+if (landed==0)
+{
+if (ammo>=0)
+{
+if (started==1)
+{
+pool.play_stationary("sounds/macgun.wav", false);
+ammo-=1;
+macguntimer.restart();
+}
+}
+}
+}
+if (key_pressed(KEY_SPACE))
+{
+if (started==1)
+{
+horn=pool.play_stationary("sounds/horn.wav", false);
+}
+}
+if (key_released(KEY_SPACE))
+{
+if (started==1)
+{
+pool.destroy_sound(horn);
+}
+}
+if (key_pressed(KEY_P))
+{
+if (landed==1)
+{
+pool.destroy_sound(lowfuel);
+pool.destroy_sound(lowfuel2);
+pool.play_stationary("sounds/reloadingvoc.wav", false);
+reloading.play_wait();
+pool.play_stationary("sounds/reloadingvoc2.wav", false);
+fuel=2000;
+ammo=500;
+}
+}
+if (fuel<=100)
+{
+lowfuel=pool.play_stationary("sounds/lowfuel.wav", true);
+}
+if (fuel<=50)
+{
+lowfuel2=pool.play_stationary("sounds/lowfuel2.wav", true);
+}
+if (fuel<=10)
+{
+if (started==1)
+{
+engine.stop();
+hstop.pitch=engine.pitch;
+hstop.play();
+pool.destroy_sound(lowfuel);
+pool.destroy_sound(lowfuel2);
+if (altitude>=15)
+{
+keyreleased=1;
+}
+started=0;
+}
+}
+if (fueltimer.elapsed>=fueltime)
+{
+if (started==1)
+{
+fuel-=random(5,25);
+fueltimer.restart();
+}
+}
+if (key_down(KEY_PRIOR) or key_down(KEY_F1))
+{
+if (falltimer2.elapsed>=100)
+{
+if (flighttime>=10)
+{
+fueltime-=3;
+engine.pitch=engine.pitch+6;
+falltimer2.restart();
+flighttime-=5;
+}
+}
+}
+if (key_down(KEY_NEXT) or key_down(KEY_F2))
+{
+if (falltimer2.elapsed>=100)
+{
+if (flighttime<=200)
+{
+fueltime-=3;
+engine.pitch=engine.pitch-6;
+flighttime+=5;
+falltimer2.restart();
+}
+}
+}
+if (key_pressed(KEY_S))
+{
+if (beepsound>=0)
+{
+speak("beep sound off");
+beepsound=0;
+}
+}
+if (key_pressed(KEY_D))
+{
+if (beepsound<=1)
+{
+speak ("beep sound on");
+beepsound=1;
+}
+}
+if (key_pressed(KEY_RIGHT))
+{
+if (started==0)
+{
+starttimer.restart();
+start.play();
+while (start.playing)
+{
+if (starttimer.elapsed>=3740)
+{
+engine.play_looped();
+started=1;
+starttimer.restart();
+}
+}
+}
+}
+if (key_pressed(KEY_LEFT))
+{
+if (started==1)
+{
+engine.stop();
+hstop.pitch=engine.pitch;
+hstop.play();
+if (altitude>=15)
+{
+keyreleased=1;
+}
+started=0;
+}
+if (altitude<=5)
+{
+landed==1;
+}
+}
+if (key_pressed(KEY_Z))
+{
+if (alarmsound>=0)
+{
+speak("alarm sound off");
+alarmsound=0;
+}
+}
+if (key_pressed(KEY_X))
+{
+if (alarmsound<=1)
+{
+speak ("alarm sound on");
+alarmsound=1;
+}
+}
+if (key_pressed(KEY_ESCAPE))
+{
+exit();
+}
+if (key_released(KEY_UP))
+{
+if (started==1)
+{
+keyreleased=1;
+}
+}
+if (key_released(KEY_DOWN))
+{
+if (started==1)
+{
+keyreleased=1;
+}
+}
+if (keyreleased==1)
+{
+if (falltimer.elapsed>=falltime)
+{
+if (altitude<=250)
+{
+if (landed==0)
+{
+if (alarmsound==1)
+{
+alarm.play_looped();
+}
+}
+}
+if (altitude<=100)
+{
+if (landed==0)
+{
+if (alarmsound==1)
+{
+alarm2.play_looped();
+}
+}
+}
+if (altitude<=5)
+{
+if (landed==0)
+{
+freefall.stop();
+groundwarning.stop();
+alarm.stop();
+alarm2.stop();
+engine.stop();
+crash.play_wait();
+int meep=question("copter simulator", "you crashed! Would you like to try again?");
+if (meep==1)
+{
+alert("copter simulator", "OK, you've been repared. Try again");
+landed=1;
+engine.play_looped();
+}
+if (meep==2)
+{
+alert("death", "OK, bye");
+exit();
+}
+}
+}
+if (altitude>=5)
+{
+if (falltime<=60)
+{
+falltime=65;
+}
+if (falltime>=29)
+{
+altitude-=10;
+freefall.volume=freefall.volume+4;
+if (beepsound==1)
+{
+fivefeet.stop();
+fivefeet.play();
+}
+falltime-=50;
+falltimer.restart();
+}
+}
+}
+}
+if (key_down(KEY_UP) and flighttimer.elapsed>=flighttime)
+{
+if (started==1)
+{
+freefall.volume=-60;
+falltime=dfalltime;
+alarm.stop();
+alarm2.stop();
+altitude+=10;
+keyreleased=0;
+flighttimer.restart();
+}
+}
+if (key_down(KEY_DOWN) and flighttimer.elapsed>=flighttime)
+{
+if (started==1)
+{
+freefall.volume=-60;
+alarm.stop();
+alarm2.stop();
+keyreleased=0;
+if (altitude<=5 and landed==0)
+{
+land.play();
+alarm.stop();
+alarm2.stop();
+landed=1;
+}
+if (altitude>=5)
+{
+keyreleased=0;
+altitude-=5;
+flighttimer.restart();
+}
+}
+}
+if (key_pressed(KEY_F))
+{
+speak("Speed 5 feet per "+flighttime+" MS");
+}
+if (key_pressed(KEY_G))
+{
+speak("your fuel is "+fuel);
+}
+if (key_pressed(KEY_C))
+{
+speak("ammo "+ammo);
+}
+if (key_pressed(KEY_A))
+{
+speak("altitude "+altitude);
+if (landed==1)
+{
+speak("you have landed");
+}
+if (keyreleased==1)
+{
+if (landed==0)
+{
+speak("you are freefalling");
+}
+}
+}
+if (altitude>=70 or landed==1)
+{
+groundwarning.stop();
+}
+if (altitude==70)
+{
+groundwarning.play_looped();
+groundwarning.pitch=100;
+}
+if (altitude==60)
+{
+groundwarning.play_looped();
+groundwarning.pitch=97;
+}
+if (altitude==50)
+{
+groundwarning.play_looped();
+groundwarning.pitch=95;
+}
+if (altitude==40)
+{
+groundwarning.play_looped();
+groundwarning.pitch=90;
+}
+if (altitude==30)
+{
+groundwarning.play_looped();
+groundwarning.pitch=80;
+}
+if (altitude==20)
+{
+groundwarning.play_looped();
+groundwarning.pitch=60;
+}
+if (altitude==10)
+{
+groundwarning.play_looped();
+groundwarning.pitch=40;
+}
+if (altitude>=5)
+{
+landed=0;
+}
+}
+}

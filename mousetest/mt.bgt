@@ -1,0 +1,79 @@
+file records;
+int times=0;
+int n45y=0;
+int n30y=0;
+int n20y=0;
+int n10y=0;
+int n3y=0;
+int n2y=0;
+int n1y=0;
+timer mtgtimer;
+sound click, n1, n2, n3, n10, n20, n30, n45;
+void main()
+{
+records.open("records.txt", "w");
+click.load("sounds/click.ogg");
+n1.load("sounds/1.ogg");
+n2.load("sounds/2.ogg");
+n3.load("sounds/3.ogg");
+n10.load("sounds/10.ogg");
+n20.load("sounds/20.ogg");
+n30.load("sounds/30.ogg");
+n45.load("sounds/45.ogg");
+string name=input_box("mouse test", "so, enter your name");
+alert("mouse test", "ok, "+name+", so, here's what ya gotta do. when you click ok, immediately begin hammering on the mouse left or right button to see how many times you can hit it in a minute!");
+show_game_window("mouse test");
+mtgtimer.restart();
+while (true)
+{
+mouse_update();
+if (mouse_pressed(1) or mouse_pressed(0))
+{
+click.stop();
+click.play();
+times+=1;
+}
+if (mtgtimer.elapsed>=15000 and n45y==0)
+{
+n45.play();
+n45y=1;
+}
+if (mtgtimer.elapsed>=30000 and n30y==0)
+{
+n30.play();
+n30y=1;
+}
+if (mtgtimer.elapsed>=40000 and n20y==0)
+{
+n20.play();
+n20y=1;
+}
+if (mtgtimer.elapsed>=50000 and n10y==0)
+{
+n10.play();
+n10y=1;
+}
+if (mtgtimer.elapsed>=57000 and n3y==0)
+{
+n3.play();
+n3y=1;
+}
+if (mtgtimer.elapsed>=58000 and n2y==0)
+{
+n2.play();
+n2y=1;
+}
+if (mtgtimer.elapsed>=59000 and n1y==0)
+{
+n1.play();
+n1y=1;
+}
+if (mtgtimer.elapsed>=60000)
+{
+alert("mouse test", "you hit the mouse buttons "+times+" times");
+records.write(name+" hit the mouse buttons "+times+" times.
+");
+exit();
+}
+}
+}

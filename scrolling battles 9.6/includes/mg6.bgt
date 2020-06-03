@@ -1,0 +1,105 @@
+int chanceswim=0;
+int swimy=0;
+sound readyset;
+sound splash;
+void mg6()
+{
+totaldollars=0;
+chanceswim=0;
+swimy=0;
+readyset.load("sounds/soundpacks/"+soundpack+"/swimreadyset.ogg");
+splash.load("sounds/soundpacks/"+soundpack+"/swimsplash.ogg");
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/swimamb.ogg", true);
+readyset.play_wait();
+splash.play();
+while(true)
+{
+if (key_pressed(KEY_C))
+{
+speak(swimy);
+}
+if (key_pressed(KEY_ESCAPE))
+{
+pool.destroy_all();
+dlg("you earned "+totaldollars+" dollars.");
+dollars+=totaldollars;
+registrywrite();
+mgmenu();
+}
+if (swimy>=500)
+{
+totaldollars+=5;
+pool.destroy_all();
+dlg("You have won! you earned "+totaldollars+" dollars.");
+dollars+=totaldollars;
+registrywrite();
+mgmenu();
+}
+if (key_pressed(KEY_UP) and y<500)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/swim"+random(1,4)+".ogg", false);
+swimy+=1;
+swimchance();
+}
+if (key_pressed(KEY_DOWN) and y>0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/swim"+random(1,4)+".ogg", false);
+swimy-=1;
+swimchance();
+}
+}
+}
+void swimchance()
+{
+chanceswim=random(1,9);
+if (chanceswim==1)
+{
+swimchance1();
+}
+else if (chanceswim==2)
+{
+swimchance2();
+}
+}
+void swimchance1()
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/swimleft.ogg", false);
+while(true)
+{
+if (key_pressed(KEY_LEFT))
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/swim"+random(1,4)+".ogg", false);
+totaldollars+=random(2,6);
+return;
+}
+else if (key_pressed(KEY_UP) or key_pressed(KEY_RIGHT))
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/wall.ogg", false);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/tele.ogg", false);
+totaldollars-=random(2,6);
+y=0;
+return;
+}
+}
+}
+void swimchance2()
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/swimright.ogg", false);
+while(true)
+{
+if (key_pressed(KEY_RIGHT))
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/swim"+random(1,4)+".ogg", false);
+totaldollars+=random(2,6);
+return;
+}
+else if (key_pressed(KEY_UP) or key_pressed(KEY_LEFT))
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/wall.ogg", false);
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/tele.ogg", false);
+totaldollars-=random(2,6);
+y=0;
+return;
+}
+}
+}

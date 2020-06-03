@@ -1,0 +1,16 @@
+0: 
+1: event. Version=9.1.0.127. (3-44-27 PM)
+2: event: mason has 16 trophies (3-44-27 PM)
+3: Event: mason is using the default Soundpack. (3-44-27 PM)
+4: Event: mason is using the Town environment. (3-44-27 PM)
+5: Event. User wants a normal game. (3-44-30 PM)
+6: event: mason has decided to start a new game. (3-44-30 PM)
+7: A lava pit spawned at 171 (3-44-30 PM)
+8: A fire pit spawned at 286 (3-44-30 PM)
+9: A fire pit spawned at 74 (3-44-30 PM)
+10: Event: an enemy (name samantha) has been spawned at 156 with 300 HP. (3-44-30 PM)
+11: Event: Game loaded! (3-44-30 PM)
+12: Event: an enemy (name Death elf) has been spawned at 173 with 300 HP. (3-44-37 PM)
+13: Event: An item has spawned! (3-44-39 PM)
+14: Event: Item has been retrieved! (3-44-41 PM)
+15: event: mason has decided to exit.

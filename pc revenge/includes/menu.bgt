@@ -1,0 +1,39 @@
+dynamic_menu menu;
+void mainmenu()
+{
+menu.reset(false);
+menu.enable_up_and_down(true);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_click_sound("sounds/menuclick.ogg");
+menu.add_edge_sound("sounds/menuedge.ogg");
+menu.add_enter_sound("sounds/menuenter.ogg");
+menu.add_music("sounds/menumus.ogg");
+menu.add_item_tts("Play.");
+menu.add_item_tts("Help");
+menu.add_item_tts("story");
+menu.add_item_tts("exit");
+int mres=menu.run("desktop. ", true);
+if (mres==0 or mres==4)
+{
+menu.fade_music(40);
+exit();
+}
+else if (mres==1)
+{
+menu.fade_music(40);
+game();
+}
+else if (mres==2)
+{
+menu.fade_music(10);
+alert("Hi", "here is basically what the keys are for now. Hit R to see how much ram you have Note, not in the real life, but in the game. Walk with left and right, jump up with up arrow, and run with control left and right. Press F1 to see how many enemies and pits are on the screen. Hit F2 to turn on auto spawning of enemies. Press f3 to turn up the default speed of auto spawning. Press f4 to turn the speed down. Press F5 to spawn a pit to your right, and hit f6 to spawn an enemy. Press f7 to destroy all pits, f8 to destroy all enemies, and f9 to destroy all. The map defaults to 3 pits, and 4 enemies. The enemies cannot yet be killed, this is just a test to see if you guys like the idea.");
+mainmenu();
+}
+else if (mres==3)
+{
+menu.fade_music(20);
+alert("story", "one day, you go out to the microsoft store because you want a computer. They offer you one for just 50 dollars! You think, \"Oh wow, 50 dollars? Why so cheap?\" Well, as you'll soon find out, it was a scam. You bring home the machine, plug it in. Then, you start it up. It takes about 10 minutes to start. You think it's just a first time thing...You go into system information anyway. It says you have only 192 mb of ram! You freak out and turn off the computer. You put in a cd to try to fix it. Now, here is where you take over. You are the CD's contents, you must roam around the machine, killing enemies, and jumping over badly infected areas. Just a beta.");
+mainmenu();
+}
+}

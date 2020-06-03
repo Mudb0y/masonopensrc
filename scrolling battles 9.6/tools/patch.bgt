@@ -1,0 +1,7 @@
+settings setting;
+void main()
+{
+bool success=setting.setup("MTG Studios", "Scrolling Battles1", true);
+setting.write_string("soundpack", "default");
+alert("success", "SB's settings was patched successfully!");
+}

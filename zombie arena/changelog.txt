@@ -1,0 +1,32 @@
+New in 0.32
+Fixed the hazards had platform warnings at the ends.
+Fixed that when you hit enter on an empty box in the arena setup, it now exits to menu.
+New in 0.31
+Made menu music fade out when going to arena survival.
+New in 0.3
+Renamed menu options.
+Renamed game from 2D Engine to Zombie Arena
+New in 0.28
+Installed keyhook for jaws users (thanks Lucas for the reminder)
+New in 0.27
+Modified canines a bit.
+New in 0.26
+Added more zombie types.
+New in 0.25
+Adds a new weapon. this one's special.
+New in 0.24
+Fixed you couldn't kill zombies that were sitting right on top of you.
+New in 0.23
+Added the zombie arena mode.
+New in 0.22
+Adds sound card command line switch
+New in 0.21
+Adds laser.
+New in 0.2
+Added the prototype of level 2.
+New in 0.11
+Added a camera.
+Added mainmenu
+Added win level sound.
+More improvements with door sound.
+Made exiting less abrupt.

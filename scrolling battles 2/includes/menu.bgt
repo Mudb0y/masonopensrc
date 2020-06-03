@@ -1,0 +1,368 @@
+﻿dynamic_menu menu;
+int mres;
+void mainmenu()
+{
+menu.click_at_edge(false);
+menu.enable_numbers(true);
+menu.enable_up_and_down(true);
+menu.enable_left_and_right(true);
+menu.repeat_last_item_at_bottom(false);
+menu.add_click_sound("sounds/menu/click.ogg");
+menu.add_edge_sound("sounds/menu/edge.ogg");
+menu.add_enter_sound("sounds/menu/enter.ogg");
+menu.add_music("sounds/menu/menumus.ogg");
+menu.reset(false);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("Start New Game");
+menu.add_item_tts("Load saved game");
+menu.add_item_tts("survival mode - beta");
+menu.add_item_tts("test speakers");
+menu.add_item_tts("options");
+if (gamewon==1)
+{
+menu.add_item_tts("save file editor");
+}
+menu.add_item_tts("Exit Game");
+mres=menu.run("Scrolling Battles 2 - main menu", true);
+if (mres==-1)
+{
+exit();
+}
+if (mres==0)
+{
+menu.fade_music(30);
+exit();
+}
+if (mres==1)
+{
+menu.fade_music(30);
+game();
+return;
+}
+if (mres==2)
+{
+loadmenu();
+}
+if (mres==3)
+{
+survivemenu();
+}
+if (mres==4)
+{
+menu.stopmusic();
+dlgplay("sounds/menu/test.ogg");
+mainmenu();
+}
+if (mres==5)
+{
+optionsmenu();
+}
+if (mres==6)
+{
+if (gamewon==1)
+{
+editor();
+}
+else
+{
+menu.fade_music(10);
+exit();
+}
+}
+if (mres==7)
+{
+menu.fade_music(10);
+exit();
+}
+}
+void savemenu()
+{
+menu.click_at_edge(false);
+menu.enable_numbers(true);
+menu.enable_up_and_down(true);
+menu.enable_left_and_right(true);
+menu.repeat_last_item_at_bottom(false);
+menu.add_click_sound("sounds/menu/click.ogg");
+menu.add_edge_sound("sounds/menu/edge.ogg");
+menu.add_enter_sound("sounds/menu/enter.ogg");
+menu.add_music("");
+menu.reset(false);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("1");
+menu.add_item_tts("2");
+menu.add_item_tts("3");
+menu.add_item_tts("4");
+menu.add_item_tts("5");
+menu.add_item_tts("6");
+menu.add_item_tts("7");
+menu.add_item_tts("8");
+menu.add_item_tts("9");
+menu.add_item_tts("10");
+menu.add_item_tts("go back");
+mres=menu.run("Select a slot to save in.", true);
+if (mres==0 or mres==11)
+{
+return;
+}
+if (mres>=1 and mres<=10)
+{
+savegame(mres);
+return;
+}
+}
+void loadmenu()
+{
+menu.click_at_edge(false);
+menu.enable_numbers(true);
+menu.enable_up_and_down(true);
+menu.enable_left_and_right(true);
+menu.repeat_last_item_at_bottom(false);
+menu.add_click_sound("sounds/menu/click.ogg");
+menu.add_edge_sound("sounds/menu/edge.ogg");
+menu.add_enter_sound("sounds/menu/enter.ogg");
+menu.add_music("");
+menu.reset(false);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("1");
+menu.add_item_tts("2");
+menu.add_item_tts("3");
+menu.add_item_tts("4");
+menu.add_item_tts("5");
+menu.add_item_tts("6");
+menu.add_item_tts("7");
+menu.add_item_tts("8");
+menu.add_item_tts("9");
+menu.add_item_tts("10");
+menu.add_item_tts("go back");
+mres=menu.run("Select a slot to load.", true);
+if (mres==0 or mres==11)
+{
+mainmenu();
+}
+if (mres>=1 and mres<=10)
+{
+loadgame(mres);
+return;
+}
+}
+void optionsmenu()
+{
+menu.click_at_edge(false);
+menu.enable_numbers(true);
+menu.enable_up_and_down(true);
+menu.enable_left_and_right(true);
+menu.repeat_last_item_at_bottom(false);
+menu.add_click_sound("sounds/menu/click.ogg");
+menu.add_edge_sound("sounds/menu/edge.ogg");
+menu.add_enter_sound("sounds/menu/enter.ogg");
+menu.add_music("");
+menu.reset(false);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("enable logo playing on startup.");
+menu.add_item_tts("enable progress bar on startup.");
+menu.add_item_tts("set back to defaults");
+menu.add_item_tts("go back");
+mres=menu.run("Options menu.", true);
+if (mres==0)
+{
+mainmenu();
+}
+if (mres==1)
+{
+string yesorno=input_box("sb2", "enter yes or no.");
+if (yesorno=="yes")
+{
+enablelogo=1;
+writesettings();
+optionsmenu();
+}
+if (yesorno=="no")
+{
+enablelogo=0;
+writesettings();
+optionsmenu();
+}
+else
+{
+optionsmenu();
+}
+}
+if (mres==2)
+{
+string yesorno=input_box("sb2", "enter yes or no.");
+if (yesorno=="yes")
+{
+enablepb=1;
+writesettings();
+optionsmenu();
+}
+if (yesorno=="no")
+{
+enablepb=0;
+writesettings();
+optionsmenu();
+}
+else
+{
+optionsmenu();
+}
+}
+if (mres==3)
+{
+int tempnumber;
+tempnumber=question("warning", "this will set your settings back to factory defaults. Are you sure you wish to continue?");
+if (tempnumber==1)
+{
+settodefaults();
+alert("success!", "");
+optionsmenu();
+}
+else
+{
+optionsmenu();
+}
+}
+if (mres==4)
+{
+mainmenu();
+}
+}
+void store()
+{
+menu.click_at_edge(false);
+menu.enable_numbers(true);
+menu.enable_up_and_down(true);
+menu.enable_left_and_right(true);
+menu.repeat_last_item_at_bottom(false);
+menu.add_click_sound("sounds/menu/click.ogg");
+menu.add_edge_sound("sounds/menu/edge.ogg");
+menu.add_enter_sound("sounds/menu/enter.ogg");
+menu.add_music("");
+menu.reset(false);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.add_item_tts("buy gun ammo.");
+menu.add_item_tts("buy machinegun ammo.");
+menu.add_item_tts("buy rifle ammo.");
+menu.add_item_tts("buy health.");
+menu.add_item_tts("buy speed item");
+menu.add_item_tts("buy rifle speed item.");
+menu.add_item_tts("buy bat damage upgrade.");
+menu.add_item_tts("buy gun damage upgrade.");
+menu.add_item_tts("buy machine gun damage upgrade.");
+menu.add_item_tts("buy Rifle damage upgrade.");
+menu.add_item_tts("buy bat repair. Costs 100 points.");
+menu.add_item_tts("you have "+points+" points.");
+menu.add_item_tts("go back");
+mres=menu.run("Scrolling Battles 2 - store", true);
+if (mres==0 or mres==12)
+{
+return;
+}
+if (mres==1)
+{
+buygunammo();
+store();
+return;
+}
+if (mres==2)
+{
+buymacgunammo();
+store();
+return;
+}
+if (mres==3)
+{
+buyrifleammo();
+store();
+return;
+}
+if (mres==4)
+{
+buyhealth();
+store();
+return;
+}
+if (mres==5)
+{
+buyspeed();
+store();
+return;
+}
+if (mres==6)
+{
+buyriflespeed();
+store();
+return;
+}
+if (mres==7)
+{
+buybatdamage();
+store();
+return;
+}
+if (mres==8)
+{
+buygundamage();
+store();
+return;
+}
+if (mres==9)
+{
+buymacgundamage();
+store();
+return;
+}
+if (mres==10)
+{
+buymacgundamage();
+store();
+return;
+}
+if (mres==11)
+{
+buyrepairbat();
+store();
+return;
+}
+if (mres==12)
+{
+store();
+return;
+}
+}
+void survivemenu()
+{
+menu.click_at_edge(false);
+menu.enable_numbers(true);
+menu.enable_up_and_down(true);
+menu.enable_left_and_right(true);
+menu.repeat_last_item_at_bottom(false);
+menu.add_click_sound("sounds/menu/click.ogg");
+menu.add_edge_sound("sounds/menu/edge.ogg");
+menu.add_enter_sound("sounds/menu/enter.ogg");
+menu.add_music("");
+menu.reset(false);
+menu.allow_escape=true;
+menu.wrap=false;
+for(uint i=1;i < maxlevel+1;i++)
+{
+menu.add_item_tts("level "+i);
+}
+menu.add_item_tts("go back");
+mres=menu.run("Please select the level you wish to survive on.", true);
+if (mres==0 or mres==maxlevel+1)
+{
+mainmenu();
+}
+else
+{
+level=mres;
+survival=1;
+game();
+}
+}

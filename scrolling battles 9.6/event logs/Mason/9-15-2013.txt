@@ -1,0 +1,3002 @@
+0: event: Enemy spawned!
+1: Event: Enemy fell into a pit! Ha ha ha!
+2: event: Enemy spawned!
+3: Event: Enemy fell into a pit! Ha ha ha!
+4: event: Enemy spawned!
+5: Event: Enemy fell into a pit! Ha ha ha!
+6: event: Enemy spawned!
+7: Event: Enemy fell into a pit! Ha ha ha!
+8: event: Enemy spawned!
+9: Event: Enemy death.
+10: Event: Grenade has exploded.
+11: Event: Enemy destroyed by grenade!
+12: Event: Enemy destroyed by grenade!
+13: Event: Enemy destroyed by grenade!
+14: Event: Enemy destroyed by grenade!
+15: Event: Grenade has exploded.
+16: Event: Enemy destroyed by grenade!
+17: Event: Enemy destroyed by grenade!
+18: Event: Enemy destroyed by grenade!
+19: Event: Enemy destroyed by grenade!
+20: event: Enemy spawned!
+21: Event: Enemy death.
+22: Event: Game loaded successfully!
+23: event: Loading game.
+24: event: Mason has decided to start a new game.
+25: event. User wants a normal game.
+26: Retrieving message of the day...
+27: Event: Installing keyhook...
+28: event: Checking name...
+29: event: Setting up registry...
+30: event. Version=5.5.0.070.
+31: event. loading started.
+32: 
+0: event: Helper detected an enemy!
+1: Event: Player helper spawned!
+2: event: Pits have changed.
+3: event: Pits will change in 3 seconds!
+4: event: Enemy spawned!
+5: Event: Enemy death.
+6: event: Enemy spawned!
+7: Event: Enemy fell into a pit! Ha ha ha!
+8: event: Enemy spawned!
+9: Event: Enemy fell into a pit! Ha ha ha!
+10: event: Enemy spawned!
+11: Event: Enemy fell into a pit! Ha ha ha!
+12: event: Enemy spawned!
+13: Event: Enemy fell into a pit! Ha ha ha!
+14: event: Enemy spawned!
+15: Event: Enemy death.
+16: Event: Game loaded successfully!
+17: event: Loading game.
+18: event: Mason has decided to start a new game.
+19: event. User wants a normal game.
+20: Retrieving message of the day...
+21: Event: Installing keyhook...
+22: event: Checking name...
+23: event: Setting up registry...
+24: event. Version=5.5.0.070.
+25: event. loading started.
+26: 
+0: Event: Enemy fell into a pit! Ha ha ha!
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: event: Helper detected an enemy!
+8: Event: Player helper spawned!
+9: event: Pits have changed.
+10: event: Pits will change in 3 seconds!
+11: event: Enemy spawned!
+12: Event: Enemy death.
+13: event: Enemy spawned!
+14: Event: Enemy fell into a pit! Ha ha ha!
+15: event: Enemy spawned!
+16: Event: Enemy fell into a pit! Ha ha ha!
+17: event: Enemy spawned!
+18: Event: Enemy fell into a pit! Ha ha ha!
+19: event: Enemy spawned!
+20: Event: Enemy fell into a pit! Ha ha ha!
+21: event: Enemy spawned!
+22: Event: Enemy death.
+23: Event: Game loaded successfully!
+24: event: Loading game.
+25: event: Mason has decided to start a new game.
+26: event. User wants a normal game.
+27: Retrieving message of the day...
+28: Event: Installing keyhook...
+29: event: Checking name...
+30: event: Setting up registry...
+31: event. Version=5.5.0.070.
+32: event. loading started.
+33: 
+0: event: Enemy spawned!
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Event: Enemy fell into a pit! Ha ha ha!
+7: event: Enemy spawned!
+8: Event: Enemy death.
+9: Event: Game loaded successfully!
+10: event: Loading game.
+11: event: Mason has decided to start a new game.
+12: event. User wants a normal game.
+13: event: Helper detected an enemy!
+14: Event: Player helper spawned!
+15: event: Pits have changed.
+16: event: Pits will change in 3 seconds!
+17: event: Enemy spawned!
+18: Event: Enemy death.
+19: event: Enemy spawned!
+20: Event: Enemy fell into a pit! Ha ha ha!
+21: event: Enemy spawned!
+22: Event: Enemy fell into a pit! Ha ha ha!
+23: event: Enemy spawned!
+24: Event: Enemy fell into a pit! Ha ha ha!
+25: event: Enemy spawned!
+26: Event: Enemy fell into a pit! Ha ha ha!
+27: event: Enemy spawned!
+28: Event: Enemy death.
+29: Event: Game loaded successfully!
+30: event: Loading game.
+31: event: Mason has decided to start a new game.
+32: event. User wants a normal game.
+33: Retrieving message of the day...
+34: Event: Installing keyhook...
+35: event: Checking name...
+36: event: Setting up registry...
+37: event. Version=5.5.0.070.
+38: event. loading started.
+39: 
+0: Event: Enemy fell into a pit! Ha ha ha!
+1: event: Enemy spawned!
+2: Event: Enemy fell into a pit! Ha ha ha!
+3: event: Pits have changed.
+4: Event: Player helper killed!
+5: Event: Player helper spawned!
+6: event: Pits will change in 3 seconds!
+7: event: Enemy spawned!
+8: Event: Grenade has exploded.
+9: Event: Grenade has exploded.
+10: Event: Grenade has exploded.
+11: Event: Enemy death.
+12: Event: Enemy destroyed by grenade!
+13: Event: Enemy destroyed by grenade!
+14: Event: Grenade has exploded.
+15: Event: Enemy destroyed by grenade!
+16: Event: Enemy destroyed by grenade!
+17: Event: Enemy destroyed by grenade!
+18: Event: Enemy destroyed by grenade!
+19: Event: Grenade has exploded.
+20: Event: Enemy destroyed by grenade!
+21: Event: Enemy destroyed by grenade!
+22: Event: Enemy destroyed by grenade!
+23: Event: Enemy destroyed by grenade!
+24: Event: Grenade has exploded.
+25: Event: Enemy destroyed by grenade!
+26: Event: Enemy destroyed by grenade!
+27: Event: Enemy destroyed by grenade!
+28: Event: Enemy destroyed by grenade!
+29: Event: Grenade has exploded.
+30: Event: Enemy destroyed by grenade!
+31: Event: Enemy destroyed by grenade!
+32: Event: Enemy destroyed by grenade!
+33: Event: Enemy destroyed by grenade!
+34: event: Enemy spawned!
+35: Event: Enemy fell into a pit! Ha ha ha!
+36: event: Enemy spawned!
+37: Event: Enemy fell into a pit! Ha ha ha!
+38: event: Enemy spawned!
+39: Event: Grenade has exploded.
+40: Event: Enemy death.
+41: Event: Enemy destroyed by grenade!
+42: event: Enemy spawned!
+43: Event: Enemy death.
+44: Event: Game loaded successfully!
+45: event: Loading game.
+46: event: Mason has decided to start a new game.
+47: event. User wants a normal game.
+48: event: Enemy spawned!
+49: Event: Enemy death.
+50: Event: Game loaded successfully!
+51: event: Loading game.
+52: event: Mason has decided to start a new game.
+53: event. User wants a normal game.
+54: Event: Enemy fell into a pit! Ha ha ha!
+55: event: Enemy spawned!
+56: Event: Enemy death.
+57: Event: Game loaded successfully!
+58: event: Loading game.
+59: event: Mason has decided to start a new game.
+60: event. User wants a normal game.
+61: event: Helper detected an enemy!
+62: Event: Player helper spawned!
+63: event: Pits have changed.
+64: event: Pits will change in 3 seconds!
+65: event: Enemy spawned!
+66: Event: Enemy death.
+67: event: Enemy spawned!
+68: Event: Enemy fell into a pit! Ha ha ha!
+69: event: Enemy spawned!
+70: Event: Enemy fell into a pit! Ha ha ha!
+71: event: Enemy spawned!
+72: Event: Enemy fell into a pit! Ha ha ha!
+73: event: Enemy spawned!
+74: Event: Enemy fell into a pit! Ha ha ha!
+75: event: Enemy spawned!
+76: Event: Enemy death.
+77: Event: Game loaded successfully!
+78: event: Loading game.
+79: event: Mason has decided to start a new game.
+80: event. User wants a normal game.
+81: Retrieving message of the day...
+82: Event: Installing keyhook...
+83: event: Checking name...
+84: event: Setting up registry...
+85: event. Version=5.5.0.070.
+86: event. loading started.
+87: 
+0: event: Mason has decided to exit.
+1: event: Helper detected an enemy!
+2: event: Enemy spawned!
+3: event: Helper stop seeing an enemy!
+4: Event: Enemy death.
+5: event: Helper detected an enemy!
+6: event: Enemy spawned!
+7: event: Helper stop seeing an enemy!
+8: Event: Enemy death.
+9: event: Helper detected an enemy!
+10: event: Enemy spawned!
+11: event: Helper stop seeing an enemy!
+12: Event: Enemy death.
+13: event: Helper detected an enemy!
+14: event: Enemy spawned!
+15: event: Helper stop seeing an enemy!
+16: Event: Enemy death.
+17: event: Helper detected an enemy!
+18: event: Enemy spawned!
+19: Event: Enemy death.
+20: event: Enemy spawned!
+21: event: Helper stop seeing an enemy!
+22: Event: Enemy death.
+23: event: Helper detected an enemy!
+24: event: Enemy spawned!
+25: Event: Enemy death.
+26: event: Enemy spawned!
+27: event: Helper stop seeing an enemy!
+28: Event: Enemy death.
+29: event: Helper detected an enemy!
+30: event: Enemy spawned!
+31: event: Helper stop seeing an enemy!
+32: Event: Enemy death.
+33: event: Helper detected an enemy!
+34: event: Enemy spawned!
+35: event: Helper stop seeing an enemy!
+36: Event: Enemy death.
+37: event: Pits have changed.
+38: event: Helper detected an enemy!
+39: event: Enemy spawned!
+40: Event: Enemy death.
+41: event: Enemy spawned!
+42: event: Pits will change in 3 seconds!
+43: event: Helper stop seeing an enemy!
+44: Event: Enemy death.
+45: event: Helper detected an enemy!
+46: event: Enemy spawned!
+47: event: Helper stop seeing an enemy!
+48: Event: Enemy death.
+49: event: Helper detected an enemy!
+50: event: Enemy spawned!
+51: event: Helper stop seeing an enemy!
+52: Event: Enemy death.
+53: event: Helper detected an enemy!
+54: event: Enemy spawned!
+55: event: Helper stop seeing an enemy!
+56: Event: Enemy death.
+57: event: Helper detected an enemy!
+58: event: Enemy spawned!
+59: Event: Enemy death.
+60: event: Enemy spawned!
+61: event: Helper stop seeing an enemy!
+62: Event: Enemy death.
+63: event: Helper detected an enemy!
+64: event: Enemy spawned!
+65: Event: Enemy death.
+66: event: Enemy spawned!
+67: event: Helper stop seeing an enemy!
+68: Event: Enemy death.
+69: event: Helper detected an enemy!
+70: event: Enemy spawned!
+71: event: Helper stop seeing an enemy!
+72: Event: Enemy death.
+73: event: Helper detected an enemy!
+74: event: Enemy spawned!
+75: event: Helper stop seeing an enemy!
+76: Event: Enemy death.
+77: event: Helper detected an enemy!
+78: event: Enemy spawned!
+79: event: Helper stop seeing an enemy!
+80: Event: Enemy death.
+81: event: Helper detected an enemy!
+82: event: Enemy spawned!
+83: event: Helper stop seeing an enemy!
+84: Event: Enemy death.
+85: event: Helper detected an enemy!
+86: event: Enemy spawned!
+87: event: Helper stop seeing an enemy!
+88: Event: Enemy death.
+89: event: Helper detected an enemy!
+90: event: Enemy spawned!
+91: event: Helper stop seeing an enemy!
+92: Event: Enemy death.
+93: event: Helper detected an enemy!
+94: event: Enemy spawned!
+95: Event: Enemy death.
+96: event: Enemy spawned!
+97: event: Helper stop seeing an enemy!
+98: Event: Enemy death.
+99: event: Pits have changed.
+100: event: Helper detected an enemy!
+101: event: Enemy spawned!
+102: Event: Enemy death.
+103: event: Enemy spawned!
+104: event: Pits will change in 3 seconds!
+105: event: Helper stop seeing an enemy!
+106: Event: Enemy death.
+107: event: Helper detected an enemy!
+108: event: Enemy spawned!
+109: event: Helper stop seeing an enemy!
+110: Event: Enemy death.
+111: event: Helper detected an enemy!
+112: event: Enemy spawned!
+113: event: Helper has stopped seeing an enemy!
+114: Event: Enemy death.
+115: event: Helper detected an enemy!
+116: event: Enemy spawned!
+117: event: Helper stop seeing an enemy!
+118: Event: Enemy death.
+119: event: Helper detected an enemy!
+120: event: Enemy spawned!
+121: event: Helper stop seeing an enemy!
+122: Event: Enemy death.
+123: event: Helper detected an enemy!
+124: event: Enemy spawned!
+125: Event: Enemy death.
+126: event: Enemy spawned!
+127: event: Helper stop seeing an enemy!
+128: Event: Enemy death.
+129: event: Helper detected an enemy!
+130: event: Enemy spawned!
+131: event: Helper stop seeing an enemy!
+132: Event: Enemy death.
+133: event: Helper detected an enemy!
+134: event: Enemy spawned!
+135: Event: Enemy death.
+136: event: Enemy spawned!
+137: Event: Enemy death.
+138: event: Enemy spawned!
+139: Event: Enemy death.
+140: event: Enemy spawned!
+141: Event: Enemy death.
+142: event: Enemy spawned!
+143: Event: Enemy death.
+144: event: Enemy spawned!
+145: event: Helper has stopped seeing an enemy!
+146: Event: Enemy death.
+147: event: Helper detected an enemy!
+148: event: Enemy spawned!
+149: Event: Enemy death.
+150: event: Enemy spawned!
+151: Event: Enemy death.
+152: event: Enemy spawned!
+153: event: Helper has stopped seeing an enemy!
+154: Event: Enemy death.
+155: event: Helper detected an enemy!
+156: event: Enemy spawned!
+157: event: Helper stop seeing an enemy!
+158: Event: Enemy death.
+159: event: Helper detected an enemy!
+160: event: Enemy spawned!
+161: Event: Enemy death.
+162: event: Enemy spawned!
+163: event: Helper stop seeing an enemy!
+164: Event: Enemy death.
+165: event: Helper detected an enemy!
+166: event: Enemy spawned!
+167: event: Helper stop seeing an enemy!
+168: Event: Enemy death.
+169: event: Helper detected an enemy!
+170: event: Enemy spawned!
+171: Event: Enemy death.
+172: event: Enemy spawned!
+173: event: Helper stop seeing an enemy!
+174: Event: Enemy death.
+175: event: Helper detected an enemy!
+176: event: Enemy spawned!
+177: Event: Enemy death.
+178: event: Enemy spawned!
+179: event: User decided to go to the store.
+180: Event: Enemy death.
+181: event: Pits have changed.
+182: event: Enemy spawned!
+183: event: Helper stop seeing an enemy!
+184: Event: Enemy death.
+185: event: Helper detected an enemy!
+186: event: Enemy spawned!
+187: event: User decided to go to the store.
+188: event: Pits will change in 3 seconds!
+189: event: Helper stop seeing an enemy!
+190: Event: Enemy death.
+191: event: Helper detected an enemy!
+192: event: Enemy spawned!
+193: Event: Enemy death.
+194: event: Enemy spawned!
+195: Event: Enemy death.
+196: event: Enemy spawned!
+197: event: Helper stop seeing an enemy!
+198: Event: Enemy death.
+199: event: Helper detected an enemy!
+200: event: Enemy spawned!
+201: Event: Enemy death.
+202: event: Enemy spawned!
+203: event: Helper stop seeing an enemy!
+204: Event: Enemy death.
+205: event: Helper detected an enemy!
+206: event: Enemy spawned!
+207: Event: Enemy death.
+208: event: Enemy spawned!
+209: Event: Enemy death.
+210: event: Enemy spawned!
+211: event: Helper stop seeing an enemy!
+212: Event: Enemy death.
+213: event: Helper detected an enemy!
+214: event: Enemy spawned!
+215: Event: Enemy death.
+216: event: Enemy spawned!
+217: event: Game paused.
+218: Event: Enemy death.
+219: event: Enemy spawned!
+220: Event: Enemy death.
+221: event: Enemy spawned!
+222: event: Helper stop seeing an enemy!
+223: Event: Enemy death.
+224: event: Helper detected an enemy!
+225: event: Enemy spawned!
+226: event: Helper stop seeing an enemy!
+227: Event: Enemy death.
+228: event: Helper detected an enemy!
+229: event: Enemy spawned!
+230: Event: Enemy death.
+231: event: Enemy spawned!
+232: Event: Enemy death.
+233: event: Enemy spawned!
+234: event: Helper stop seeing an enemy!
+235: Event: Enemy death.
+236: event: Enemy spawned!
+237: Event: Enemy death.
+238: event: Helper detected an enemy!
+239: event: Enemy spawned!
+240: event: Helper stop seeing an enemy!
+241: Event: Enemy death.
+242: event: Helper detected an enemy!
+243: event: Enemy spawned!
+244: Event: Enemy death.
+245: event: Enemy spawned!
+246: Event: Enemy death.
+247: event: Enemy spawned!
+248: Event: Enemy death.
+249: event: Enemy spawned!
+250: event: Helper has stopped seeing an enemy!
+251: Event: Enemy death.
+252: event: Enemy spawned!
+253: Event: Enemy death.
+254: event: Helper detected an enemy!
+255: event: Enemy spawned!
+256: Event: Enemy death.
+257: event: Enemy spawned!
+258: event: Helper stop seeing an enemy!
+259: Event: Enemy death.
+260: event: Enemy spawned!
+261: Event: Enemy death.
+262: event: Helper detected an enemy!
+263: event: Pits have changed.
+264: event: Enemy spawned!
+265: Event: Enemy death.
+266: event: Enemy spawned!
+267: event: Helper stop seeing an enemy!
+268: Event: Enemy death.
+269: event: Helper detected an enemy!
+270: event: Pits will change in 3 seconds!
+271: event: Enemy spawned!
+272: Event: Enemy death.
+273: event: Enemy spawned!
+274: event: Helper has stopped seeing an enemy!
+275: Event: Enemy death.
+276: event: Helper detected an enemy!
+277: event: Enemy spawned!
+278: event: Helper stop seeing an enemy!
+279: Event: Enemy death.
+280: event: Helper detected an enemy!
+281: event: Enemy spawned!
+282: Event: Enemy death.
+283: event: Enemy spawned!
+284: Event: Enemy death.
+285: event: Enemy spawned!
+286: event: Helper stop seeing an enemy!
+287: Event: Enemy death.
+288: event: Helper detected an enemy!
+289: event: Enemy spawned!
+290: Event: Enemy death.
+291: event: Enemy spawned!
+292: Event: Enemy death.
+293: event: Enemy spawned!
+294: Event: Enemy death.
+295: event: Enemy spawned!
+296: Event: Enemy death.
+297: event: Enemy spawned!
+298: event: Helper stop seeing an enemy!
+299: Event: Enemy death.
+300: event: Helper detected an enemy!
+301: event: Enemy spawned!
+302: event: Helper stop seeing an enemy!
+303: Event: Enemy death.
+304: event: Helper detected an enemy!
+305: event: Enemy spawned!
+306: event: Helper stop seeing an enemy!
+307: Event: Enemy death.
+308: event: Enemy spawned!
+309: Event: Enemy death.
+310: event: Helper detected an enemy!
+311: event: Enemy spawned!
+312: event: Helper stop seeing an enemy!
+313: Event: Enemy death.
+314: event: Helper detected an enemy!
+315: event: Enemy spawned!
+316: Event: Enemy death.
+317: event: Enemy spawned!
+318: event: Helper has stopped seeing an enemy!
+319: Event: Enemy death.
+320: event: Helper detected an enemy!
+321: event: Enemy spawned!
+322: event: Helper stop seeing an enemy!
+323: Event: Enemy death.
+324: event: Helper detected an enemy!
+325: event: Enemy spawned!
+326: Event: Enemy death.
+327: event: Enemy spawned!
+328: event: Helper has stopped seeing an enemy!
+329: Event: Enemy death.
+330: event: Helper detected an enemy!
+331: event: Enemy spawned!
+332: Event: Enemy death.
+333: event: Enemy spawned!
+334: event: Helper stop seeing an enemy!
+335: Event: Enemy death.
+336: event: Helper detected an enemy!
+337: event: Enemy spawned!
+338: Event: Enemy death.
+339: event: Enemy spawned!
+340: event: Helper stop seeing an enemy!
+341: Event: Enemy death.
+342: event: Helper detected an enemy!
+343: event: Enemy spawned!
+344: Event: Enemy death.
+345: event: Enemy spawned!
+346: Event: Enemy death.
+347: event: Enemy spawned!
+348: event: Pits have changed.
+349: Event: Enemy death.
+350: event: Enemy spawned!
+351: event: Helper stop seeing an enemy!
+352: Event: Enemy death.
+353: event: Enemy spawned!
+354: event: Pits will change in 3 seconds!
+355: Event: Enemy death.
+356: event: Helper detected an enemy!
+357: event: Enemy spawned!
+358: Event: Enemy death.
+359: event: Enemy spawned!
+360: Event: Enemy death.
+361: event: Enemy spawned!
+362: Event: Enemy death.
+363: event: Enemy spawned!
+364: Event: Enemy death.
+365: event: Enemy spawned!
+366: event: Helper stop seeing an enemy!
+367: Event: Enemy death.
+368: event: Enemy spawned!
+369: Event: Enemy death.
+370: event: Enemy spawned!
+371: Event: Enemy death.
+372: event: Helper detected an enemy!
+373: event: Enemy spawned!
+374: Event: Enemy death.
+375: event: Enemy spawned!
+376: event: Helper stop seeing an enemy!
+377: Event: Enemy death.
+378: event: Helper detected an enemy!
+379: event: Enemy spawned!
+380: Event: Enemy death.
+381: event: Enemy spawned!
+382: event: Helper has stopped seeing an enemy!
+383: Event: Enemy death.
+384: event: Helper detected an enemy!
+385: event: Enemy spawned!
+386: Event: Enemy death.
+387: event: Enemy spawned!
+388: Event: Enemy death.
+389: event: Enemy spawned!
+390: Event: Enemy death.
+391: event: Enemy spawned!
+392: Event: Enemy death.
+393: event: Enemy spawned!
+394: event: Helper stop seeing an enemy!
+395: Event: Enemy death.
+396: event: Helper detected an enemy!
+397: event: Enemy spawned!
+398: Event: Enemy death.
+399: event: Enemy spawned!
+400: Event: Enemy death.
+401: event: Enemy spawned!
+402: event: Helper stop seeing an enemy!
+403: Event: Enemy death.
+404: event: Helper detected an enemy!
+405: event: Enemy spawned!
+406: Event: Enemy death.
+407: event: Enemy spawned!
+408: Event: Enemy death.
+409: event: Enemy spawned!
+410: event: Helper stop seeing an enemy!
+411: Event: Enemy death.
+412: event: Helper detected an enemy!
+413: event: Enemy spawned!
+414: Event: Enemy death.
+415: event: Enemy spawned!
+416: event: User decided to go to the store.
+417: Event: Enemy death.
+418: event: Enemy spawned!
+419: Event: Enemy death.
+420: event: Enemy spawned!
+421: Event: Enemy death.
+422: event: Enemy spawned!
+423: event: Pits have changed.
+424: event: Helper stop seeing an enemy!
+425: Event: Enemy death.
+426: event: Helper detected an enemy!
+427: event: Enemy spawned!
+428: Event: Enemy death.
+429: event: Enemy spawned!
+430: event: Pits will change in 3 seconds!
+431: event: Helper stop seeing an enemy!
+432: Event: Enemy death.
+433: event: Helper detected an enemy!
+434: event: Enemy spawned!
+435: Event: Enemy death.
+436: event: Enemy spawned!
+437: Event: Enemy death.
+438: event: Enemy spawned!
+439: event: Helper stop seeing an enemy!
+440: Event: Enemy death.
+441: event: Enemy spawned!
+442: Event: Enemy death.
+443: event: Enemy spawned!
+444: Event: Enemy death.
+445: event: Helper detected an enemy!
+446: event: Enemy spawned!
+447: Event: Enemy death.
+448: event: Enemy spawned!
+449: event: Helper has stopped seeing an enemy!
+450: Event: Enemy death.
+451: event: Helper detected an enemy!
+452: event: Enemy spawned!
+453: Event: Enemy death.
+454: event: Enemy spawned!
+455: event: Helper stop seeing an enemy!
+456: Event: Enemy death.
+457: event: Helper detected an enemy!
+458: event: Enemy spawned!
+459: Event: Enemy death.
+460: event: Enemy spawned!
+461: Event: Enemy death.
+462: event: Enemy spawned!
+463: event: Helper stop seeing an enemy!
+464: Event: Enemy death.
+465: event: Helper detected an enemy!
+466: event: Enemy spawned!
+467: Event: Enemy death.
+468: event: Enemy spawned!
+469: Event: Enemy death.
+470: event: Enemy spawned!
+471: Event: Enemy death.
+472: event: Enemy spawned!
+473: Event: Enemy death.
+474: event: Enemy spawned!
+475: Event: Enemy death.
+476: event: Enemy spawned!
+477: event: Helper stop seeing an enemy!
+478: Event: Enemy death.
+479: event: Helper detected an enemy!
+480: event: Enemy spawned!
+481: Event: Enemy death.
+482: event: Enemy spawned!
+483: event: Helper has stopped seeing an enemy!
+484: Event: Enemy death.
+485: event: Helper detected an enemy!
+486: event: Enemy spawned!
+487: Event: Enemy death.
+488: event: Enemy spawned!
+489: event: Helper stop seeing an enemy!
+490: Event: Enemy death.
+491: event: Helper detected an enemy!
+492: event: Enemy spawned!
+493: Event: Enemy death.
+494: event: Enemy spawned!
+495: Event: Enemy death.
+496: event: Enemy spawned!
+497: event: Helper stop seeing an enemy!
+498: Event: Enemy death.
+499: event: Helper detected an enemy!
+500: event: Enemy spawned!
+501: Event: Enemy death.
+502: event: Enemy spawned!
+503: Event: Enemy death.
+504: event: Enemy spawned!
+505: Event: Enemy death.
+506: event: Pits have changed.
+507: event: Enemy spawned!
+508: Event: Enemy death.
+509: event: Enemy spawned!
+510: event: Helper stop seeing an enemy!
+511: Event: Enemy death.
+512: event: Pits will change in 3 seconds!
+513: event: User decided to go to the store.
+514: event: Helper detected an enemy!
+515: event: Enemy spawned!
+516: event: Helper stop seeing an enemy!
+517: Event: Enemy death.
+518: event: User has decided to sell stuff.
+519: event: Helper detected an enemy!
+520: event: Enemy spawned!
+521: event: Helper stop seeing an enemy!
+522: Event: Enemy death.
+523: event: Pits have changed.
+524: event: Pits will change in 3 seconds!
+525: event: Helper detected an enemy!
+526: event: Enemy spawned!
+527: event: Helper stop seeing an enemy!
+528: Event: Enemy death.
+529: event: User has decided to sell stuff.
+530: event: User decided to go to the store.
+531: event: User has decided to sell stuff.
+532: event: User decided to go to the store.
+533: event: User has decided to sell stuff.
+534: event: Helper detected an enemy!
+535: event: Enemy spawned!
+536: event: Helper stop seeing an enemy!
+537: Event: Enemy death.
+538: event: Pits have changed.
+539: event: Pits will change in 3 seconds!
+540: event: Helper detected an enemy!
+541: event: Enemy spawned!
+542: event: Helper stop seeing an enemy!
+543: Event: Enemy death.
+544: event: Helper detected an enemy!
+545: event: Enemy spawned!
+546: event: Helper stop seeing an enemy!
+547: Event: Enemy death.
+548: event: Helper detected an enemy!
+549: event: Enemy spawned!
+550: event: Helper stop seeing an enemy!
+551: Event: Enemy death.
+552: event: Helper detected an enemy!
+553: event: Enemy spawned!
+554: event: Helper stop seeing an enemy!
+555: Event: Enemy death.
+556: event: Helper detected an enemy!
+557: event: Enemy spawned!
+558: event: Helper stop seeing an enemy!
+559: Event: Enemy death.
+560: event: Pits have changed.
+561: event: Pits will change in 3 seconds!
+562: event: Helper detected an enemy!
+563: event: Enemy spawned!
+564: event: Helper stop seeing an enemy!
+565: Event: Enemy death.
+566: event: Helper detected an enemy!
+567: event: Enemy spawned!
+568: event: Helper stop seeing an enemy!
+569: Event: Enemy death.
+570: event: Helper detected an enemy!
+571: event: Enemy spawned!
+572: event: Helper stop seeing an enemy!
+573: Event: Enemy death.
+574: event: Pits have changed.
+575: event: Pits will change in 3 seconds!
+576: event: Helper detected an enemy!
+577: event: Enemy spawned!
+578: event: Helper stop seeing an enemy!
+579: Event: Enemy death.
+580: event: User decided to go to the store.
+581: event: Helper detected an enemy!
+582: event: Enemy spawned!
+583: event: Helper stop seeing an enemy!
+584: Event: Enemy death.
+585: event: Pits have changed.
+586: event: Pits will change in 3 seconds!
+587: event: Helper detected an enemy!
+588: event: Enemy spawned!
+589: event: Helper stop seeing an enemy!
+590: Event: Enemy death.
+591: event: Helper detected an enemy!
+592: event: Enemy spawned!
+593: event: Helper stop seeing an enemy!
+594: Event: Enemy death.
+595: event: Pits have changed.
+596: event: Pits will change in 3 seconds!
+597: event: Helper detected an enemy!
+598: event: Enemy spawned!
+599: event: Helper stop seeing an enemy!
+600: Event: Enemy death.
+601: event: User decided to go to the store.
+602: event: Helper detected an enemy!
+603: event: Enemy spawned!
+604: event: Helper stop seeing an enemy!
+605: Event: Enemy death.
+606: event: Helper detected an enemy!
+607: event: Enemy spawned!
+608: event: Helper stop seeing an enemy!
+609: Event: Enemy death.
+610: event: Helper detected an enemy!
+611: event: Pits have changed.
+612: event: Enemy spawned!
+613: event: Helper stop seeing an enemy!
+614: Event: Enemy death.
+615: event: Pits will change in 3 seconds!
+616: event: Helper detected an enemy!
+617: event: Enemy spawned!
+618: event: Helper stop seeing an enemy!
+619: Event: Enemy fell into a pit! Ha ha ha!
+620: event: User decided to go to the store.
+621: event: Helper detected an enemy!
+622: event: Enemy spawned!
+623: event: Helper stop seeing an enemy!
+624: Event: Enemy death.
+625: event: Pits have changed.
+626: event: Pits will change in 3 seconds!
+627: event: Helper detected an enemy!
+628: event: Enemy spawned!
+629: event: Helper stop seeing an enemy!
+630: Event: Enemy death.
+631: event: Helper detected an enemy!
+632: event: Enemy spawned!
+633: event: Helper has stopped seeing an enemy!
+634: Event: Enemy death.
+635: event: User has decided to sell stuff.
+636: event: Pits have changed.
+637: event: Pits will change in 3 seconds!
+638: event: Helper detected an enemy!
+639: event: Enemy spawned!
+640: event: Helper stop seeing an enemy!
+641: Event: Enemy death.
+642: event: Helper detected an enemy!
+643: event: Enemy spawned!
+644: event: Helper stop seeing an enemy!
+645: Event: Enemy death.
+646: event: User decided to go to the store.
+647: event: Pits have changed.
+648: event: Helper detected an enemy!
+649: event: Enemy spawned!
+650: event: Helper stop seeing an enemy!
+651: Event: Enemy death.
+652: event: Pits will change in 3 seconds!
+653: event: Helper detected an enemy!
+654: event: Enemy spawned!
+655: event: Helper stop seeing an enemy!
+656: Event: Enemy death.
+657: event: Helper detected an enemy!
+658: event: Enemy spawned!
+659: event: Helper stop seeing an enemy!
+660: Event: Enemy death.
+661: event: Pits have changed.
+662: event: Pits will change in 3 seconds!
+663: event: Helper detected an enemy!
+664: event: Enemy spawned!
+665: event: Helper stop seeing an enemy!
+666: Event: Enemy death.
+667: event: Pits have changed.
+668: event: Pits will change in 3 seconds!
+669: event: Helper detected an enemy!
+670: event: Enemy spawned!
+671: event: Helper stop seeing an enemy!
+672: Event: Enemy death.
+673: event: Helper detected an enemy!
+674: event: Enemy spawned!
+675: event: Helper stop seeing an enemy!
+676: Event: Enemy death.
+677: event: User decided to go to the store.
+678: event: Helper detected an enemy!
+679: event: Enemy spawned!
+680: Event: Enemy death.
+681: event: Enemy spawned!
+682: event: Pits have changed.
+683: event: Helper stop seeing an enemy!
+684: Event: Enemy death.
+685: event: Pits will change in 3 seconds!
+686: event: Helper detected an enemy!
+687: event: Enemy spawned!
+688: event: Helper stop seeing an enemy!
+689: Event: Enemy death.
+690: event: Pits have changed.
+691: event: Pits will change in 3 seconds!
+692: event: Helper detected an enemy!
+693: event: Enemy spawned!
+694: event: Helper stop seeing an enemy!
+695: Event: Enemy death.
+696: event: Helper detected an enemy!
+697: event: Enemy spawned!
+698: event: Helper stop seeing an enemy!
+699: Event: Enemy death.
+700: event: Helper detected an enemy!
+701: event: Enemy spawned!
+702: event: Helper stop seeing an enemy!
+703: Event: Enemy death.
+704: event: Helper detected an enemy!
+705: event: Enemy spawned!
+706: event: Helper stop seeing an enemy!
+707: Event: Enemy death.
+708: event: Helper detected an enemy!
+709: event: Enemy spawned!
+710: event: Helper stop seeing an enemy!
+711: Event: Enemy death.
+712: event: Pits have changed.
+713: event: Pits will change in 3 seconds!
+714: event: Helper detected an enemy!
+715: event: Enemy spawned!
+716: event: Helper stop seeing an enemy!
+717: Event: Enemy death.
+718: event: Helper detected an enemy!
+719: event: Enemy spawned!
+720: event: Helper stop seeing an enemy!
+721: Event: Enemy death.
+722: event: User decided to go to the store.
+723: event: Helper detected an enemy!
+724: event: Enemy spawned!
+725: event: Helper stop seeing an enemy!
+726: Event: Enemy death.
+727: event: Pits have changed.
+728: event: Pits will change in 3 seconds!
+729: event: Helper detected an enemy!
+730: event: Enemy spawned!
+731: event: Helper stop seeing an enemy!
+732: Event: Enemy death.
+733: event: Helper detected an enemy!
+734: event: Enemy spawned!
+735: event: Helper stop seeing an enemy!
+736: Event: Enemy death.
+737: event: Helper detected an enemy!
+738: event: Enemy spawned!
+739: event: Pits have changed.
+740: event: Helper stop seeing an enemy!
+741: Event: Enemy death.
+742: event: Pits will change in 3 seconds!
+743: event: Helper detected an enemy!
+744: event: Enemy spawned!
+745: event: Helper stop seeing an enemy!
+746: Event: Enemy death.
+747: event: Helper detected an enemy!
+748: event: Enemy spawned!
+749: event: Helper stop seeing an enemy!
+750: Event: Enemy death.
+751: event: Helper detected an enemy!
+752: event: Enemy spawned!
+753: Event: Enemy death.
+754: event: Enemy spawned!
+755: event: Helper stop seeing an enemy!
+756: Event: Enemy death.
+757: event: Helper detected an enemy!
+758: event: Enemy spawned!
+759: event: Helper stop seeing an enemy!
+760: Event: Enemy death.
+761: event: Helper detected an enemy!
+762: event: Enemy spawned!
+763: event: Pits have changed.
+764: event: Helper stop seeing an enemy!
+765: Event: Enemy death.
+766: event: Pits will change in 3 seconds!
+767: event: Helper detected an enemy!
+768: event: Enemy spawned!
+769: event: Helper stop seeing an enemy!
+770: Event: Enemy death.
+771: event: Helper detected an enemy!
+772: event: Enemy spawned!
+773: event: Helper stop seeing an enemy!
+774: Event: Enemy death.
+775: event: Helper detected an enemy!
+776: event: Enemy spawned!
+777: event: Helper stop seeing an enemy!
+778: Event: Enemy death.
+779: event: Helper detected an enemy!
+780: event: Enemy spawned!
+781: event: Helper stop seeing an enemy!
+782: Event: Enemy death.
+783: event: Pits have changed.
+784: event: Pits will change in 3 seconds!
+785: event: Helper detected an enemy!
+786: event: Enemy spawned!
+787: event: Helper stop seeing an enemy!
+788: Event: Enemy death.
+789: event: Helper detected an enemy!
+790: event: Enemy spawned!
+791: event: Helper stop seeing an enemy!
+792: Event: Enemy death.
+793: event: Helper detected an enemy!
+794: event: Enemy spawned!
+795: event: Helper stop seeing an enemy!
+796: Event: Enemy death.
+797: event: Helper detected an enemy!
+798: event: Enemy spawned!
+799: event: Pits have changed.
+800: event: Helper stop seeing an enemy!
+801: Event: Enemy death.
+802: event: Helper detected an enemy!
+803: event: Enemy spawned!
+804: event: Helper stop seeing an enemy!
+805: Event: Enemy death.
+806: event: Pits will change in 3 seconds!
+807: event: Helper detected an enemy!
+808: event: Enemy spawned!
+809: event: User decided to go to the store.
+810: event: Helper stop seeing an enemy!
+811: Event: Enemy death.
+812: event: Helper detected an enemy!
+813: event: Enemy spawned!
+814: event: Helper stop seeing an enemy!
+815: Event: Enemy death.
+816: event: Helper detected an enemy!
+817: event: Enemy spawned!
+818: Event: Enemy death.
+819: event: Enemy spawned!
+820: event: Helper stop seeing an enemy!
+821: Event: Enemy death.
+822: event: Pits have changed.
+823: event: Pits will change in 3 seconds!
+824: event: Helper detected an enemy!
+825: event: Enemy spawned!
+826: event: Helper stop seeing an enemy!
+827: Event: Enemy death.
+828: event: Helper detected an enemy!
+829: event: Enemy spawned!
+830: event: Helper stop seeing an enemy!
+831: Event: Enemy death.
+832: event: Helper detected an enemy!
+833: event: Enemy spawned!
+834: event: Helper has stopped seeing an enemy!
+835: Event: Enemy death.
+836: event: Helper detected an enemy!
+837: event: Enemy spawned!
+838: event: Helper stop seeing an enemy!
+839: Event: Enemy death.
+840: event: Helper detected an enemy!
+841: event: Enemy spawned!
+842: event: Helper stop seeing an enemy!
+843: Event: Enemy death.
+844: event: Pits have changed.
+845: event: Pits will change in 3 seconds!
+846: event: Helper detected an enemy!
+847: event: Enemy spawned!
+848: event: Helper stop seeing an enemy!
+849: Event: Enemy death.
+850: event: Helper detected an enemy!
+851: event: Enemy spawned!
+852: event: Helper has stopped seeing an enemy!
+853: Event: Enemy death.
+854: event: Helper detected an enemy!
+855: event: Enemy spawned!
+856: event: Helper has stopped seeing an enemy!
+857: Event: Enemy death.
+858: event: Helper detected an enemy!
+859: event: Enemy spawned!
+860: event: Helper stop seeing an enemy!
+861: Event: Enemy death.
+862: event: Helper detected an enemy!
+863: event: Enemy spawned!
+864: event: Helper stop seeing an enemy!
+865: Event: Enemy death.
+866: event: Helper detected an enemy!
+867: event: Enemy spawned!
+868: event: Helper stop seeing an enemy!
+869: Event: Enemy death.
+870: event: Pits have changed.
+871: event: Pits will change in 3 seconds!
+872: event: Helper detected an enemy!
+873: event: Enemy spawned!
+874: event: Helper has stopped seeing an enemy!
+875: Event: Enemy death.
+876: event: Helper detected an enemy!
+877: event: Enemy spawned!
+878: event: Helper stop seeing an enemy!
+879: Event: Enemy death.
+880: event: Helper detected an enemy!
+881: event: Enemy spawned!
+882: event: Helper stop seeing an enemy!
+883: Event: Enemy death.
+884: event: Helper detected an enemy!
+885: event: Enemy spawned!
+886: event: Helper stop seeing an enemy!
+887: Event: Enemy death.
+888: event: Helper detected an enemy!
+889: event: Enemy spawned!
+890: event: Helper stop seeing an enemy!
+891: Event: Enemy death.
+892: event: Helper detected an enemy!
+893: event: Enemy spawned!
+894: event: Helper stop seeing an enemy!
+895: Event: Enemy death.
+896: event: Helper detected an enemy!
+897: event: Enemy spawned!
+898: event: Helper stop seeing an enemy!
+899: Event: Enemy death.
+900: event: Helper detected an enemy!
+901: event: Enemy spawned!
+902: event: Helper stop seeing an enemy!
+903: Event: Enemy death.
+904: event: Pits have changed.
+905: event: Helper detected an enemy!
+906: event: Enemy spawned!
+907: event: Helper stop seeing an enemy!
+908: Event: Enemy death.
+909: event: Pits will change in 3 seconds!
+910: event: Helper detected an enemy!
+911: event: Enemy spawned!
+912: Event: Enemy death.
+913: event: Enemy spawned!
+914: event: Helper stop seeing an enemy!
+915: Event: Enemy death.
+916: event: Helper detected an enemy!
+917: event: Enemy spawned!
+918: event: Helper stop seeing an enemy!
+919: Event: Enemy death.
+920: event: Helper detected an enemy!
+921: event: Enemy spawned!
+922: event: Helper stop seeing an enemy!
+923: Event: Enemy death.
+924: event: Helper detected an enemy!
+925: event: Enemy spawned!
+926: event: Helper stop seeing an enemy!
+927: Event: Enemy death.
+928: event: Helper detected an enemy!
+929: event: Enemy spawned!
+930: event: Helper stop seeing an enemy!
+931: Event: Enemy death.
+932: event: Helper detected an enemy!
+933: event: Enemy spawned!
+934: event: Helper has stopped seeing an enemy!
+935: Event: Enemy death.
+936: event: Helper detected an enemy!
+937: event: Enemy spawned!
+938: event: Helper stop seeing an enemy!
+939: Event: Enemy death.
+940: event: Helper detected an enemy!
+941: event: Enemy spawned!
+942: event: Helper stop seeing an enemy!
+943: Event: Enemy death.
+944: event: Helper detected an enemy!
+945: event: Enemy spawned!
+946: event: Pits have changed.
+947: event: Helper has stopped seeing an enemy!
+948: Event: Enemy death.
+949: event: Helper detected an enemy!
+950: event: Enemy spawned!
+951: Event: Enemy death.
+952: event: Enemy spawned!
+953: event: Pits will change in 3 seconds!
+954: event: Helper has stopped seeing an enemy!
+955: Event: Enemy death.
+956: event: Helper detected an enemy!
+957: event: Enemy spawned!
+958: event: Helper stop seeing an enemy!
+959: Event: Enemy death.
+960: event: Helper detected an enemy!
+961: event: Enemy spawned!
+962: event: Helper stop seeing an enemy!
+963: Event: Enemy death.
+964: event: Helper detected an enemy!
+965: event: Enemy spawned!
+966: event: Helper stop seeing an enemy!
+967: Event: Enemy death.
+968: event: Helper detected an enemy!
+969: event: Enemy spawned!
+970: event: Helper stop seeing an enemy!
+971: Event: Enemy death.
+972: event: Helper detected an enemy!
+973: event: Enemy spawned!
+974: event: Helper stop seeing an enemy!
+975: Event: Enemy death.
+976: event: Helper detected an enemy!
+977: event: Enemy spawned!
+978: event: Helper has stopped seeing an enemy!
+979: Event: Enemy death.
+980: event: Helper detected an enemy!
+981: event: Enemy spawned!
+982: event: Helper stop seeing an enemy!
+983: Event: Enemy death.
+984: event: Helper detected an enemy!
+985: event: Enemy spawned!
+986: event: Helper stop seeing an enemy!
+987: Event: Enemy death.
+988: event: Helper detected an enemy!
+989: event: Enemy spawned!
+990: event: Helper stop seeing an enemy!
+991: Event: Enemy death.
+992: event: Pits have changed.
+993: event: Helper detected an enemy!
+994: event: Enemy spawned!
+995: event: Helper has stopped seeing an enemy!
+996: Event: Enemy death.
+997: event: Pits will change in 3 seconds!
+998: event: Helper detected an enemy!
+999: event: Enemy spawned!
+1000: event: Helper stop seeing an enemy!
+1001: Event: Enemy death.
+1002: event: Helper detected an enemy!
+1003: event: Enemy spawned!
+1004: event: Helper stop seeing an enemy!
+1005: Event: Enemy death.
+1006: event: Helper detected an enemy!
+1007: event: Enemy spawned!
+1008: event: Helper stop seeing an enemy!
+1009: Event: Enemy death.
+1010: event: Helper detected an enemy!
+1011: event: Enemy spawned!
+1012: event: Helper stop seeing an enemy!
+1013: Event: Enemy death.
+1014: event: Helper detected an enemy!
+1015: event: Enemy spawned!
+1016: event: Helper stop seeing an enemy!
+1017: Event: Enemy death.
+1018: event: Helper detected an enemy!
+1019: event: Enemy spawned!
+1020: event: Helper stop seeing an enemy!
+1021: Event: Enemy death.
+1022: event: Helper detected an enemy!
+1023: event: Enemy spawned!
+1024: event: Helper has stopped seeing an enemy!
+1025: Event: Enemy death.
+1026: event: Helper detected an enemy!
+1027: event: Enemy spawned!
+1028: event: Helper stop seeing an enemy!
+1029: Event: Enemy death.
+1030: event: Pits have changed.
+1031: event: Helper detected an enemy!
+1032: event: Enemy spawned!
+1033: event: Helper has stopped seeing an enemy!
+1034: Event: Enemy death.
+1035: event: Pits will change in 3 seconds!
+1036: event: Helper detected an enemy!
+1037: event: Enemy spawned!
+1038: event: Helper stop seeing an enemy!
+1039: Event: Enemy death.
+1040: event: Helper detected an enemy!
+1041: event: Enemy spawned!
+1042: event: Helper stop seeing an enemy!
+1043: Event: Enemy death.
+1044: Event: Grenade has exploded.
+1045: Event: Enemy destroyed by grenade!
+1046: Event: Enemy destroyed by grenade!
+1047: Event: Enemy destroyed by grenade!
+1048: Event: Enemy destroyed by grenade!
+1049: Event: Grenade has exploded.
+1050: Event: Enemy destroyed by grenade!
+1051: Event: Enemy destroyed by grenade!
+1052: Event: Enemy destroyed by grenade!
+1053: Event: Enemy destroyed by grenade!
+1054: event: Helper detected an enemy!
+1055: event: Enemy spawned!
+1056: event: Helper stop seeing an enemy!
+1057: Event: Enemy death.
+1058: event: Helper detected an enemy!
+1059: event: Enemy spawned!
+1060: event: Helper stop seeing an enemy!
+1061: Event: Enemy death.
+1062: event: Helper detected an enemy!
+1063: event: Enemy spawned!
+1064: event: Helper stop seeing an enemy!
+1065: Event: Enemy death.
+1066: event: Helper detected an enemy!
+1067: event: Enemy spawned!
+1068: event: Helper stop seeing an enemy!
+1069: Event: Enemy death.
+1070: event: Helper detected an enemy!
+1071: event: Enemy spawned!
+1072: event: Helper stop seeing an enemy!
+1073: Event: Enemy death.
+1074: event: User decided to go to the store.
+1075: event: Pits have changed.
+1076: event: Pits will change in 3 seconds!
+1077: event: Helper detected an enemy!
+1078: event: Enemy spawned!
+1079: event: Helper has stopped seeing an enemy!
+1080: Event: Enemy death.
+1081: event: Helper detected an enemy!
+1082: event: Enemy spawned!
+1083: event: Helper stop seeing an enemy!
+1084: Event: Enemy death.
+1085: event: Helper detected an enemy!
+1086: event: Enemy spawned!
+1087: event: Helper stop seeing an enemy!
+1088: Event: Enemy death.
+1089: event: User decided to go to the store.
+1090: event: Enemy spawned!
+1091: Event: Enemy death.
+1092: event: Helper detected an enemy!
+1093: event: Enemy spawned!
+1094: event: Helper stop seeing an enemy!
+1095: Event: Enemy death.
+1096: event: Helper detected an enemy!
+1097: event: Enemy spawned!
+1098: event: Helper stop seeing an enemy!
+1099: Event: Enemy death.
+1100: event: Pits have changed.
+1101: event: Helper detected an enemy!
+1102: event: Enemy spawned!
+1103: event: Helper stop seeing an enemy!
+1104: Event: Enemy death.
+1105: event: Pits will change in 3 seconds!
+1106: event: Helper detected an enemy!
+1107: event: Enemy spawned!
+1108: event: Helper stop seeing an enemy!
+1109: Event: Enemy death.
+1110: event: Helper detected an enemy!
+1111: event: Enemy spawned!
+1112: event: Helper stop seeing an enemy!
+1113: Event: Enemy death.
+1114: event: Helper detected an enemy!
+1115: event: Enemy spawned!
+1116: event: Helper stop seeing an enemy!
+1117: Event: Enemy death.
+1118: event: Helper detected an enemy!
+1119: event: Enemy spawned!
+1120: event: Helper stop seeing an enemy!
+1121: Event: Enemy fell into a pit! Ha ha ha!
+1122: event: Helper detected an enemy!
+1123: event: Enemy spawned!
+1124: event: Helper stop seeing an enemy!
+1125: Event: Enemy death.
+1126: event: Helper detected an enemy!
+1127: event: Enemy spawned!
+1128: Event: Grenade has exploded.
+1129: event: Helper stop seeing an enemy!
+1130: Event: Enemy death.
+1131: event: Helper detected an enemy!
+1132: event: Enemy spawned!
+1133: event: Helper stop seeing an enemy!
+1134: Event: Enemy death.
+1135: event: Helper detected an enemy!
+1136: event: Enemy spawned!
+1137: event: Helper stop seeing an enemy!
+1138: Event: Enemy fell into a pit! Ha ha ha!
+1139: event: Helper detected an enemy!
+1140: event: Enemy spawned!
+1141: event: Pits have changed.
+1142: event: Helper stop seeing an enemy!
+1143: Event: Enemy death.
+1144: event: Pits will change in 3 seconds!
+1145: event: Helper detected an enemy!
+1146: event: Enemy spawned!
+1147: event: Helper stop seeing an enemy!
+1148: Event: Enemy death.
+1149: event: Helper detected an enemy!
+1150: event: Enemy spawned!
+1151: event: Helper stop seeing an enemy!
+1152: Event: Enemy death.
+1153: event: Helper detected an enemy!
+1154: event: Enemy spawned!
+1155: event: Helper stop seeing an enemy!
+1156: Event: Enemy death.
+1157: event: Helper detected an enemy!
+1158: event: Enemy spawned!
+1159: event: Helper stop seeing an enemy!
+1160: Event: Enemy death.
+1161: event: Helper detected an enemy!
+1162: event: Enemy spawned!
+1163: event: Helper stop seeing an enemy!
+1164: Event: Enemy death.
+1165: event: Pits have changed.
+1166: event: Helper detected an enemy!
+1167: event: Enemy spawned!
+1168: event: Pits will change in 3 seconds!
+1169: event: Helper stop seeing an enemy!
+1170: Event: Enemy fell into a pit! Ha ha ha!
+1171: event: Helper detected an enemy!
+1172: event: Enemy spawned!
+1173: event: Helper stop seeing an enemy!
+1174: Event: Enemy death.
+1175: event: Helper detected an enemy!
+1176: event: Enemy spawned!
+1177: event: Helper stop seeing an enemy!
+1178: Event: Enemy death.
+1179: event: Helper detected an enemy!
+1180: event: Enemy spawned!
+1181: Event: Enemy death.
+1182: event: Enemy spawned!
+1183: event: User decided to go to the store.
+1184: event: Helper stop seeing an enemy!
+1185: Event: Enemy death.
+1186: event: Helper detected an enemy!
+1187: event: Enemy spawned!
+1188: event: Helper stop seeing an enemy!
+1189: Event: Enemy death.
+1190: event: Helper detected an enemy!
+1191: event: Enemy spawned!
+1192: event: Helper stop seeing an enemy!
+1193: Event: Enemy death.
+1194: event: User decided to go to the store.
+1195: event: Helper detected an enemy!
+1196: event: Enemy spawned!
+1197: event: Helper stop seeing an enemy!
+1198: Event: Enemy death.
+1199: event: Helper detected an enemy!
+1200: event: Enemy spawned!
+1201: event: Pits have changed.
+1202: event: Helper stop seeing an enemy!
+1203: Event: Enemy fell into a pit! Ha ha ha!
+1204: event: Pits will change in 3 seconds!
+1205: event: Helper detected an enemy!
+1206: event: Enemy spawned!
+1207: event: Helper stop seeing an enemy!
+1208: Event: Enemy fell into a pit! Ha ha ha!
+1209: event: Helper detected an enemy!
+1210: event: Enemy spawned!
+1211: event: Helper stop seeing an enemy!
+1212: Event: Enemy death.
+1213: event: Helper detected an enemy!
+1214: event: Enemy spawned!
+1215: event: Helper stop seeing an enemy!
+1216: Event: Enemy fell into a pit! Ha ha ha!
+1217: event: Helper detected an enemy!
+1218: event: Enemy spawned!
+1219: event: User decided to go to the store.
+1220: event: Helper stop seeing an enemy!
+1221: Event: Enemy death.
+1222: Event: Player helper spawned!
+1223: event: User decided to go to the store.
+1224: Event: Player helper killed!
+1225: event: Helper detected an enemy!
+1226: event: Enemy spawned!
+1227: event: Helper stop seeing an enemy!
+1228: Event: Enemy death.
+1229: Event: Player helper spawned!
+1230: event: Pits have changed.
+1231: event: Pits will change in 3 seconds!
+1232: event: User decided to go to the store.
+1233: event: User decided to go to the store.
+1234: event: Pits have changed.
+1235: event: Pits will change in 3 seconds!
+1236: event: Enemy spawned!
+1237: Event: Grenade has exploded.
+1238: Event: Enemy death.
+1239: Event: Enemy destroyed by grenade!
+1240: Event: Enemy destroyed by grenade!
+1241: Event: Grenade has exploded.
+1242: Event: Enemy destroyed by grenade!
+1243: Event: Enemy destroyed by grenade!
+1244: Event: Enemy destroyed by grenade!
+1245: Event: Enemy destroyed by grenade!
+1246: Event: Grenade has exploded.
+1247: Event: Enemy destroyed by grenade!
+1248: Event: Enemy destroyed by grenade!
+1249: Event: Enemy destroyed by grenade!
+1250: Event: Enemy destroyed by grenade!
+1251: Event: Grenade has exploded.
+1252: Event: Enemy destroyed by grenade!
+1253: Event: Enemy destroyed by grenade!
+1254: Event: Enemy destroyed by grenade!
+1255: Event: Enemy destroyed by grenade!
+1256: Event: Grenade has exploded.
+1257: Event: Enemy destroyed by grenade!
+1258: Event: Enemy destroyed by grenade!
+1259: Event: Enemy destroyed by grenade!
+1260: Event: Enemy destroyed by grenade!
+1261: event: Enemy spawned!
+1262: Event: Enemy fell into a pit! Ha ha ha!
+1263: event: Enemy spawned!
+1264: Event: Enemy death.
+1265: event: Enemy spawned!
+1266: Event: Enemy death.
+1267: Event: Game loaded successfully!
+1268: event: Loading game.
+1269: event: Mason has decided to start a new game.
+1270: event. User wants a normal game.
+1271: Event: Enemy fell into a pit! Ha ha ha!
+1272: event: Enemy spawned!
+1273: Event: Enemy fell into a pit! Ha ha ha!
+1274: event: Pits have changed.
+1275: Event: Player helper killed!
+1276: Event: Player helper spawned!
+1277: event: Pits will change in 3 seconds!
+1278: event: Enemy spawned!
+1279: Event: Grenade has exploded.
+1280: Event: Grenade has exploded.
+1281: Event: Grenade has exploded.
+1282: Event: Enemy death.
+1283: Event: Enemy destroyed by grenade!
+1284: Event: Enemy destroyed by grenade!
+1285: Event: Grenade has exploded.
+1286: Event: Enemy destroyed by grenade!
+1287: Event: Enemy destroyed by grenade!
+1288: Event: Enemy destroyed by grenade!
+1289: Event: Enemy destroyed by grenade!
+1290: Event: Grenade has exploded.
+1291: Event: Enemy destroyed by grenade!
+1292: Event: Enemy destroyed by grenade!
+1293: Event: Enemy destroyed by grenade!
+1294: Event: Enemy destroyed by grenade!
+1295: Event: Grenade has exploded.
+1296: Event: Enemy destroyed by grenade!
+1297: Event: Enemy destroyed by grenade!
+1298: Event: Enemy destroyed by grenade!
+1299: Event: Enemy destroyed by grenade!
+1300: Event: Grenade has exploded.
+1301: Event: Enemy destroyed by grenade!
+1302: Event: Enemy destroyed by grenade!
+1303: Event: Enemy destroyed by grenade!
+1304: Event: Enemy destroyed by grenade!
+1305: event: Enemy spawned!
+1306: Event: Enemy fell into a pit! Ha ha ha!
+1307: event: Enemy spawned!
+1308: Event: Enemy fell into a pit! Ha ha ha!
+1309: event: Enemy spawned!
+1310: Event: Grenade has exploded.
+1311: Event: Enemy death.
+1312: Event: Enemy destroyed by grenade!
+1313: event: Enemy spawned!
+1314: Event: Enemy death.
+1315: Event: Game loaded successfully!
+1316: event: Loading game.
+1317: event: Mason has decided to start a new game.
+1318: event. User wants a normal game.
+1319: event: Enemy spawned!
+1320: Event: Enemy death.
+1321: Event: Game loaded successfully!
+1322: event: Loading game.
+1323: event: Mason has decided to start a new game.
+1324: event. User wants a normal game.
+1325: Event: Enemy fell into a pit! Ha ha ha!
+1326: event: Enemy spawned!
+1327: Event: Enemy death.
+1328: Event: Game loaded successfully!
+1329: event: Loading game.
+1330: event: Mason has decided to start a new game.
+1331: event. User wants a normal game.
+1332: event: Helper detected an enemy!
+1333: Event: Player helper spawned!
+1334: event: Pits have changed.
+1335: event: Pits will change in 3 seconds!
+1336: event: Enemy spawned!
+1337: Event: Enemy death.
+1338: event: Enemy spawned!
+1339: Event: Enemy fell into a pit! Ha ha ha!
+1340: event: Enemy spawned!
+1341: Event: Enemy fell into a pit! Ha ha ha!
+1342: event: Enemy spawned!
+1343: Event: Enemy fell into a pit! Ha ha ha!
+1344: event: Enemy spawned!
+1345: Event: Enemy fell into a pit! Ha ha ha!
+1346: event: Enemy spawned!
+1347: Event: Enemy death.
+1348: Event: Game loaded successfully!
+1349: event: Loading game.
+1350: event: Mason has decided to start a new game.
+1351: event. User wants a normal game.
+1352: Retrieving message of the day...
+1353: Event: Installing keyhook...
+1354: event: Checking name...
+1355: event: Setting up registry...
+1356: event. Version=5.5.0.070.
+1357: event. loading started.
+1358: 
+0: event: Mason has decided to exit.
+1: event: Pits have changed.
+2: event: Enemy spawned!
+3: event: Pits will change in 3 seconds!
+4: Event: Enemy fell into a pit! Ha ha ha!
+5: event: Enemy spawned!
+6: Event: Enemy fell into a pit! Ha ha ha!
+7: event: Enemy spawned!
+8: Event: Enemy fell into a pit! Ha ha ha!
+9: event: Enemy spawned!
+10: Event: Enemy fell into a pit! Ha ha ha!
+11: event: Enemy spawned!
+12: Event: Enemy fell into a pit! Ha ha ha!
+13: event: Enemy spawned!
+14: Event: Enemy fell into a pit! Ha ha ha!
+15: event: Enemy spawned!
+16: Event: Enemy death.
+17: Event: Game loaded successfully!
+18: event: Loading game.
+19: event: Mason has decided to start a new game.
+20: event. User wants a normal game.
+21: Retrieving message of the day...
+22: Event: Installing keyhook...
+23: event: Checking name...
+24: event: Setting up registry...
+25: event. Version=5.5.0.072.
+26: event. loading started.
+27: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: event: Pits will change in 3 seconds!
+3: event: Game unpaused by user
+4: event: Game paused by user
+5: Event: Enemy fell into a pit! Ha ha ha!
+6: event: Enemy spawned!
+7: Event: Enemy fell into a pit! Ha ha ha!
+8: event: Game unpaused by user
+9: event: Game paused by user
+10: event: Enemy spawned!
+11: Event: Enemy fell into a pit! Ha ha ha!
+12: event: Enemy spawned!
+13: Event: Enemy death.
+14: Event: Game loaded successfully!
+15: event: Loading game.
+16: event: Mason has decided to start a new game.
+17: event. User wants a normal game.
+18: Retrieving message of the day...
+19: Event: Installing keyhook...
+20: event: Checking name...
+21: event: Setting up registry...
+22: event. Version=5.5.0.072.
+23: event. loading started.
+24: 
+0: event: Mason has decided to exit.
+1: event: Game unpaused by user
+2: event: Game paused by user
+3: event: Game unpaused by user
+4: event: Game paused by user
+5: event: Game unpaused by user
+6: event: Game paused by user
+7: event: Enemy spawned!
+8: Event: Enemy fell into a pit! Ha ha ha!
+9: event: Enemy spawned!
+10: Event: Enemy death.
+11: Event: Game loaded successfully!
+12: event: Loading game.
+13: event: Mason has decided to start a new game.
+14: event. User wants a normal game.
+15: Retrieving message of the day...
+16: Event: Installing keyhook...
+17: event: Checking name...
+18: event: Setting up registry...
+19: event. Version=5.5.0.072.
+20: event. loading started.
+21: 
+0: event: Mason has decided to exit.
+1: event: Game unpaused by user
+2: event: Game paused by user
+3: event: Game unpaused by user
+4: event: Game paused by user
+5: event: Game unpaused by user
+6: event: Game paused by user
+7: event: Enemy spawned!
+8: Event: Enemy death.
+9: Event: Game loaded successfully!
+10: event: Loading game.
+11: event: Mason has decided to start a new game.
+12: event. User wants a normal game.
+13: Retrieving message of the day...
+14: Event: Installing keyhook...
+15: event: Checking name...
+16: event: Setting up registry...
+17: event. Version=5.5.0.072.
+18: event. loading started.
+19: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: event: Enemy spawned!
+4: Event: Enemy death.
+5: Event: Game loaded successfully!
+6: event: Loading game.
+7: event: Mason has decided to start a new game.
+8: event. User wants a normal game.
+9: Retrieving message of the day...
+10: Event: Installing keyhook...
+11: event: Checking name...
+12: event: Setting up registry...
+13: event. Version=5.5.0.072.
+14: event. loading started.
+15: 
+0: event: Mason has decided to exit.
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=5.5.0.072.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=5.5.0.072.
+12: event. loading started.
+13: 
+0: event: Mason has decided to exit.
+1: Event: Enemy death.
+2: Event: Enemy death.
+3: Event: Enemy death.
+4: event: Enemy spawned!
+5: Event: Enemy death.
+6: Event: Enemy death.
+7: event: Enemy spawned!
+8: Event: Enemy death.
+9: Event: Enemy death.
+10: Event: Enemy death.
+11: Event: Enemy death.
+12: event: Enemy spawned!
+13: Event: Enemy death.
+14: Event: Enemy death.
+15: Event: Game loaded successfully!
+16: event: Loading game.
+17: event: Mason has decided to start a new game.
+18: event. User wants a normal game.
+19: Retrieving message of the day...
+20: Event: Installing keyhook...
+21: event: Checking name...
+22: event: Setting up registry...
+23: event. Version=5.5.0.072.
+24: event. loading started.
+25: 
+0: event: Mason has decided to exit.
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=5.5.0.072.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=5.5.0.072.
+12: event. loading started.
+13: 
+0: event: Mason has decided to exit.
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=5.5.0.072.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=5.5.0.072.
+12: event. loading started.
+13: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: event: Mason has decided to exit.
+8: event: Enemy spawned!
+9: Event: Enemy death.
+10: Event: Game loaded successfully!
+11: event: Loading game.
+12: event: Mason has decided to start a new game.
+13: event. User wants a normal game.
+14: Retrieving message of the day...
+15: Event: Installing keyhook...
+16: event: Checking name...
+17: event: Setting up registry...
+18: event. Version=5.5.0.072.
+19: event. loading started.
+20: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=5.5.0.072.
+12: event. loading started.
+13: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: event: Enemy spawned!
+4: Event: Enemy death.
+5: Event: Game loaded successfully!
+6: event: Loading game.
+7: event: Mason has decided to start a new game.
+8: event. User wants a normal game.
+9: Retrieving message of the day...
+10: Event: Installing keyhook...
+11: event: Checking name...
+12: event: Setting up registry...
+13: event. Version=5.5.0.072.
+14: event. loading started.
+15: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: event: Enemy spawned!
+4: Event: Enemy death.
+5: Event: Game loaded successfully!
+6: event: Loading game.
+7: event: Mason has decided to start a new game.
+8: event. User wants a normal game.
+9: Retrieving message of the day...
+10: Event: Installing keyhook...
+11: event: Checking name...
+12: event: Setting up registry...
+13: event. Version=5.5.0.072.
+14: event. loading started.
+15: 
+0: event: Mason has decided to exit.
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=5.5.0.072.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: event: Helper has stopped seeing an enemy!
+2: Event: Enemy death.
+3: event: Helper detected an enemy!
+4: event: Enemy spawned!
+5: event: Helper has stopped seeing an enemy!
+6: Event: Enemy death.
+7: event: Helper detected an enemy!
+8: event: Enemy spawned!
+9: event: Helper stop seeing an enemy!
+10: Event: Enemy death.
+11: event: Helper detected an enemy!
+12: event: Enemy spawned!
+13: Event: Enemy death.
+14: event: Enemy spawned!
+15: event: Helper has stopped seeing an enemy!
+16: Event: Enemy death.
+17: event: Helper detected an enemy!
+18: Event: Player helper spawned!
+19: event: Enemy spawned!
+20: Event: Enemy death.
+21: Event: Game loaded successfully!
+22: event: Loading game.
+23: event: Mason has decided to start a new game.
+24: event. User wants a normal game.
+25: event: Mason has decided to exit.
+26: Event: Enemy death.
+27: Event: Game loaded successfully!
+28: event: Loading game.
+29: event: Mason has decided to start a new game.
+30: event. User wants a normal game.
+31: Retrieving message of the day...
+32: Event: Installing keyhook...
+33: event: Checking name...
+34: event: Setting up registry...
+35: event. Version=5.5.0.072.
+36: event. loading started.
+37: 
+0: event: Mason has decided to exit.
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: event: Mason has decided to exit.
+7: event: Helper has stopped seeing an enemy!
+8: Event: Enemy death.
+9: event: Helper detected an enemy!
+10: event: Enemy spawned!
+11: event: Helper has stopped seeing an enemy!
+12: Event: Enemy death.
+13: event: Helper detected an enemy!
+14: event: Enemy spawned!
+15: event: Helper stop seeing an enemy!
+16: Event: Enemy death.
+17: event: Helper detected an enemy!
+18: event: Enemy spawned!
+19: Event: Enemy death.
+20: event: Enemy spawned!
+21: event: Helper has stopped seeing an enemy!
+22: Event: Enemy death.
+23: event: Helper detected an enemy!
+24: Event: Player helper spawned!
+25: event: Enemy spawned!
+26: Event: Enemy death.
+27: Event: Game loaded successfully!
+28: event: Loading game.
+29: event: Mason has decided to start a new game.
+30: event. User wants a normal game.
+31: event: Mason has decided to exit.
+32: Event: Enemy death.
+33: Event: Game loaded successfully!
+34: event: Loading game.
+35: event: Mason has decided to start a new game.
+36: event. User wants a normal game.
+37: Retrieving message of the day...
+38: Event: Installing keyhook...
+39: event: Checking name...
+40: event: Setting up registry...
+41: event. Version=5.5.0.072.
+42: event. loading started.
+43: 
+0: event: Mason has decided to exit.
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=5.5.0.072.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: event: Enemy spawned!
+4: Event: Enemy death.
+5: event: Enemy spawned!
+6: Event: Enemy death.
+7: event: Enemy spawned!
+8: Event: Enemy death.
+9: event: Enemy spawned!
+10: Event: Enemy death.
+11: Event: Game loaded successfully!
+12: event: Loading game.
+13: event: Mason has decided to start a new game.
+14: event. User wants a normal game.
+15: event: Mason has decided to exit.
+16: Event: Enemy death.
+17: Event: Game loaded successfully!
+18: event: Loading game.
+19: event: Mason has decided to start a new game.
+20: event. User wants a normal game.
+21: Retrieving message of the day...
+22: Event: Installing keyhook...
+23: event: Checking name...
+24: event: Setting up registry...
+25: event. Version=5.5.0.072.
+26: event. loading started.
+27: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: event: Enemy spawned!
+4: Event: Enemy death.
+5: Event: Game loaded successfully!
+6: event: Loading game.
+7: event: Mason has decided to start a new game.
+8: event. User wants a normal game.
+9: event: Mason has decided to exit.
+10: event: Enemy spawned!
+11: Event: Enemy death.
+12: event: Enemy spawned!
+13: Event: Enemy death.
+14: event: Enemy spawned!
+15: Event: Enemy death.
+16: event: Enemy spawned!
+17: Event: Enemy death.
+18: event: Enemy spawned!
+19: Event: Enemy death.
+20: Event: Game loaded successfully!
+21: event: Loading game.
+22: event: Mason has decided to start a new game.
+23: event. User wants a normal game.
+24: event: Mason has decided to exit.
+25: Event: Enemy death.
+26: Event: Game loaded successfully!
+27: event: Loading game.
+28: event: Mason has decided to start a new game.
+29: event. User wants a normal game.
+30: Retrieving message of the day...
+31: Event: Installing keyhook...
+32: event: Checking name...
+33: event: Setting up registry...
+34: event. Version=5.5.0.072.
+35: event. loading started.
+36: 
+0: event: Mason has decided to exit.
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=5.5.0.072.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=5.5.0.072.
+12: event. loading started.
+13: 
+0: event: Mason has decided to exit.
+1: event: Helper has stopped seeing an enemy!
+2: Event: Enemy death.
+3: event: Helper detected an enemy!
+4: event: Enemy spawned!
+5: Event: Enemy death.
+6: event: Enemy spawned!
+7: event: Helper has stopped seeing an enemy!
+8: Event: Enemy death.
+9: event: Helper detected an enemy!
+10: Event: Player helper spawned!
+11: event: Enemy spawned!
+12: Event: Enemy death.
+13: Event: Game loaded successfully!
+14: event: Loading game.
+15: event: Mason has decided to start a new game.
+16: event. User wants a normal game.
+17: Retrieving message of the day...
+18: Event: Installing keyhook...
+19: event: Checking name...
+20: event: Setting up registry...
+21: event. Version=5.5.0.072.
+22: event. loading started.
+23: 
+0: event: Mason has decided to exit.
+1: event: Helper detected an enemy!
+2: event: Enemy spawned!
+3: event: Helper stop seeing an enemy!
+4: Event: Enemy death.
+5: event: Helper detected an enemy!
+6: event: Enemy spawned!
+7: event: Helper stop seeing an enemy!
+8: Event: Enemy death.
+9: event: Helper detected an enemy!
+10: event: Enemy spawned!
+11: event: Helper stop seeing an enemy!
+12: Event: Enemy death.
+13: event: Helper detected an enemy!
+14: event: Enemy spawned!
+15: event: Helper stop seeing an enemy!
+16: Event: Enemy death.
+17: event: Helper detected an enemy!
+18: event: Enemy spawned!
+19: Event: Player helper spawned!
+20: Event: Enemy death.
+21: Event: Game loaded successfully!
+22: event: Loading game.
+23: event: Mason has decided to start a new game.
+24: event. User wants an advanced game.
+25: event: Mason has decided to exit.
+26: event: Helper has stopped seeing an enemy!
+27: Event: Enemy death.
+28: event: Helper detected an enemy!
+29: event: Enemy spawned!
+30: Event: Enemy death.
+31: event: Enemy spawned!
+32: event: Helper has stopped seeing an enemy!
+33: Event: Enemy death.
+34: event: Helper detected an enemy!
+35: Event: Player helper spawned!
+36: event: Enemy spawned!
+37: Event: Enemy death.
+38: Event: Game loaded successfully!
+39: event: Loading game.
+40: event: Mason has decided to start a new game.
+41: event. User wants a normal game.
+42: Retrieving message of the day...
+43: Event: Installing keyhook...
+44: event: Checking name...
+45: event: Setting up registry...
+46: event. Version=5.5.0.072.
+47: event. loading started.
+48: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=5.5.0.072.
+12: event. loading started.
+13: 
+0: event: Mason has decided to exit.
+1: Event: Enemy death.
+2: event: Enemy spawned!
+3: Event: Enemy death.
+4: Event: Game loaded successfully!
+5: event: Loading game.
+6: event: Mason has decided to start a new game.
+7: event. User wants a normal game.
+8: Retrieving message of the day...
+9: Event: Installing keyhook...
+10: event: Checking name...
+11: event: Setting up registry...
+12: event. Version=5.5.0.072.
+13: event. loading started.
+14: 
+0: event: Mason has decided to exit.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: event: Enemy spawned!
+4: Event: Enemy death.
+5: event: Enemy spawned!
+6: Event: Enemy death.
+7: event: Enemy spawned!
+8: Event: Enemy death.
+9: Event: Game loaded successfully!
+10: event: Loading game.
+11: event: Mason has decided to start a new game.
+12: event. User wants a normal game.
+13: Retrieving message of the day...
+14: Event: Installing keyhook...
+15: event: Checking name...
+16: event: Setting up registry...
+17: event. Version=5.5.0.072.
+18: event. loading started.
+19: 
+0: event: Mason has decided to exit.
+1: Event: Enemy death.
+2: event: Enemy spawned!
+3: Event: Enemy death.
+4: Event: Game loaded successfully!
+5: event: Loading game.
+6: event: Mason has decided to start a new game.
+7: event. User wants a normal game.
+8: Retrieving message of the day...
+9: Event: Installing keyhook...
+10: event: Checking name...
+11: event: Setting up registry...
+12: event. Version=5.5.0.072.
+13: event. loading started.
+14: 
+0: event: Mason has decided to exit.
+1: Event: Player helper no longer spawned!
+2: Event: Player helper spawned!
+3: Event: Player helper no longer spawned!
+4: Event: Player helper spawned!
+5: Event: Player helper no longer spawned!
+6: Event: Player helper spawned!
+7: Event: Player helper no longer spawned!
+8: Event: Player helper spawned!
+9: Event: Player helper no longer spawned!
+10: Event: Player helper spawned!
+11: Event: Player helper no longer spawned!
+12: Event: Player helper spawned!
+13: Event: Game loaded successfully!
+14: event: Loading game.
+15: event: Mason has decided to start a new game.
+16: event. User wants a normal game.
+17: Retrieving message of the day...
+18: Event: Installing keyhook...
+19: event: Checking name...
+20: event: Setting up registry...
+21: event. Version=5.5.0.072.
+22: event. loading started.
+23: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=5.5.0.072.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: event: User decided to go to the store.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=6.0.0.074.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: event: User decided to go to the store.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=6.0.0.074.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: event: Game unpaused by user
+2: event: Game paused by user
+3: event: Game unpaused by user
+4: event: Game paused by user
+5: Event: Game loaded successfully!
+6: event: Loading game.
+7: event: Mason has decided to start a new game.
+8: event. User wants a normal game.
+9: Retrieving message of the day...
+10: Event: Installing keyhook...
+11: event: Checking name...
+12: event: Setting up registry...
+13: event. Version=6.0.0.074.
+14: event. loading started.
+15: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Player helper spawned!
+2: Event: Player helper no longer spawned!
+3: Event: Player helper spawned!
+4: Event: Player helper no longer spawned!
+5: Event: Player helper spawned!
+6: Event: Player helper no longer spawned!
+7: Event: Player helper spawned!
+8: Event: Player helper no longer spawned!
+9: Event: Player helper spawned!
+10: Event: Player helper no longer spawned!
+11: Event: Player helper spawned!
+12: Event: Game loaded successfully!
+13: event: Loading game.
+14: event: Mason has decided to start a new game.
+15: event. User wants a normal game.
+16: Retrieving message of the day...
+17: Event: Installing keyhook...
+18: event: Checking name...
+19: event: Setting up registry...
+20: event. Version=6.0.0.074.
+21: event. loading started.
+22: 
+0: event: Mason has decided to exit.
+1: Event: Player helper spawned!
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=6.0.0.074.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Teleporter started!
+2: Event: Teleporter started!
+3: Event: Teleporter started!
+4: Event: Teleporter started!
+5: Event: Teleporter started!
+6: Event: Player helper no longer spawned!
+7: Event: Player helper spawned!
+8: Event: Player helper no longer spawned!
+9: Event: Player helper spawned!
+10: Event: Player helper no longer spawned!
+11: Event: Player helper spawned!
+12: Event: Game loaded successfully!
+13: event: Loading game.
+14: event: Mason has decided to start a new game.
+15: event. User wants a normal game.
+16: Retrieving message of the day...
+17: Event: Installing keyhook...
+18: event: Checking name...
+19: event: Setting up registry...
+20: event. Version=6.0.0.074.
+21: event. loading started.
+22: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: event: Game unpaused by user
+2: event: Game paused by user
+3: event: Game unpaused by user
+4: event: Game paused by user
+5: event: Game unpaused by user
+6: event: Game paused by user
+7: event: Game unpaused by user
+8: event: Game paused by user
+9: event: Game unpaused by user
+10: event: Game paused by user
+11: Event: Game loaded successfully!
+12: event: Loading game.
+13: event: Mason has decided to start a new game.
+14: event. User wants a normal game.
+15: Retrieving message of the day...
+16: Event: Installing keyhook...
+17: event: Checking name...
+18: event: Setting up registry...
+19: event. Version=6.0.0.074.
+20: event. loading started.
+21: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: event: Game unpaused by user
+2: event: Game paused by user
+3: event: Game unpaused by user
+4: event: Game paused by user
+5: event: Game unpaused by user
+6: event: Game paused by user
+7: event: Game unpaused by user
+8: event: Game paused by user
+9: event: Game unpaused by user
+10: event: Game paused by user
+11: event: Game unpaused by user
+12: event: Game paused by user
+13: event: Game unpaused by user
+14: event: Game paused by user
+15: event: Game unpaused by user
+16: event: Game paused by user
+17: event: Game unpaused by user
+18: event: Game paused by user
+19: event: Game unpaused by user
+20: event: Game paused by user
+21: Event: Game loaded successfully!
+22: event: Loading game.
+23: event: Mason has decided to start a new game.
+24: event. User wants a normal game.
+25: event: Mason has decided to exit.
+26: Event: Game loaded successfully!
+27: event: Loading game.
+28: event: Mason has decided to start a new game.
+29: event. User wants a normal game.
+30: Retrieving message of the day...
+31: Event: Installing keyhook...
+32: event: Checking name...
+33: event: Setting up registry...
+34: event. Version=6.0.0.074.
+35: event. loading started.
+36: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants an advanced game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: event: User decided to go to the store.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=6.0.0.074.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: event: Game unpaused by user
+2: event: Game paused by user
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=6.0.0.074.
+12: event. loading started.
+13: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Teleporter started!
+2: Event: Teleporter started!
+3: Event: Teleporter started!
+4: Event: Teleporter started!
+5: event: Game unpaused by user
+6: event: Game paused by user
+7: Event: Teleporter started!
+8: Event: Teleporter started!
+9: Event: Teleporter started!
+10: event: User decided to go to the store.
+11: Event: Teleporter started!
+12: Event: Teleporter started!
+13: Event: Teleporter started!
+14: event: User decided to go to the store.
+15: Event: Teleporter started!
+16: Event: Teleporter started!
+17: Event: Teleporter started!
+18: Event: Teleporter started!
+19: Event: Teleporter started!
+20: Event: Game loaded successfully!
+21: event: Loading game.
+22: event: Mason has decided to start a new game.
+23: event. User wants a normal game.
+24: event: Mason has decided to exit.
+25: Event: Game loaded successfully!
+26: event: Loading game.
+27: event: Mason has decided to start a new game.
+28: event. User wants a normal game.
+29: Retrieving message of the day...
+30: Event: Installing keyhook...
+31: event: Checking name...
+32: event: Setting up registry...
+33: event. Version=6.0.0.074.
+34: event. loading started.
+35: 
+0: event: Mason has decided to exit.
+1: Event: Grenade has exploded.
+2: Event: Grenade has exploded.
+3: Event: Grenade has exploded.
+4: Event: Grenade has exploded.
+5: Event: Grenade has exploded.
+6: Event: Game loaded successfully!
+7: event: Loading game.
+8: event: Mason has decided to start a new game.
+9: event. User wants a normal game.
+10: Retrieving message of the day...
+11: Event: Installing keyhook...
+12: event: Checking name...
+13: event: Setting up registry...
+14: event. Version=6.0.0.074.
+15: event. loading started.
+16: 
+0: event: Mason has decided to exit.
+1: Event: Grenade has exploded.
+2: Event: Grenade has exploded.
+3: Event: Grenade has exploded.
+4: Event: Grenade has exploded.
+5: Event: Grenade has exploded.
+6: Event: Grenade has exploded.
+7: Event: Grenade has exploded.
+8: Event: Grenade has exploded.
+9: Event: Grenade has exploded.
+10: Event: Grenade has exploded.
+11: Event: Grenade has exploded.
+12: Event: Grenade has exploded.
+13: Event: Grenade has exploded.
+14: Event: Grenade has exploded.
+15: Event: Grenade has exploded.
+16: Event: Grenade has exploded.
+17: Event: Grenade has exploded.
+18: Event: Grenade has exploded.
+19: Event: Grenade has exploded.
+20: Event: Grenade has exploded.
+21: Event: Grenade has exploded.
+22: Event: Game loaded successfully!
+23: event: Loading game.
+24: event: Mason has decided to start a new game.
+25: event. User wants a normal game.
+26: Retrieving message of the day...
+27: Event: Installing keyhook...
+28: event: Checking name...
+29: event: Setting up registry...
+30: event. Version=6.0.0.074.
+31: event. loading started.
+32: 
+0: event: Mason has decided to exit.
+1: Event: Teleporter started!
+2: Event: Grenade has exploded.
+3: Event: Grenade has exploded.
+4: Event: Grenade has exploded.
+5: Event: Grenade has exploded.
+6: Event: Grenade has exploded.
+7: Event: Grenade has exploded.
+8: Event: Grenade has exploded.
+9: Event: Grenade has exploded.
+10: Event: Grenade has exploded.
+11: Event: Grenade has exploded.
+12: Event: Grenade has exploded.
+13: Event: Grenade has exploded.
+14: Event: Grenade has exploded.
+15: Event: Game loaded successfully!
+16: event: Loading game.
+17: event: Mason has decided to start a new game.
+18: event. User wants a normal game.
+19: Retrieving message of the day...
+20: Event: Installing keyhook...
+21: event: Checking name...
+22: event: Setting up registry...
+23: event. Version=6.0.0.074.
+24: event. loading started.
+25: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Grenade has exploded.
+2: Event: Grenade has exploded.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event. User wants a normal game.
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=6.0.0.074.
+12: event. loading started.
+13: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Grenade has exploded.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants a normal game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=6.0.0.074.
+11: event. loading started.
+12: 
+0: event: Mason has decided to exit.
+1: event: User has decided to sell stuff.
+2: event: User decided to go to the store.
+3: event: User has decided to sell stuff.
+4: event: User decided to go to the store.
+5: event: User decided to go to the store.
+6: Event: Game loaded successfully!
+7: event: Loading game.
+8: event: Mason has decided to start a new game.
+9: event. User wants a normal game.
+10: Retrieving message of the day...
+11: Event: Installing keyhook...
+12: event: Checking name...
+13: event: Setting up registry...
+14: event. Version=6.0.0.074.
+15: event. loading started.
+16: 

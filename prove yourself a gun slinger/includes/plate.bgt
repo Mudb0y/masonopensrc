@@ -1,0 +1,104 @@
+plate@[] plates(0);
+int spawntime;
+timer spawntimer;
+class plate
+{
+int platetime;
+int platesound;
+int px;
+int dir;
+timer platetimer;
+plate(int level)
+{
+dir=random(1,2);
+if (dir==1)
+{
+px=-5;
+}
+else if (dir==2)
+{
+px=25;
+}
+platetime=280-(level*12);
+if (platetime<=30)
+{
+platetime=30;
+}
+platesound=p.play_extended_1d("sounds/plate.wav",x,px,0,0,true,0,0,0,75+(level*3));
+}
+}
+void plateloop()
+{
+if (spawntimer.elapsed>=spawntime and platestoshoot>0)
+{
+spawntimer.restart();
+spawn_plate(round);
+}
+for (uint i=0; i<plates.length(); i++)
+{
+if (plates[i].dir==1 and plates[i].platetimer.elapsed>=plates[i].platetime)
+{
+plates[i].platetimer.restart();
+plates[i].px+=1;
+p.update_sound_1d(plates[i].platesound, plates[i].px);
+if (plates[i].px>=20)
+{
+p.play_1d("sounds/wall.wav",x,plates[i].px,false);
+p.destroy_sound(plates[i].platesound);
+platestoshoot-=1;
+plates.remove_at(i);
+break;
+}
+}
+else if (plates[i].dir==2 and plates[i].platetimer.elapsed>=plates[i].platetime)
+{
+plates[i].platetimer.restart();
+plates[i].px-=1;
+p.update_sound_1d(plates[i].platesound, plates[i].px);
+if (plates[i].px<=0)
+{
+p.play_1d("sounds/wall.wav",x,plates[i].px,false);
+p.destroy_sound(plates[i].platesound);
+plates.remove_at(i);
+platestoshoot-=1;
+break;
+}
+}
+}
+}
+void spawn_plate(int lvl)
+{
+plate plate1(lvl);
+plates.insert_last(plate1);
+}
+void shoot_plate()
+{
+for (uint i=0; i<plates.length(); i++)
+{
+if (gunx>=plates[i].px-gunrange and gunx<=plates[i].px+gunrange)
+{
+p.play_1d("sounds/hit"+random(1,2)+".wav",x,plates[i].px,false);
+p.destroy_sound(plates[i].platesound);
+if (plates[i].dir==1)
+{
+score+=50-(plates[i].px-gunx);
+}
+else if (plates[i].dir==2)
+{
+score+=50-(gunx-plates[i].px);
+}
+plates.remove_at(i);
+platesshot=1;
+platestoshoot-=1;
+break;
+}
+}
+}
+void destroy_all_plates()
+{
+for (uint i=0; i<plates.length(); i++)
+{
+p.destroy_sound(plates[i].platesound);
+}
+plates.resize(0);
+}

@@ -1,0 +1,21 @@
+http download;
+void getmotd()
+{
+string motd=download.get("http://mtgstudiosus.tk/sb/motd.txt");
+if(get_last_error()!=0)
+{
+alert("Error", "An error occured.\r\nDescription: " + motd + "");
+}
+else
+{
+while(download.progress)
+{
+motd+=download.request();
+wait(5);
+}
+dlg("message of the day: "+motd);
+bufferlength+=1;
+speechbuffer.resize(bufferlength);
+speechbuffer.insert_at(0, "event: Message of the day is "+motd);
+}
+}

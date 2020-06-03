@@ -1,0 +1,267 @@
+0: Machine gun shoots quite much slower!
+1: event: Item retrieved!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. loading started.
+11: 
+0: event: Item spawned!
+1: event: Pits have changed.
+2: event: Pits will change in 3 seconds!
+3: event: Helper detected an enemy!
+4: event: Enemy spawned!
+5: event: Helper stop seeing an enemy!
+6: Event: Enemy death.
+7: Event: Player helper spawned!
+8: event: Item spawned!
+9: event: Enemy spawned!
+10: Event: Copter no longer spawned.
+11: event: Copter has killed an enemy!
+12: Event: Enemy death.
+13: event: Item spawned!
+14: event: Copter has detected an enemy!
+15: event: Enemy spawned!
+16: event: Copter has killed an enemy!
+17: Event: Enemy death.
+18: event: Copter has detected an enemy!
+19: event: Enemy spawned!
+20: event: Copter has killed an enemy!
+21: Event: Enemy death.
+22: event: Copter has detected an enemy!
+23: event: Enemy spawned!
+24: Event: Grenade has exploded.
+25: event: Copter has killed an enemy!
+26: Event: Enemy death.
+27: Event: Pit 3 destroyed by grenade!
+28: Event: Pit 2 destroyed by grenade!
+29: event: Copter has detected an enemy!
+30: event: Enemy spawned!
+31: event: Pits have changed.
+32: event: Copter has killed an enemy!
+33: Event: Enemy death.
+34: event: Pits will change in 3 seconds!
+35: event: Copter has detected an enemy!
+36: event: Enemy spawned!
+37: event: Copter has killed an enemy!
+38: Event: Enemy death.
+39: event: Copter has detected an enemy!
+40: event: Enemy spawned!
+41: event: Copter has killed an enemy!
+42: Event: Enemy death.
+43: Event: Player helper no longer spawned!
+44: event: Item spawned!
+45: event: Helper detected an enemy!
+46: event: Copter has detected an enemy!
+47: event: Enemy spawned!
+48: event: Helper stop seeing an enemy!
+49: event: Copter has killed an enemy!
+50: Event: Enemy death.
+51: Event: Copter spawned!
+52: Event: Copter no longer spawned.
+53: water has way more time to move!
+54: event: Helper retrieved an item for you!
+55: event: Helper detected an enemy!
+56: event: Copter has detected an enemy!
+57: event: Enemy spawned!
+58: event: Helper stop seeing an enemy!
+59: event: Item spawned!
+60: event: Copter has killed an enemy!
+61: Event: Enemy death.
+62: event: Helper detected an enemy!
+63: event: Copter has detected an enemy!
+64: event: Enemy spawned!
+65: Enemy spawns slower!
+66: event: Helper retrieved an item for you!
+67: event: Item spawned!
+68: event: User decided to go to the store.
+69: event: Pits have changed.
+70: event: Helper stop seeing an enemy!
+71: event: Copter has killed an enemy!
+72: Event: Enemy death.
+73: event: Pits will change in 3 seconds!
+74: event: User decided to go to the store.
+75: event: Helper detected an enemy!
+76: event: Copter has detected an enemy!
+77: event: Enemy spawned!
+78: event: Helper stop seeing an enemy!
+79: event: Copter has killed an enemy!
+80: Event: Enemy death.
+81: event: Helper detected an enemy!
+82: event: Copter has detected an enemy!
+83: event: Enemy spawned!
+84: event: Helper stop seeing an enemy!
+85: event: Copter has killed an enemy!
+86: Event: Enemy death.
+87: event: Helper detected an enemy!
+88: event: Copter has detected an enemy!
+89: event: Enemy spawned!
+90: event: Helper stop seeing an enemy!
+91: event: Copter has killed an enemy!
+92: Event: Enemy fell into a pit! Ha ha ha!
+93: event: Item spawned!
+94: event: Helper detected an enemy!
+95: event: Copter has detected an enemy!
+96: event: Enemy spawned!
+97: event: Helper stop seeing an enemy!
+98: event: Copter has killed an enemy!
+99: Event: Enemy death.
+100: event: Item has fallen into a pit!
+101: event: Item spawned!
+102: event: Copter has detected an enemy!
+103: Event: Copter spawned!
+104: event: Helper detected an enemy!
+105: event: Enemy spawned!
+106: event: Helper stop seeing an enemy!
+107: Event: Enemy fell into a pit! Ha ha ha!
+108: event: Helper detected an enemy!
+109: event: Enemy spawned!
+110: Event: Enemy death.
+111: event: Enemy spawned!
+112: event: Helper stop seeing an enemy!
+113: Event: Enemy fell into a pit! Ha ha ha!
+114: event: Helper detected an enemy!
+115: event: Enemy spawned!
+116: event: Item spawned!
+117: event: Helper stop seeing an enemy!
+118: Event: Enemy death.
+119: event: Item has fallen into a pit!
+120: event: Pits have changed.
+121: event: Helper detected an enemy!
+122: event: Enemy spawned!
+123: event: Pits will change in 3 seconds!
+124: event: Helper stop seeing an enemy!
+125: Event: Enemy death.
+126: event: Helper detected an enemy!
+127: event: Enemy spawned!
+128: event: Helper stop seeing an enemy!
+129: Event: Enemy death.
+130: event: Helper detected an enemy!
+131: event: Enemy spawned!
+132: Event: Enemy death.
+133: event: Enemy spawned!
+134: event: Helper stop seeing an enemy!
+135: Event: Enemy death.
+136: event: Item spawned!
+137: event: Helper detected an enemy!
+138: event: Enemy spawned!
+139: event: Item spawned!
+140: event: Helper stop seeing an enemy!
+141: Event: Enemy death.
+142: event: Item has fallen into a pit!
+143: event: Item spawned!
+144: event: Helper detected an enemy!
+145: Event: Player helper spawned!
+146: event: Enemy spawned!
+147: Event: Enemy death.
+148: event: Enemy spawned!
+149: event: Item spawned!
+150: Event: Enemy death.
+151: Event: Game loaded successfully!
+152: event: Loading game.
+153: event: Mason has decided to start a new game.
+154: event: Message of the day is testing
+155: Retrieving message of the day...
+156: Event: Installing keyhook...
+157: event: Checking name...
+158: event: Setting up registry...
+159: event. loading started.
+160: 
+0: event: Item spawned!
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event: Message of the day is testing
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=5.0. Beta version=1
+11: event. loading started.
+12: 
+0: event: Item spawned!
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event: Message of the day is testing
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. User is using a beta version.
+11: event. Version=5.0.
+12: event. loading started.
+13: 
+0: event: User decided to go to the store.
+1: event: Item spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=5.0.
+12: event. loading started.
+13: 
+0: event: Item spawned!
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=5.0.
+11: event. loading started.
+12: 
+0: event: Item spawned!
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=5.0.
+11: event. loading started.
+12: 
+0: event: Item spawned!
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+6: Retrieving message of the day...
+7: Event: Installing keyhook...
+8: event: Checking name...
+9: event: Setting up registry...
+10: event. Version=5.0.
+11: event. loading started.
+12: 
+0: event: User decided to go to the store.
+1: event: Item spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+7: Retrieving message of the day...
+8: Event: Installing keyhook...
+9: event: Checking name...
+10: event: Setting up registry...
+11: event. Version=5.1.1.
+12: event. loading started.
+13: 

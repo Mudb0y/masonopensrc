@@ -1,0 +1,12 @@
+beacon szb;
+beacon hrb;
+class beacon
+{
+int x;
+int y;
+void spawn(int zx,int zy)
+{
+x=zx;
+y=zy;
+}
+}

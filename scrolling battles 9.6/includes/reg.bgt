@@ -1,0 +1,400 @@
+void registrywrite()
+{
+data2.set("trophy19unlocked", trophy19unlocked);
+data2.set("trophy18unlocked", trophy18unlocked);
+data2.set("trophy17unlocked", trophy17unlocked);
+data2.set("trophy16unlocked", trophy16unlocked);
+data2.set("trophy15unlocked", trophy15unlocked);
+data2.set("trophy14unlocked", trophy14unlocked);
+data2.set("trophy13unlocked", trophy13unlocked);
+data2.set("trophy12unlocked", trophy12unlocked);
+data2.set("trophy11unlocked", trophy11unlocked);
+data2.set("trophy10unlocked", trophy10unlocked);
+data2.set("trophy9unlocked", trophy9unlocked);
+data2.set("trophy8unlocked", trophy8unlocked);
+data2.set("trophy7unlocked", trophy7unlocked);
+data2.set("trophy6unlocked", trophy6unlocked);
+data2.set("trophy5unlocked", trophy5unlocked);
+data2.set("trophy4unlocked", trophy4unlocked);
+data2.set("trophy3unlocked", trophy3unlocked);
+data2.set("trophy2unlocked", trophy2unlocked);
+data2.set("trophy1unlocked", trophy1unlocked);
+file troph;
+troph.open(DIRECTORY_APPDATA+"/sb/trophies.dat", "wb");
+troph.write(serialize(data2));
+troph.close();
+data.set("enemymaxchance", enemymaxchance);
+data.set("hotkeybought", hotkeybought);
+data.set("maxchance", maxchance);
+data.set("playerchance", playerchance);
+data.set("sz1damage", sz1.damage);
+data.set("sz2damage", sz2.damage);
+data.set("sz1healthspeed", sz1.healthspeed);
+data.set("sz2healthspeed", sz2.healthspeed);
+data.set("sz1maxhealth", sz1.maxhealth);
+data.set("sz2maxhealth", sz2.maxhealth);
+data.set("sz1length", sz1.length);
+data.set("sz2length", sz2.length);
+data.set("batteries", batteries);
+file d;
+write(DIRECTORY_APPDATA+"/sb/character.dat", character);
+write(DIRECTORY_APPDATA+"/sb/soundpack.dat", soundpack);
+data.set("grenades", grenades);
+data.set("grenademove", grenademove);
+data.set("grenaderange", grenaderange);
+data.set("grenadespeed", grenadespeed);
+data.set("telespeed", telespeed);
+data.set("telerange", telerange);
+data.set("laserrange", laserrange);
+data.set("laserdamage", laserdamage);
+data.set("lasergot", lasergot);
+data.set("helperrange", helperrange);
+data.set("gametime", gametimer.elapsed);
+data.set("kills", kills);
+data.set("helperdamage", helperdamage);
+data.set("helperspeed", helperspeed);
+data.set("helperhealth", helperhealth);
+data.set("gunammo", gunammo);
+data.set("macgunammo", macgunammo);
+data.set("blasterspeed", blasterspeed);
+data.set("macguntime", macguntime);
+data.set("maxpos", maxpos);
+data.set("knifedamage", knifedamage);
+data.set("gundamage", gundamage);
+data.set("macgundamage", macgundamage);
+data.set("pusherdamage", pusherdamage);
+data.set("kniferange", kniferange);
+data.set("gunrange", gunrange);
+data.set("macgunrange", macgunrange);
+data.set("pusherrange", pusherrange);
+data.set("mastervolume", sound_master_volume);
+data.set("dollars", dollars);
+if (playerhealth>=20)
+{
+data.set("playerhealth", playerhealth);
+}
+file savedata;
+savedata.open(DIRECTORY_APPDATA+"/sb/save.dat", "wb");
+savedata.write(serialize(data));
+savedata.close();
+}
+void registry()
+{
+file d;
+d.open(DIRECTORY_APPDATA+"/sb/save.dat", "rb");
+data=deserialize(d.read());
+d.close();
+d.open(DIRECTORY_APPDATA+"/sb/trophies.dat", "rb");
+data2=deserialize(d.read());
+d.close();
+if (data.exists("enableevents"))
+{
+data.get("enableevents", enableevents);
+}
+if (data2.exists("trophy19unlocked"))
+{
+data2.get("trophy19unlocked", trophy19unlocked);
+}
+if (data2.exists("trophy18unlocked"))
+{
+data2.get("trophy18unlocked", trophy18unlocked);
+}
+if (data2.exists("trophy17unlocked"))
+{
+data2.get("trophy17unlocked", trophy17unlocked);
+}
+if (data2.exists("trophy16unlocked"))
+{
+data2.get("trophy16unlocked", trophy16unlocked);
+}
+if (data2.exists("trophy15unlocked"))
+{
+data2.get("trophy15unlocked", trophy15unlocked);
+}
+if (data2.exists("trophy14unlocked"))
+{
+data2.get("trophy14unlocked", trophy14unlocked);
+}
+if (data2.exists("trophy13unlocked"))
+{
+data2.get("trophy13unlocked", trophy13unlocked);
+}
+if (data2.exists("trophy12unlocked"))
+{
+data2.get("trophy12unlocked", trophy12unlocked);
+}
+if (data2.exists("trophy11unlocked"))
+{
+data2.get("trophy11unlocked", trophy11unlocked);
+}
+if (data2.exists("trophy10unlocked"))
+{
+data2.get("trophy10unlocked", trophy10unlocked);
+}
+if (data2.exists("trophy9unlocked"))
+{
+data2.get("trophy9unlocked", trophy9unlocked);
+}
+if (data2.exists("trophy8unlocked"))
+{
+data2.get("trophy8unlocked", trophy8unlocked);
+}
+if (data2.exists("trophy7unlocked"))
+{
+data2.get("trophy7unlocked", trophy7unlocked);
+}
+if (data2.exists("trophy6unlocked"))
+{
+data2.get("trophy6unlocked", trophy6unlocked);
+}
+if (data2.exists("trophy5unlocked"))
+{
+data2.get("trophy5unlocked", trophy5unlocked);
+}
+if (data2.exists("trophy4unlocked"))
+{
+data2.get("trophy4unlocked", trophy4unlocked);
+}
+if (data2.exists("trophy3unlocked"))
+{
+data2.get("trophy3unlocked", trophy3unlocked);
+}
+if (data2.exists("trophy2unlocked"))
+{
+data2.get("trophy2unlocked", trophy2unlocked);
+}
+if (data2.exists("trophy1unlocked"))
+{
+data2.get("trophy1unlocked", trophy1unlocked);
+}
+if (data.exists("enemymaxchance"))
+{
+data.get("enemymaxchance", enemymaxchance);
+}
+if (file_exists(DIRECTORY_APPDATA+"/sb/environment.dat"))
+{
+environment=read_string(DIRECTORY_APPDATA+"/sb/environment.dat");
+}
+else
+{
+environment="forest (default)";
+}
+if (data.exists("hotkeybought"))
+{
+data.get("hotkeybought", hotkeybought);
+}
+if (data.exists("maxchance"))
+{
+data.get("maxchance", maxchance);
+}
+if (data.exists("playerchance"))
+{
+data.get("playerchance", playerchance);
+}
+if (data.exists("sz1damage"))
+{
+data.get("sz1damage", sz1.damage);
+}
+if (data.exists("sz1healthspeed"))
+{
+data.get("sz1healthspeed", sz1.healthspeed);
+}
+if (data.exists("sz2damage"))
+{
+data.get("sz2damage", sz2.damage);
+}
+if (data.exists("sz2healthspeed"))
+{
+data.get("sz2healthspeed", sz2.healthspeed);
+}
+if (data.exists("sz1maxhealth"))
+{
+data.get("sz1maxhealth", sz1.maxhealth);
+}
+if (data.exists("sz2maxhealth"))
+{
+data.get("sz2maxhealth", sz2.maxhealth);
+}
+if (data.exists("sz1length"))
+{
+data.get("sz1length", sz1.length);
+}
+if (data.exists("sz2length"))
+{
+data.get("sz2length", sz2.length);
+}
+if (data.exists("batteries"))
+{
+data.get("batteries", batteries);
+}
+if (file_exists(DIRECTORY_APPDATA+"/sb/character.dat"))
+{
+character=read_string(DIRECTORY_APPDATA+"/sb/character.dat");
+}
+else
+{
+character="default";
+}
+if (file_exists(DIRECTORY_APPDATA+"/sb/soundpack.dat"))
+{
+soundpack=read_string(DIRECTORY_APPDATA+"/sb/soundpack.dat");
+}
+else
+{
+soundpack="default";
+}
+if (data.exists("pusherpos"))
+{
+data.get("pusherpos", pusherpos);
+}
+if (data.exists("grenades"))
+{
+data.get("grenades", grenades);
+}
+if (data.exists("grenademove"))
+{
+data.get("grenademove", grenademove);
+}
+if (data.exists("grenaderange"))
+{
+data.get("grenaderange", grenaderange);
+}
+if (data.exists("grenadespeed"))
+{
+data.get("grenadespeed", grenadespeed);
+}
+if (data.exists("telespeed"))
+{
+data.get("telespeed", telespeed);
+}
+if (data.exists("telegot"))
+{
+data.get("telegot", telegot);
+}
+if (data.exists("telerange"))
+{
+data.get("telerange", telerange);
+}
+if (data.exists("laserdamage"))
+{
+data.get("laserdamage", laserdamage);
+}
+if (data.exists("laserrange"))
+{
+data.get("laserrange", laserrange);
+}
+if (data.exists("lasergot"))
+{
+data.get("lasergot", lasergot);
+}
+if (file_exists(DIRECTORY_APPDATA+"/sb/name.dat"))
+{
+name=read_string(DIRECTORY_APPDATA+"/sb/name.dat");
+}
+if (data.exists("helperrange"))
+{
+data.get("helperrange", helperrange);
+}
+if (data.exists("gametime"))
+{
+data.get("gametime", gametime);
+}
+if (data.exists("kills"))
+{
+data.get("kills", kills);
+}
+if (data.exists("helperdamage"))
+{
+data.get("helperdamage", helperdamage);
+}
+if (data.exists("helperspeed"))
+{
+data.get("helperspeed", helperspeed);
+}
+if (data.exists("helperhealth"))
+{
+data.get("helperhealth", helperhealth);
+}
+if (data.exists("gunammo"))
+{
+data.get("gunammo", gunammo);
+}
+if (data.exists("macgunammo"))
+{
+data.get("macgunammo", macgunammo);
+}
+if (data.exists("blasterspeed"))
+{
+data.get("blasterspeed", blasterspeed);
+}
+if (data.exists("macguntime"))
+{
+data.get("macguntime", macguntime);
+}
+if (data.exists("maxpos"))
+{
+data.get("maxpos", maxpos);
+}
+if (data.exists("knifedamage"))
+{
+data.get("knifedamage", knifedamage);
+}
+if (data.exists("gundamage"))
+{
+data.get("gundamage", gundamage);
+}
+if (data.exists("macgundamage"))
+{
+data.get("macgundamage", macgundamage);
+}
+if (data.exists("pusherdamage"))
+{
+data.get("pusherdamage", pusherdamage);
+}
+if (data.exists("kniferange"))
+{
+data.get("kniferange", kniferange);
+}
+if (data.exists("gunrange"))
+{
+data.get("gunrange", gunrange);
+}
+if (data.exists("macgunrange"))
+{
+data.get("macgunrange", macgunrange);
+}
+if (data.exists("pusherrange"))
+{
+data.get("pusherrange", pusherrange);
+}
+if (data.exists("mastervolume"))
+{
+int mastervolume;
+data.get("mastervolume", mastervolume);
+set_sound_master_volume(mastervolume);
+}
+if (data.exists("playerhealth"))
+{
+data.get("playerhealth", playerhealth);
+}
+if (data.exists("dollars"))
+{
+data.get("dollars", dollars);
+}
+if (data.exists("grabberget"))
+{
+data.get("grabberget", grabberget);
+}
+if (data.exists("enableconfirmation"))
+{
+data.get("enableconfirmation", enableyn);
+}
+if (data.exists("enablelogo"))
+{
+data.get("enablelogo", enablelogo);
+}
+if (data.exists("musicvolume"))
+{
+data.get("musicvolume", musvol);
+}
+}

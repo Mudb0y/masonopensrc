@@ -1,0 +1,61 @@
+0: 
+1: Event:  has started Scrolling Battles! (6-18-12 PM)
+2: event. Version=7.0.0.099. (6-18-12 PM)
+3: Event: Message of the day is                                                                                                                                                            
+<!DOCTYPE html>
+<html>
+<head><title>Dropbox - 404</title>
+<link href="https://www.dropbox.com/static/css/error.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="/static/images/favicon.ico"/>
+</head>
+<body>
+<div class="figure">
+<img src="/static/images/psychobox.png" alt="Error:"/>
+</div>
+<div id="errorbox">
+<h1>Error (404)</h1>We can't find the page you're looking for. Check out our <a href="https://www.dropbox.com/help">Help Center</a> and <a href="https://forums.dropbox.com">forums</a> for help, or head back to <a href="https://www.dropbox.com/home">home</a>.
+</div>
+
+</body>
+</html> (6-18-12 PM)
+4: Event: mason is using the default Soundpack. (6-18-13 PM)
+5: Event: mason is using the forest (default) environment. (6-18-13 PM)
+6: Event. User wants a normal game. (6-18-15 PM)
+7: event: mason has decided to start a new game. (6-18-15 PM)
+8: A hollow pit spawned at 321 (6-18-15 PM)
+9: A hollow pit spawned at 362 (6-18-15 PM)
+10: A lava pit spawned at 26 (6-18-16 PM)
+11: Event: a level 5879 enemy (name Giovani) has been spawned at 397 with 7205 HP. (6-18-16 PM)
+12: Event: a level 5879 enemy (name microsoft sam) has been spawned at 196 with 7017 HP. (6-18-16 PM)
+13: Event: a level 5879 enemy (name mason 2) has been spawned at 270 with 8135 HP. (6-18-16 PM)
+14: Event: a level 5879 enemy (name alex mackintosh) has been spawned at 167 with 6419 HP. (6-18-16 PM)
+15: Event: Game loaded! (6-18-16 PM)
+16: Event: Item has been retrieved! (6-18-16 PM)
+17: Event: Item has been retrieved! (6-18-16 PM)
+18: Event: Item has been retrieved! (6-18-16 PM)
+19: Event: Item has been retrieved! (6-18-16 PM)
+20: Event: Item has been retrieved! (6-18-16 PM)
+21: Event: a level 5879 enemy (name Giovani) has been spawned at 94 with 6280 HP. (6-18-19 PM)
+22: Event: Enemy has jumped over a pit. (6-18-20 PM)
+23: Event: Enemy has jumped over a pit. (6-18-25 PM)
+24: Event: An item has spawned! (6-18-25 PM)
+25: Event: a level 5879 enemy (name dectalk paul) has been spawned at 36 with 7622 HP. (6-18-26 PM)
+26: Event: Enemy has jumped over a pit. (6-18-28 PM)
+27: Event: An item has spawned! (6-18-29 PM)
+28: Event: Enemy has jumped over a pit. (6-18-30 PM)
+29: Event: An item has spawned! (6-18-30 PM)
+30: Event: An item has spawned! (6-18-31 PM)
+31: Event: Enemy has jumped over a pit. (6-18-31 PM)
+32: Event: An item has spawned! (6-18-32 PM)
+33: Event: a level 5879 enemy (name mason 1) has been spawned at 81 with 9362 HP. (6-18-33 PM)
+34: Event: Helper has been spawned onto the map. (6-18-38 PM)
+35: Event: Helper has been removed from the map. (6-18-39 PM)
+36: Event: a level 5879 enemy (name mason 2) has been spawned at 284 with 7076 HP. (6-18-40 PM)
+37: Event: an enemy has been killed. (6-18-40 PM)
+38: Event: an enemy has been killed. (6-18-40 PM)
+39: Event: an enemy has been killed. (6-18-40 PM)
+40: Event: an enemy has been killed. (6-18-40 PM)
+41: Event: an enemy has been killed. (6-18-41 PM)
+42: Event: an enemy has been killed. (6-18-41 PM)
+43: Event: an enemy has been killed. (6-18-42 PM)
+44: event: mason has decided to exit.

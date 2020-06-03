@@ -1,0 +1,21 @@
+#include"dlg.bgt"
+void urlreader(string url, string yourtitle)
+{
+http download;
+string_replace(url, "https", "http", true);
+string_replace(url, "Https", "http", true);
+string urlread=download.get(url);
+if(get_last_error()!=0)
+{
+alert("Error", "An error occured.\r\nDescription: "+urlread+"");
+}
+else
+{
+while(download.progress)
+{
+urlread+=download.request();
+}
+event("Event: Message of the day is "+urlread);
+dlg(yourtitle+": "+urlread);
+}
+}

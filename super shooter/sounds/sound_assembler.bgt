@@ -1,0 +1,139 @@
+string temp_name_1="";
+string temp_name_2="";
+pack_file pack;
+
+void main()
+{
+show_game_window("Sound Assembler");
+if(file_exists("oggenc2.exe")==false)
+{
+alert("Error", "Could not find oggenc2.exe. Please download this file from www.xiph.org and place it in the same directory as this program.");
+exit();
+}
+int ogg_quality=0;
+int resample=44100;
+string encryption_key=input_box("Encryption Key", "Please enter the encryption key that should be used.");
+if(encryption_key=="")
+{
+exit();
+}
+string digits=input_box("Ogg Vorbis Quality", "Please enter the Ogg Vorbis quality that you would like to use, as a number between 0 and 9. 6 is recommended.");
+if(digits=="")
+{
+exit();
+}
+if(string_is_digits(digits)==false)
+{
+alert("Error", "Invalid input.");
+exit();
+}
+ogg_quality=string_to_number(digits);
+if(ogg_quality>9)
+{
+alert("Error", "Invalid input.");
+exit();
+}
+string[] search=find_files("*.wav");
+if(search.length()==0)
+{
+alert("Error", "No sounds were found.");
+exit();
+}
+alert("Information", "" + search.length() + " sounds were found. To cancel the operation, press space in the window. Beginning process...");bool result=pack.create("sounds.dat");
+if(result==false)
+{
+alert("Error", "An error occured while creating sounds.dat.\nError description: " + get_last_error_text());
+exit();
+}
+temp_name_1=generate_temp_filename(DIRECTORY_TEMP+"\\", 10, ".ogg");
+temp_name_2=generate_temp_filename(DIRECTORY_TEMP+"\\", 10, ".dat");
+for(uint i=0;i<search.length();i++)
+{
+show_game_window("Sound Assembler - Processing file " + (i+1) + " of " + search.length() + "...");
+//check_exit();
+result=run("oggenc2.exe", "-q" + ogg_quality + " --resample " + resample + " -S0 " + search[i] + " -o " + temp_name_1, true, true);
+if(result==false)
+{
+clean();
+alert("Error", "An error occured while encoding " + search[i] + ".\nError description: " + get_last_error_text());
+exit();
+}
+//check_exit();
+result=file_encrypt(temp_name_1, temp_name_2, encryption_key);
+if(result==false)
+{
+clean();
+alert("Error", "An error occured while encrypting " + search[i] + ".\nError description: " + get_last_error_text());
+exit();
+}
+//check_exit();
+result=pack.add_file(temp_name_2, search[i]);
+if(result==false)
+{
+clean();
+alert("Error", "An error occured while adding " + search[i] + " to sounds.dat.\nError description: " + get_last_error_text());
+}
+}
+file_delete(temp_name_1);
+file_delete(temp_name_2);
+alert("Success", "The files were added successfully!");
+}
+/*
+void check_exit()
+{
+if(key_down(KEY_SPACE))
+{
+if(question("Cancel", "Are you sure you would like to cancel the operation?")==1)
+{
+clean();
+alert("Status", "Operation cancelled.");
+exit();
+}
+}
+}
+*/
+void clean()
+{
+file_delete(temp_name_1);
+file_delete(temp_name_1);
+pack.close();
+file_delete("sounds.dat");
+}
+
+string generate_temp_filename(string prefix, int length, string extention)
+{
+if(length<1)
+{
+return "";
+}
+string temp_characters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+string returned="";
+int attempts=100;
+while(true)
+{
+returned=prefix;
+for(int i=0;i<length;i++)
+{
+returned+=temp_characters[random(0, temp_characters.length()-1)];
+}
+if(extention=="")
+{
+returned+=".tmp";
+}
+else
+{
+returned+=extention;
+}
+if(file_exists(returned))
+{
+attempts-=1;
+if(attempts==0)
+{
+break;
+}
+continue;
+}
+return returned;
+}
+return "";
+}

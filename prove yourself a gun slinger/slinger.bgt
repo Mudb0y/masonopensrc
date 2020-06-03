@@ -1,0 +1,103 @@
+#include"includes/plate.bgt"
+#include"number_speaker.bgt"
+#include"sound_pool.bgt"
+int initspeed=6500;
+int roundadjust=140;
+int score;
+int round=1;
+int platesshot;
+int platestoshoot=5;
+int loaded=0;
+int gunrange=3;
+int x=10;
+int gunx=10;
+sound_pool p;
+number_speaker ns;
+sound music, points, sround;
+void main()
+{
+show_game_window("Silver Dollar");
+points.load("sounds/points.wav");
+music.load("sounds/music.wav");
+sround.load("sounds/round.wav");
+p.volume_step=0.1;
+p.pan_step=2;
+if (screen_reader_is_running(1))
+install_keyhook();
+game();
+}
+void game()
+{
+ns.prepend="numbers/";
+ns.append=".ogg";
+music.pitch=98+(round*2);
+music.volume=-20;
+music.play_looped();
+sround.play_wait();
+ns.speak_wait(round);
+spawn_plate(round);
+spawntime=initspeed-(round*roundadjust);
+while(true)
+{
+plateloop();
+p.update_listener_1d(x);
+music.pitch=98+(round*2);
+if (initspeed-(round*roundadjust)>=750)
+{
+spawntime=initspeed-(round*roundadjust);
+}
+else
+{
+spawntime=750;
+}
+if (platestoshoot==0)
+{
+destroy_all_plates();
+round+=1;
+wait(400);
+ns.speak_wait(score);
+points.play_wait();
+wait(150);
+if (platesshot==0)
+{
+exit();
+}
+sround.play_wait();
+ns.speak_wait(round);
+platesshot=0;
+platestoshoot=5;
+}
+if (key_pressed(KEY_DOWN) and loaded==0)
+{
+p.play_1d("sounds/reload.wav",x,gunx,false);
+loaded=1;
+}
+if (key_pressed(KEY_UP))
+{
+if (loaded==1)
+{
+p.play_1d("sounds/gun.wav",x,gunx,false);
+shoot_plate();
+loaded=0;
+}
+else
+{
+p.play_1d("sounds/empty.wav",x,gunx,false);
+}
+}
+if (key_pressed(KEY_LEFT) and gunx>0)
+{
+gunx-=5;
+p.play_1d("sounds/move.wav",x,gunx,false);
+}
+if (key_pressed(KEY_RIGHT) and gunx<20)
+{
+gunx+=5;
+p.play_1d("sounds/move.wav",x,gunx,false);
+}
+if (key_pressed(KEY_ESCAPE))
+{
+exit();
+}
+}
+}

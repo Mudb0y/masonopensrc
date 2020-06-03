@@ -1,0 +1,17 @@
+0: 
+1: event. Version=8.0.0.113. (3-36-07 PM)
+2: Event: mason is using the default Soundpack. (3-36-07 PM)
+3: Event: mason is using the swimming pool environment. (3-36-07 PM)
+4: Event. User wants a normal game. (3-36-10 PM)
+5: event: mason has decided to start a new game. (3-36-10 PM)
+6: A casm pit spawned at 1360 (3-36-11 PM)
+7: A water pit spawned at 1509 (3-36-11 PM)
+8: A lava pit spawned at 674 (3-36-11 PM)
+9: Event: a level 5692 enemy (name mason 1) has been spawned at 1067 with 8973 HP. (3-36-11 PM)
+10: Event: a level 5692 enemy (name mason 1) has been spawned at 1625 with 11352 HP. (3-36-11 PM)
+11: Event: a level 5692 enemy (name Giovani) has been spawned at 809 with 9339 HP. (3-36-11 PM)
+12: Event: a level 5692 enemy (name samantha) has been spawned at 352 with 8565 HP. (3-36-11 PM)
+13: Event: Game loaded! (3-36-11 PM)
+14: Event: a level 5692 enemy (name Death elf) has been spawned at 946 with 8384 HP. (3-36-14 PM)
+15: Event: An item has spawned! (3-36-19 PM)
+16: event: mason has decided to exit.

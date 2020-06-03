@@ -1,0 +1,406 @@
+0: event: Item spawned!
+1: Event: Enemy fell into a pit! Ha ha ha!
+2: event: Enemy spawned!
+3: event: Item has fallen into a pit!
+4: event: Item spawned!
+5: Event: Enemy death.
+6: Event: Game loaded successfully!
+7: event: Loading game.
+8: event:  has decided to start a new game.
+9: event: going to main screen.
+10: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+11: Retrieving message of the day...
+12: Event: Installing keyhook...
+13: event: Checking name...
+14: event: Setting up registry...
+15: event. Version=5.2.
+16: event. loading started.
+17: 
+0: Playing field expanded!
+1: event: Item retrieved!
+2: Event: Enemy death.
+3: event: Enemy spawned!
+4: event: Item spawned!
+5: Event: Enemy fell into a pit! Ha ha ha!
+6: event: Enemy spawned!
+7: event: Item spawned!
+8: Event: Enemy death.
+9: Event: Game loaded successfully!
+10: event: Loading game.
+11: event: Mason has decided to start a new game.
+12: event: going to main screen.
+13: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+14: Retrieving message of the day...
+15: Event: Installing keyhook...
+16: event: Checking name...
+17: event: Setting up registry...
+18: event. Version=5.2.
+19: event. loading started.
+20: 
+0: event: Pits have changed.
+1: event: Helper detected an enemy!
+2: event: Pits will change in 3 seconds!
+3: event: Enemy spawned!
+4: event: Helper has stopped seeing an enemy!
+5: Event: Enemy death.
+6: event: User decided to go to the store.
+7: event: Helper detected an enemy!
+8: event: Enemy spawned!
+9: event: Helper has stopped seeing an enemy!
+10: Event: Enemy death.
+11: event: Helper detected an enemy!
+12: event: Enemy spawned!
+13: event: Helper stop seeing an enemy!
+14: Event: Enemy death.
+15: event: Item spawned!
+16: event: Helper detected an enemy!
+17: event: Enemy spawned!
+18: event: Helper stop seeing an enemy!
+19: Event: Enemy death.
+20: Player random teleport!
+21: event: Item retrieved!
+22: event: Helper detected an enemy!
+23: event: Enemy spawned!
+24: event: Helper stop seeing an enemy!
+25: Event: Enemy death.
+26: event: Pits have changed.
+27: event: Helper detected an enemy!
+28: event: Enemy spawned!
+29: event: Helper stop seeing an enemy!
+30: Event: Enemy death.
+31: event: Pits will change in 3 seconds!
+32: Event: Player helper spawned!
+33: event: Enemy spawned!
+34: Event: Enemy death.
+35: event: Enemy spawned!
+36: Event: Enemy death.
+37: event: Enemy spawned!
+38: Event: Enemy death.
+39: Event: Player helper no longer spawned!
+40: event: Helper detected an enemy!
+41: event: Enemy spawned!
+42: event: Helper has stopped seeing an enemy!
+43: Event: Enemy death.
+44: Event: Player helper spawned!
+45: Event: Player helper no longer spawned!
+46: Event: Player helper spawned!
+47: Event: Player helper no longer spawned!
+48: event: Helper detected an enemy!
+49: event: Enemy spawned!
+50: event: Helper has stopped seeing an enemy!
+51: Event: Enemy death.
+52: event: Item spawned!
+53: event: Helper retrieved an item for you!
+54: event: Item spawned!
+55: event: Helper detected an enemy!
+56: event: Enemy spawned!
+57: event: Helper stop seeing an enemy!
+58: Event: Enemy fell into a pit! Ha ha ha!
+59: event: Pits have changed.
+60: event: Helper detected an enemy!
+61: event: Enemy spawned!
+62: event: Pits will change in 3 seconds!
+63: event: Helper stop seeing an enemy!
+64: Event: Enemy death.
+65: event: User decided to go to the store.
+66: event: Helper detected an enemy!
+67: event: Enemy spawned!
+68: event: Helper stop seeing an enemy!
+69: Event: Enemy death.
+70: event: Item spawned!
+71: event: Helper detected an enemy!
+72: event: Enemy spawned!
+73: event: Helper stop seeing an enemy!
+74: Event: Enemy fell into a pit! Ha ha ha!
+75: event: Helper detected an enemy!
+76: event: Enemy spawned!
+77: event: Helper has stopped seeing an enemy!
+78: Event: Enemy death.
+79: event: Helper detected an enemy!
+80: event: Enemy spawned!
+81: event: Helper stop seeing an enemy!
+82: Event: Enemy death.
+83: event: Helper detected an enemy!
+84: event: Enemy spawned!
+85: event: Helper has stopped seeing an enemy!
+86: Event: Enemy death.
+87: Event: Player helper spawned!
+88: event: Item spawned!
+89: event: Pits have changed.
+90: event: User decided to go to the store.
+91: event: Pits will change in 3 seconds!
+92: event: Enemy spawned!
+93: Event: Enemy death.
+94: event: Item spawned!
+95: event: Item spawned!
+96: Event: Copter no longer spawned.
+97: event: Copter has detected an enemy!
+98: event: Enemy spawned!
+99: Event: Copter spawned!
+100: Event: Copter no longer spawned.
+101: Event: Copter spawned!
+102: Event: Copter no longer spawned.
+103: event: Copter has shot an item.
+104: Event: Copter spawned!
+105: Event: Enemy death.
+106: event: Enemy spawned!
+107: Event: Enemy death.
+108: event: Enemy spawned!
+109: Event: Enemy death.
+110: event: Pits have changed.
+111: event: Item spawned!
+112: event: Pits will change in 3 seconds!
+113: Speed boost! Except not, you are at maximum speed!
+114: Speed boost!
+115: event: Item retrieved!
+116: event: Enemy spawned!
+117: Event: Enemy death.
+118: event: Game unpaused by user
+119: event: Game paused by user
+120: event: Item spawned!
+121: event: Enemy spawned!
+122: event: User decided to go to the store.
+123: Event: Enemy death.
+124: event: Enemy spawned!
+125: Event: Enemy death.
+126: event: Enemy spawned!
+127: Event: Enemy fell into a pit! Ha ha ha!
+128: event: Enemy spawned!
+129: Event: Enemy death.
+130: event: Pits have changed.
+131: event: Pits will change in 3 seconds!
+132: event: Enemy spawned!
+133: event: Item spawned!
+134: Event: Enemy death.
+135: event: Item retrieved!
+136: event: Item spawned!
+137: event: Enemy spawned!
+138: Event: Enemy death.
+139: event: Item has fallen into a pit!
+140: event: Item spawned!
+141: event: Enemy spawned!
+142: Event: Enemy death.
+143: event: Enemy spawned!
+144: machine gun shoots slower!
+145: event: Item retrieved!
+146: Event: Enemy death.
+147: event: Item spawned!
+148: event: Enemy spawned!
+149: event: Item retrieved!
+150: Event: Enemy death.
+151: event: Enemy spawned!
+152: Event: Enemy death.
+153: event: Enemy spawned!
+154: event: Item spawned!
+155: Event: Enemy death.
+156: event: Pits have changed.
+157: Super health superboost!
+158: event: Item retrieved!
+159: event: Pits will change in 3 seconds!
+160: event: Enemy spawned!
+161: Event: Enemy death.
+162: event: Item spawned!
+163: event: Item has fallen into a pit!
+164: event: Item spawned!
+165: event: Item retrieved!
+166: event: Enemy spawned!
+167: Event: Enemy fell into a pit! Ha ha ha!
+168: event: Item spawned!
+169: event: Enemy spawned!
+170: Event: Enemy fell into a pit! Ha ha ha!
+171: event: User decided to go to the store.
+172: event: Enemy spawned!
+173: Event: Grenade has exploded.
+174: event: Item spawned!
+175: Event: Grenade has exploded.
+176: Event: Enemy death.
+177: Event: Grenade has exploded.
+178: Event: Enemy destroyed by grenade!
+179: Event: Enemy destroyed by grenade!
+180: Event: Enemy destroyed by grenade!
+181: Event: Pit 3 destroyed by grenade!
+182: Event: Enemy destroyed by grenade!
+183: event: Pits have changed.
+184: event: Pits will change in 3 seconds!
+185: event: Item spawned!
+186: event: User decided to go to the store.
+187: event: Enemy spawned!
+188: Event: Enemy death.
+189: Event: Grenade has exploded.
+190: Event: Enemy destroyed by grenade!
+191: Event: Enemy destroyed by grenade!
+192: Event: Enemy destroyed by grenade!
+193: Event: Enemy destroyed by grenade!
+194: Gun Range Upgrade.
+195: event: Item retrieved!
+196: Event: Grenade has exploded.
+197: Event: Pit 4 destroyed by grenade!
+198: event: Enemy spawned!
+199: Event: Enemy death.
+200: Event: Grenade has exploded.
+201: Event: Enemy destroyed by grenade!
+202: Event: Enemy destroyed by grenade!
+203: Event: Enemy destroyed by grenade!
+204: Event: Pit 3 destroyed by grenade!
+205: Event: Enemy destroyed by grenade!
+206: event: Enemy spawned!
+207: Event: Grenade has exploded.
+208: Event: Enemy death.
+209: Event: Grenade has exploded.
+210: Event: Pit 1 destroyed by grenade!
+211: Event: Enemy destroyed by grenade!
+212: Event: Enemy destroyed by grenade!
+213: Event: Enemy destroyed by grenade!
+214: Event: Enemy destroyed by grenade!
+215: event: Enemy spawned!
+216: Event: Grenade has exploded.
+217: Event: Grenade has exploded.
+218: Event: Enemy death.
+219: Event: Enemy destroyed by grenade!
+220: Event: Pit 2 destroyed by grenade!
+221: Event: Enemy destroyed by grenade!
+222: Event: Enemy destroyed by grenade!
+223: Event: Player helper killed!
+224: event: Helper detected an enemy!
+225: event: Enemy spawned!
+226: event: Helper has stopped seeing an enemy!
+227: Event: Enemy death.
+228: event: Helper detected an enemy!
+229: event: Enemy spawned!
+230: Event: Enemy fell into a pit! Ha ha ha!
+231: event: Enemy spawned!
+232: event: Helper stop seeing an enemy!
+233: Event: Enemy death.
+234: event: Pits have changed.
+235: event: Helper detected an enemy!
+236: event: Enemy spawned!
+237: event: Pits will change in 3 seconds!
+238: event: Helper has stopped seeing an enemy!
+239: Event: Enemy death.
+240: event: Helper detected an enemy!
+241: event: Enemy spawned!
+242: event: Helper stop seeing an enemy!
+243: Event: Enemy death.
+244: event: Helper detected an enemy!
+245: event: Enemy spawned!
+246: event: Helper has stopped seeing an enemy!
+247: Event: Enemy death.
+248: event: Helper detected an enemy!
+249: event: Enemy spawned!
+250: event: Item spawned!
+251: Event: Enemy fell into a pit! Ha ha ha!
+252: event: Enemy spawned!
+253: event: Helper stop seeing an enemy!
+254: Event: Enemy fell into a pit! Ha ha ha!
+255: event: Helper detected an enemy!
+256: event: Enemy spawned!
+257: Event: Enemy death.
+258: event: Enemy spawned!
+259: event: Pits have changed.
+260: event: Helper stop seeing an enemy!
+261: event: Item spawned!
+262: Event: Enemy death.
+263: event: Pits will change in 3 seconds!
+264: event: Helper detected an enemy!
+265: event: Enemy spawned!
+266: event: Helper stop seeing an enemy!
+267: Event: Enemy fell into a pit! Ha ha ha!
+268: Gun damage upgrade.
+269: event: Helper retrieved an item for you!
+270: event: Helper detected an enemy!
+271: event: Enemy spawned!
+272: event: Helper stop seeing an enemy!
+273: Event: Enemy death.
+274: event: Helper detected an enemy!
+275: event: Enemy spawned!
+276: event: Item spawned!
+277: event: Helper stop seeing an enemy!
+278: Event: Enemy death.
+279: Enemy Super Slow Down
+280: event: Helper retrieved an item for you!
+281: event: Helper detected an enemy!
+282: event: Enemy spawned!
+283: event: Helper stop seeing an enemy!
+284: Event: Enemy death.
+285: event: Helper detected an enemy!
+286: Event: Player helper spawned!
+287: event: Item spawned!
+288: event: User decided to go to the store.
+289: event: Enemy spawned!
+290: Event: Enemy death.
+291: event: Enemy spawned!
+292: event: Pits have changed.
+293: Event: Enemy fell into a pit! Ha ha ha!
+294: event: Enemy spawned!
+295: event: Pits will change in 3 seconds!
+296: event: Item spawned!
+297: Event: Enemy fell into a pit! Ha ha ha!
+298: event: Enemy spawned!
+299: event: Item has fallen into a pit!
+300: event: Item spawned!
+301: Event: Enemy death.
+302: event: Enemy spawned!
+303: Event: Enemy death.
+304: event: Item spawned!
+305: event: Enemy spawned!
+306: event: Copter has shot an item.
+307: event: Item spawned!
+308: Event: Enemy fell into a pit! Ha ha ha!
+309: event: Enemy spawned!
+310: event: Copter has shot an item.
+311: event: Item spawned!
+312: Event: Enemy fell into a pit! Ha ha ha!
+313: event: Enemy spawned!
+314: Event: Enemy fell into a pit! Ha ha ha!
+315: event: Enemy spawned!
+316: event: Item spawned!
+317: Event: Enemy death.
+318: Event: Game loaded successfully!
+319: event: Loading game.
+320: event: Mason has decided to start a new game.
+321: event: going to main screen.
+322: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+323: Retrieving message of the day...
+324: Event: Installing keyhook...
+325: event: Checking name...
+326: event: Setting up registry...
+327: event. Version=5.2.
+328: event. loading started.
+329: 
+0: event: Mason has decided to exit.
+1: event: Item spawned!
+2: Event: Enemy death.
+3: Event: Game loaded successfully!
+4: event: Loading game.
+5: event: Mason has decided to start a new game.
+6: event: going to main screen.
+7: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+8: Retrieving message of the day...
+9: Event: Installing keyhook...
+10: event: Checking name...
+11: event: Setting up registry...
+12: event. Version=5.2.
+13: event. loading started.
+14: 
+0: event: Mason has decided to exit.
+1: event: Item has fallen into a pit!
+2: event: Item spawned!
+3: Event: Enemy death.
+4: Event: Game loaded successfully!
+5: event: Loading game.
+6: event: Mason has decided to start a new game.
+7: event: Mason has decided to exit.
+8: event: Item spawned!
+9: Event: Enemy death.
+10: Event: Game loaded successfully!
+11: event: Loading game.
+12: event: Mason has decided to start a new game.
+13: event: going to main screen.
+14: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+15: Retrieving message of the day...
+16: Event: Installing keyhook...
+17: event: Checking name...
+18: event: Setting up registry...
+19: event. Version=5.2.
+20: event. loading started.
+21: 

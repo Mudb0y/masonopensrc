@@ -1,0 +1,78 @@
+class plane
+{
+int dir;
+int px;
+int py;
+int speed;
+sound planesound;
+timer speedtimer;
+plane(int position, int height, int planespeed)
+{
+speed=planespeed;
+px=position;
+py=height;
+planesound.load("plane.ogg");
+position_sound_2d(planesound, x, y, px, py, 2, 2, 4);
+planesound.play_looped();
+}
+}
+void planecheckloop()
+{
+for (uint i=0; i<planes.length(); i++)
+{
+position_sound_2d(planes[i].planesound, x, y, planes[i].px, planes[i].py, 2, 2, 4);
+if (planes[i].px<=maxpos and planes[i].speedtimer.elapsed>=planes[i].speed and planes[i].dir==1)
+{
+planes[i].speedtimer.restart();
+planes[i].px+=1;
+}
+else if (planes[i].px>=0 and planes[i].speedtimer.elapsed>=planes[i].speed and planes[i].dir==0)
+{
+planes[i].speedtimer.restart();
+planes[i].px-=1;
+}
+if (planes[i].dir==1 and planes[i].px>maxpos)
+{
+planes[i].dir=0;
+}
+else if (planes[i].dir==0 and planes[i].px<=0)
+{
+planes[i].dir=1;
+}
+if (x==planes[i].px and y==planes[i].py)
+{
+pool.play_stationary("hit.ogg", false);
+health-=50;
+if (planes[i].dir==1)
+{
+planes[i].px+=1;
+}
+else if (planes[i].dir==0)
+{
+planes[i].px-=1;
+}
+}
+}
+}
+void destroy_all_planes()
+{
+for (uint i=0; i<planes.length(); i++)
+{
+planes[i].planesound.stop();
+}
+planes.resize(0);
+}
+void pause_all_planes()
+{
+for (uint i=0; i<planes.length(); i++)
+{
+planes[i].planesound.pause();
+}
+}
+void play_all_planes()
+{
+for (uint i=0; i<planes.length(); i++)
+{
+planes[i].planesound.play_looped();
+}
+}

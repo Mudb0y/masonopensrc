@@ -1,0 +1,170 @@
+#include"sounds.dat"
+#include "speech.bgt"
+#include "sound_pool.bgt"
+int killslevel;
+int level=1;
+int voltime=300;
+int num1=1;
+int num2=1;
+int startingvol=-30;
+int enemynum;
+int enemy1s, enemy2s;
+pack_file pfile;
+sound levelup, enemy1, enemy1death, enemy2, enemy2death, gun;
+sound_pool pool;
+timer voltimer;
+void main()
+{
+pfile.open("*");
+set_sound_storage("*");
+set_sound_decryption_key("m9t12g42rs4212da12334096438stafr3214dsa132gb22c", true);
+alert("super shooter", "welcome. press left arrow to move left, right arrow to move right, space to shoot. your goal is to shoot at the target before it reaches your base. You will know this by it's volume. Note, there are supposed to be 2 types of enemies, but one of them is broken, as in not working. Don't be surprised if you hear 2 hit sounds.");
+show_game_window("Super Shooter");
+loadsounds();
+game();
+}
+void loadsounds()
+{
+enemy1.load("enemy1.wav");
+enemy1death.load("enemy1death.wav");
+enemy2.load("enemy2.wav");
+enemy2death.load("enemy2death.wav");
+levelup.load("levelup.wav");
+}
+void game()
+{
+enemynum=random(num1,num2);
+while (true)
+{
+if (killslevel==5)
+{
+levelup.play();
+level+=1;
+killslevel=0;
+if (num2<2)
+{
+num2+=1;
+}
+}
+if (key_pressed(KEY_L))
+{
+speak("level "+level);
+}
+if (key_pressed(KEY_F1))
+{
+speak(voltime);
+}
+if (voltimer.elapsed>=voltime)
+{
+voltimer.restart();
+if (enemynum==1 and enemy1s==1)
+{
+enemy1.volume=enemy1.volume+1;
+if (enemy1.volume>=0)
+{
+enemy1.stop();
+enemy1death.volume=enemy1.volume;
+enemy1death.pan=enemy1.pan;
+enemy1death.stop();
+enemy1death.play();
+enemy1s=0;
+enemynum=random(num1,num2);
+}
+}
+}
+if (enemynum==2 and enemy2s==1)
+{
+enemy2.volume=enemy2.volume+1;
+if (enemy2.volume>=0)
+{
+enemy2.stop();
+enemy2death.volume=enemy2.volume;
+enemy2death.pan=enemy2.pan;
+enemy2death.stop();
+enemy2death.play();
+enemy2s=0;
+enemynum=random(num1,num2);
+}
+}
+if (enemynum==1 and enemy1s==0)
+{
+enemy1.pan=random(-20,20);
+enemy1.volume=startingvol;
+enemy1.play_looped();
+enemy1s=1;
+}
+if (enemynum==2 and enemy2s==0)
+{
+enemy2.pan=random(-20,20);
+enemy2.volume=startingvol;
+enemy2.play_looped();
+enemy2s=1;
+}
+if (key_pressed(KEY_LEFT))
+{
+if (enemynum==1 and enemy1s==1 and enemy1.pan>=-20)
+{
+enemy1.pan=enemy1.pan+2;
+}
+if (enemynum==2 and enemy2s==1 and enemy2.pan>=-20)
+{
+enemy2.pan=enemy2.pan+2;
+}
+}
+if (key_pressed(KEY_RIGHT))
+{
+if (enemynum==1 and enemy1s==1 and enemy1.pan<=20)
+{
+enemy1.pan=enemy1.pan-2;
+}
+if (enemynum==2 and enemy2s==1 and enemy2.pan<=20)
+{
+enemy2.pan=enemy2.pan-2;
+}
+}
+if (key_pressed(KEY_ESCAPE))
+{
+exit();
+}
+if (key_pressed(KEY_SPACE))
+{
+pool.play_stationary("gun.wav", false);
+if (enemynum==1 and enemy1s==1)
+{
+if (enemy1.pan>=-3 and enemy1.pan<=3)
+{
+enemy1.stop();
+enemy1death.volume=enemy1.volume;
+enemy1death.pan=enemy1.pan;
+enemy1death.stop();
+enemy1death.play();
+enemy1s=0;
+killslevel+=1;
+if (voltime>=125)
+{
+voltime-=5;
+}
+enemynum=random(num1,num2);
+}
+}
+if (enemynum==2 and enemy2s==1)
+{
+if (enemy2.pan>=-3 and enemy2.pan<=3)
+{
+enemy2.stop();
+enemy2death.volume=enemy2.volume;
+enemy2death.pan=enemy2.pan;
+enemy2death.stop();
+enemy2death.play();
+enemy2s=0;
+killslevel+=1;
+if (voltime>=125)
+{
+voltime-=5;
+}
+enemynum=random(num1,num2);
+}
+}
+}
+}
+}

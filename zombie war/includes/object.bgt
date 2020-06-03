@@ -1,0 +1,187 @@
+object@[] objs(0);
+int minitemtime=5000;
+int maxitemtime=7000;
+int itemtime=random(minitemtime,maxitemtime);
+timer itemtimer;
+class object
+{
+int pickrange=2;
+int ox,oy;
+int osound;
+string type;
+string what;
+int hm;
+object(int objx,int objy, string otype="random",string owhat="random",int howmany=1)
+{
+hm=howmany;
+what=owhat;
+ox=objx;
+oy=objy;
+type=otype;
+if (type=="random")
+{
+type=itemtypes[random(0,itemtypes.length()-1)];
+if (type==".9 MM ammo")
+{
+what=".9 MM ammo";
+if (quantifier<=0)
+hm=10;
+else
+hm=10*quantifier;
+}
+if (type=="benelli")
+{
+type="shotgun";
+what="benelli";
+}
+if (type=="spas")
+{
+type="shotgun";
+what="spas";
+}
+if (type=="eagle")
+{
+type="pistol";
+what="eagle";
+}
+if (type=="med")
+{
+type="med";
+what="med";
+}
+if (type=="bat" and bathas==0)
+{
+type="melee";
+what="bat";
+}
+else if (type=="bat" and bathas==1)
+{
+type="ammo";
+what=".9 MM ammo";
+if (quantifier<=0)
+hm=10;
+else
+hm=10*quantifier;
+}
+}
+osound=p.play_2d("loot.ogg", me.x,me.y,ox,oy,true);
+}
+}
+void oloop()
+{
+if (itemtimer.elapsed>=itemtime and objs.length()<50)
+{
+itemtimer.restart();
+spawn_object(random(0,maxx-5),random(0,maxy));
+}
+for (uint i=0; i<objs.length(); i++)
+{
+if (me.x>=objs[i].ox-objs[i].pickrange and me.x<=objs[i].ox+objs[i].pickrange and me.y>=objs[i].oy-objs[i].pickrange and me.y<=objs[i].oy+objs[i].pickrange)
+{
+p.play_stationary("get_"+objs[i].type+".ogg", false);
+p.destroy_sound(objs[i].osound);
+objcheck(objs[i].what, objs[i].hm);
+objs.remove_at(i);
+break;
+}
+}
+}
+void spawn_object(int ox,int oy, string otype="random",string owhat="random", int howmany=1)
+{
+object object1(ox,oy,otype,owhat,howmany);
+objs.insert_last(object1);
+}
+void objcheck(string what, int howmany)
+{
+if (what=="benelli")
+{
+if (benellihas==0)
+{
+speak("Benelli");
+benellihas=1;
+w3.give_benelli();
+}
+else
+{
+if (quantifier<=0)
+howmany=8;
+else
+howmany=8*quantifier;
+p.play_stationary("get_shotgun shells.ogg",false);
+speak(howmany+" .shotgun shells from a benelli");
+ammo[2]+=howmany;
+}
+}
+if (what=="spas")
+{
+if (spashas==0)
+{
+speak("SPAS12");
+spashas=1;
+w3.give_spas();
+}
+else
+{
+if (quantifier<=0)
+howmany=9;
+else
+howmany=9*quantifier;
+p.play_stationary("get_shotgun shells.ogg",false);
+speak(howmany+" .shotgun shells from a SPAS12");
+ammo[2]+=howmany;
+}
+}
+if (what=="eagle")
+{
+if (eaglehas==0)
+{
+speak("Desert Eagle");
+eaglehas=1;
+w2.give_eagle();
+}
+else
+{
+if (quantifier<=0)
+howmany=15;
+else
+howmany=15*quantifier;
+p.play_stationary("get_.9 MM ammo.ogg",false);
+speak(howmany+" .9 MM ammo from a desert eagle");
+ammo[0]+=howmany;
+}
+}
+if (what==".9 MM ammo")
+{
+speak(howmany+" .9 MM ammo");
+ammo[0]+=howmany;
+}
+if (what=="shotgun shells")
+{
+speak(howmany+" .shotgun shells");
+ammo[2]+=howmany;
+}
+if (what=="bat")
+{
+bathas=1;
+speak("Baseball bat.");
+w1.give_bat();
+}
+if (what=="med")
+{
+int hmmed;
+if (quantifier<=0)
+hmmed=1;
+else
+hmmed=1*quantifier;
+speak(hmmed+" medkits");
+meds+=hmmed;
+}
+}
+void destroy_all_objects()
+{
+for (uint i=0; i<objs.length(); i++)
+{
+p.destroy_sound(objs[i].osound);
+}
+objs.resize(0);
+}

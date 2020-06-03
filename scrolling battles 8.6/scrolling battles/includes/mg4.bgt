@@ -1,0 +1,93 @@
+int firepos, firespeed, winpos, yourpos;
+sound fireloop, fireamb;
+timer firetimer;
+void mg4()
+{
+gamepaused=0;
+gamedollars=0;
+playerpos=0;
+firepos=-10;
+firespeed=380;
+winpos=30;
+fireloop.load("sounds/soundpacks/"+soundpack+"/fireloop.ogg");
+fireamb.load("sounds/soundpacks/"+soundpack+"/fireamb.ogg");
+fireamb.play_looped();
+fireloop.play_looped();
+while(true)
+{
+if (key_pressed(KEY_P))
+{
+if (gamepaused==0)
+{
+gamepaused=1;
+firetimer.pause();
+fireloop.pause();
+fireamb.pause();
+}
+else if (gamepaused==1)
+{
+gamepaused=0;
+firetimer.resume();
+fireloop.play_looped();
+fireamb.play_looped();
+}
+}
+if (key_pressed(KEY_C))
+{
+speak(playerpos+" of "+winpos);
+}
+if (key_pressed(KEY_ESCAPE))
+{
+dlg("You earned a total of "+gamedollars+" Dollars.");
+dollars+=gamedollars;
+fireamb.stop();
+fireloop.stop();
+registrywrite();
+mgmenu();
+}
+if (key_pressed(KEY_LEFT) and gamepaused==0)
+{
+pool.play_stationary("sounds/environments/"+environment+"/step"+random(1,5)+".ogg", false, false);
+playerpos-=1;
+}
+if (key_pressed(KEY_RIGHT) and gamepaused==0)
+{
+pool.play_stationary("sounds/environments/"+environment+"/step"+random(1,5)+".ogg", false, false);
+playerpos+=1;
+}
+if(playerpos<=firepos)
+{
+dlgplay("sounds/soundpacks/"+soundpack+"/killed.ogg");
+dlg("You earned a total of "+gamedollars+" Dollars.");
+dollars+=gamedollars;
+registrywrite();
+fireamb.stop();
+fireloop.stop();
+mgmenu();
+}
+if (playerpos>=winpos)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/tele.ogg", false);
+speak("next fire!");
+gamedollars+=random(1,10);
+playerpos=0;
+firepos=-10;
+if (firespeed>=70)
+{
+firespeed-=10;
+}
+winpos+=5;
+}
+if (firetimer.elapsed>=firespeed)
+{
+firepos+=1;
+firetimer.restart();
+}
+positions4();
+wait(5);
+}
+}
+void positions4()
+{
+position_sound_1d(fireloop, playerpos, firepos, 1, 1);
+}

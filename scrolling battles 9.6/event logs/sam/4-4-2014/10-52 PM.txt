@@ -1,0 +1,17 @@
+0: 
+1: event. Version=9.6.0.133. (10-52-26 PM)
+2: event: sam has 16 trophies (10-52-26 PM)
+3: Event: sam is using the upgraded Soundpack. (10-52-26 PM)
+4: Event: sam is using the building (sb3 default) environment. (10-52-26 PM)
+5: Event. User wants a normal game. (10-52-29 PM)
+6: event: sam has decided to start a new game. (10-52-29 PM)
+7: A lava pit spawned at 259 (10-52-29 PM)
+8: A casm pit spawned at 182 (10-52-29 PM)
+9: A hollow pit spawned at 123 (10-52-29 PM)
+10: Event: an enemy (name samantha) has been spawned at 342 with 300 HP. (10-52-29 PM)
+11: Event: Game loaded! (10-52-29 PM)
+12: event: sam just earned the trophy Play scrolling battles late at night! (10-52-31 PM)
+13: Event: an enemy (name dectalk paul) has been spawned at 190 with 300 HP. (10-52-33 PM)
+14: Event: An item has spawned! (10-52-38 PM)
+15: Event: an enemy (name southerner) has been spawned at 257 with 300 HP. (10-52-40 PM)
+16: event: sam has decided to exit.

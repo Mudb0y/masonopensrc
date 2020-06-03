@@ -1,0 +1,78 @@
+string version;
+string link="http://mtgstudiosus.tk/sb/dl.txt";
+string ver="http://mtgstudiosus.tk/sb/ver.txt";
+string url;
+http download;
+file setup;
+tts_voice voice;
+void main()
+{
+voice.speak("Retrieving initial data.");
+url=download.get(link);
+if(get_last_error()!=0)
+{
+alert("Error", "An error occured.\r\nDescription: "+url);
+}
+else
+{
+while(download.progress)
+{
+url+=download.request();
+}
+initial();
+}
+}
+void initial()
+{
+version=download.get(ver);
+if(get_last_error()!=0)
+{
+alert("Error", "An error occured.\r\nDescription: "+version);
+}
+else
+{
+while(download.progress)
+{
+version+=download.request();
+}
+voice.stop();
+int answer=question("SB Downloader", "The latest version of sb is "+version+". Would you like to download it?");
+if (answer==1)
+{
+dl();
+}
+else
+{
+exit();
+}
+}
+}
+void dl()
+{
+voice.speak_interrupt("Downloading file, please wait a few minutes.");
+string installer=download.get(url);
+if(get_last_error()!=0)
+{
+alert("Error", "An error occured.\r\nDescription: "+installer);
+}
+else
+{
+while(download.progress)
+{
+installer+=download.request();
+}
+voice.speak_interrupt("Done!");
+setup.open("sb_setup_v"+version+".exe", "wb");
+setup.write(installer);
+setup.close();
+}
+int answer=question("Finished", "Would you like to run the SB installer now?");
+if (answer==1)
+{
+run("sb_setup_v"+version+".exe", false, false, false);
+}
+else
+{
+exit();
+}
+}

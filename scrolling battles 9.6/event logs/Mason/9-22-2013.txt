@@ -1,0 +1,202 @@
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.076.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: event: Game unpaused by user
+2: event: Game paused by user
+3: event: Game unpaused by user
+4: event: Game paused by user
+5: event: Game unpaused by user
+6: event: Game paused by user
+7: event: Game unpaused by user
+8: event: Game paused by user
+9: Event: Game loaded successfully!
+10: event: Loading game.
+11: event: Mason has decided to start a new game.
+12: event. User wants a normal game.
+13: Retrieving message of the day...
+14: Event: Installing keyhook...
+15: event: Checking name...
+16: event: Setting up registry...
+17: event. Version=6.0.0.076.
+18: event. loading started.
+19: 
+0: event: Mason has decided to exit.
+1: event: Game unpaused by user
+2: event: Game paused by user
+3: event: Game unpaused by user
+4: event: Game paused by user
+5: Event: Game loaded successfully!
+6: event: Loading game.
+7: event: Mason has decided to start a new game.
+8: event. User wants a normal game.
+9: Retrieving message of the day...
+10: Event: Installing keyhook...
+11: event: Checking name...
+12: event: Setting up registry...
+13: event. Version=6.0.0.076.
+14: event. loading started.
+15: 
+0: event: Mason has decided to exit.
+1: event: User decided to go to the store.
+2: event: Game unpaused by user
+3: event: Game paused by user
+4: event: Game unpaused by user
+5: event: Game paused by user
+6: event: Game unpaused by user
+7: event: Game paused by user
+8: event: Game unpaused by user
+9: event: Game paused by user
+10: event: Game unpaused by user
+11: event: Game paused by user
+12: event: User decided to go to the store.
+13: event: Game unpaused by user
+14: event: Game paused by user
+15: Event: Game loaded successfully!
+16: event: Loading game.
+17: event: Mason has decided to start a new game.
+18: event. User wants a normal game.
+19: Retrieving message of the day...
+20: Event: Installing keyhook...
+21: event: Checking name...
+22: event: Setting up registry...
+23: event. Version=6.0.0.076.
+24: event. loading started.
+25: 
+0: event: Mason has decided to exit.
+1: Event: Teleporter started!
+2: Event: Teleporter started!
+3: Event: Teleporter started!
+4: Event: Player helper spawned!
+5: Event: Player helper no longer spawned!
+6: Event: Player helper spawned!
+7: Event: Player helper no longer spawned!
+8: Event: Player helper spawned!
+9: Event: Teleporter started!
+10: Event: Game loaded successfully!
+11: event: Loading game.
+12: event: Mason has decided to start a new game.
+13: event. User wants a normal game.
+14: Retrieving message of the day...
+15: Event: Installing keyhook...
+16: event: Checking name...
+17: event: Setting up registry...
+18: event. Version=6.0.0.076.
+19: event. loading started.
+20: 
+0: event: Mason has decided to exit.
+1: Event: Grenade has exploded.
+2: Event: Grenade has exploded.
+3: Event: Grenade has exploded.
+4: Event: Grenade has exploded.
+5: Event: Game loaded successfully!
+6: event: Loading game.
+7: event: Mason has decided to start a new game.
+8: event. User wants a normal game.
+9: Retrieving message of the day...
+10: Event: Installing keyhook...
+11: event: Checking name...
+12: event: Setting up registry...
+13: event. Version=6.0.0.076.
+14: event. loading started.
+15: 
+0: event: Mason has decided to exit.
+1: Event: Teleporter started!
+2: Event: Teleporter started!
+3: Event: Teleporter started!
+4: Event: Player helper no longer spawned!
+5: Event: Player helper spawned!
+6: event: Game unpaused by user
+7: event: Game paused by user
+8: Event: Game loaded successfully!
+9: event: Loading game.
+10: event: Mason has decided to start a new game.
+11: event. User wants a normal game.
+12: Retrieving message of the day...
+13: Event: Installing keyhook...
+14: event: Checking name...
+15: event: Setting up registry...
+16: event. Version=6.0.0.076.
+17: event. loading started.
+18: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.076.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.077.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.077.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.077.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.077.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.077.
+10: event. loading started.
+11: 

@@ -1,0 +1,37 @@
+0: event: Mason has decided to exit.
+1: event: Game unpaused by user
+2: event: Game paused by user
+3: event: Pits have changed.
+4: event: Pits will change in 3 seconds!
+5: event: Enemy spawned!
+6: Event: Enemy fell into a pit! Ha ha ha!
+7: event: User has decided to sell stuff.
+8: event: Pits have changed.
+9: event: Pits will change in 3 seconds!
+10: event: User has decided to sell stuff.
+11: event: Enemy spawned!
+12: Event: Enemy death.
+13: event: Pits have changed.
+14: event: Pits will change in 3 seconds!
+15: event: User has decided to sell stuff.
+16: event: User has decided to sell stuff.
+17: event: Pits have changed.
+18: event: Pits will change in 3 seconds!
+19: event: Enemy spawned!
+20: Event: Enemy fell into a pit! Ha ha ha!
+21: event: Enemy spawned!
+22: Event: Enemy fell into a pit! Ha ha ha!
+23: event: User has decided to sell stuff.
+24: event: Enemy spawned!
+25: Event: Enemy death.
+26: Event: Game loaded successfully!
+27: event: Loading game.
+28: event: Mason has decided to start a new game.
+29: event: going to main screen.
+30: Retrieving message of the day...
+31: Event: Installing keyhook...
+32: event: Checking name...
+33: event: Setting up registry...
+34: event. Version=5.5.0.066.
+35: event. loading started.
+36: 

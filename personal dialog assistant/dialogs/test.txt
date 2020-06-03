@@ -1,0 +1,2 @@
+dialog title. test
+dialog text. test2

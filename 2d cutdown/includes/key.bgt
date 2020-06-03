@@ -1,0 +1,40 @@
+string value="value";
+dictionary ks;
+class key
+{
+int keysound;
+int keyroom;
+int x, y;
+key(int kx, int ky, int room)
+{
+x=kx;
+y=ky;
+keyroom=room;
+keysound=p.play_2d("key.ogg", me.x, me.y, x, y, true);
+}
+}
+void keyloop()
+{
+for (uint i=0; i<keys.length(); i++)
+{
+p.update_sound_2d(keys[i].keysound, keys[i].x, keys[i].y);
+if (me.x==keys[i].x and me.y==keys[i].y)
+{
+p.destroy_sound(keys[i].keysound);
+p.play_stationary("keyget.ogg", false);
+p.play_stationary("keyvoice.ogg", false);
+ks.set(keys[i].keyroom, value);
+keys.remove_at(i);
+break;
+}
+}
+}
+void spawn_key(int keyx, int keyy, int keyroom)
+{
+key key1(keyx, keyy, keyroom);
+keys.insert_last(key1);
+}
+void destroy_all_keys()
+{
+keys.resize(0);
+}

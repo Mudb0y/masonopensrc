@@ -1,0 +1,78 @@
+dictionary maphazards;
+string[] hazardkeys;
+h@[] hazards;
+class h
+{
+int minx, maxx, miny, maxy;
+int hazard_sound;
+string type;
+h(int min_x, int max_x, int min_y, int max_y, string htype="")
+{
+minx=min_x;
+maxx=max_x;
+miny=min_y;
+maxy=max_y;
+type=htype;
+hazard_sound=p.play_2d(type, minx, miny, me.x, me.y, true);
+spawn_platform(minx,maxx,miny,"hazard",false);
+}
+}
+void hazardcheckloop()
+{
+for (uint i=0; i<hazards.length(); i++)
+{
+p.update_sound_2d(hazards[i].hazard_sound, hazards[i].minx, hazards[i].miny);
+p.update_sound_range_2d(hazards[i].hazard_sound, (me.x-hazards[i].minx), (hazards[i].maxx-hazards[i].minx), (me.y-hazards[i].miny), (hazards[i].maxy-hazards[i].miny));
+if (me.x>=hazards[i].minx and me.x<=hazards[i].maxx and me.y>=hazards[i].miny and me.y<=hazards[i].maxy)
+{
+p.play_stationary("fireignite.ogg",false);
+wait(600);
+health=0;
+}
+}
+}
+void spawn_hazard(int minx, int maxx, int miny, int maxy, string type)
+{
+h hazard1(minx, maxx, miny, maxy,type);
+hazards.insert_last(hazard1);
+maphazards.set(minx+":"+maxx+":"+miny+":"+maxy+":"+type, "hazard");
+}
+void destroy_hazard(int s)
+{
+p.destroy_sound(hazards[s].hazard_sound);
+hazards.remove_at(s);
+}
+void remove_hazard(int hazard)
+{
+destroy_hazard(hazard);
+maphazards.delete(hazardkeys[hazard]);
+hazardkeys.remove_at(hazard);
+destroy_all_hazards(false);
+for(uint i=0; i<hazardkeys.length(); i++)
+{
+add_hazard(i);
+}
+}
+void destroy_all_hazards(bool delete=true)
+{
+for(uint i=0; i<hazards.length(); i++)
+{
+p.destroy_sound(hazards[i].hazard_sound);
+}
+hazards.resize(0);
+if(delete==true)
+{
+maphazards.delete_all();
+}
+}
+void add_hazard(int hazard)
+{
+string[] hazardsplits;
+if(maphazards.exists(hazardkeys[hazard]))
+{
+hazardsplits=string_split(hazardkeys[hazard], ":", false);
+int minx=string_to_number(hazardsplits[0]), maxx=string_to_number(hazardsplits[1]), miny=string_to_number(hazardsplits[2]), maxy=string_to_number(hazardsplits[3]);
+string type=hazardsplits[4];
+spawn_hazard(minx, maxx, miny, maxy, type);
+}
+}

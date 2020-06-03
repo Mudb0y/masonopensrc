@@ -1,0 +1,1832 @@
+0: Event: Enemy death.
+1: event: Enemy spawned!
+2: Event: Enemy death.
+3: event: Enemy spawned!
+4: event: Helper stop seeing an enemy!
+5: Event: Enemy death.
+6: event: Helper detected an enemy!
+7: event: Enemy spawned!
+8: Event: Enemy death.
+9: event: Enemy spawned!
+10: Event: Enemy death.
+11: event: Enemy spawned!
+12: event: Helper stop seeing an enemy!
+13: Event: Enemy death.
+14: event: Helper detected an enemy!
+15: event: Enemy spawned!
+16: event: Helper has stopped seeing an enemy!
+17: Event: Enemy death.
+18: event: Helper detected an enemy!
+19: event: Enemy spawned!
+20: Event: Enemy death.
+21: event: Enemy spawned!
+22: event: Helper stop seeing an enemy!
+23: Event: Enemy death.
+24: event: Helper detected an enemy!
+25: event: Enemy spawned!
+26: event: Helper stop seeing an enemy!
+27: Event: Enemy death.
+28: event: Helper detected an enemy!
+29: event: Enemy spawned!
+30: Event: Enemy death.
+31: event: Enemy spawned!
+32: Event: Enemy death.
+33: event: Enemy spawned!
+34: event: Helper has stopped seeing an enemy!
+35: Event: Enemy death.
+36: event: Helper detected an enemy!
+37: event: Enemy spawned!
+38: event: Helper stop seeing an enemy!
+39: Event: Enemy death.
+40: event: Helper detected an enemy!
+41: event: Enemy spawned!
+42: event: Pits have changed.
+43: Event: Enemy death.
+44: event: Enemy spawned!
+45: event: Pits will change in 3 seconds!
+46: event: Helper stop seeing an enemy!
+47: Event: Enemy death.
+48: event: Helper detected an enemy!
+49: event: Enemy spawned!
+50: event: Helper stop seeing an enemy!
+51: Event: Enemy death.
+52: event: Helper detected an enemy!
+53: event: Enemy spawned!
+54: Event: Enemy death.
+55: event: Enemy spawned!
+56: Event: Enemy death.
+57: event: Enemy spawned!
+58: Event: Enemy death.
+59: event: Enemy spawned!
+60: Event: Enemy death.
+61: event: Enemy spawned!
+62: Event: Enemy death.
+63: event: Enemy spawned!
+64: event: Helper stop seeing an enemy!
+65: Event: Enemy death.
+66: event: Helper detected an enemy!
+67: event: Enemy spawned!
+68: event: Helper stop seeing an enemy!
+69: Event: Enemy death.
+70: event: Helper detected an enemy!
+71: event: Enemy spawned!
+72: Event: Enemy death.
+73: event: Enemy spawned!
+74: Event: Enemy death.
+75: event: Enemy spawned!
+76: Event: Enemy death.
+77: event: Enemy spawned!
+78: Event: Enemy death.
+79: event: Enemy spawned!
+80: Event: Enemy death.
+81: event: Enemy spawned!
+82: event: Helper stop seeing an enemy!
+83: Event: Enemy death.
+84: event: Helper detected an enemy!
+85: event: Enemy spawned!
+86: event: Pits have changed.
+87: event: Helper has stopped seeing an enemy!
+88: Event: Enemy death.
+89: event: Helper detected an enemy!
+90: event: Enemy spawned!
+91: event: Pits will change in 3 seconds!
+92: Event: Enemy death.
+93: event: Enemy spawned!
+94: Event: Enemy fell into a pit! Ha ha ha!
+95: event: Enemy spawned!
+96: event: Helper stop seeing an enemy!
+97: Event: Enemy death.
+98: event: Helper detected an enemy!
+99: event: Enemy spawned!
+100: Event: Enemy death.
+101: event: Enemy spawned!
+102: event: Helper stop seeing an enemy!
+103: Event: Enemy death.
+104: event: Helper detected an enemy!
+105: event: Enemy spawned!
+106: event: Helper stop seeing an enemy!
+107: Event: Enemy death.
+108: event: Helper detected an enemy!
+109: event: Enemy spawned!
+110: event: Helper stop seeing an enemy!
+111: Event: Enemy death.
+112: event: Helper detected an enemy!
+113: event: Enemy spawned!
+114: Event: Enemy death.
+115: event: Enemy spawned!
+116: Event: Enemy death.
+117: event: Enemy spawned!
+118: Event: Enemy death.
+119: event: Enemy spawned!
+120: event: Helper stop seeing an enemy!
+121: Event: Enemy death.
+122: event: Helper detected an enemy!
+123: event: Enemy spawned!
+124: Event: Enemy death.
+125: event: Enemy spawned!
+126: event: Pits have changed.
+127: event: Pits will change in 3 seconds!
+128: Event: Enemy death.
+129: event: Enemy spawned!
+130: Event: Enemy death.
+131: event: Enemy spawned!
+132: event: Helper stop seeing an enemy!
+133: Event: Enemy fell into a pit! Ha ha ha!
+134: event: Helper detected an enemy!
+135: event: Enemy spawned!
+136: event: Helper stop seeing an enemy!
+137: Event: Enemy death.
+138: event: Helper detected an enemy!
+139: event: Enemy spawned!
+140: event: Helper stop seeing an enemy!
+141: Event: Enemy death.
+142: event: Helper detected an enemy!
+143: event: Enemy spawned!
+144: Event: Enemy death.
+145: event: Enemy spawned!
+146: Event: Enemy death.
+147: event: Enemy spawned!
+148: Event: Enemy death.
+149: event: Enemy spawned!
+150: Event: Enemy death.
+151: event: Enemy spawned!
+152: Event: Enemy death.
+153: event: Enemy spawned!
+154: Event: Player helper spawned!
+155: event: Item spawned!
+156: Event: Enemy death.
+157: Event: Game loaded successfully!
+158: event: Loading game.
+159: event: Mason has decided to start a new game.
+160: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+161: Retrieving message of the day...
+162: Event: Installing keyhook...
+163: event: Checking name...
+164: event: Setting up registry...
+165: event. Version=5.1.3.
+166: event. loading started.
+167: 
+0: event: Pits have changed.
+1: event: Pits will change in 3 seconds!
+2: event: Copter has detected an enemy!
+3: event: Enemy spawned!
+4: event: Copter has killed an enemy!
+5: Event: Enemy death.
+6: event: Pits have changed.
+7: event: Copter has detected an enemy!
+8: event: Enemy spawned!
+9: event: Copter has killed an enemy!
+10: Event: Enemy death.
+11: event: Pits will change in 3 seconds!
+12: event: Copter has detected an enemy!
+13: Event: Copter spawned!
+14: event: Enemy spawned!
+15: Event: Enemy death.
+16: event: Enemy spawned!
+17: Event: Enemy death.
+18: event: Enemy spawned!
+19: Event: Enemy death.
+20: event: Pits have changed.
+21: event: Pits will change in 3 seconds!
+22: event: Pits have changed.
+23: event: Pits will change in 3 seconds!
+24: event: Pits have changed.
+25: event: Pits will change in 3 seconds!
+26: event: Pits have changed.
+27: event: Pits will change in 3 seconds!
+28: event: Pits have changed.
+29: event: Pits will change in 3 seconds!
+30: event: Pits have changed.
+31: event: Pits will change in 3 seconds!
+32: event: Item spawned!
+33: event: Item has fallen into a pit!
+34: event: Pits have changed.
+35: event: Pits will change in 3 seconds!
+36: event: Pits have changed.
+37: event: Pits will change in 3 seconds!
+38: event: Pits have changed.
+39: event: Pits will change in 3 seconds!
+40: event: Pits have changed.
+41: event: Pits will change in 3 seconds!
+42: event: Pits have changed.
+43: event: Pits will change in 3 seconds!
+44: event: Pits have changed.
+45: event: Pits will change in 3 seconds!
+46: event: Pits have changed.
+47: event: Pits will change in 3 seconds!
+48: event: Pits have changed.
+49: event: Pits will change in 3 seconds!
+50: event: Pits have changed.
+51: event: Pits will change in 3 seconds!
+52: event: Pits have changed.
+53: event: Pits will change in 3 seconds!
+54: event: Pits have changed.
+55: event: Pits will change in 3 seconds!
+56: event: Pits have changed.
+57: event: Pits will change in 3 seconds!
+58: event: Item spawned!
+59: event: Item has fallen into a pit!
+60: event: Pits have changed.
+61: event: Pits will change in 3 seconds!
+62: event: Pits have changed.
+63: event: Pits will change in 3 seconds!
+64: event: Pits have changed.
+65: event: Pits will change in 3 seconds!
+66: event: Pits have changed.
+67: event: Pits will change in 3 seconds!
+68: event: Pits have changed.
+69: event: Pits will change in 3 seconds!
+70: event: Enemy spawned!
+71: Event: Enemy death.
+72: event: Pits have changed.
+73: event: Pits will change in 3 seconds!
+74: event: Pits have changed.
+75: event: Pits will change in 3 seconds!
+76: event: Pits have changed.
+77: event: Pits will change in 3 seconds!
+78: event: Game unpaused by user
+79: event: Game paused by user
+80: event: Pits have changed.
+81: event: Pits will change in 3 seconds!
+82: event: Pits have changed.
+83: event: Pits will change in 3 seconds!
+84: event: Pits have changed.
+85: event: Pits will change in 3 seconds!
+86: event: Pits have changed.
+87: event: Pits will change in 3 seconds!
+88: event: Pits have changed.
+89: event: Pits will change in 3 seconds!
+90: event: Pits have changed.
+91: event: Pits will change in 3 seconds!
+92: event: Pits have changed.
+93: event: Pits will change in 3 seconds!
+94: event: Pits have changed.
+95: event: Pits will change in 3 seconds!
+96: event: Item spawned!
+97: event: Item has fallen into a pit!
+98: event: Pits have changed.
+99: event: Pits will change in 3 seconds!
+100: event: Pits have changed.
+101: event: Pits will change in 3 seconds!
+102: event: Pits have changed.
+103: event: Pits will change in 3 seconds!
+104: event: Pits have changed.
+105: event: Pits will change in 3 seconds!
+106: event: Pits have changed.
+107: event: Pits will change in 3 seconds!
+108: event: Pits have changed.
+109: event: Pits will change in 3 seconds!
+110: event: Pits have changed.
+111: event: Pits will change in 3 seconds!
+112: event: Pits have changed.
+113: event: Pits will change in 3 seconds!
+114: event: Pits have changed.
+115: event: Pits will change in 3 seconds!
+116: event: Pits have changed.
+117: event: Pits will change in 3 seconds!
+118: event: Enemy spawned!
+119: event: Pits have changed.
+120: event: Pits will change in 3 seconds!
+121: Event: Enemy death.
+122: event: Pits have changed.
+123: event: Pits will change in 3 seconds!
+124: event: Pits have changed.
+125: event: Pits will change in 3 seconds!
+126: event: Pits have changed.
+127: event: Pits will change in 3 seconds!
+128: event: Pits have changed.
+129: event: Pits will change in 3 seconds!
+130: event: Pits have changed.
+131: event: Pits will change in 3 seconds!
+132: event: Pits have changed.
+133: event: Pits will change in 3 seconds!
+134: event: Pits have changed.
+135: event: Pits will change in 3 seconds!
+136: event: Enemy spawned!
+137: Event: Enemy death.
+138: event: Pits have changed.
+139: event: Pits will change in 3 seconds!
+140: event: Enemy spawned!
+141: Event: Enemy death.
+142: event: Enemy spawned!
+143: Event: Enemy death.
+144: event: Pits have changed.
+145: event: Enemy spawned!
+146: Event: Enemy death.
+147: event: Pits will change in 3 seconds!
+148: event: Pits have changed.
+149: event: Pits will change in 3 seconds!
+150: event: Pits have changed.
+151: event: Pits will change in 3 seconds!
+152: event: Pits have changed.
+153: event: Pits will change in 3 seconds!
+154: event: Pits have changed.
+155: event: Pits will change in 3 seconds!
+156: event: Item spawned!
+157: event: Enemy spawned!
+158: Event: Enemy death.
+159: event: Enemy spawned!
+160: Event: Enemy death.
+161: event: Pits have changed.
+162: event: Pits will change in 3 seconds!
+163: event: Pits have changed.
+164: event: Pits will change in 3 seconds!
+165: event: Pits have changed.
+166: event: Pits will change in 3 seconds!
+167: event: Enemy spawned!
+168: Event: Enemy death.
+169: event: Pits have changed.
+170: event: Pits will change in 3 seconds!
+171: event: Item spawned!
+172: event: Pits have changed.
+173: event: Pits will change in 3 seconds!
+174: Event: Player helper no longer spawned!
+175: event: Enemy spawned!
+176: event: Helper stop seeing an enemy!
+177: Event: Enemy death.
+178: event: Helper detected an enemy!
+179: event: Enemy spawned!
+180: event: Helper has stopped seeing an enemy!
+181: Event: Enemy death.
+182: event: Helper detected an enemy!
+183: event: Enemy spawned!
+184: event: Helper stop seeing an enemy!
+185: Event: Enemy death.
+186: event: Helper detected an enemy!
+187: event: Enemy spawned!
+188: event: Helper stop seeing an enemy!
+189: Event: Enemy death.
+190: event: Enemy spawned!
+191: event: Pits have changed.
+192: Event: Enemy death.
+193: event: Helper detected an enemy!
+194: event: Enemy spawned!
+195: event: Helper stop seeing an enemy!
+196: Event: Enemy death.
+197: event: Pits will change in 3 seconds!
+198: event: Helper detected an enemy!
+199: event: Enemy spawned!
+200: event: Helper stop seeing an enemy!
+201: Event: Enemy death.
+202: event: Helper detected an enemy!
+203: event: Enemy spawned!
+204: event: Helper stop seeing an enemy!
+205: Event: Enemy death.
+206: event: Helper detected an enemy!
+207: event: Enemy spawned!
+208: event: Helper stop seeing an enemy!
+209: Event: Enemy death.
+210: event: Helper detected an enemy!
+211: event: Enemy spawned!
+212: event: Helper stop seeing an enemy!
+213: Event: Enemy death.
+214: event: Helper detected an enemy!
+215: event: Enemy spawned!
+216: event: Helper stop seeing an enemy!
+217: Event: Enemy death.
+218: event: Helper detected an enemy!
+219: event: Enemy spawned!
+220: event: Helper stop seeing an enemy!
+221: Event: Enemy death.
+222: event: Helper detected an enemy!
+223: event: Enemy spawned!
+224: event: Helper stop seeing an enemy!
+225: Event: Enemy death.
+226: event: Helper detected an enemy!
+227: event: Enemy spawned!
+228: event: Helper stop seeing an enemy!
+229: Event: Enemy death.
+230: event: Helper detected an enemy!
+231: event: Enemy spawned!
+232: event: Helper stop seeing an enemy!
+233: Event: Enemy death.
+234: event: Helper detected an enemy!
+235: event: Enemy spawned!
+236: event: Helper stop seeing an enemy!
+237: Event: Enemy death.
+238: event: Helper detected an enemy!
+239: event: Enemy spawned!
+240: event: Helper stop seeing an enemy!
+241: Event: Enemy death.
+242: event: Helper detected an enemy!
+243: event: Enemy spawned!
+244: event: Helper stop seeing an enemy!
+245: Event: Enemy death.
+246: event: Helper detected an enemy!
+247: event: Enemy spawned!
+248: event: Helper stop seeing an enemy!
+249: Event: Enemy death.
+250: event: Helper detected an enemy!
+251: event: Enemy spawned!
+252: event: Helper stop seeing an enemy!
+253: Event: Enemy death.
+254: event: Helper detected an enemy!
+255: event: Enemy spawned!
+256: event: Helper stop seeing an enemy!
+257: Event: Enemy death.
+258: event: Helper detected an enemy!
+259: event: Enemy spawned!
+260: event: Helper stop seeing an enemy!
+261: Event: Enemy death.
+262: event: Item spawned!
+263: event: Helper detected an enemy!
+264: event: Enemy spawned!
+265: event: Helper stop seeing an enemy!
+266: Event: Enemy death.
+267: event: Helper detected an enemy!
+268: event: Enemy spawned!
+269: event: Pits have changed.
+270: event: Helper stop seeing an enemy!
+271: Event: Enemy death.
+272: event: Item has fallen into a pit!
+273: event: Item spawned!
+274: event: Helper detected an enemy!
+275: event: Enemy spawned!
+276: event: Helper stop seeing an enemy!
+277: Event: Enemy death.
+278: event: Pits will change in 3 seconds!
+279: event: Helper detected an enemy!
+280: event: Enemy spawned!
+281: event: Helper stop seeing an enemy!
+282: Event: Enemy death.
+283: event: Helper detected an enemy!
+284: event: Enemy spawned!
+285: event: Helper stop seeing an enemy!
+286: Event: Enemy death.
+287: event: Helper detected an enemy!
+288: event: Enemy spawned!
+289: event: Helper stop seeing an enemy!
+290: Event: Enemy death.
+291: event: Helper detected an enemy!
+292: event: Enemy spawned!
+293: event: Helper stop seeing an enemy!
+294: Event: Enemy death.
+295: event: Helper detected an enemy!
+296: event: Enemy spawned!
+297: event: Helper stop seeing an enemy!
+298: Event: Enemy death.
+299: event: Helper detected an enemy!
+300: event: Enemy spawned!
+301: event: Helper stop seeing an enemy!
+302: Event: Enemy death.
+303: event: Helper detected an enemy!
+304: event: Enemy spawned!
+305: event: Helper stop seeing an enemy!
+306: Event: Enemy death.
+307: event: Helper detected an enemy!
+308: event: Enemy spawned!
+309: event: Helper stop seeing an enemy!
+310: Event: Enemy death.
+311: event: Helper detected an enemy!
+312: event: Enemy spawned!
+313: Event: Enemy fell into a pit! Ha ha ha!
+314: event: Enemy spawned!
+315: event: Helper stop seeing an enemy!
+316: Event: Enemy fell into a pit! Ha ha ha!
+317: event: Helper detected an enemy!
+318: event: Enemy spawned!
+319: event: Helper stop seeing an enemy!
+320: Event: Enemy death.
+321: event: Helper detected an enemy!
+322: event: Enemy spawned!
+323: event: Helper has stopped seeing an enemy!
+324: Event: Enemy death.
+325: event: Helper detected an enemy!
+326: event: Enemy spawned!
+327: event: Helper stop seeing an enemy!
+328: Event: Enemy death.
+329: event: Helper detected an enemy!
+330: event: Enemy spawned!
+331: event: Helper stop seeing an enemy!
+332: Event: Enemy death.
+333: event: Helper detected an enemy!
+334: event: Enemy spawned!
+335: event: Helper stop seeing an enemy!
+336: Event: Enemy death.
+337: event: Helper detected an enemy!
+338: event: Enemy spawned!
+339: event: Helper stop seeing an enemy!
+340: Event: Enemy death.
+341: event: Helper detected an enemy!
+342: event: Enemy spawned!
+343: event: Helper stop seeing an enemy!
+344: Event: Enemy death.
+345: event: Helper detected an enemy!
+346: event: Enemy spawned!
+347: event: Helper stop seeing an enemy!
+348: Event: Enemy death.
+349: event: Pits have changed.
+350: event: Helper detected an enemy!
+351: event: Enemy spawned!
+352: event: Helper stop seeing an enemy!
+353: Event: Enemy death.
+354: event: Pits will change in 3 seconds!
+355: event: Helper detected an enemy!
+356: event: Enemy spawned!
+357: event: Helper has stopped seeing an enemy!
+358: Event: Enemy death.
+359: event: Helper detected an enemy!
+360: event: Enemy spawned!
+361: event: Helper stop seeing an enemy!
+362: Event: Enemy death.
+363: event: Helper detected an enemy!
+364: event: Enemy spawned!
+365: event: Helper has stopped seeing an enemy!
+366: Event: Enemy death.
+367: event: Helper detected an enemy!
+368: event: Enemy spawned!
+369: event: Helper has stopped seeing an enemy!
+370: Event: Enemy death.
+371: event: Helper detected an enemy!
+372: event: Enemy spawned!
+373: event: Helper stop seeing an enemy!
+374: Event: Enemy death.
+375: event: Helper detected an enemy!
+376: event: Enemy spawned!
+377: event: Helper stop seeing an enemy!
+378: Event: Enemy death.
+379: event: Helper detected an enemy!
+380: event: Enemy spawned!
+381: event: Helper stop seeing an enemy!
+382: Event: Enemy death.
+383: event: Helper detected an enemy!
+384: event: Enemy spawned!
+385: event: Helper has stopped seeing an enemy!
+386: Event: Enemy death.
+387: event: Helper detected an enemy!
+388: event: Enemy spawned!
+389: event: Helper stop seeing an enemy!
+390: Event: Enemy death.
+391: event: Enemy spawned!
+392: Event: Enemy death.
+393: event: Helper detected an enemy!
+394: event: Enemy spawned!
+395: event: Helper stop seeing an enemy!
+396: Event: Enemy death.
+397: event: Helper detected an enemy!
+398: event: Enemy spawned!
+399: event: Helper stop seeing an enemy!
+400: Event: Enemy death.
+401: event: Helper detected an enemy!
+402: event: Enemy spawned!
+403: event: Helper stop seeing an enemy!
+404: Event: Enemy death.
+405: event: Helper detected an enemy!
+406: event: Enemy spawned!
+407: event: Helper stop seeing an enemy!
+408: Event: Enemy death.
+409: event: Helper detected an enemy!
+410: event: Enemy spawned!
+411: event: Helper stop seeing an enemy!
+412: Event: Enemy death.
+413: event: Helper detected an enemy!
+414: event: Enemy spawned!
+415: event: Helper stop seeing an enemy!
+416: Event: Enemy death.
+417: event: Helper detected an enemy!
+418: event: Enemy spawned!
+419: event: Helper stop seeing an enemy!
+420: event: Pits have changed.
+421: Event: Enemy death.
+422: event: Helper detected an enemy!
+423: event: Enemy spawned!
+424: event: Helper stop seeing an enemy!
+425: Event: Enemy death.
+426: event: Pits will change in 3 seconds!
+427: event: Enemy spawned!
+428: Event: Enemy death.
+429: event: Helper detected an enemy!
+430: event: Enemy spawned!
+431: event: Helper stop seeing an enemy!
+432: Event: Enemy death.
+433: event: Helper detected an enemy!
+434: event: Enemy spawned!
+435: event: Helper stop seeing an enemy!
+436: Event: Enemy death.
+437: event: Helper detected an enemy!
+438: event: Enemy spawned!
+439: event: Helper stop seeing an enemy!
+440: Event: Enemy death.
+441: event: Helper detected an enemy!
+442: event: Enemy spawned!
+443: event: Helper stop seeing an enemy!
+444: Event: Enemy death.
+445: event: Helper detected an enemy!
+446: event: Enemy spawned!
+447: event: Helper stop seeing an enemy!
+448: Event: Enemy death.
+449: event: Helper detected an enemy!
+450: event: Enemy spawned!
+451: event: Helper stop seeing an enemy!
+452: Event: Enemy death.
+453: event: Helper detected an enemy!
+454: event: Enemy spawned!
+455: event: Helper stop seeing an enemy!
+456: Event: Enemy death.
+457: event: Helper detected an enemy!
+458: event: Enemy spawned!
+459: event: Helper stop seeing an enemy!
+460: Event: Enemy death.
+461: event: Helper detected an enemy!
+462: event: Enemy spawned!
+463: event: Helper stop seeing an enemy!
+464: Event: Enemy death.
+465: event: Helper detected an enemy!
+466: event: Enemy spawned!
+467: event: Helper stop seeing an enemy!
+468: Event: Enemy death.
+469: event: Helper detected an enemy!
+470: event: Enemy spawned!
+471: event: Helper stop seeing an enemy!
+472: Event: Enemy death.
+473: event: Helper detected an enemy!
+474: event: Enemy spawned!
+475: event: Helper stop seeing an enemy!
+476: Event: Enemy death.
+477: event: Helper detected an enemy!
+478: event: Enemy spawned!
+479: event: Helper stop seeing an enemy!
+480: Event: Enemy death.
+481: event: Helper detected an enemy!
+482: event: Enemy spawned!
+483: event: Helper stop seeing an enemy!
+484: Event: Enemy death.
+485: event: Helper detected an enemy!
+486: event: Enemy spawned!
+487: event: Helper stop seeing an enemy!
+488: Event: Enemy death.
+489: event: Helper detected an enemy!
+490: event: Enemy spawned!
+491: event: Helper stop seeing an enemy!
+492: Event: Enemy death.
+493: event: Helper detected an enemy!
+494: event: Enemy spawned!
+495: event: Pits have changed.
+496: event: Helper stop seeing an enemy!
+497: Event: Enemy death.
+498: event: Helper detected an enemy!
+499: event: Enemy spawned!
+500: event: Pits will change in 3 seconds!
+501: event: Helper stop seeing an enemy!
+502: Event: Enemy death.
+503: event: Helper detected an enemy!
+504: event: Enemy spawned!
+505: event: Helper has stopped seeing an enemy!
+506: Event: Enemy death.
+507: event: Helper detected an enemy!
+508: event: Enemy spawned!
+509: event: Helper stop seeing an enemy!
+510: Event: Enemy death.
+511: event: Helper detected an enemy!
+512: event: Enemy spawned!
+513: event: Helper stop seeing an enemy!
+514: Event: Enemy death.
+515: event: Helper detected an enemy!
+516: event: Enemy spawned!
+517: event: Helper stop seeing an enemy!
+518: Event: Enemy death.
+519: event: Helper detected an enemy!
+520: event: Enemy spawned!
+521: event: Helper stop seeing an enemy!
+522: Event: Enemy death.
+523: event: Helper detected an enemy!
+524: event: Enemy spawned!
+525: event: Helper stop seeing an enemy!
+526: Event: Enemy death.
+527: event: Helper detected an enemy!
+528: event: Enemy spawned!
+529: event: Helper stop seeing an enemy!
+530: Event: Enemy death.
+531: event: Helper detected an enemy!
+532: event: Enemy spawned!
+533: event: Helper stop seeing an enemy!
+534: Event: Enemy death.
+535: event: Helper detected an enemy!
+536: event: Enemy spawned!
+537: event: Helper stop seeing an enemy!
+538: Event: Enemy death.
+539: event: Helper detected an enemy!
+540: event: Enemy spawned!
+541: event: Helper stop seeing an enemy!
+542: Event: Enemy death.
+543: event: Helper detected an enemy!
+544: event: Enemy spawned!
+545: event: Helper stop seeing an enemy!
+546: Event: Enemy death.
+547: event: Helper detected an enemy!
+548: event: Enemy spawned!
+549: event: Helper stop seeing an enemy!
+550: Event: Enemy death.
+551: event: Helper detected an enemy!
+552: event: Enemy spawned!
+553: event: Helper stop seeing an enemy!
+554: Event: Enemy death.
+555: event: Helper detected an enemy!
+556: event: Enemy spawned!
+557: event: Helper stop seeing an enemy!
+558: Event: Enemy death.
+559: event: Helper detected an enemy!
+560: event: Enemy spawned!
+561: event: Helper stop seeing an enemy!
+562: Event: Enemy death.
+563: event: Helper detected an enemy!
+564: event: Enemy spawned!
+565: event: Helper stop seeing an enemy!
+566: Event: Enemy death.
+567: event: Helper detected an enemy!
+568: event: Enemy spawned!
+569: event: Pits have changed.
+570: event: Helper has stopped seeing an enemy!
+571: Event: Enemy death.
+572: event: Helper detected an enemy!
+573: event: Enemy spawned!
+574: event: Pits will change in 3 seconds!
+575: event: Helper stop seeing an enemy!
+576: Event: Enemy death.
+577: event: Helper detected an enemy!
+578: event: Enemy spawned!
+579: event: Helper stop seeing an enemy!
+580: Event: Enemy death.
+581: event: Helper detected an enemy!
+582: event: Item spawned!
+583: event: Enemy spawned!
+584: event: Helper stop seeing an enemy!
+585: Event: Enemy death.
+586: event: Helper detected an enemy!
+587: event: Enemy spawned!
+588: event: Helper stop seeing an enemy!
+589: Event: Enemy death.
+590: event: Helper detected an enemy!
+591: event: Enemy spawned!
+592: event: Helper stop seeing an enemy!
+593: Event: Enemy death.
+594: event: Helper detected an enemy!
+595: event: Enemy spawned!
+596: event: Helper stop seeing an enemy!
+597: Event: Enemy death.
+598: event: Helper detected an enemy!
+599: event: Enemy spawned!
+600: event: Helper stop seeing an enemy!
+601: Event: Enemy death.
+602: event: Helper detected an enemy!
+603: event: Enemy spawned!
+604: event: Helper stop seeing an enemy!
+605: Event: Enemy death.
+606: event: Helper detected an enemy!
+607: event: Enemy spawned!
+608: event: Helper stop seeing an enemy!
+609: Event: Enemy death.
+610: event: Helper detected an enemy!
+611: event: Enemy spawned!
+612: event: Helper stop seeing an enemy!
+613: Event: Enemy death.
+614: event: Helper detected an enemy!
+615: event: Enemy spawned!
+616: event: Helper stop seeing an enemy!
+617: Event: Enemy death.
+618: event: Helper detected an enemy!
+619: event: Enemy spawned!
+620: event: Helper stop seeing an enemy!
+621: Event: Enemy death.
+622: event: Helper detected an enemy!
+623: event: Enemy spawned!
+624: event: Helper stop seeing an enemy!
+625: Event: Enemy death.
+626: event: Helper detected an enemy!
+627: event: Enemy spawned!
+628: event: Helper stop seeing an enemy!
+629: Event: Enemy death.
+630: event: Helper detected an enemy!
+631: event: Enemy spawned!
+632: event: Helper stop seeing an enemy!
+633: Event: Enemy death.
+634: event: Pits have changed.
+635: event: Helper detected an enemy!
+636: event: Enemy spawned!
+637: event: Helper has stopped seeing an enemy!
+638: Event: Enemy death.
+639: event: Pits will change in 3 seconds!
+640: event: Helper detected an enemy!
+641: event: Enemy spawned!
+642: event: Helper stop seeing an enemy!
+643: Event: Enemy death.
+644: event: Helper detected an enemy!
+645: event: Enemy spawned!
+646: event: Helper stop seeing an enemy!
+647: Event: Enemy death.
+648: event: Helper detected an enemy!
+649: event: Enemy spawned!
+650: event: Helper stop seeing an enemy!
+651: Event: Enemy death.
+652: event: Helper detected an enemy!
+653: event: Enemy spawned!
+654: event: Helper stop seeing an enemy!
+655: Event: Enemy death.
+656: event: Helper detected an enemy!
+657: event: Enemy spawned!
+658: event: Helper stop seeing an enemy!
+659: Event: Enemy death.
+660: event: Helper detected an enemy!
+661: event: Enemy spawned!
+662: event: Helper stop seeing an enemy!
+663: Event: Enemy death.
+664: event: Helper detected an enemy!
+665: event: Enemy spawned!
+666: event: Helper stop seeing an enemy!
+667: Event: Enemy death.
+668: event: Helper detected an enemy!
+669: event: Enemy spawned!
+670: event: Helper stop seeing an enemy!
+671: Event: Enemy death.
+672: event: Helper detected an enemy!
+673: event: Enemy spawned!
+674: event: Helper stop seeing an enemy!
+675: Event: Enemy death.
+676: event: Helper detected an enemy!
+677: event: Enemy spawned!
+678: event: Helper stop seeing an enemy!
+679: Event: Enemy death.
+680: event: Helper detected an enemy!
+681: event: Enemy spawned!
+682: event: Helper stop seeing an enemy!
+683: Event: Enemy death.
+684: event: Helper detected an enemy!
+685: event: Enemy spawned!
+686: event: Pits have changed.
+687: event: Helper stop seeing an enemy!
+688: Event: Enemy death.
+689: event: Pits will change in 3 seconds!
+690: event: Helper detected an enemy!
+691: event: Enemy spawned!
+692: event: Helper stop seeing an enemy!
+693: Event: Enemy death.
+694: event: Helper detected an enemy!
+695: event: Enemy spawned!
+696: event: Helper stop seeing an enemy!
+697: Event: Enemy death.
+698: event: Helper detected an enemy!
+699: event: Enemy spawned!
+700: event: Helper stop seeing an enemy!
+701: Event: Enemy death.
+702: event: Helper detected an enemy!
+703: event: Enemy spawned!
+704: event: Helper stop seeing an enemy!
+705: Event: Enemy death.
+706: event: Helper detected an enemy!
+707: event: Enemy spawned!
+708: event: Helper stop seeing an enemy!
+709: Event: Enemy death.
+710: event: Helper detected an enemy!
+711: event: Enemy spawned!
+712: event: Helper stop seeing an enemy!
+713: Event: Enemy death.
+714: event: Helper detected an enemy!
+715: event: Enemy spawned!
+716: event: Helper stop seeing an enemy!
+717: Event: Enemy death.
+718: event: Helper detected an enemy!
+719: event: Enemy spawned!
+720: event: Helper stop seeing an enemy!
+721: Event: Enemy death.
+722: event: Helper detected an enemy!
+723: event: Enemy spawned!
+724: event: Helper stop seeing an enemy!
+725: Event: Enemy death.
+726: event: Helper detected an enemy!
+727: event: Enemy spawned!
+728: event: Helper stop seeing an enemy!
+729: Event: Enemy death.
+730: event: Helper detected an enemy!
+731: event: Enemy spawned!
+732: event: Helper stop seeing an enemy!
+733: Event: Enemy death.
+734: event: Helper detected an enemy!
+735: event: Enemy spawned!
+736: event: Pits have changed.
+737: event: Helper stop seeing an enemy!
+738: Event: Enemy death.
+739: event: Helper detected an enemy!
+740: event: Pits will change in 3 seconds!
+741: event: Enemy spawned!
+742: event: Helper has stopped seeing an enemy!
+743: Event: Enemy death.
+744: event: Helper detected an enemy!
+745: event: Enemy spawned!
+746: event: Helper stop seeing an enemy!
+747: Event: Enemy fell into a pit! Ha ha ha!
+748: Event: Enemy death.
+749: event: Helper detected an enemy!
+750: event: Enemy spawned!
+751: event: Helper stop seeing an enemy!
+752: Event: Enemy death.
+753: event: Helper detected an enemy!
+754: event: Enemy spawned!
+755: event: Helper stop seeing an enemy!
+756: Event: Enemy death.
+757: event: Helper detected an enemy!
+758: event: Enemy spawned!
+759: event: Helper stop seeing an enemy!
+760: Event: Enemy death.
+761: event: Helper detected an enemy!
+762: event: Enemy spawned!
+763: event: Helper stop seeing an enemy!
+764: Event: Enemy death.
+765: event: Helper detected an enemy!
+766: event: Enemy spawned!
+767: event: Helper stop seeing an enemy!
+768: Event: Enemy death.
+769: event: Helper detected an enemy!
+770: event: Enemy spawned!
+771: event: Helper stop seeing an enemy!
+772: Event: Enemy death.
+773: event: Helper detected an enemy!
+774: event: Enemy spawned!
+775: event: Helper stop seeing an enemy!
+776: Event: Enemy death.
+777: event: Helper detected an enemy!
+778: event: Enemy spawned!
+779: event: Pits have changed.
+780: event: Helper stop seeing an enemy!
+781: Event: Enemy death.
+782: event: Helper detected an enemy!
+783: event: Enemy spawned!
+784: event: Pits will change in 3 seconds!
+785: Event: Player helper spawned!
+786: Event: Enemy fell into a pit! Ha ha ha!
+787: event: Item spawned!
+788: event: Enemy spawned!
+789: Event: Enemy fell into a pit! Ha ha ha!
+790: event: Enemy spawned!
+791: Event: Enemy fell into a pit! Ha ha ha!
+792: event: Enemy spawned!
+793: Event: Enemy fell into a pit! Ha ha ha!
+794: event: Enemy spawned!
+795: event: Item spawned!
+796: Event: Enemy death.
+797: Event: Game loaded successfully!
+798: event: Loading game.
+799: event: Mason has decided to start a new game.
+800: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+801: Retrieving message of the day...
+802: Event: Installing keyhook...
+803: event: Checking name...
+804: event: Setting up registry...
+805: event. Version=5.2.
+806: event. loading started.
+807: 
+0: event: Pits have changed.
+1: event: Enemy spawned!
+2: event: Pits will change in 3 seconds!
+3: Event: Enemy death.
+4: event: Enemy spawned!
+5: Event: Enemy fell into a pit! Ha ha ha!
+6: event: Enemy spawned!
+7: Event: Enemy death.
+8: event: Enemy spawned!
+9: Event: Enemy death.
+10: event: Enemy spawned!
+11: Event: Enemy death.
+12: Event: Grenade has exploded.
+13: Event: Pit 3 destroyed by grenade!
+14: Event: Enemy destroyed by grenade!
+15: Event: Enemy destroyed by grenade!
+16: Event: Enemy destroyed by grenade!
+17: Event: Enemy destroyed by grenade!
+18: Event: Enemy destroyed by grenade!
+19: event: Pits have changed.
+20: event: Enemy spawned!
+21: event: Pits will change in 3 seconds!
+22: Event: Enemy fell into a pit! Ha ha ha!
+23: event: Enemy spawned!
+24: Event: Enemy fell into a pit! Ha ha ha!
+25: event: Enemy spawned!
+26: Event: Enemy fell into a pit! Ha ha ha!
+27: event: Enemy spawned!
+28: Event: Enemy fell into a pit! Ha ha ha!
+29: event: Item spawned!
+30: event: Enemy spawned!
+31: Event: Enemy fell into a pit! Ha ha ha!
+32: Way more jump time!
+33: event: Item retrieved!
+34: event: Item spawned!
+35: event: Item has fallen into a pit!
+36: event: Pits have changed.
+37: event: Pits will change in 3 seconds!
+38: event: Enemy spawned!
+39: Event: Enemy fell into a pit! Ha ha ha!
+40: event: Item spawned!
+41: event: Item retrieved!
+42: event: Enemy spawned!
+43: event: Item spawned!
+44: Event: Enemy death.
+45: Event: Game loaded successfully!
+46: event: Loading game.
+47: event: Mason has decided to start a new game.
+48: event: Pits have changed.
+49: event: Pits will change in 3 seconds!
+50: event: Copter has detected an enemy!
+51: event: Enemy spawned!
+52: event: Copter has killed an enemy!
+53: Event: Enemy death.
+54: event: Pits have changed.
+55: event: Copter has detected an enemy!
+56: event: Enemy spawned!
+57: event: Copter has killed an enemy!
+58: Event: Enemy death.
+59: event: Pits will change in 3 seconds!
+60: event: Copter has detected an enemy!
+61: Event: Copter spawned!
+62: event: Enemy spawned!
+63: Event: Enemy death.
+64: event: Enemy spawned!
+65: Event: Enemy death.
+66: event: Enemy spawned!
+67: Event: Enemy death.
+68: event: Pits have changed.
+69: event: Pits will change in 3 seconds!
+70: event: Pits have changed.
+71: event: Pits will change in 3 seconds!
+72: event: Pits have changed.
+73: event: Pits will change in 3 seconds!
+74: event: Pits have changed.
+75: event: Pits will change in 3 seconds!
+76: event: Pits have changed.
+77: event: Pits will change in 3 seconds!
+78: event: Pits have changed.
+79: event: Pits will change in 3 seconds!
+80: event: Item spawned!
+81: event: Item has fallen into a pit!
+82: event: Pits have changed.
+83: event: Pits will change in 3 seconds!
+84: event: Pits have changed.
+85: event: Pits will change in 3 seconds!
+86: event: Pits have changed.
+87: event: Pits will change in 3 seconds!
+88: event: Pits have changed.
+89: event: Pits will change in 3 seconds!
+90: event: Pits have changed.
+91: event: Pits will change in 3 seconds!
+92: event: Pits have changed.
+93: event: Pits will change in 3 seconds!
+94: event: Pits have changed.
+95: event: Pits will change in 3 seconds!
+96: event: Pits have changed.
+97: event: Pits will change in 3 seconds!
+98: event: Pits have changed.
+99: event: Pits will change in 3 seconds!
+100: event: Pits have changed.
+101: event: Pits will change in 3 seconds!
+102: event: Pits have changed.
+103: event: Pits will change in 3 seconds!
+104: event: Pits have changed.
+105: event: Pits will change in 3 seconds!
+106: event: Item spawned!
+107: event: Item has fallen into a pit!
+108: event: Pits have changed.
+109: event: Pits will change in 3 seconds!
+110: event: Pits have changed.
+111: event: Pits will change in 3 seconds!
+112: event: Pits have changed.
+113: event: Pits will change in 3 seconds!
+114: event: Pits have changed.
+115: event: Pits will change in 3 seconds!
+116: event: Pits have changed.
+117: event: Pits will change in 3 seconds!
+118: event: Enemy spawned!
+119: Event: Enemy death.
+120: event: Pits have changed.
+121: event: Pits will change in 3 seconds!
+122: event: Pits have changed.
+123: event: Pits will change in 3 seconds!
+124: event: Pits have changed.
+125: event: Pits will change in 3 seconds!
+126: event: Game unpaused by user
+127: event: Game paused by user
+128: event: Pits have changed.
+129: event: Pits will change in 3 seconds!
+130: event: Pits have changed.
+131: event: Pits will change in 3 seconds!
+132: event: Pits have changed.
+133: event: Pits will change in 3 seconds!
+134: event: Pits have changed.
+135: event: Pits will change in 3 seconds!
+136: event: Pits have changed.
+137: event: Pits will change in 3 seconds!
+138: event: Pits have changed.
+139: event: Pits will change in 3 seconds!
+140: event: Pits have changed.
+141: event: Pits will change in 3 seconds!
+142: event: Pits have changed.
+143: event: Pits will change in 3 seconds!
+144: event: Item spawned!
+145: event: Item has fallen into a pit!
+146: event: Pits have changed.
+147: event: Pits will change in 3 seconds!
+148: event: Pits have changed.
+149: event: Pits will change in 3 seconds!
+150: event: Pits have changed.
+151: event: Pits will change in 3 seconds!
+152: event: Pits have changed.
+153: event: Pits will change in 3 seconds!
+154: event: Pits have changed.
+155: event: Pits will change in 3 seconds!
+156: event: Pits have changed.
+157: event: Pits will change in 3 seconds!
+158: event: Pits have changed.
+159: event: Pits will change in 3 seconds!
+160: event: Pits have changed.
+161: event: Pits will change in 3 seconds!
+162: event: Pits have changed.
+163: event: Pits will change in 3 seconds!
+164: event: Pits have changed.
+165: event: Pits will change in 3 seconds!
+166: event: Enemy spawned!
+167: event: Pits have changed.
+168: event: Pits will change in 3 seconds!
+169: Event: Enemy death.
+170: event: Pits have changed.
+171: event: Pits will change in 3 seconds!
+172: event: Pits have changed.
+173: event: Pits will change in 3 seconds!
+174: event: Pits have changed.
+175: event: Pits will change in 3 seconds!
+176: event: Pits have changed.
+177: event: Pits will change in 3 seconds!
+178: event: Pits have changed.
+179: event: Pits will change in 3 seconds!
+180: event: Pits have changed.
+181: event: Pits will change in 3 seconds!
+182: event: Pits have changed.
+183: event: Pits will change in 3 seconds!
+184: event: Enemy spawned!
+185: Event: Enemy death.
+186: event: Pits have changed.
+187: event: Pits will change in 3 seconds!
+188: event: Enemy spawned!
+189: Event: Enemy death.
+190: event: Enemy spawned!
+191: Event: Enemy death.
+192: event: Pits have changed.
+193: event: Enemy spawned!
+194: Event: Enemy death.
+195: event: Pits will change in 3 seconds!
+196: event: Pits have changed.
+197: event: Pits will change in 3 seconds!
+198: event: Pits have changed.
+199: event: Pits will change in 3 seconds!
+200: event: Pits have changed.
+201: event: Pits will change in 3 seconds!
+202: event: Pits have changed.
+203: event: Pits will change in 3 seconds!
+204: event: Item spawned!
+205: event: Enemy spawned!
+206: Event: Enemy death.
+207: event: Enemy spawned!
+208: Event: Enemy death.
+209: event: Pits have changed.
+210: event: Pits will change in 3 seconds!
+211: event: Pits have changed.
+212: event: Pits will change in 3 seconds!
+213: event: Pits have changed.
+214: event: Pits will change in 3 seconds!
+215: event: Enemy spawned!
+216: Event: Enemy death.
+217: event: Pits have changed.
+218: event: Pits will change in 3 seconds!
+219: event: Item spawned!
+220: event: Pits have changed.
+221: event: Pits will change in 3 seconds!
+222: Event: Player helper no longer spawned!
+223: event: Enemy spawned!
+224: event: Helper stop seeing an enemy!
+225: Event: Enemy death.
+226: event: Helper detected an enemy!
+227: event: Enemy spawned!
+228: event: Helper has stopped seeing an enemy!
+229: Event: Enemy death.
+230: event: Helper detected an enemy!
+231: event: Enemy spawned!
+232: event: Helper stop seeing an enemy!
+233: Event: Enemy death.
+234: event: Helper detected an enemy!
+235: event: Enemy spawned!
+236: event: Helper stop seeing an enemy!
+237: Event: Enemy death.
+238: event: Enemy spawned!
+239: event: Pits have changed.
+240: Event: Enemy death.
+241: event: Helper detected an enemy!
+242: event: Enemy spawned!
+243: event: Helper stop seeing an enemy!
+244: Event: Enemy death.
+245: event: Pits will change in 3 seconds!
+246: event: Helper detected an enemy!
+247: event: Enemy spawned!
+248: event: Helper stop seeing an enemy!
+249: Event: Enemy death.
+250: event: Helper detected an enemy!
+251: event: Enemy spawned!
+252: event: Helper stop seeing an enemy!
+253: Event: Enemy death.
+254: event: Helper detected an enemy!
+255: event: Enemy spawned!
+256: event: Helper stop seeing an enemy!
+257: Event: Enemy death.
+258: event: Helper detected an enemy!
+259: event: Enemy spawned!
+260: event: Helper stop seeing an enemy!
+261: Event: Enemy death.
+262: event: Helper detected an enemy!
+263: event: Enemy spawned!
+264: event: Helper stop seeing an enemy!
+265: Event: Enemy death.
+266: event: Helper detected an enemy!
+267: event: Enemy spawned!
+268: event: Helper stop seeing an enemy!
+269: Event: Enemy death.
+270: event: Helper detected an enemy!
+271: event: Enemy spawned!
+272: event: Helper stop seeing an enemy!
+273: Event: Enemy death.
+274: event: Helper detected an enemy!
+275: event: Enemy spawned!
+276: event: Helper stop seeing an enemy!
+277: Event: Enemy death.
+278: event: Helper detected an enemy!
+279: event: Enemy spawned!
+280: event: Helper stop seeing an enemy!
+281: Event: Enemy death.
+282: event: Helper detected an enemy!
+283: event: Enemy spawned!
+284: event: Helper stop seeing an enemy!
+285: Event: Enemy death.
+286: event: Helper detected an enemy!
+287: event: Enemy spawned!
+288: event: Helper stop seeing an enemy!
+289: Event: Enemy death.
+290: event: Helper detected an enemy!
+291: event: Enemy spawned!
+292: event: Helper stop seeing an enemy!
+293: Event: Enemy death.
+294: event: Helper detected an enemy!
+295: event: Enemy spawned!
+296: event: Helper stop seeing an enemy!
+297: Event: Enemy death.
+298: event: Helper detected an enemy!
+299: event: Enemy spawned!
+300: event: Helper stop seeing an enemy!
+301: Event: Enemy death.
+302: event: Helper detected an enemy!
+303: event: Enemy spawned!
+304: event: Helper stop seeing an enemy!
+305: Event: Enemy death.
+306: event: Helper detected an enemy!
+307: event: Enemy spawned!
+308: event: Helper stop seeing an enemy!
+309: Event: Enemy death.
+310: event: Item spawned!
+311: event: Helper detected an enemy!
+312: event: Enemy spawned!
+313: event: Helper stop seeing an enemy!
+314: Event: Enemy death.
+315: event: Helper detected an enemy!
+316: event: Enemy spawned!
+317: event: Pits have changed.
+318: event: Helper stop seeing an enemy!
+319: Event: Enemy death.
+320: event: Item has fallen into a pit!
+321: event: Item spawned!
+322: event: Helper detected an enemy!
+323: event: Enemy spawned!
+324: event: Helper stop seeing an enemy!
+325: Event: Enemy death.
+326: event: Pits will change in 3 seconds!
+327: event: Helper detected an enemy!
+328: event: Enemy spawned!
+329: event: Helper stop seeing an enemy!
+330: Event: Enemy death.
+331: event: Helper detected an enemy!
+332: event: Enemy spawned!
+333: event: Helper stop seeing an enemy!
+334: Event: Enemy death.
+335: event: Helper detected an enemy!
+336: event: Enemy spawned!
+337: event: Helper stop seeing an enemy!
+338: Event: Enemy death.
+339: event: Helper detected an enemy!
+340: event: Enemy spawned!
+341: event: Helper stop seeing an enemy!
+342: Event: Enemy death.
+343: event: Helper detected an enemy!
+344: event: Enemy spawned!
+345: event: Helper stop seeing an enemy!
+346: Event: Enemy death.
+347: event: Helper detected an enemy!
+348: event: Enemy spawned!
+349: event: Helper stop seeing an enemy!
+350: Event: Enemy death.
+351: event: Helper detected an enemy!
+352: event: Enemy spawned!
+353: event: Helper stop seeing an enemy!
+354: Event: Enemy death.
+355: event: Helper detected an enemy!
+356: event: Enemy spawned!
+357: event: Helper stop seeing an enemy!
+358: Event: Enemy death.
+359: event: Helper detected an enemy!
+360: event: Enemy spawned!
+361: Event: Enemy fell into a pit! Ha ha ha!
+362: event: Enemy spawned!
+363: event: Helper stop seeing an enemy!
+364: Event: Enemy fell into a pit! Ha ha ha!
+365: event: Helper detected an enemy!
+366: event: Enemy spawned!
+367: event: Helper stop seeing an enemy!
+368: Event: Enemy death.
+369: event: Helper detected an enemy!
+370: event: Enemy spawned!
+371: event: Helper has stopped seeing an enemy!
+372: Event: Enemy death.
+373: event: Helper detected an enemy!
+374: event: Enemy spawned!
+375: event: Helper stop seeing an enemy!
+376: Event: Enemy death.
+377: event: Helper detected an enemy!
+378: event: Enemy spawned!
+379: event: Helper stop seeing an enemy!
+380: Event: Enemy death.
+381: event: Helper detected an enemy!
+382: event: Enemy spawned!
+383: event: Helper stop seeing an enemy!
+384: Event: Enemy death.
+385: event: Helper detected an enemy!
+386: event: Enemy spawned!
+387: event: Helper stop seeing an enemy!
+388: Event: Enemy death.
+389: event: Helper detected an enemy!
+390: event: Enemy spawned!
+391: event: Helper stop seeing an enemy!
+392: Event: Enemy death.
+393: event: Helper detected an enemy!
+394: event: Enemy spawned!
+395: event: Helper stop seeing an enemy!
+396: Event: Enemy death.
+397: event: Pits have changed.
+398: event: Helper detected an enemy!
+399: event: Enemy spawned!
+400: event: Helper stop seeing an enemy!
+401: Event: Enemy death.
+402: event: Pits will change in 3 seconds!
+403: event: Helper detected an enemy!
+404: event: Enemy spawned!
+405: event: Helper has stopped seeing an enemy!
+406: Event: Enemy death.
+407: event: Helper detected an enemy!
+408: event: Enemy spawned!
+409: event: Helper stop seeing an enemy!
+410: Event: Enemy death.
+411: event: Helper detected an enemy!
+412: event: Enemy spawned!
+413: event: Helper has stopped seeing an enemy!
+414: Event: Enemy death.
+415: event: Helper detected an enemy!
+416: event: Enemy spawned!
+417: event: Helper has stopped seeing an enemy!
+418: Event: Enemy death.
+419: event: Helper detected an enemy!
+420: event: Enemy spawned!
+421: event: Helper stop seeing an enemy!
+422: Event: Enemy death.
+423: event: Helper detected an enemy!
+424: event: Enemy spawned!
+425: event: Helper stop seeing an enemy!
+426: Event: Enemy death.
+427: event: Helper detected an enemy!
+428: event: Enemy spawned!
+429: event: Helper stop seeing an enemy!
+430: Event: Enemy death.
+431: event: Helper detected an enemy!
+432: event: Enemy spawned!
+433: event: Helper has stopped seeing an enemy!
+434: Event: Enemy death.
+435: event: Helper detected an enemy!
+436: event: Enemy spawned!
+437: event: Helper stop seeing an enemy!
+438: Event: Enemy death.
+439: event: Enemy spawned!
+440: Event: Enemy death.
+441: event: Helper detected an enemy!
+442: event: Enemy spawned!
+443: event: Helper stop seeing an enemy!
+444: Event: Enemy death.
+445: event: Helper detected an enemy!
+446: event: Enemy spawned!
+447: event: Helper stop seeing an enemy!
+448: Event: Enemy death.
+449: event: Helper detected an enemy!
+450: event: Enemy spawned!
+451: event: Helper stop seeing an enemy!
+452: Event: Enemy death.
+453: event: Helper detected an enemy!
+454: event: Enemy spawned!
+455: event: Helper stop seeing an enemy!
+456: Event: Enemy death.
+457: event: Helper detected an enemy!
+458: event: Enemy spawned!
+459: event: Helper stop seeing an enemy!
+460: Event: Enemy death.
+461: event: Helper detected an enemy!
+462: event: Enemy spawned!
+463: event: Helper stop seeing an enemy!
+464: Event: Enemy death.
+465: event: Helper detected an enemy!
+466: event: Enemy spawned!
+467: event: Helper stop seeing an enemy!
+468: event: Pits have changed.
+469: Event: Enemy death.
+470: event: Helper detected an enemy!
+471: event: Enemy spawned!
+472: event: Helper stop seeing an enemy!
+473: Event: Enemy death.
+474: event: Pits will change in 3 seconds!
+475: event: Enemy spawned!
+476: Event: Enemy death.
+477: event: Helper detected an enemy!
+478: event: Enemy spawned!
+479: event: Helper stop seeing an enemy!
+480: Event: Enemy death.
+481: event: Helper detected an enemy!
+482: event: Enemy spawned!
+483: event: Helper stop seeing an enemy!
+484: Event: Enemy death.
+485: event: Helper detected an enemy!
+486: event: Enemy spawned!
+487: event: Helper stop seeing an enemy!
+488: Event: Enemy death.
+489: event: Helper detected an enemy!
+490: event: Enemy spawned!
+491: event: Helper stop seeing an enemy!
+492: Event: Enemy death.
+493: event: Helper detected an enemy!
+494: event: Enemy spawned!
+495: event: Helper stop seeing an enemy!
+496: Event: Enemy death.
+497: event: Helper detected an enemy!
+498: event: Enemy spawned!
+499: event: Helper stop seeing an enemy!
+500: Event: Enemy death.
+501: event: Helper detected an enemy!
+502: event: Enemy spawned!
+503: event: Helper stop seeing an enemy!
+504: Event: Enemy death.
+505: event: Helper detected an enemy!
+506: event: Enemy spawned!
+507: event: Helper stop seeing an enemy!
+508: Event: Enemy death.
+509: event: Helper detected an enemy!
+510: event: Enemy spawned!
+511: event: Helper stop seeing an enemy!
+512: Event: Enemy death.
+513: event: Helper detected an enemy!
+514: event: Enemy spawned!
+515: event: Helper stop seeing an enemy!
+516: Event: Enemy death.
+517: event: Helper detected an enemy!
+518: event: Enemy spawned!
+519: event: Helper stop seeing an enemy!
+520: Event: Enemy death.
+521: event: Helper detected an enemy!
+522: event: Enemy spawned!
+523: event: Helper stop seeing an enemy!
+524: Event: Enemy death.
+525: event: Helper detected an enemy!
+526: event: Enemy spawned!
+527: event: Helper stop seeing an enemy!
+528: Event: Enemy death.
+529: event: Helper detected an enemy!
+530: event: Enemy spawned!
+531: event: Helper stop seeing an enemy!
+532: Event: Enemy death.
+533: event: Helper detected an enemy!
+534: event: Enemy spawned!
+535: event: Helper stop seeing an enemy!
+536: Event: Enemy death.
+537: event: Helper detected an enemy!
+538: event: Enemy spawned!
+539: event: Helper stop seeing an enemy!
+540: Event: Enemy death.
+541: event: Helper detected an enemy!
+542: event: Enemy spawned!
+543: event: Pits have changed.
+544: event: Helper stop seeing an enemy!
+545: Event: Enemy death.
+546: event: Helper detected an enemy!
+547: event: Enemy spawned!
+548: event: Pits will change in 3 seconds!
+549: event: Helper stop seeing an enemy!
+550: Event: Enemy death.
+551: event: Helper detected an enemy!
+552: event: Enemy spawned!
+553: event: Helper has stopped seeing an enemy!
+554: Event: Enemy death.
+555: event: Helper detected an enemy!
+556: event: Enemy spawned!
+557: event: Helper stop seeing an enemy!
+558: Event: Enemy death.
+559: event: Helper detected an enemy!
+560: event: Enemy spawned!
+561: event: Helper stop seeing an enemy!
+562: Event: Enemy death.
+563: event: Helper detected an enemy!
+564: event: Enemy spawned!
+565: event: Helper stop seeing an enemy!
+566: Event: Enemy death.
+567: event: Helper detected an enemy!
+568: event: Enemy spawned!
+569: event: Helper stop seeing an enemy!
+570: Event: Enemy death.
+571: event: Helper detected an enemy!
+572: event: Enemy spawned!
+573: event: Helper stop seeing an enemy!
+574: Event: Enemy death.
+575: event: Helper detected an enemy!
+576: event: Enemy spawned!
+577: event: Helper stop seeing an enemy!
+578: Event: Enemy death.
+579: event: Helper detected an enemy!
+580: event: Enemy spawned!
+581: event: Helper stop seeing an enemy!
+582: Event: Enemy death.
+583: event: Helper detected an enemy!
+584: event: Enemy spawned!
+585: event: Helper stop seeing an enemy!
+586: Event: Enemy death.
+587: event: Helper detected an enemy!
+588: event: Enemy spawned!
+589: event: Helper stop seeing an enemy!
+590: Event: Enemy death.
+591: event: Helper detected an enemy!
+592: event: Enemy spawned!
+593: event: Helper stop seeing an enemy!
+594: Event: Enemy death.
+595: event: Helper detected an enemy!
+596: event: Enemy spawned!
+597: event: Helper stop seeing an enemy!
+598: Event: Enemy death.
+599: event: Helper detected an enemy!
+600: event: Enemy spawned!
+601: event: Helper stop seeing an enemy!
+602: Event: Enemy death.
+603: event: Helper detected an enemy!
+604: event: Enemy spawned!
+605: event: Helper stop seeing an enemy!
+606: Event: Enemy death.
+607: event: Helper detected an enemy!
+608: event: Enemy spawned!
+609: event: Helper stop seeing an enemy!
+610: Event: Enemy death.
+611: event: Helper detected an enemy!
+612: event: Enemy spawned!
+613: event: Helper stop seeing an enemy!
+614: Event: Enemy death.
+615: event: Helper detected an enemy!
+616: event: Enemy spawned!
+617: event: Pits have changed.
+618: event: Helper has stopped seeing an enemy!
+619: Event: Enemy death.
+620: event: Helper detected an enemy!
+621: event: Enemy spawned!
+622: event: Pits will change in 3 seconds!
+623: event: Helper stop seeing an enemy!
+624: Event: Enemy death.
+625: event: Helper detected an enemy!
+626: event: Enemy spawned!
+627: event: Helper stop seeing an enemy!
+628: Event: Enemy death.
+629: event: Helper detected an enemy!
+630: event: Item spawned!
+631: event: Enemy spawned!
+632: event: Helper stop seeing an enemy!
+633: Event: Enemy death.
+634: event: Helper detected an enemy!
+635: event: Enemy spawned!
+636: event: Helper stop seeing an enemy!
+637: Event: Enemy death.
+638: event: Helper detected an enemy!
+639: event: Enemy spawned!
+640: event: Helper stop seeing an enemy!
+641: Event: Enemy death.
+642: event: Helper detected an enemy!
+643: event: Enemy spawned!
+644: event: Helper stop seeing an enemy!
+645: Event: Enemy death.
+646: event: Helper detected an enemy!
+647: event: Enemy spawned!
+648: event: Helper stop seeing an enemy!
+649: Event: Enemy death.
+650: event: Helper detected an enemy!
+651: event: Enemy spawned!
+652: event: Helper stop seeing an enemy!
+653: Event: Enemy death.
+654: event: Helper detected an enemy!
+655: event: Enemy spawned!
+656: event: Helper stop seeing an enemy!
+657: Event: Enemy death.
+658: event: Helper detected an enemy!
+659: event: Enemy spawned!
+660: event: Helper stop seeing an enemy!
+661: Event: Enemy death.
+662: event: Helper detected an enemy!
+663: event: Enemy spawned!
+664: event: Helper stop seeing an enemy!
+665: Event: Enemy death.
+666: event: Helper detected an enemy!
+667: event: Enemy spawned!
+668: event: Helper stop seeing an enemy!
+669: Event: Enemy death.
+670: event: Helper detected an enemy!
+671: event: Enemy spawned!
+672: event: Helper stop seeing an enemy!
+673: Event: Enemy death.
+674: event: Helper detected an enemy!
+675: event: Enemy spawned!
+676: event: Helper stop seeing an enemy!
+677: Event: Enemy death.
+678: event: Helper detected an enemy!
+679: event: Enemy spawned!
+680: event: Helper stop seeing an enemy!
+681: Event: Enemy death.
+682: event: Pits have changed.
+683: event: Helper detected an enemy!
+684: event: Enemy spawned!
+685: event: Helper has stopped seeing an enemy!
+686: Event: Enemy death.
+687: event: Pits will change in 3 seconds!
+688: event: Helper detected an enemy!
+689: event: Enemy spawned!
+690: event: Helper stop seeing an enemy!
+691: Event: Enemy death.
+692: event: Helper detected an enemy!
+693: event: Enemy spawned!
+694: event: Helper stop seeing an enemy!
+695: Event: Enemy death.
+696: event: Helper detected an enemy!
+697: event: Enemy spawned!
+698: event: Helper stop seeing an enemy!
+699: Event: Enemy death.
+700: event: Helper detected an enemy!
+701: event: Enemy spawned!
+702: event: Helper stop seeing an enemy!
+703: Event: Enemy death.
+704: event: Helper detected an enemy!
+705: event: Enemy spawned!
+706: event: Helper stop seeing an enemy!
+707: Event: Enemy death.
+708: event: Helper detected an enemy!
+709: event: Enemy spawned!
+710: event: Helper stop seeing an enemy!
+711: Event: Enemy death.
+712: event: Helper detected an enemy!
+713: event: Enemy spawned!
+714: event: Helper stop seeing an enemy!
+715: Event: Enemy death.
+716: event: Helper detected an enemy!
+717: event: Enemy spawned!
+718: event: Helper stop seeing an enemy!
+719: Event: Enemy death.
+720: event: Helper detected an enemy!
+721: event: Enemy spawned!
+722: event: Helper stop seeing an enemy!
+723: Event: Enemy death.
+724: event: Helper detected an enemy!
+725: event: Enemy spawned!
+726: event: Helper stop seeing an enemy!
+727: Event: Enemy death.
+728: event: Helper detected an enemy!
+729: event: Enemy spawned!
+730: event: Helper stop seeing an enemy!
+731: Event: Enemy death.
+732: event: Helper detected an enemy!
+733: event: Enemy spawned!
+734: event: Pits have changed.
+735: event: Helper stop seeing an enemy!
+736: Event: Enemy death.
+737: event: Pits will change in 3 seconds!
+738: event: Helper detected an enemy!
+739: event: Enemy spawned!
+740: event: Helper stop seeing an enemy!
+741: Event: Enemy death.
+742: event: Helper detected an enemy!
+743: event: Enemy spawned!
+744: event: Helper stop seeing an enemy!
+745: Event: Enemy death.
+746: event: Helper detected an enemy!
+747: event: Enemy spawned!
+748: event: Helper stop seeing an enemy!
+749: Event: Enemy death.
+750: event: Helper detected an enemy!
+751: event: Enemy spawned!
+752: event: Helper stop seeing an enemy!
+753: Event: Enemy death.
+754: event: Helper detected an enemy!
+755: event: Enemy spawned!
+756: event: Helper stop seeing an enemy!
+757: Event: Enemy death.
+758: event: Helper detected an enemy!
+759: event: Enemy spawned!
+760: event: Helper stop seeing an enemy!
+761: Event: Enemy death.
+762: event: Helper detected an enemy!
+763: event: Enemy spawned!
+764: event: Helper stop seeing an enemy!
+765: Event: Enemy death.
+766: event: Helper detected an enemy!
+767: event: Enemy spawned!
+768: event: Helper stop seeing an enemy!
+769: Event: Enemy death.
+770: event: Helper detected an enemy!
+771: event: Enemy spawned!
+772: event: Helper stop seeing an enemy!
+773: Event: Enemy death.
+774: event: Helper detected an enemy!
+775: event: Enemy spawned!
+776: event: Helper stop seeing an enemy!
+777: Event: Enemy death.
+778: event: Helper detected an enemy!
+779: event: Enemy spawned!
+780: event: Helper stop seeing an enemy!
+781: Event: Enemy death.
+782: event: Helper detected an enemy!
+783: event: Enemy spawned!
+784: event: Pits have changed.
+785: event: Helper stop seeing an enemy!
+786: Event: Enemy death.
+787: event: Helper detected an enemy!
+788: event: Pits will change in 3 seconds!
+789: event: Enemy spawned!
+790: event: Helper has stopped seeing an enemy!
+791: Event: Enemy death.
+792: event: Helper detected an enemy!
+793: event: Enemy spawned!
+794: event: Helper stop seeing an enemy!
+795: Event: Enemy fell into a pit! Ha ha ha!
+796: Event: Enemy death.
+797: event: Helper detected an enemy!
+798: event: Enemy spawned!
+799: event: Helper stop seeing an enemy!
+800: Event: Enemy death.
+801: event: Helper detected an enemy!
+802: event: Enemy spawned!
+803: event: Helper stop seeing an enemy!
+804: Event: Enemy death.
+805: event: Helper detected an enemy!
+806: event: Enemy spawned!
+807: event: Helper stop seeing an enemy!
+808: Event: Enemy death.
+809: event: Helper detected an enemy!
+810: event: Enemy spawned!
+811: event: Helper stop seeing an enemy!
+812: Event: Enemy death.
+813: event: Helper detected an enemy!
+814: event: Enemy spawned!
+815: event: Helper stop seeing an enemy!
+816: Event: Enemy death.
+817: event: Helper detected an enemy!
+818: event: Enemy spawned!
+819: event: Helper stop seeing an enemy!
+820: Event: Enemy death.
+821: event: Helper detected an enemy!
+822: event: Enemy spawned!
+823: event: Helper stop seeing an enemy!
+824: Event: Enemy death.
+825: event: Helper detected an enemy!
+826: event: Enemy spawned!
+827: event: Pits have changed.
+828: event: Helper stop seeing an enemy!
+829: Event: Enemy death.
+830: event: Helper detected an enemy!
+831: event: Enemy spawned!
+832: event: Pits will change in 3 seconds!
+833: Event: Player helper spawned!
+834: Event: Enemy fell into a pit! Ha ha ha!
+835: event: Item spawned!
+836: event: Enemy spawned!
+837: Event: Enemy fell into a pit! Ha ha ha!
+838: event: Enemy spawned!
+839: Event: Enemy fell into a pit! Ha ha ha!
+840: event: Enemy spawned!
+841: Event: Enemy fell into a pit! Ha ha ha!
+842: event: Enemy spawned!
+843: event: Item spawned!
+844: Event: Enemy death.
+845: Event: Game loaded successfully!
+846: event: Loading game.
+847: event: Mason has decided to start a new game.
+848: event: Message of the day is Hi, and welcome to scrolling battles 5! There are quite a lot of new features, so enjoy!
+849: Retrieving message of the day...
+850: Event: Installing keyhook...
+851: event: Checking name...
+852: event: Setting up registry...
+853: event. Version=5.2.
+854: event. loading started.
+855: 

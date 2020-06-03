@@ -1,0 +1,189 @@
+int gamedollars=0;
+int gamepaused=0;
+int fishlives=5;
+int casted=0;
+int reeltime=5000;
+int fishcaught=0;
+int numofreels=5;
+int reeled=0;
+int anumber=0;
+int fishspeed=400;
+timer reeltimer, fishtimer;
+sound fambloop, casts, fishcoming, reel, fishlose, swimaway, catch;
+void mg3()
+{
+gamepaused=0;
+fishtimer.restart();
+gamedollars=0;
+gamepaused=0;
+fishlives=5;
+casted=0;
+reeltime=5000;
+fishcaught=0;
+numofreels=5;
+reeled=0;
+anumber=0;
+reeltimer.restart();
+reeltimer.pause();
+fambloop.load("sounds/soundpacks/"+soundpack+"/fambloop.ogg");
+casts.load("sounds/soundpacks/"+soundpack+"/cast.ogg");
+fishcoming.load("sounds/soundpacks/"+soundpack+"/fishcoming.ogg");
+reel.load("sounds/soundpacks/"+soundpack+"/reel.ogg");
+fishlose.load("sounds/soundpacks/"+soundpack+"/fishlose.ogg");
+swimaway.load("sounds/soundpacks/"+soundpack+"/swimaway.ogg");
+catch.load("sounds/soundpacks/"+soundpack+"/catch.ogg");
+fambloop.play_looped();
+fishcoming.pan=-30;
+fishcoming.play_looped();
+while (true)
+{
+if (reeltimer.elapsed>=reeltime)
+{
+fishlose.play_wait();
+reeltimer.restart();
+reeltimer.pause();
+reeled=0;
+casted=0;
+fishcoming.pan=-30;
+fishcoming.play_looped();
+anumber=0;
+if (fishspeed>=70)
+{
+fishspeed-=10;
+}
+fishtimer.restart();
+fishlives-=1;
+if (fishlives<1)
+{
+fambloop.stop();
+fishtimer.pause();
+fishcoming.stop();
+dlg("You earned "+gamedollars+" Dollars.");
+dollars+=gamedollars;
+registrywrite();
+mgmenu();
+}
+}
+if (fishtimer.elapsed>=fishspeed)
+{
+fishcoming.pan=fishcoming.pan+2;
+fishtimer.restart();
+}
+if (fishcoming.pan>=30)
+{
+fishcoming.stop();
+fishtimer.pause();
+swimaway.play_wait();
+if (fishlives>=0)
+{
+casted=0;
+reeled=0;
+fishcoming.pan=-30;
+fishcoming.play_looped();
+anumber=0;
+if (fishspeed>=70)
+{
+fishspeed-=10;
+}
+fishtimer.restart();
+fishlives-=1;
+}
+if (fishlives==0)
+{
+fambloop.stop();
+dlg("You earned "+gamedollars+" Dollars.");
+dollars+=gamedollars;
+registrywrite();
+mgmenu();
+}
+}
+if (key_pressed(KEY_ESCAPE))
+{
+fambloop.stop();
+fishcoming.stop();
+fishtimer.pause();
+speak("you have lost. You earned "+gamedollars+" Dollars.");
+wait(3000);
+dollars+=gamedollars;
+registrywrite();
+mgmenu();
+}
+if (key_pressed(KEY_SPACE) and casted==0)
+{
+if (gamepaused==0)
+{
+if (fishcoming.pan==0 or fishcoming.pan==1 or fishcoming.pan==2 or fishcoming.pan==3 or fishcoming.pan==4 or fishcoming.pan==5 or fishcoming.pan==-1 or fishcoming.pan==-2 or fishcoming.pan==-3 or fishcoming.pan==-4 or fishcoming.pan==-5)
+{
+reeltimer.restart();
+reeled=1;
+fishcoming.stop();
+fishtimer.pause();
+}
+casts.stop();
+casts.play();
+casted=1;
+}
+}
+if (key_pressed(KEY_LCONTROL) and reeled==1 or key_pressed(KEY_RCONTROL) and reeled==1)
+{
+if (paused==0)
+{
+reel.stop();
+reel.play();
+anumber+=1;
+if (anumber>=numofreels)
+{
+reeltimer.pause();
+catch.play_wait();
+fishcaught+=1;
+gamedollars+=random(1,10);
+casted=0;
+reeled=0;
+fishcoming.pan=-30;
+fishcoming.play_looped();
+anumber=0;
+if (fishspeed>=70)
+{
+fishspeed-=10;
+}
+fishtimer.restart();
+}
+}
+}
+if (key_pressed(KEY_HOME))
+{
+set_sound_master_volume(sound_master_volume+2);
+}
+if (key_pressed(KEY_END))
+{
+set_sound_master_volume(sound_master_volume-2);
+}
+if (key_pressed(KEY_P))
+{
+if (gamepaused==1)
+{
+if (reeled==0)
+{
+fambloop.play_looped();
+fishcoming.play_looped();
+fishtimer.resume();
+gamepaused=0;
+}
+}
+else if (gamepaused==0)
+{
+if (reeled==0)
+{
+fambloop.pause();
+fishcoming.pause();
+fishtimer.pause();
+gamepaused=1;
+}
+}
+}
+if (key_pressed(KEY_F))
+{
+speak("you have caught "+fishcaught+" fish");
+}
+}
+}

@@ -1,0 +1,177 @@
+int alerted;
+int pittime=45000;
+int pittime2=30000;
+timer pittimer, pittimer2;
+bool stepped;
+bool landed;
+class pit
+{
+int pos;
+string name;
+bool placed;
+bool occupied;
+sound pitsound;
+pit(int position, string pitsname="")
+{
+if (pitsname=="")
+{
+retrieve_pit();
+name=pitname;
+}
+else
+{
+name=pitsname;
+}
+pos=position;
+pitsound.load("sounds/pits/"+name+"/loop.ogg");
+position_sound_pov(pitsound, pos, 1, 1);
+pitsound.play_looped();
+placed=true;
+event("A "+name+" pit spawned at "+pos);
+}
+void destroy()
+{
+pitsound.stop();
+pos=-150;
+}
+}
+void checkloop()
+{
+if (pittimer.elapsed>=pittime-3000 and advancedmode==0 and alerted==0 and paused==0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/alert.ogg", false);
+alerted=1;
+}
+if (pittimer.elapsed>=pittime2-1500 and advancedmode==1 and alerted==0 and paused==0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/alert.ogg", false);
+alerted=1;
+}
+if (pittimer.elapsed>=pittime and advancedmode==0 and paused==0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/change.ogg", false);
+pittimer.restart();
+alerted=0;
+destroy_all_pits();
+regenerate_pits();
+}
+else if (pittimer.elapsed>=pittime2 and advancedmode==1 and paused==0)
+{
+pool.play_stationary("sounds/soundpacks/"+soundpack+"/change.ogg", false);
+pittimer.restart();
+alerted=0;
+destroy_all_pits();
+regenerate_pits();
+}
+for (uint i=0; i<pits.length(); i++)
+{
+if (pits[i].placed==true)
+{
+position_sound_pov(pits[i].pitsound, pits[i].pos, 1, 1);
+if (pits[i].pos<=sz1.finish+2)
+{
+pits[i].pos+=random(2,4);
+}
+if (pits[i].pos>=sz2.finish-2)
+{
+pits[i].pos-=random(2,4);
+}
+if (x==pits[i].pos-2 or x==pits[i].pos-1 or x==pits[i].pos or x==pits[i].pos+1 or x==pits[i].pos+2)
+{
+pits[i].occupied=true;
+}
+else
+{
+pits[i].occupied=false;
+}
+if (x==pits[i].pos and jumping==0 and playerchance==0 or x==pits[i].pos and jumping==0 and playerchance==1 and x==pits[i].pos and jumping==2)
+{
+dlgplay("sounds/pits/"+pits[i].name+"/fall.ogg");
+registrywrite();
+close();
+mainmenu();
+}
+}
+}
+}
+void playwalksound()
+{
+stepped=false;
+for (uint i=0; i<pits.length(); i++)
+{
+if (x==pits[i].pos-2 or x==pits[i].pos-1 or x==pits[i].pos or x==pits[i].pos+1 or x==pits[i].pos+2 and stepped==false)
+{
+playerpos=pool.play_1d("sounds/pits/"+pits[i].name+"/step"+random(1,5)+".ogg", x, x, false);
+stepped=true;
+}
+else if (pits[i].occupied==false and stepped==false and i>=pits.length()-1)
+{
+playerpos=pool.play_1d("sounds/environments/"+environment+"/step"+random(1,5)+".ogg", x, x, false);
+stepped=true;
+}
+}
+}
+void playlandsound()
+{
+landed=false;
+for (uint i=0; i<pits.length(); i++)
+{
+if (x==pits[i].pos-2 or x==pits[i].pos-1 or x==pits[i].pos or x==pits[i].pos+1 or x==pits[i].pos+2 and landed==false)
+{
+playerpos=pool.play_1d("sounds/pits/"+pits[i].name+"/land.ogg", x, x, false);
+playerpos=pool.play_1d("sounds/pits/"+pits[i].name+"/step"+random(1,5)+".ogg", x, x, false);
+landed=true;
+}
+else if (pits[i].occupied==false and landed==false and i>=pits.length()-1)
+{
+playerpos=pool.play_1d("sounds/environments/"+environment+"/land.ogg", x, x, false);
+playerpos=pool.play_1d("sounds/soundpacks/"+soundpack+"/"+random(1,5)+".ogg", x, x, false);
+landed=true;
+}
+}
+}
+void destroy_all_pits()
+{
+for (uint i=0; i<pits.length(); i++)
+{
+pits[i].destroy();
+}
+pits.resize(0);
+}
+void pause_all_pits()
+{
+pittimer.pause();
+for (uint i=0; i<pits.length(); i++)
+{
+pits[i].pitsound.pause();
+}
+}
+void play_all_pits()
+{
+pittimer.resume();
+for (uint i=0; i<pits.length(); i++)
+{
+pits[i].pitsound.play_looped();
+}
+}
+void regenerate_pits()
+{
+pit pit1(random(sz1.finish+2,sz2.start-2));
+pits.insert_last(pit1);
+pit pit2(random(sz1.finish+2,sz2.start-2));
+pits.insert_last(pit2);
+pit pit3(random(sz1.finish+2,sz2.start-2));
+pits.insert_last(pit3);
+if (advancedmode==1)
+{
+pit pit4(random(sz1.finish+2,sz2.start-2));
+pits.insert_last(pit4);
+pit pit5(random(sz1.finish+2,sz2.start-2));
+pits.insert_last(pit5);
+}
+}
+void retrieve_pit()
+{
+string[] temporary=find_directories("sounds/pits/*");
+pitname=temporary[random(0,temporary.length()-1)];
+}

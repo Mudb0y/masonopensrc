@@ -1,0 +1,18 @@
+0: 
+1: event. Version=7.6.0.106. (5-5-19 PM)
+2: Event: Message of the day is SB now has menu themes! Give it a try! It's cool! (5-5-20 PM)
+3: Event: mason is using the default Soundpack. (5-5-23 PM)
+4: Event: mason is using the Town environment. (5-5-23 PM)
+5: Event: Scrolling Battles has been ran worldwide a total of 314 times, including yours! (5-5-23 PM)
+6: Event. User wants a normal game. (5-5-31 PM)
+7: event: mason has decided to start a new game. (5-5-31 PM)
+8: A lava pit spawned at 1192 (5-5-32 PM)
+9: A casm pit spawned at 1272 (5-5-32 PM)
+10: A fire pit spawned at 1345 (5-5-32 PM)
+11: Event: a level 4568 enemy (name mason 2) has been spawned at 286 with 7192 HP. (5-5-32 PM)
+12: Event: a level 4568 enemy (name Death elf) has been spawned at 1322 with 5299 HP. (5-5-32 PM)
+13: Event: a level 4568 enemy (name dectalk paul) has been spawned at 1003 with 9014 HP. (5-5-33 PM)
+14: Event: a level 4568 enemy (name Behemoth) has been spawned at 916 with 5010 HP. (5-5-33 PM)
+15: Event: Game loaded! (5-5-33 PM)
+16: Event: a level 4568 enemy (name Giovani) has been spawned at 281 with 8259 HP. (5-5-33 PM)
+17: event: mason has decided to exit.

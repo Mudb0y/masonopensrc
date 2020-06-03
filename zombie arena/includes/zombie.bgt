@@ -1,0 +1,117 @@
+zombie@[] zombies(0);
+class zombie
+{
+int attackrange;
+int attacktime;
+int damage;
+int seerange;
+int seen;
+int dx;
+int hp;
+int movetime;
+int type;
+int growlspeed;
+timer attacktimer, movetimer,growltimer;
+int x,y;
+zombie(int t,int zx,int zy)
+{
+x=zx;
+y=zy;
+type=t;
+if (type==1)
+{
+movetime=random(500,900);
+hp=random(20,35);
+growlspeed=random(1500,2500);
+seerange=8;
+attackrange=2;
+damage=random(1,2);
+attacktime=random(1200,1600);
+}
+if (type==2)
+{
+movetime=random(700,1200);
+hp=random(50,75);
+growlspeed=random(2500,3500);
+seerange=12;
+attackrange=4;
+damage=random(3,5);
+attacktime=random(1600,2400);
+}
+if (type==3)
+{
+movetime=random(180,300);
+hp=random(10,25);
+growlspeed=random(2500,3500);
+seerange=20;
+attackrange=3;
+damage=random(5,8);
+attacktime=random(800,1800);
+}
+}
+}
+void zloop()
+{
+for (uint i=0; i<zombies.length(); i++)
+{
+if (me.x>zombies[i].x-zombies[i].attackrange and me.x<zombies[i].x+zombies[i].attackrange and me.y==zombies[i].y and zombies[i].attacktimer.elapsed>=zombies[i].attacktime)
+{
+zombies[i].attacktimer.restart();
+p.play_2d("z"+zombies[i].type+"attack"+random(1,3)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+health-=zombies[i].damage;
+}
+if (zombies[i].hp<=0)
+{
+p.play_2d("z"+zombies[i].type+"kill.ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+zombies.remove_at(i);
+break;
+}
+if (zombies[i].growltimer.elapsed>=zombies[i].growlspeed)
+{
+zombies[i].growltimer.restart();
+p.play_2d("z"+zombies[i].type+"growl"+random(1,5)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+}
+if (zombies[i].x>zombies[i].dx and zombies[i].movetimer.elapsed>=zombies[i].movetime)
+{
+zombies[i].movetimer.restart();
+zombies[i].x-=1;
+p.play_2d(get_tile_at(zombies[i].x,zombies[i].y)+"step"+random(1,5)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+}
+if (zombies[i].x<zombies[i].dx and zombies[i].movetimer.elapsed>=zombies[i].movetime)
+{
+zombies[i].movetimer.restart();
+zombies[i].x+=1;
+p.play_2d(get_tile_at(zombies[i].x,zombies[i].y)+"step"+random(1,5)+".ogg",me.x,me.y,zombies[i].x,zombies[i].y,false);
+}
+if (zombies[i].x==zombies[i].dx)
+{
+if (zombies[i].seen==0)
+{
+zombies[i].dx=random(0,maxx);
+}
+}
+if (zombies[i].seen==1)
+{
+zombies[i].dx=me.x;
+}
+if (me.x>zombies[i].x-zombies[i].seerange and me.x<zombies[i].x+zombies[i].seerange and zombies[i].seen==0)
+{
+zombies[i].seen=1;
+zombies[i].movetime-=(zombies[i].movetime/2);
+}
+else if (me.x<zombies[i].x-zombies[i].seerange and zombies[i].seen==1 or me.x>zombies[i].x+zombies[i].seerange and zombies[i].seen==1)
+{
+zombies[i].seen=0;
+zombies[i].movetime=(zombies[i].movetime*2);
+}
+}
+}
+void spawn_zombie(int type,int x, int y)
+{
+zombie z1(type,x,y);
+zombies.insert_last(z1);
+}
+void destroy_all_zombies()
+{
+zombies.resize(0);
+}

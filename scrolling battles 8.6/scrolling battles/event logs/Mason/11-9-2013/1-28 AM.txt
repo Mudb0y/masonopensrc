@@ -1,0 +1,16 @@
+0: 
+1: event. Version=8.0.0.111. (1-28-25 AM)
+2: Event: mason is using the default Soundpack. (1-28-25 AM)
+3: Event: mason is using the spaceship 2 environment. (1-28-25 AM)
+4: Event. User wants a normal game. (1-28-27 AM)
+5: event: mason has decided to start a new game. (1-28-27 AM)
+6: A casm pit spawned at 1170 (1-28-27 AM)
+7: A lava pit spawned at 681 (1-28-28 AM)
+8: A casm pit spawned at 1515 (1-28-28 AM)
+9: Event: a level 4732 enemy (name southerner) has been spawned at 412 with 5852 HP. (1-28-28 AM)
+10: Event: a level 4732 enemy (name microsoft sam) has been spawned at 1374 with 9163 HP. (1-28-28 AM)
+11: Event: a level 4732 enemy (name Behemoth) has been spawned at 717 with 8285 HP. (1-28-28 AM)
+12: Event: a level 4732 enemy (name southerner) has been spawned at 539 with 9264 HP. (1-28-28 AM)
+13: Event: Game loaded! (1-28-28 AM)
+14: event: mason just earned the trophy Fight level 250 enemies! (1-28-30 AM)
+15: event: mason has decided to exit.

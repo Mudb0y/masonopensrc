@@ -1,0 +1,93 @@
+﻿void weaponloop()
+{
+if (key_pressed(KEY_1) and weapons.length()>=1)
+{
+pool.play_stationary("sounds/weapons/1/draw.ogg", false);
+speak(weapons[0]);
+weapon=1;
+}
+if (key_pressed(KEY_2) and weapons.length()>=2)
+{
+pool.play_stationary("sounds/weapons/2/draw.ogg", false);
+speak(weapons[1]);
+weapon=2;
+}
+if (key_pressed(KEY_3) and weapons.length()>=3)
+{
+pool.play_stationary("sounds/weapons/3/draw.ogg", false);
+speak(weapons[2]);
+weapon=3;
+}
+}
+void fire()
+{
+if (weapon==1)
+{
+pool.play_stationary("sounds/weapons/1/fire.ogg", false);
+firecheck();
+}
+if (weapon==2)
+{
+pool.play_stationary("sounds/weapons/2/fire.ogg", false);
+firecheck();
+}
+if (weapon==3)
+{
+pool.play_stationary("sounds/weapons/3/fire.ogg", false);
+firecheck();
+}
+}
+void firecheck()
+{
+for (uint i=0; i<enemies.length(); i++)
+{
+if (enemies[i].spawned==1)
+{
+if (weapon==1)
+{
+if (enemies[i].pos>=x-weapon1range and enemies[i].pos<=x+weapon1range)
+{
+if (enemies[i].health<=0)
+{
+edie(i);
+}
+else
+{
+ehit(i);
+enemies[i].health-=weapon1damage;
+}
+}
+}
+if (weapon==2)
+{
+if (enemies[i].pos>=x-weapon2range and enemies[i].pos<=x+weapon2range)
+{
+if (enemies[i].health<=0)
+{
+edie(i);
+}
+else
+{
+ehit(i);
+enemies[i].health-=weapon2damage;
+}
+}
+}
+if (weapon==3)
+{
+if (enemies[i].pos>=x-weapon3range and enemies[i].pos<=x+weapon3range)
+{
+if (enemies[i].health<=0)
+{
+edie(i);
+}
+else
+{
+ehit(i);
+enemies[i].health-=weapon3damage;
+}
+}
+}
+}
+}
+}

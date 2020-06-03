@@ -1,0 +1,74 @@
+0: event: Enemy spawned!
+1: Event: Enemy fell into a pit! Ha ha ha!
+2: event: Enemy spawned!
+3: Event: Enemy death.
+4: Event: Game loaded successfully!
+5: event: Loading game.
+6: event: Mason has decided to start a new game.
+7: event. User wants an advanced game.
+8: event: going to main screen.
+9: Retrieving message of the day...
+10: Event: Installing keyhook...
+11: event: Checking name...
+12: event: Setting up registry...
+13: event. Version=5.5.0.070.
+14: event. loading started.
+15: 
+0: Event: Player helper killed!
+1: event: Helper detected an enemy!
+2: Event: Player helper spawned!
+3: event: User decided to go to the store.
+4: event: Enemy spawned!
+5: Event: Enemy death.
+6: Event: Game loaded successfully!
+7: event: Loading game.
+8: event: Mason has decided to start a new game.
+9: event. User wants an advanced game.
+10: event: Enemy spawned!
+11: Event: Enemy fell into a pit! Ha ha ha!
+12: event: Enemy spawned!
+13: Event: Enemy death.
+14: Event: Game loaded successfully!
+15: event: Loading game.
+16: event: Mason has decided to start a new game.
+17: event. User wants an advanced game.
+18: event: going to main screen.
+19: Retrieving message of the day...
+20: Event: Installing keyhook...
+21: event: Checking name...
+22: event: Setting up registry...
+23: event. Version=5.5.0.070.
+24: event. loading started.
+25: 
+0: event: Enemy spawned!
+1: Event: Enemy death.
+2: Event: Game loaded successfully!
+3: event: Loading game.
+4: event: Mason has decided to start a new game.
+5: event. User wants an advanced game.
+6: Event: Player helper killed!
+7: event: Helper detected an enemy!
+8: Event: Player helper spawned!
+9: event: User decided to go to the store.
+10: event: Enemy spawned!
+11: Event: Enemy death.
+12: Event: Game loaded successfully!
+13: event: Loading game.
+14: event: Mason has decided to start a new game.
+15: event. User wants an advanced game.
+16: event: Enemy spawned!
+17: Event: Enemy fell into a pit! Ha ha ha!
+18: event: Enemy spawned!
+19: Event: Enemy death.
+20: Event: Game loaded successfully!
+21: event: Loading game.
+22: event: Mason has decided to start a new game.
+23: event. User wants an advanced game.
+24: event: going to main screen.
+25: Retrieving message of the day...
+26: Event: Installing keyhook...
+27: event: Checking name...
+28: event: Setting up registry...
+29: event. Version=5.5.0.070.
+30: event. loading started.
+31: 

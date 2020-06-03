@@ -1,0 +1,204 @@
+#include "dlg.bgt"
+#include "keyhook.bgt"
+#include "m.bgt"
+#include "sounds.dat"
+file moods, reasons, temp;
+string musicsetting;
+string numoftimes;
+string randommood, randomreason, moodsplit, reasonsplit;
+string[] mood, reason;
+sound music;
+pack_file pfile;
+dynamic_menu menu;
+int mres;
+kh keyhook;
+void main()
+{
+keyhook.install();
+show_game_window("Random Mood Generator");
+pfile.open("*");
+set_sound_storage("*");
+set_sound_decryption_key("m3t4g6s40430131eb32c", true);
+music.load("music.wav");
+music.volume=-10;
+music.play_looped();
+mainmenu();
+}
+void mainmenu()
+{
+menu.reset(true);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.click_at_edge(false);
+menu.enable_up_and_down(true);
+menu.repeat_last_item_at_bottom(true);
+menu.add_item_tts("generate a random mood");
+menu.add_item_tts("database editor");
+menu.add_item_tts("statistics");
+menu.add_item_tts("exit");
+mres=menu.run("Random Mood Generator Menu", true);
+if (mres==0)
+{
+fade(music, -40, 20);
+exit();
+}
+if (mres==1)
+{
+genmood();
+mainmenu();
+}
+if (mres==2)
+{
+databaseeditor();
+}
+if (mres==3)
+{
+statsmenu();
+}
+if (mres==4)
+{
+fade(music, -40, 20);
+exit();
+}
+}
+void genmood()
+{
+getmood();
+dlg("Hi, I am in a "+randommood+" mood because "+randomreason);
+}
+void getmood()
+{
+moods.open("databases/moods.rmg", "r");
+moodsplit=moods.read();
+mood=string_split(moodsplit, "+", true);
+randommood=mood[random(0, mood.length-1)];
+reasons.open("databases/reasons.rmg", "r");
+reasonsplit=reasons.read();
+reason=string_split(reasonsplit, "+", true);
+randomreason=reason[random(0, reason.length-1)];
+}
+void statsmenu()
+{
+getmood();
+menu.reset(true);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.click_at_edge(false);
+menu.enable_up_and_down(true);
+menu.repeat_last_item_at_bottom(true);
+menu.add_item_tts("number of moods in database, "+mood.length);
+menu.add_item_tts("number of reasons in database, "+reason.length);
+mres=menu.run("Statistics menu. Hit enter or escape to close back to main menu.", true);
+if (mres>=0)
+{
+mainmenu();
+}
+}
+void databaseeditor()
+{
+menu.reset(true);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.click_at_edge(false);
+menu.enable_up_and_down(true);
+menu.repeat_last_item_at_bottom(true);
+menu.add_item_tts("add a mood.");
+menu.add_item_tts("add a reason.");
+menu.add_item_tts("view database");
+menu.add_item_tts("go back");
+mres=menu.run("Database editor menu.", true);
+if (mres==0)
+{
+mainmenu();
+}
+if (mres==1)
+{
+moods.open("databases/moods.rmg", "a");
+string yournewmood=input_box("random mood generator", "please enter a mood to add to the collection.");
+moods.write("+"+yournewmood);
+moods.close();
+databaseeditor();
+}
+if (mres==2)
+{
+reasons.open("databases/reasons.rmg", "a");
+string yournewreason=input_box("random mood generator", "please enter a reason to add to the collection.");
+reasons.write("+"+yournewreason);
+reasons.close();
+databaseeditor();
+}
+if (mres==3)
+{
+getmood();
+databaseviewer();
+}
+if (mres==4)
+{
+mainmenu();
+}
+}
+void databaseviewer()
+{
+menu.reset(true);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.click_at_edge(false);
+menu.enable_up_and_down(true);
+menu.repeat_last_item_at_bottom(true);
+menu.add_item_tts("view moods.");
+menu.add_item_tts("view reasons.");
+menu.add_item_tts("go back");
+mres=menu.run("Database viewer menu.", true);
+if (mres==0)
+{
+databaseeditor();
+}
+if (mres==1)
+{
+moodsviewer();
+}
+if (mres==2)
+{
+reasonsviewer();
+}
+if (mres==3)
+{
+databaseeditor();
+}
+}
+void moodsviewer()
+{
+menu.reset(true);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.click_at_edge(false);
+menu.enable_up_and_down(true);
+menu.repeat_last_item_at_bottom(true);
+for(uint i=0;i < mood.length();i++)
+{
+menu.add_item_tts(mood[i]);
+}
+mres=menu.run("Moods view. Press escape or enter to close.", true);
+if (mres>=0)
+{
+databaseviewer();
+}
+}
+void reasonsviewer()
+{
+menu.reset(true);
+menu.allow_escape=true;
+menu.wrap=false;
+menu.click_at_edge(false);
+menu.enable_up_and_down(true);
+menu.repeat_last_item_at_bottom(true);
+for(uint i=0;i < reason.length();i++)
+{
+menu.add_item_tts(reason[i]);
+}
+mres=menu.run("Reasons view. Press escape or enter to close.", true);
+if (mres>=0)
+{
+databaseviewer();
+}
+}

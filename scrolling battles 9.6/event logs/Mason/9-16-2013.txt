@@ -1,0 +1,29 @@
+0: event: Mason has decided to exit.
+1: Event: Game loaded successfully!
+2: event: Loading game.
+3: event: Mason has decided to start a new game.
+4: event. User wants a normal game.
+5: Retrieving message of the day...
+6: Event: Installing keyhook...
+7: event: Checking name...
+8: event: Setting up registry...
+9: event. Version=6.0.0.074.
+10: event. loading started.
+11: 
+0: event: Mason has decided to exit.
+1: Event: Grenade has exploded.
+2: Event: Grenade has exploded.
+3: Event: Grenade has exploded.
+4: Event: Grenade has exploded.
+5: Event: Grenade has exploded.
+6: Event: Game loaded successfully!
+7: event: Loading game.
+8: event: Mason has decided to start a new game.
+9: event. User wants a normal game.
+10: Retrieving message of the day...
+11: Event: Installing keyhook...
+12: event: Checking name...
+13: event: Setting up registry...
+14: event. Version=6.0.0.074.
+15: event. loading started.
+16: 

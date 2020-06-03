@@ -1,0 +1,19 @@
+0: event: Mason has decided to exit.
+1: event: Game unpaused by user
+2: event: Game paused by user
+3: event: Game unpaused by user
+4: event: Game paused by user
+5: event: Enemy spawned!
+6: Event: Enemy death.
+7: Event: Game loaded successfully!
+8: event: Loading game.
+9: event: Mason has decided to start a new game.
+10: event: going to main screen.
+11: event: Message of the day is Scrolling battles 5.5.0.065 is in development! Expect a beta release soon!
+12: Retrieving message of the day...
+13: Event: Installing keyhook...
+14: event: Checking name...
+15: event: Setting up registry...
+16: event. Version=5.5.0.065.
+17: event. loading started.
+18: 

@@ -1,0 +1,28 @@
+file the_exported;
+void cd(string title, string text, bool export)
+{
+alert(title, text);
+int answer=question(title, "would you like to copy this to the clipboard?");
+if (answer==1)
+{
+clipboard_copy_text(text);
+}
+if (answer==2)
+{
+exit();
+}
+if (export==true)
+{
+int answer=question(title, "would you like to export it to a text file? it will be called "+title+".txt.");
+if (answer==1)
+{
+the_exported.open(title+".txt", "a");
+the_exported.write(text+"
+");
+}
+if (answer==2)
+{
+exit();
+}
+}
+}

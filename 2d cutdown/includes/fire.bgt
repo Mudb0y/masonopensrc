@@ -1,0 +1,41 @@
+class fire
+{
+int firesound;
+int fx;
+int fy;
+fire(int firex, int firey)
+{
+fx=firex;
+fy=firey;
+firesound=p.play_2d("fire.ogg", fx, fy, me.x, me.y, true);
+}
+}
+void fcheckloop()
+{
+for (uint i=0; i<fires.length(); i++)
+{
+p.update_sound_2d(fires[i].firesound, fires[i].fx, fires[i].fy);
+if (me.x==fires[i].fx)
+{
+if (me.y==fires[i].fy+2 or me.y==fires[i].fy+1 or me.y==fires[i].fy)
+{
+p.destroy_sound(fallsound);
+dlgplay("death.ogg");
+fade_pool(p);
+mainmenu();
+}
+}
+}
+}
+void destroy_all_fires()
+{
+fires.resize(0);
+}
+void spawn_fire(int firex, int firey)
+{
+fire fire1(firex, firey);
+fires.insert_last(fire1);
+map.set(firex+":"+firey, hazard);
+map.set(firex+":"+(firey+1), hazard);
+map.set(firex+":"+(firey+2), hazard);
+}
